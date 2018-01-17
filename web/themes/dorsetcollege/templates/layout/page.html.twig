@@ -1,0 +1,35 @@
+<div id="page-wrapper" class="clearfix">
+  <div id="page" class="clearfix {{ region_classes }}">
+    <header id="section-header" class="outer-wrapper clearfix {{ secondary_menu ? 'with-secondary-menu' : 'without-secondary-menu' }}" role="banner">
+      <div id="zone-header" class="{{ region_classes.header }} inner-wrapper clearfix">
+
+        {{ page.header }}
+
+      </div>
+    </header>
+
+    <section id="section-content" class="outer-wrapper clearfix">
+
+        {% if page.content %}
+          {{ page.content }}
+        {% endif %}
+
+    </section><!-- /#main-content-wrapper -->
+
+    {% if page.footer %}
+
+    <footer id="section-footer" class="outer-wrapper clearfix">
+      <div id="zone-footer" role="contentinfo" class="{{ region_classes.footer }} inner-wrapper clearfix">
+
+        {{ page.footer }}
+
+      </div> <!-- /#footer -->
+      <div id="zone-post-footer" role="contentinfo" class="{{ region_classes.postfooter }} inner-wrapper clearfix">
+
+        {{ page.postfooter }}
+
+      </div>
+    </footer> <!-- /#footer-outer-wrapper -->
+    {% endif %}
+  </div>
+</div> <!-- /#page, /#page-wrapper -->

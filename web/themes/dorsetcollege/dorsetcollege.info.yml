@@ -1,0 +1,33 @@
+name: Dorset Collede Theme
+type: theme
+description: 'Dorset College Theme for Main Website - www.dorset-college.ie'
+package: Core
+
+# version: VERSION
+base theme: omega
+
+# core: 8.x
+force_export: false
+inherit_layout: false
+scss_support: false
+libraries:
+  - dorsetcollege/dorsetcollege
+regions:
+  header: 'Header'
+  content: Content
+  footer: 'Footer'
+  postfooter: 'Post Footer'
+features:
+  logo: true
+  name: true
+  slogan: true
+  node_user_picture: true
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  main_menu: true
+  secondary_menu: true
+
+# Information added by Drupal.org packaging script on 2016-10-10
+version: '8.x-0.1-dc'
+core: '8.x'

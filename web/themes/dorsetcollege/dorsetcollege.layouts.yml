@@ -1,0 +1,19 @@
+frontpage:
+  label: Front Page Layout
+  category: DC EFL Layouts
+  template: layouts/front_page
+  regions:
+    headerimage:
+      label: Header Image Region
+    homecourses:
+      label: Courses Region
+    homeaccommodations:
+      label: Accomodations Region
+    homesocial:
+      label: Social Region
+    homeevents:
+      label: Events Region
+    hometestimonials:
+      label: Testimonials Region
+    homeaccreditations:
+      label: Accreditations Region

@@ -1,0 +1,21 @@
+dorsetcollege:
+  allow_clone_for_subtheme: true
+  allow_enable_disable: true
+  title: 'Library for Dorset College Theme'
+  description: 'Library for Dorset College Main Website - dorset-college.ie'
+  scss:
+    style/css/dorsetcollege.css: 'style/scss/dorsetcollege.scss'
+
+  version: VERSION
+  js:
+    # Custom Javascript file for your own JS modifications.
+    # Examples of behaviors in JS file.
+    js/dorsetcollege.js: {}
+
+  css:
+    theme:
+      # Custom CSS file to be loaded in all media circumstances
+      style/css/dorsetcollege.css: {}
+
+  dependencies:
+      - core/jquery
