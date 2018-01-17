@@ -1,6 +1,6 @@
 frontpage:
-  label: Front Page Layout
-  category: DC EFL Layouts
+  label: Front Page - Layout
+  category: Dorset College Layouts
   template: layouts/front_page
   regions:
     headerimage:
@@ -17,3 +17,15 @@ frontpage:
       label: Testimonials Region
     homeaccreditations:
       label: Accreditations Region
+
+maincontent:
+  label: Main Content - Layout
+  category: Dorset College Layouts
+  template: layouts/maincontent
+  regions:
+    headerimage:
+      label: Header Image Region
+    main:
+      label: Main Region
+    bottom:
+      label: Bottom region
