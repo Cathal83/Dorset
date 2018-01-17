@@ -4,7 +4,7 @@ description: 'Dorset College Theme for Main Website - www.dorset-college.ie'
 package: Core
 
 # version: VERSION
-base theme: omega
+base theme: false
 
 # core: 8.x
 force_export: false
