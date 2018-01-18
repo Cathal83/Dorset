@@ -1,25 +1,20 @@
 {% extends "block.html.twig" %}
 {% block content %}
-
   <div id="site-branding">
       <div id="logo">
         <a href="{{ url('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo">
           <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
         </a>
       </div>
-
     {% if site_name %}
       <div id="name-slogan" class="site-name-slogan clearfix">
         <div class="site-name">
           <a href="{{ url('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name|e }}</a>
         </div>
-
       {% if site_slogan %}
         <div class="site-slogan">{{ site_slogan }}</div>
       {% endif %}
-
       </div>
     {% endif %}
-
   </div>
 {% endblock %}
