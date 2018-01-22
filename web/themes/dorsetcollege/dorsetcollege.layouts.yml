@@ -5,18 +5,16 @@ frontpage:
   regions:
     headerimage:
       label: Header Image Region
-    homecourses:
-      label: Courses Region
-    homeaccommodations:
-      label: Accomodations Region
-    homesocial:
-      label: Social Region
-    homeevents:
-      label: Events Region
-    hometestimonials:
-      label: Testimonials Region
+    homeactionblocks:
+      label: Action Blocks
+    homestats:
+      label: Statistics Region
+    homeabout:
+      label: About Region
     homeaccreditations:
       label: Accreditations Region
+    homenewsevents:
+      label: News & Events Region
 
 maincontent:
   label: Main Content - Layout
