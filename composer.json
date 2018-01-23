@@ -35,6 +35,7 @@
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.0",
         "drupal/simple_sitemap": "^2.11",
+        "drupal/svg_image": "^1.8",
         "drupal/video_embed_field": "^1.5",
         "drupal/webform": "^5.0@RC",
         "drush/drush": "~8.0|^9.0.0-beta8",
