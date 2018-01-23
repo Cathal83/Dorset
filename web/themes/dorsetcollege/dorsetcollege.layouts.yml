@@ -6,7 +6,7 @@ frontpage:
     headerimage:
       label: Header Image Region
     homeactionblocks:
-      label: Action Blocks
+      label: Action Blocks Region
     homestats:
       label: Statistics Region
     homeabout:
