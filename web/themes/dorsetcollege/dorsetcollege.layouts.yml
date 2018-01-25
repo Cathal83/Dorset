@@ -19,7 +19,7 @@ frontpage:
 main:
   label: Main Content - Layout
   category: Dorset College Layouts
-  template: layouts/maincontent
+  template: layouts/main
   regions:
     headerimage:
       label: Header Image Region
