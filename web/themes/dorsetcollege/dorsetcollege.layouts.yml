@@ -6,7 +6,7 @@ frontpage:
     headerimage:
       label: Header Image Region
     homeactionblocks:
-      label: Action Blocks Region
+      label: Action Blocks
     homestats:
       label: Statistics Region
     homeabout:
@@ -16,10 +16,10 @@ frontpage:
     homenewsevents:
       label: News & Events Region
 
-main:
+maincontent:
   label: Main Content - Layout
   category: Dorset College Layouts
-  template: layouts/main
+  template: layouts/maincontent
   regions:
     headerimage:
       label: Header Image Region
