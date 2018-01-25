@@ -16,7 +16,7 @@ frontpage:
     homenewsevents:
       label: News & Events Region
 
-maincontent:
+main:
   label: Main Content - Layout
   category: Dorset College Layouts
   template: layouts/maincontent
