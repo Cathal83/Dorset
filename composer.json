@@ -26,6 +26,7 @@
         "drupal/commerce": "^2.3",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.4",
+        "drupal/custom_search": "^1.0@beta",
         "drupal/facebook_pixel": "^1.0@alpha",
         "drupal/field_group": "^1.0",
         "drupal/geolocation": "^1.11",
