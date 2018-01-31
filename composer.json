@@ -36,6 +36,7 @@
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.0",
         "drupal/search_api": "^1.6",
+        "drupal/search_api_page": "^1.0@alpha",
         "drupal/search_autocomplete": "^1.1",
         "drupal/simple_sitemap": "^2.11",
         "drupal/svg_image": "^1.8",
