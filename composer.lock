@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c0da952ca9e848849115ceb922918ae8",
+    "content-hash": "c88c26ebd85d56450b032c6d109cb5fb",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2972,6 +2972,53 @@
             "homepage": "http://drupal.org/project/profile",
             "support": {
                 "source": "http://cgit.drupalcode.org/profile"
+            }
+        },
+        {
+            "name": "drupal/search_autocomplete",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/search_autocomplete",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/search_autocomplete-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "f80427ffefbe4b159db91442b6e32b11de448926"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1481975884",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Dom.",
+                    "homepage": "https://www.drupal.org/user/801982"
+                }
+            ],
+            "description": "Provides autocompletion feature for fields in your Drupal site. This module ships with pre-existing autocompletion configurations.",
+            "homepage": "https://www.drupal.org/project/search_autocomplete",
+            "support": {
+                "source": "http://cgit.drupalcode.org/search_autocomplete"
             }
         },
         {
