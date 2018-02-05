@@ -1,0 +1,11 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function bookingform_theme() {
+  return array(
+    'bookingform_view' => array(
+      'template' => 'bookingform',
+    ),
+  );
+}

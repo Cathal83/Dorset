@@ -1,0 +1,103 @@
+## Angular libraries
+angularjs:
+  js:
+    js/library/angular.min.js: {}
+
+angular-messages:
+  js:
+    js/library/angular-messages.min.js: {}
+  dependencies:
+    - bookingform/angularjs
+
+angular-ui-router:
+  js:
+    js/library/angular-ui-router.min.js: {}
+  dependencies:
+    - bookingform/angularjs
+
+angular-filter:
+  js:
+    js/library/angular-filter.min.js: {}
+  dependencies:
+    - bookingform/angularjs
+
+angular-animate:
+  js:
+    js/library/angular-animate.min.js: {}
+  dependencies:
+    - bookingform/angularjs
+
+angular-aria:
+  js:
+    js/library/angular-aria.min.js: {}
+  dependencies:
+    - bookingform/angularjs
+
+angular-material:
+  js:
+    js/library/angular-material.min.js: {}
+  dependencies:
+    - bookingform/angularjs
+
+moment:
+  js:
+    js/library/moment.min.js: {}
+  dependencies:
+    - bookingform/angularjs
+
+lodash:
+  js:
+    js/library/lodash.min.js: {}
+  dependencies:
+    - bookingform/angularjs
+
+## Angular Material css dependecy for Datepicker
+
+angular-material-CSS:
+  version: VERSION
+  css:
+    theme:
+      css/angular-material.min.css: {}
+
+## BookingForm Angular App
+bookingFormApp:
+  js:
+    js/bookingFormApp/app.js: {}
+  dependencies:
+    - bookingform/angularjs
+
+bookingFormConfig:
+  js:
+    js/bookingFormApp/config/form.config.js: {}
+  dependencies:
+      - bookingform/angularjs
+
+bookingDataService:
+    js:
+      js/bookingFormApp/services/data.service.js: {}
+    dependencies:
+      - bookingform/angularjs
+
+bookingFormService:
+    js:
+      js/bookingFormApp/services/form.service.js: {}
+    dependencies:
+      - bookingform/angularjs
+
+bookingPostService:
+    js:
+      js/bookingFormApp/services/post.service.js: {}
+    dependencies:
+      - bookingform/angularjs
+      
+bookingFormController:
+    js:
+      js/bookingFormApp/controllers/form.controller.js: {}
+    dependencies:
+      - bookingform/angularjs
+
+bookingFormDateConfig:
+    js:
+      js/bookingFormApp/config/date.config.js: {}
+    dependencies:
+      - bookingform/angularjs

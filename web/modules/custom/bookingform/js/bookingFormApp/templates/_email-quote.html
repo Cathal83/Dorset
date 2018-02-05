@@ -1,0 +1,56 @@
+<div class="email-quote">
+  <div class="form-content">
+    <div class="form-title">
+      <h2>Email me this quote:</h2>
+    </div>
+    <div class="form-fields">
+      <div class="form-row">
+        <label>Enter your email address and we will email you the following quote:</label>
+        <div class="form-opt">
+          <input type="email" name="invoemail" ng-model="user.invoemail" required>
+        </div>
+        <div class="error-msg" ng-messages="bookingStepForm.invoemail.$error" ng-if="formStepSubmitted">
+          <div ng-message="required">This field is required.</div>
+          <div ng-message="email">Invalid email address.</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-fields">
+      <div class="form-row">
+        <div class="payment-btn">
+          <a class="booking-next" href="" ng-click="goToNextSection(bookingStepForm.$valid)">Send Quote<span class="email-ico"></span></a>
+        </div>
+      </div>
+    </div>
+    <h3>Quote:</h3>
+    <div class="form-fields">
+      <div class="form-row" ng-show="user.course">
+        <label>Course</label>
+        <span class="form-opt">{{ user.items.coursePrice }}</span>
+      </div>
+      <div class="form-row" ng-repeat="fee in fees" ng-show="user.course">
+        <label>{{ fee.product_id }}</label>
+        <span class="form-opt">{{ fee.price__number }}</span>
+      </div>
+      <div class="form-row" ng-show="user.accommodation">
+        <label>Accommodation</label>
+        <span class="form-opt">{{ user.items.accommPrice }}</span>
+      </div>
+      <div class="form-row" ng-show="user.airportPick">
+        <label>Airport Pick Up</label>
+        <span class="form-opt">{{ user.items.airportPrice }}</span>
+      </div>
+      <div class="form-row" ng-show="user.medicalInsu">
+        <label>Medical Insurance</label>
+        <span class="form-opt">{{ user.items.medPrice }}</span>
+      </div>
+      <div class="form-row" ng-show="user.bookingTotal">
+        <label>Total:</label>
+        <span class="form-opt">{{ user.bookingTotal | currency:"&euro;" }}</span>
+      </div>
+    </div>
+    <div class="bookingform-btn">
+      <a class="booking-prev" ui-sref="bookingSummary.bookingForm"><span class="left-arrow"></span>Go back</a>
+    </div>
+  </div>
+</div>
