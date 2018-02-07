@@ -1,13 +1,12 @@
 <div class="form-content">
   <div class="form-title">
-    <h2><strong>Step 1/3:</strong><br /> Select Course, Accommodation & Airport Transfer</h2>
+    <h2>Application</h2>
   </div>
   <!-- Course Select Box -->
   <div class="form-fields">
     <div class="form-row">
-      <label class="form-required">Course</label>
       <div class="form-opt">
-        <select ng-model="user.course" name="course" ng-options="course.product_id as course.product_id for course in courses | unique: 'product_id'" ng-change="courseAttributes(user.course, user.courseWeeks)" required>
+        <select ng-model="user.course" name="course" ng-options="course.nid as course.title group by course.faculty for course in products | unique: 'title'" ng-change="courseDelivery(user.course)" required>
            <option value="">Choose your Course</option>
         </select>
       </div>
@@ -15,152 +14,30 @@
         <div ng-message="required">Please choose a Course.</div>
       </div>
     </div>
-
-    <!-- Course Start Date -->
-    <div class="form-row">
-      <label class="form-required">Course Start Date</label>
-      <div class="form-opt">
-        <md-datepicker name="coursedate" ng-model="user.courseDate" md-placeholder="dd/mm/yyyy" md-min-date="minDate" md-date-filter="onlyMonday" required></md-datepicker>
-      </div>
-      <div ng-messages="bookingStepForm.coursedate.$error" ng-if="formStepSubmitted" class="error-msg">
-        <div ng-message="required">Start date required.</div>
-      </div>
-    </div>
-
-    <!-- Duration Course Select -->
     <div class="form-row" ng-if="user.course">
-      <label> Number of Weeks</label>
       <div class="form-opt">
-        <select ng-model="user.courseWeeks" ng-change="courseWeeksChosen(user.course, user.courseWeeks)">
-          <option ng-repeat="attribute in courseAttr">{{ attribute.attribute_weeks }}</option>
+        <select ng-model="user.delivery_mode" name="coursedelivery" ng-options="delivery.delivery_mode as delivery.delivery_mode for delivery in deliveryTypes | unique: 'delivery_mode'" ng-change="" required>
+           <option value="">Choose Course Mode</option>
         </select>
       </div>
+      <div ng-messages="bookingStepForm.course.$error" ng-if="formStepSubmitted" class="error-msg">
+        <div ng-message="required">Please choose a Course.</div>
+      </div>
     </div>
-    <div class="form-row" ng-if="user.course">
-      <label>Special Requirements</label>
+    <div class="form-row" ng-if="user.delivery_mode">
       <div class="form-opt">
-        <textarea ng-model="user.courseRequirements" rows="4" cols="50"></textarea>
+        <input type="email" name="email" ng-model="user.email" required>
       </div>
     </div>
-
-    <!-- Requires accommodation -->
-    <div class="form-row">
-      <label> Do you require accommodation?</label>
+    <div class="form-row" ng-if="user.delivery_mode">
       <div class="form-opt">
-        <select name="accommNeeded" ng-model="user.accommNeeded" ng-change="accommNeeded(user.accommNeeded)">
-          <option value="true" ng-value="true">Yes</option>
-          <option value="false" ng-value="false">No</option>
-        </select>
+        <input type="text" name="nationality" ng-model="user.nationality" required>
       </div>
     </div>
-
-    <!-- Accommodation Select -->
-    <div class="form-row" ng-if="user.accommNeeded">
-      <label> Accommodation Type</label>
+    <div class="form-row" ng-if="user.delivery_mode">
       <div class="form-opt">
-        <select name="accommType" ng-model="user.accommodation" ng-options="accommodation.product_id as accommodation.product_id for accommodation in accommodations | unique: 'product_id'" ng-change="accommodationAttributes(user.accommodation, user.accommWeeks)" required>
-          <option value="">Choose your Accommodation</option>
-        </select>
+        <input type="text" name="country" ng-model="user.country" required>
       </div>
-      <div ng-messages="bookingStepForm.accommType.$error" ng-if="formStepSubmitted" class="error-msg">
-        <div ng-message="required">Please choose the accommodation type.</div>
-      </div>
-    </div>
-
-    <!-- Accommodation Start Date -->
-    <div class="form-row" ng-if="user.accommNeeded">
-      <label>Accommodation Arrival Date</label>
-      <div class="form-opt">
-        <md-datepicker name="accommDate" ng-model="user.accommDate" md-placeholder="dd/mm/yyyy" md-min-date="minDate" required></md-datepicker>
-      </div>
-      <div ng-messages="bookingStepForm.accommDate.$error" ng-if="formStepSubmitted" class="error-msg">
-        <div ng-message="required">Please choose the accommodation arrival date.</div>
-      </div>
-    </div>
-
-    <div class="form-row" ng-if="user.accommodation">
-      <label> Number of Weeks</label>
-      <div class="form-opt">
-        <select name="accommWeeks" ng-model="user.accommWeeks" ng-change="accomWeeksChosen(user.accommodation, user.accommWeeks)" required>
-          <option ng-repeat="attribute in accommAttr">{{ attribute.attribute_weeks }}</option>
-        </select>
-      </div>
-      <div ng-messages="bookingStepForm.accommWeeks.$error" ng-if="formStepSubmitted" class="error-msg">
-        <div ng-message="required">Choose number of weeks for accommodation.</div>
-      </div>
-    </div>
-    <div class="form-row" ng-if="user.accommWeeks">
-      <label>Special Accommodation Requirements?</label>
-      <div class="form-opt">
-        <textarea ng-model="user.accommRequirements" rows="4" cols="50"></textarea>
-      </div>
-    </div>
-
-    <!-- Requires Airport Pick Up -->
-    <div class="form-row">
-      <label> Would you like an airport transfer on arrival or departure?</label>
-      <div class="form-opt">
-        <select name="airportPick" ng-model="user.airportPick" ng-change="airportChange(user.airportPick)">
-          <option value="true" ng-value="true">Yes</option>
-          <option value="false" ng-value="false">No</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="form-row" ng-if="user.airportPick">
-      <label>Aiport Transfer Type</label>
-      <div class="form-opt">
-        <select name="airportPickDetail" ng-model="user.aiportPickDetail" ng-options="aiport.product_id as aiport.product_id for aiport in airports" ng-change="aiportChosen(user.aiportPickDetail)" required>
-          <option value="">Choose Airport Transfer type</option>
-        </select>
-      </div>
-      <div ng-messages="bookingStepForm.airportPickDetail.$error" ng-if="formStepSubmitted" class="error-msg">
-        <div ng-message="required">Please choose the airport pick up type.</div>
-      </div>
-    </div>
-
-    <!-- Flight Details -->
-    <div class="form-row" ng-if="user.aiportPickDetail">
-      <label> Do you know your flight details?</label>
-      <div class="form-opt">
-        <select name="flightDetail" ng-model="user.flightDetail" ng-change="flightDetail(user.flightDetail)">
-          <option value="true" ng-value="true">Yes</option>
-          <option value="false" ng-value="false">No</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="form-row" ng-if="user.flightDetail">
-      <label>Flight No.</label>
-      <div class="form-opt">
-        <input type="text" name="flightNumber" ng-model="user.flightNumber" required/>
-      </div>
-      <div ng-messages="bookingStepForm.flightNumber.$error" ng-if="formStepSubmitted" class="error-msg">
-        <div ng-message="required">Please type the flight number.</div>
-      </div>
-    </div>
-    <div class="form-row" ng-if="user.flightDetail">
-      <label>Arrival Date</label>
-      <div class="form-opt">
-        <md-datepicker name="airportDate" ng-model="user.airportDate" md-placeholder="dd/mm/yyyy" md-min-date="minDate" required></md-datepicker>
-      </div>
-      <div ng-messages="bookingStepForm.airportDate.$error" ng-if="formStepSubmitted" class="error-msg">
-        <div ng-message="required">Choose the airport pick up date.</div>
-      </div>
-    </div>
-
-    <!-- Requires Medical Insurance -->
-    <div class="form-row">
-      <label> Do you require Medical Insurance?</label>
-      <div class="form-opt">
-        <select name="medicalInsu" ng-model="user.medicalInsu" ng-change="medChosen(user.medicalInsu)">
-          <option value="true" ng-value="true">Yes</option>
-          <option value="false" ng-value="false">No</option>
-        </select>
-      </div>
-    </div>
-    <div class="bookingform-btn">
-      <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Next<span class="right-arrow"></span></a>
     </div>
   </div>
 </div>
