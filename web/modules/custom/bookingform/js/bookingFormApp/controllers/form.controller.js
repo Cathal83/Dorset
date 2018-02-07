@@ -2,11 +2,17 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, da
 
   // Get Data from services
   dataService.getProducts().then(function(response) {
-    // Split data into variables
-    //$scope.courses = $filter('filter')(response, {type: "title"}, true); 
+
     $scope.products = response;
 
   });
+
+  // Get Countries list
+  dataService.getCountries().then(function(response){
+
+    $scope.countries = response;
+
+  })
 
   // Returns delivery modes once course is chosen
   $scope.courseDelivery = function(productid) {

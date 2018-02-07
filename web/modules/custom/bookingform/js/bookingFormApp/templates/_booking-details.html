@@ -4,6 +4,8 @@
   </div>
   <!-- Course Select Box -->
   <div class="form-fields">
+
+    <!-- Select Course -->
     <div class="form-row">
       <div class="form-opt">
         <select ng-model="user.course" name="course" ng-options="course.nid as course.title group by course.faculty for course in products | unique: 'title'" ng-change="courseDelivery(user.course)" required>
@@ -14,6 +16,8 @@
         <div ng-message="required">Please choose a Course.</div>
       </div>
     </div>
+
+    <!-- Select delivery Type -->
     <div class="form-row" ng-if="user.course">
       <div class="form-opt">
         <select ng-model="user.delivery_mode" name="coursedelivery" ng-options="delivery.delivery_mode as delivery.delivery_mode for delivery in deliveryTypes | unique: 'delivery_mode'" ng-change="" required>
@@ -24,20 +28,13 @@
         <div ng-message="required">Please choose a Course.</div>
       </div>
     </div>
+
+    <!-- Email input -->
     <div class="form-row" ng-if="user.delivery_mode">
       <div class="form-opt">
         <input type="email" name="email" ng-model="user.email" required>
       </div>
     </div>
-    <div class="form-row" ng-if="user.delivery_mode">
-      <div class="form-opt">
-        <input type="text" name="nationality" ng-model="user.nationality" required>
-      </div>
-    </div>
-    <div class="form-row" ng-if="user.delivery_mode">
-      <div class="form-opt">
-        <input type="text" name="country" ng-model="user.country" required>
-      </div>
-    </div>
+    
   </div>
 </div>
