@@ -1,4 +1,4 @@
-bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $routeParams, dataService, formService, formSteps) {
+bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $location, dataService, formService, formSteps) {
   /**
    * Default user settings
    */
@@ -12,9 +12,16 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $r
    * or not.
    * 
   **/
-  console.log($routeParams);
-  $scope.showProductSel = true;
-
+  // Search for course nid on URL
+  var coursenid = $location.search();
+  console.log(coursenid.nid);
+  if(!coursenid) {
+    $scope.showProductSel = false;
+  }
+  else {
+    $scope.showProductSel = true;
+  }
+  
   // Get Data from services
   dataService.getProducts().then(function(response) {
 
