@@ -5,15 +5,10 @@
   <!-- Course Select Box -->
   <div class="form-fields">
 
-    <!-- Course display -->
-    <div ng-if="user.course">
-        <h1>{{ productName }}</h1>
-    </div>
-
     <!-- Select Course -->
-    <div class="form-row" ng-show="showProductSel">
+    <div class="form-row">
       <div class="form-opt">
-        <select ng-model="user.course" name="course" ng-options="course.nid as course.title group by course.faculty for course in products | unique: 'title'" ng-change="productIsolate(user.course)" required>
+        <select ng-model="user.course" name="course" ng-options="course.nid as course.title group by course.faculty for course in products | unique: 'title'" ng-change="courseDelivery(user.course)" required>
            <option value="">Choose your Course</option>
         </select>
       </div>
@@ -25,11 +20,11 @@
     <!-- Select delivery Type -->
     <div class="form-row" ng-if="user.course">
       <div class="form-opt">
-        <select ng-model="user.deliverymode" name="coursedelivery" ng-options="delivery.delivery_mode as delivery.delivery_mode for delivery in productInfo | unique: 'delivery_mode'" ng-change="" required>
+        <select ng-model="user.deliverymode" name="coursedelivery" ng-options="delivery.delivery_mode as delivery.delivery_mode for delivery in deliveryTypes | unique: 'delivery_mode'" ng-change="" required>
            <option value="">Choose Course Mode</option>
         </select>
       </div>
-      <div ng-messages="bookingStepForm.coursedelivery.$error" ng-if="formStepSubmitted" class="error-msg">
+      <div ng-messages="bookingStepForm.course.$error" ng-if="formStepSubmitted" class="error-msg">
         <div ng-message="required">Please choose a Course Mode</div>
       </div>
     </div>
@@ -38,9 +33,6 @@
     <div class="form-row" ng-if="user.deliverymode">
       <div class="form-opt">
         <input type="email" name="email" ng-model="user.email" placeholder="Your Email" required>
-      </div>
-      <div ng-messages="bookingStepForm.email.$error" ng-if="formStepSubmitted" class="error-msg">
-          <div ng-message="required">Please choose a Course Mode</div>
       </div>
     </div>
 
