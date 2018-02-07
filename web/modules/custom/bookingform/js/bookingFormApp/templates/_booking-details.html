@@ -13,28 +13,32 @@
         </select>
       </div>
       <div ng-messages="bookingStepForm.course.$error" ng-if="formStepSubmitted" class="error-msg">
-        <div ng-message="required">Please choose a Course.</div>
+        <div ng-message="required">Please choose a Course</div>
       </div>
     </div>
 
     <!-- Select delivery Type -->
     <div class="form-row" ng-if="user.course">
       <div class="form-opt">
-        <select ng-model="user.delivery_mode" name="coursedelivery" ng-options="delivery.delivery_mode as delivery.delivery_mode for delivery in deliveryTypes | unique: 'delivery_mode'" ng-change="" required>
+        <select ng-model="user.deliverymode" name="coursedelivery" ng-options="delivery.delivery_mode as delivery.delivery_mode for delivery in deliveryTypes | unique: 'delivery_mode'" ng-change="" required>
            <option value="">Choose Course Mode</option>
         </select>
       </div>
       <div ng-messages="bookingStepForm.course.$error" ng-if="formStepSubmitted" class="error-msg">
-        <div ng-message="required">Please choose a Course.</div>
+        <div ng-message="required">Please choose a Course Mode</div>
       </div>
     </div>
 
     <!-- Email input -->
     <div class="form-row" ng-if="user.delivery_mode">
       <div class="form-opt">
-        <input type="email" name="email" ng-model="user.email" required>
+        <input type="email" name="email" ng-model="user.email" placeholder="Your Email" required>
       </div>
     </div>
-    
+
+    <!-- Proceed Button -->
+    <div class="bookingform-btn">
+        <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Proceed</a>
+    </div>
   </div>
 </div>

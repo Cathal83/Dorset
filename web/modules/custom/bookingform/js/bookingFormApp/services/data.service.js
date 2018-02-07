@@ -9,7 +9,7 @@ bookingformJS.factory("dataService", function($http) {
     }
 
     var Countries = function() {
-        return $http.get("http://192.168.99.100/web/modules/custom/bookingform/js/data/countries.json")
+        return $http.get("http://192.168.99.100/web/modules/custom/bookingform/js/bookingFormApp/data/countries.json")
         .then(function(response) {
             return response.data;
         });
