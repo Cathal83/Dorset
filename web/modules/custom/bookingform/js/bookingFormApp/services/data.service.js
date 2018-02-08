@@ -1,11 +1,19 @@
-bookingformJS.factory("dataService", function($http) {
+bookingformJS.service("dataService", function($http, $filter) {
 
     //Get all website Products
     var Products = function() {
-        return $http.get("http://192.168.99.100/web/ng-course")
+        return $http.get("http://192.168.99.100/web/modules/custom/bookingform/js/bookingFormApp/data/products.json")
         .then(function(response) {
             return response.data;
         });
+    }
+
+    var ProductData = function(productnid) {
+        return $http.get("http://192.168.99.100/web/modules/custom/bookingform/js/bookingFormApp/data/products.json")
+        .then(function(response) {
+            var productData = $filter('filter')(response.data, { nid: productnid }, true);
+            return productData;
+        })
     }
 
     var Countries = function() {
@@ -16,6 +24,8 @@ bookingformJS.factory("dataService", function($http) {
     }
     return {
         getProducts: Products,
+        getProductData: ProductData,
         getCountries: Countries
     };
+
 })

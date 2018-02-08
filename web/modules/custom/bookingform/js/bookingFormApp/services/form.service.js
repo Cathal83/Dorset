@@ -1,10 +1,15 @@
-bookingformJS.service("formService", function($filter) {
+bookingformJS.service("formService", function($filter, $location, dataService) {
 
-    this.courseDelivery = function(coursenid, products) {
+    var productDelivery = function(coursenid, products) {
 
         var courseDelivery = $filter('filter')(products, {nid: coursenid }, true);
         return courseDelivery;
 
     }
+
+    return {
+        productDelivery: productDelivery
+
+    };
 
 })

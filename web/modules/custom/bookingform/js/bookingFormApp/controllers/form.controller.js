@@ -6,35 +6,45 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     deliverymode: null
 
   }
+  
   /**
    * 
    * Show or hide Product selection depending if there's a product id passed on url
-   * or not.
+   * or not. If it's passed display course, else load all courses
    * 
   **/
-  // Search for course nid on URL
-  var coursenid = $location.search();
-  console.log(coursenid.nid);
-  if(!coursenid) {
+  if($location.search().nid !== undefined){
+    
     $scope.showProductSel = false;
+    // Get product ID from URL
+    var productnid = $location.search().nid;
+
+    // Get Product Data from ID
+    dataService.getProductData(productnid).then(function(response){
+      var product = response;
+      $scope.productName = product[0].title;
+      console.log(product[0].title);
+    });
+    
   }
-  else {
+  else{
+
     $scope.showProductSel = true;
-  }
+    // Get Products data
+    dataService.getProducts().then(function(response) {
+
+      $scope.products = response;
   
-  // Get Data from services
-  dataService.getProducts().then(function(response) {
+    });
 
-    $scope.products = response;
-
-  });
+  }
 
   // Get Countries list
-  dataService.getCountries().then(function(response){
+  dataService.getCountries().then(function(response) {
 
     $scope.countries = response;
 
-  })
+  });
 
   // Return Product chosen information
   $scope.productIsolate = function(productnid, user) {
@@ -44,7 +54,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     // Hide Product Select
     $scope.showProductSel = false;
 
-    var productInfo = formService.courseDelivery(productnid, $scope.products);
+    var productInfo = formService.productDelivery(productnid, $scope.products);
 
     $scope.productInfo = productInfo;
     $scope.productName = productInfo[0].title;
