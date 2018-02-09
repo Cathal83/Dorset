@@ -1,9 +1,9 @@
 bookingformJS.service("formService", function($filter, $location, dataService) {
 
-    var productDelivery = function(coursenid, products) {
+    var productDelivery = function(productnid, products) {
 
-        var courseDelivery = $filter('filter')(products, {nid: coursenid }, true);
-        return courseDelivery;
+        var productDelivery = $filter('filter')(products, { nid: productnid }, true);
+        return productDelivery;
 
     }
 

@@ -6,58 +6,42 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     deliverymode: null
 
   }
-  
+
+  $scope.showProductSel = true;
+
   /**
-   * 
-   * Show or hide Product selection depending if there's a product id passed on url
-   * or not. If it's passed display course, else load all courses
-   * 
-  **/
-  if($location.search().nid !== undefined){
-    
-    $scope.showProductSel = false;
-    // Get product ID from URL
-    var productnid = $location.search().nid;
-
-    // Get Product Data from ID
-    dataService.getProductData(productnid).then(function(response){
-      var product = response;
-      $scope.productName = product[0].title;
-      console.log(product[0].title);
-    });
-    
-  }
-  else{
-
-    $scope.showProductSel = true;
-    // Get Products data
+   * Functions that get data from JSON
+   * callable by function
+   */
+  var getProducts = function() {
     dataService.getProducts().then(function(response) {
 
       $scope.products = response;
   
     });
-
   }
 
-  // Get Countries list
-  dataService.getCountries().then(function(response) {
+  var getCountries = function() {
+    dataService.getCountries().then(function(response) {
 
-    $scope.countries = response;
+      $scope.countries = response;
+  
+    });
+  }
 
-  });
-
-  // Return Product chosen information
+  // Gets product delivery types based on product chosen/selected
   $scope.productIsolate = function(productnid, user) {
     
     // Reset delivery mode value
     $scope.user.deliverymode = null;
     // Hide Product Select
     $scope.showProductSel = false;
-
+    
     var productInfo = formService.productDelivery(productnid, $scope.products);
 
     $scope.productInfo = productInfo;
-    $scope.productName = productInfo[0].title;
+    $scope.user.productName = productInfo[0].title;
+    $scope.user.application = productInfo[0].application_type;
 
     // In case only one option it selects it by default
     if(productInfo.length == 1) {
@@ -69,10 +53,52 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
   }
 
   /**
+   * 
+   * Show or hide Product selection depending if there's a product id passed on url
+   * or not. If it's passed display course, else load all courses
+   * 
+  **/
+  if($location.search().nid !== undefined){
+    
+    // Get product ID from URL
+    var productnid = $location.search().nid;
+    
+    // Get Product Data from ID
+    dataService.getProductData(productnid).then(function(response){
+
+      if(response.length > 0) {
+
+        var productInfo = response;
+        // Scope everything
+        $scope.showProductSel = false;
+        $scope.user.productnid = productInfo[0].nid;
+        $scope.user.productName = productInfo[0].title;
+        $scope.user.application = productInfo[0].application_type;
+        $scope.productInfo = productInfo;
+
+        // In case only one option it selects it by default
+        if(productInfo.length == 1) {
+
+          $scope.user.deliverymode = productInfo[0].delivery_mode;
+
+        } else { }
+
+      }
+      else {
+        getProducts();
+      }
+
+    });
+    
+  }
+  else{
+    getProducts();
+  }
+
+  /**
    * Form Steps Validation
    * Also view loading based on current template/view
   **/
-
   $scope.formData = {};
   $scope.formStepSubmitted = false;
   
@@ -83,7 +109,13 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     switch (currentState) {
 
       case 'bookingForm' :
-        return 'bookingSteps'
+        // In case deposit or Documents application needed
+        if($scope.user.application == "Documents Review Needed") {
+          return 'steps-application'
+        }
+        else {
+          return 'steps-deposit'
+        }
         break;
 
       case 'bookingSteps' :
@@ -94,7 +126,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
   }
 
   // Gets the form current step
-  var updateValidityOfCurrentStep=function(updatedValidity) {
+  var updateValidityOfCurrentStep = function(updatedValidity) {
 
     var currentStateIndex = _.findIndex(formSteps, function(formStep) {
       return formStep.uiSref === $state.current.name;

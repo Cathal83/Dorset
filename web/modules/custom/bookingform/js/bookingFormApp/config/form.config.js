@@ -9,16 +9,22 @@ bookingformJS.config(function($stateProvider, $urlRouterProvider) {
             templateUrl : '/web/modules/custom/bookingform/js/bookingFormApp/templates/_booking-details.html'
         })
 
-        .state('bookingSteps', {
+        .state('steps-deposit', {
             url : '/bookingsteps',
-            templateUrl : '/web/modules/custom/bookingform/js/bookingFormApp/templates/_booking-steps.html'
+            templateUrl : '/web/modules/custom/bookingform/js/bookingFormApp/templates/_steps-deposit.html'
+        })
+
+        .state('steps-application', {
+            url : '/bookingsteps',
+            templateUrl : '/web/modules/custom/bookingform/js/bookingFormApp/templates/_steps-application.html'
         })
         
 })
 
 bookingformJS.value('formSteps', [
     { uiSref: 'bookingForm', valid: false },
-    { uiSref: 'bookingSteps', valid: false }
+    { uiSref: 'steps-application', valid: false },
+    { uiSref: 'steps-deposit', valid: false }
 ])
   
 bookingformJS.run([

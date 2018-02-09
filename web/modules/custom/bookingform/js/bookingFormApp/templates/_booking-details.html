@@ -2,35 +2,35 @@
   <div class="form-title">
     <h2>Application</h2>
   </div>
-  <!-- Course Select Box -->
+  <!-- product Select Box -->
   <div class="form-fields">
 
-    <!-- Course display -->
-    <div ng-if="user.course">
-        <h1>{{ productName }}</h1>
+    <!-- product display -->
+    <div ng-if="user.productnid">
+        <h1>{{ user.productName }}</h1>
     </div>
 
-    <!-- Select Course -->
+    <!-- Select product -->
     <div class="form-row" ng-show="showProductSel">
       <div class="form-opt">
-        <select ng-model="user.course" name="course" ng-options="course.nid as course.title group by course.faculty for course in products | unique: 'title'" ng-change="productIsolate(user.course)" required>
-           <option value="">Choose your Course</option>
+        <select ng-model="user.productnid" name="product" ng-options="product.nid as product.title group by product.faculty for product in products | unique: 'title'" ng-change="productIsolate(user.productnid)" required>
+           <option value="">Choose your product</option>
         </select>
       </div>
-      <div ng-messages="bookingStepForm.course.$error" ng-if="formStepSubmitted" class="error-msg">
-        <div ng-message="required">Please choose a Course</div>
+      <div ng-messages="bookingStepForm.product.$error" ng-if="formStepSubmitted" class="error-msg">
+        <div ng-message="required">Please choose a product</div>
       </div>
     </div>
 
     <!-- Select delivery Type -->
-    <div class="form-row" ng-if="user.course">
+    <div class="form-row" ng-if="user.productnid">
       <div class="form-opt">
-        <select ng-model="user.deliverymode" name="coursedelivery" ng-options="delivery.delivery_mode as delivery.delivery_mode for delivery in productInfo | unique: 'delivery_mode'" ng-change="" required>
-           <option value="">Choose Course Mode</option>
+        <select ng-model="user.deliverymode" name="productdelivery" ng-options="delivery.delivery_mode as delivery.delivery_mode for delivery in productInfo | unique: 'delivery_mode'" ng-change="" required>
+           <option value="">Choose product Mode</option>
         </select>
       </div>
-      <div ng-messages="bookingStepForm.coursedelivery.$error" ng-if="formStepSubmitted" class="error-msg">
-        <div ng-message="required">Please choose a Course Mode</div>
+      <div ng-messages="bookingStepForm.productdelivery.$error" ng-if="formStepSubmitted" class="error-msg">
+        <div ng-message="required">Please choose a product Mode</div>
       </div>
     </div>
 
@@ -40,7 +40,7 @@
         <input type="email" name="email" ng-model="user.email" placeholder="Your Email" required>
       </div>
       <div ng-messages="bookingStepForm.email.$error" ng-if="formStepSubmitted" class="error-msg">
-          <div ng-message="required">Please choose a Course Mode</div>
+          <div ng-message="required">Please choose a product Mode</div>
       </div>
     </div>
 
