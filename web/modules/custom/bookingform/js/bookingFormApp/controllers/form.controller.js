@@ -8,6 +8,8 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     productName : "Bachelor of Business"
   }
 
+  $scope.showProductSel = true;
+
   /**
    * Functions that get data from JSON
    * callable by function
@@ -38,6 +40,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     var productInfo = formService.productDelivery(productnid, $scope.products);
 
     $scope.productInfo = productInfo;
+    console.log(productInfo);
     $scope.user.productName = productInfo[0].title;
     $scope.user.application = productInfo[0].application_type;
 
@@ -50,6 +53,18 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
 
   }
 
+  /**
+   * 
+   * Get Documents from Product and Delivery chosen
+   * 
+   */
+  var productDocuments = function(productInfo, productDelivery) {
+
+    var docs = formService.productDocuments();
+    console.log(docs);
+    $scope.product = docs;
+
+  }
   /**
    * 
    * Show or hide Product selection depending if there's a product id passed on url
@@ -73,6 +88,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
         $scope.user.productName = productInfo[0].title;
         $scope.user.application = productInfo[0].application_type;
         $scope.productInfo = productInfo;
+        console.log(productInfo);
 
         // In case only one option it selects it by default
         if(productInfo.length == 1) {
@@ -104,13 +120,14 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
   // If validation passes move to the next page
   var nextState = function(currentState) {
     // Check the current page and returns the next
-    console.log(currentState);
     switch (currentState) {
-
+      // Product Selection to Application Steps
       case 'bookingForm' :
         // In case deposit or Documents application needed
         // 33 : Deposit
         // 32 : Documents Review
+        //productDocuments($scope.productInfo, $scope.user.productDelivery);
+        console.log($scope.productInfo, $scope.user.deliverymode);
         if($scope.user.application == "33") {
           return 'steps-application'
         }

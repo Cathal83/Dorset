@@ -7,9 +7,12 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
 
     }
 
-    return {
-        productDelivery: productDelivery
+    var productDocuments = function(productInfo, productDelivery) {
 
+    }
+    return {
+        productDelivery : productDelivery,
+        productDocuments : productDocuments
     };
 
 })
