@@ -1,0 +1,133 @@
+<div class="form-content">
+    <div class="form-title">
+      <h2>Application</h2>
+      <div>
+        <h1>{{ user.productName }}</h1>
+      </div>
+    </div>
+    <!-- Course Select Box -->
+    <div class="form-fields">
+        <h3>Step 1: Personal Details</h3>
+        {{ user }}
+        <!-- Select Course -->
+        <div class="form-wrapper">
+            <div>
+                <h4>Personal Information:</h4>
+            </div>
+            <div class="form-row">
+                <div class="form-opt">
+                    <input type="text" name="firstname" ng-model="user.firstName" placeholder="First Name" required>
+                </div>
+                <div ng-messages="bookingStepForm.firstname.$error" ng-if="formStepSubmitted" class="error-msg">
+                    <div ng-message="required">The field is required.</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-opt">
+                    <input type="text" name="surname" ng-model="user.surname" placeholder="Surname" required>
+                </div>
+                <div ng-messages="bookingStepForm.surname.$error" ng-if="formStepSubmitted" class="error-msg">
+                    <div ng-message="required">The field is required.</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-opt">
+                    <md-datepicker name="dob" ng-model="user.dob" md-current-view="year" md-placeholder="Date of Birth" required></md-datepicker>
+                </div>
+                <div ng-messages="bookingStepForm.dob.$error" ng-if="formStepSubmitted" class="error-msg">
+                    <div ng-message="required">The field is required.</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-opt">
+                    <select name="gender" ng-model="user.gender" placeholder="Gender" required>
+                        <option value="" selected>Gender</option>
+                        <option value="F">Female</option>
+                        <option value="M">Male</option>
+                    </select>
+                </div>
+                <div ng-messages="bookingStepForm.gender.$error" ng-if="formStepSubmitted" class="error-msg">
+                    <div ng-message="required">The field is required.</div>
+                </div>
+            </div>
+            <!-- Country -->
+            <div class="form-row">
+                <div class="form-opt">
+                    <select ng-model="user.country" placeholder="Country of Residence" name="country" ng-options="country.name as country.name for country in countries" required>
+                        <option value="">Country of Residence</option>
+                    </select>
+                </div>
+                <div ng-messages="bookingStepForm.country.$error" ng-if="formStepSubmitted" class="error-msg">
+                    <div ng-message="required">The field is required.</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-wrapper">
+            <div>
+                <h4>Contact Address:</h4>
+            </div>
+            <!-- Address Line 1 -->
+            <div class="form-row">
+                <div class="form-opt">
+                    <input type="text" placeholder="Address Line 1" name="address1" ng-model="user.contactaddress.address1" required>
+                </div>
+                <div ng-messages="bookingStepForm.address1.$error" ng-if="formStepSubmitted" class="error-msg">
+                    <div ng-message="required">The field is required.</div>
+                </div>
+            </div>
+            <!-- County -->
+            <div class="form-row">
+                <div class="form-opt">
+                    <input type="text" placeholder="County" name="county" ng-model="user.contactaddress.county" required>
+                </div>
+                <div ng-messages="bookingStepForm.county.$error" ng-if="formStepSubmitted" class="error-msg">
+                    <div ng-message="required">The field is required.</div>
+                </div>
+            </div>
+            <!-- Address Line 2 -->
+            <div class="form-row">
+                <div class="form-opt">
+                    <input type="text" placeholder="Address Line 2" name="address2" ng-model="user.contactaddress.address2" required>
+                </div>
+                <div ng-messages="bookingStepForm.address2.$error" ng-if="formStepSubmitted" class="error-msg">
+                    <div ng-message="required">The field is required.</div>
+                </div>
+            </div>
+            <!-- Country -->
+            <div class="form-row">
+                <div class="form-opt">
+                    <select ng-model="user.contactaddress.country" placeholder="Country" name="addresscountry" ng-options="country.name as country.name for country in countries" required>
+                        <option value="">Country</option>
+                    </select>
+                </div>
+                <div ng-messages="bookingStepForm.country.$error" ng-if="formStepSubmitted" class="error-msg">
+                    <div ng-message="required">The field is required.</div>
+                </div>
+            </div>
+            <!-- City/ Town -->
+            <div class="form-row">
+                <div class="form-opt">
+                    <input type="text" placeholder="City/ Town" name="city" ng-model="user.contactaddress.city" required>
+                </div>
+                <div ng-messages="bookingStepForm.city.$error" ng-if="formStepSubmitted" class="error-msg">
+                    <div ng-message="required">The field is required.</div>
+                </div>
+            </div>   
+             <!-- Postal Code -->
+             <div class="form-row">
+                <div class="form-opt">
+                    <input type="text" placeholder="Postal Code" name="postalcode" ng-model="user.contactaddress.postalcode" required>
+                </div>
+                <div ng-messages="bookingStepForm.postalcode.$error" ng-if="formStepSubmitted" class="error-msg">
+                    <div ng-message="required">The field is required.</div>
+                </div>
+            </div>           
+        </div>
+        <!-- Proceed Button -->
+        <div class="bookingform-btn">
+            <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Back</a>
+            <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Continue</a>
+        </div>
+    </div>
+  </div>
+  

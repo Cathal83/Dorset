@@ -1,0 +1,22 @@
+<div class="form-content">
+    <div class="form-title">
+        <h2>Application</h2>
+        <div>
+        <h1>{{ user.productName }}</h1>
+        </div>
+    </div>
+    <!-- Course Select Box -->
+    <div class="form-fields">
+        <h3>Step 2: Required Documents</h3>
+        {{ user }}
+        <input type="file" name="user.document" />  
+        <button ng-click="add()">Upload</button> 
+    </div>
+        <!-- Proceed Button -->
+        <div class="bookingform-btn">
+            <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Back</a>
+            <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Continue</a>
+        </div>
+    </div>
+</div>
+      

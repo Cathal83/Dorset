@@ -3,11 +3,10 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
    * Default user settings
    */
   $scope.user = {
-    deliverymode: null
-
+    date : new Date(),
+    deliverymode : null,
+    productName : "Bachelor of Business"
   }
-
-  $scope.showProductSel = true;
 
   /**
    * Functions that get data from JSON
@@ -21,13 +20,12 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     });
   }
 
-  var getCountries = function() {
-    dataService.getCountries().then(function(response) {
+  // Get countries list
+  dataService.getCountries().then(function(response) {
 
-      $scope.countries = response;
-  
-    });
-  }
+    $scope.countries = response;
+
+  });
 
   // Gets product delivery types based on product chosen/selected
   $scope.productIsolate = function(productnid, user) {
@@ -106,20 +104,31 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
   // If validation passes move to the next page
   var nextState = function(currentState) {
     // Check the current page and returns the next
+    console.log(currentState);
     switch (currentState) {
 
       case 'bookingForm' :
         // In case deposit or Documents application needed
-        if($scope.user.application == "Documents Review Needed") {
+        // 33 : Deposit
+        // 32 : Documents Review
+        if($scope.user.application == "33") {
           return 'steps-application'
         }
         else {
           return 'steps-deposit'
         }
         break;
-
+      // Pass to Student Detaisl
       case 'bookingSteps' :
         return 'studentDetails'
+        break;
+      // Goes to Deposit/ Application depending on Course
+      case 'steps-deposit' : case 'steps-application' :
+        return 'customer-details'
+        break;
+      // Documents Sumissions
+      case 'customer-details' :
+        return 'customer-files'
         break;
 
     }
