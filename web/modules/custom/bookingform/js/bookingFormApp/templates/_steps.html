@@ -1,0 +1,51 @@
+<div class="form-content">
+    <div class="form-title">
+      <h2>Application</h2>
+    </div>
+    <!-- Course Select Box -->
+    <div class="form-fields">
+        {{ productData }}
+        <!-- Course display -->
+        <div ng-if="user.productnid">
+            <h1>{{ user.productName }}</h1>
+        </div>
+        <div>
+            <h2>What you may need</h2>
+        </div>
+        <!--
+        *
+        * if productData lenght higher than means the course needs document in order
+        * to apply or payment.
+        * 
+        * productData.Application 33 : Application needed - deposit/payment no available
+        * productData.Application 32 : Deposit/ Payment available 
+        *
+        -->
+        <ul>
+            <div ng-repeat="step in steps">
+                {{ $index }}
+                <li ng-if="$index == 0">
+                    <div>{{ $index + 1 }} {{ step }}</div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </li>
+                <li ng-if="$index == 1 && productData[0].document !== ''">
+                    <div>{{ $index + 1 }} {{ step }}</div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </li>
+                <li ng-if="$index == 2 && productData[0].application_type == 32">
+                    <div>{{ $index + 1 }} {{ step }}</div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </li>
+                <li ng-if="$index == 3">
+                    <div>{{ $index + 1 }} {{ step }}</div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </li>
+            </div>    
+        </ul>
+        <!-- Proceed Button -->
+        <div class="bookingform-btn">
+            <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Start</a>
+        </div>
+    </div>
+  </div>
+  
