@@ -25,7 +25,7 @@
     <!-- Select delivery Type -->
     <div class="form-row" ng-if="user.productnid">
       <div class="form-opt">
-        <select ng-model="user.deliverymode" name="productdelivery" ng-options="delivery.delivery_mode as delivery.delivery_mode for delivery in productInfo | unique: 'delivery_mode'" ng-change="" required>
+        <select ng-model="user.deliverymode" name="productdelivery" ng-options="delivery.delivery_mode as delivery.delivery_mode for delivery in productData | unique: 'delivery_mode'" ng-change="" required>
            <option value="">Choose product Mode</option>
         </select>
       </div>

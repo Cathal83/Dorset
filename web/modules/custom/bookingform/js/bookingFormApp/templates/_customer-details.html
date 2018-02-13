@@ -7,8 +7,7 @@
     </div>
     <!-- Course Select Box -->
     <div class="form-fields">
-        <h3>Step 1: Personal Details</h3>
-        {{ user }}
+        <h3>Step {{ step }}: Personal Details</h3>
         <!-- Select Course -->
         <div class="form-wrapper">
             <div>
@@ -16,7 +15,7 @@
             </div>
             <div class="form-row">
                 <div class="form-opt">
-                    <input type="text" name="firstname" ng-model="user.firstName" placeholder="First Name" required>
+                    <input type="text" name="firstname" ng-model="user.firstname" placeholder="First Name" required>
                 </div>
                 <div ng-messages="bookingStepForm.firstname.$error" ng-if="formStepSubmitted" class="error-msg">
                     <div ng-message="required">The field is required.</div>

@@ -5,9 +5,26 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
   $scope.user = {
     date : new Date(),
     deliverymode : null,
-    productName : "Bachelor of Business"
+    productName : "Bachelor of Business",
+    firstname : "Javier",
+    surname : "Torrado",
+    country : "Ireland",
+    email : "chavi809@gmail.com",
+    dob : "2018-08-01",
+    gender : "F",
+    contactaddress : {
+      address1 : "Flat 2",
+      address2 : "13 Dalymount",
+      county : "Dublin",
+      country : "Ireland",
+      city : "Dublin",
+      postalcode : "D7"
+    }
   }
-
+  /**
+   * Step number and show product select
+   */
+  $scope.step = "1";
   $scope.showProductSel = true;
 
   /**
@@ -37,17 +54,16 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     // Hide Product Select
     $scope.showProductSel = false;
     
-    var productInfo = formService.productDelivery(productnid, $scope.products);
+    var productData = formService.productDelivery(productnid, $scope.products);
 
-    $scope.productInfo = productInfo;
-    console.log(productInfo);
-    $scope.user.productName = productInfo[0].title;
-    $scope.user.application = productInfo[0].application_type;
+    $scope.productData = productData;
+    $scope.user.productName = productData[0].title;
+    $scope.user.application = productData[0].application_type;
 
     // In case only one option it selects it by default
-    if(productInfo.length == 1) {
+    if(productData.length == 1) {
 
-      $scope.user.deliverymode = productInfo[0].delivery_mode;
+      $scope.user.deliverymode = productData[0].delivery_mode;
 
     } else { }
 
@@ -58,11 +74,11 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
    * Get Documents from Product and Delivery chosen
    * 
    */
-  var productDocuments = function(productInfo, productDelivery) {
+  var productDocuments = function(productData, productDelivery) {
 
-    var docs = formService.productDocuments();
+    var docs = formService.productDocuments(productData, productDelivery);
     console.log(docs);
-    $scope.product = docs;
+    $scope.productData = docs;
 
   }
   /**
@@ -81,19 +97,18 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
 
       if(response.length > 0) {
 
-        var productInfo = response;
+        var productData = response;
         // Scope everything
         $scope.showProductSel = false;
-        $scope.user.productnid = productInfo[0].nid;
-        $scope.user.productName = productInfo[0].title;
-        $scope.user.application = productInfo[0].application_type;
-        $scope.productInfo = productInfo;
-        console.log(productInfo);
+        $scope.user.productnid = productData[0].nid;
+        $scope.user.productName = productData[0].title;
+        $scope.user.application = productData[0].application_type;
+        $scope.productData = productData;
 
         // In case only one option it selects it by default
-        if(productInfo.length == 1) {
+        if(productData.length == 1) {
 
-          $scope.user.deliverymode = productInfo[0].delivery_mode;
+          $scope.user.deliverymode = productData[0].delivery_mode;
 
         } else { }
 
@@ -123,21 +138,21 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     switch (currentState) {
       // Product Selection to Application Steps
       case 'bookingForm' :
-        // In case deposit or Documents application needed
-        // 33 : Deposit
-        // 32 : Documents Review
-        //productDocuments($scope.productInfo, $scope.user.productDelivery);
-        console.log($scope.productInfo, $scope.user.deliverymode);
-        if($scope.user.application == "33") {
+        // Get products needed for course application
+        var productData = productDocuments($scope.productData, $scope.user.deliverymode);
+        console.log(productData);
+        $scope.productData = productData;
+        /** 
+         * In case deposit or Documents application needed
+         * 33 : Deposit
+         * 32 : Documents Review
+        **/
+         if($scope.user.application == "33") {
           return 'steps-application'
         }
         else {
           return 'steps-deposit'
         }
-        break;
-      // Pass to Student Detaisl
-      case 'bookingSteps' :
-        return 'studentDetails'
         break;
       // Goes to Deposit/ Application depending on Course
       case 'steps-deposit' : case 'steps-application' :
@@ -145,7 +160,13 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
         break;
       // Documents Sumissions
       case 'customer-details' :
-        return 'customer-files'
+        // if documents needed go to documents submissions, if not payment
+        if(productData.document == ""){
+          return 'payment';
+        }
+        else {
+          return 'customer-files'
+        }
         break;
 
     }

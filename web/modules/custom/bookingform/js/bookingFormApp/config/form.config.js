@@ -28,6 +28,11 @@ bookingformJS.config(function($stateProvider, $urlRouterProvider) {
             url : '/documents',
             templateUrl : '/web/modules/custom/bookingform/js/bookingFormApp/templates/_documents.html'
         })
+
+        .state('payment',{
+            url : '/payment',
+            templateUrl : '/web/modules/custom/bookingform/js/bookingFormApp/templates/_payment.html'
+        })
         
 })
 

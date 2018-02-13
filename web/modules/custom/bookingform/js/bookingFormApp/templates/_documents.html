@@ -3,14 +3,18 @@
         <h2>Application</h2>
         <div>
         <h1>{{ user.productName }}</h1>
+        {{ productData }}
         </div>
     </div>
     <!-- Course Select Box -->
     <div class="form-fields">
         <h3>Step 2: Required Documents</h3>
-        {{ user }}
-        <input type="file" name="user.document" />  
-        <button ng-click="add()">Upload</button> 
+        <div class="form-opt" ng-repeat="product in productData">
+            <div>
+                <div>{{ product.document }}</div>
+                <input name="{[ product.document }}" type="file">
+            </div>
+        </div>  
     </div>
         <!-- Proceed Button -->
         <div class="bookingform-btn">
