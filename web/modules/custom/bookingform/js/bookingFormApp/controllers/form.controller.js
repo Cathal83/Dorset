@@ -1,4 +1,4 @@
-bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $location, $controller, dataService, formService, formSteps) {
+bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $location, $controller, dataService, formService, formSteps, Upload) {
   /**
    * Default user settings
    */
@@ -22,6 +22,8 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     }
   }
 
+  $scope.productData = [{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'Evidence of Prior Learning'},{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'English Proficiency'},{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'High School Transcripts'}]
+  $scope.docs = [];
   $scope.showProductSel = true;
 
   /**
@@ -117,7 +119,23 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     $scope.steps = steps;
 
   }
-
+  /**
+   * Upload documents settings
+  **/
+  $scope.uploadDocs = function(files){
+    // Number of files
+    var n = files.length;
+    console.log(n);
+    for (var i=0; i<n; i++) {
+      console.log(files[n]);
+    }
+    /**
+    file.upload = Upload.upload({
+      url: 'http://192.168.99.100/web/sites/default/files/dcbookingform',
+      data: {}
+    });
+    */
+  }
   /**
    * Controller for Templates and Form Steps
   */

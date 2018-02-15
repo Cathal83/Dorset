@@ -1,2 +1,2 @@
-var bookingformJS = angular.module('BookingForm', ['ui.router', 'angular.filter', 'ngMaterial']);
+var bookingformJS = angular.module('BookingForm', ['ui.router', 'angular.filter', 'ngMaterial', 'ngFileUpload']);
  

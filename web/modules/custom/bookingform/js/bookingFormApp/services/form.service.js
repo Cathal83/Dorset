@@ -20,20 +20,20 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
          */
         var steps = {
             1 : {
-            title: "Personal Details",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                title: "Personal Details",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             2 : {
-            title: "Required Documents",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                title: "Required Documents",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             3 : {
-            title: "Payment/ Deposit",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                title: "Payment/ Deposit",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             4 : {
-            title: "Completion!",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                title: "Completion!",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             }
         }
         /**

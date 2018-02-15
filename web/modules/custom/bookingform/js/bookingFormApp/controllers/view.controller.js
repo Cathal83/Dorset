@@ -25,7 +25,8 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
       // Documents Sumissions
       case 'customer-details' :
         // if documents needed go to documents submissions, if not payment
-        if(productData.document == ""){
+        console.log($scope.productData);
+        if($scope.productData.document == ""){
           return 'payment';
         }
         else {
