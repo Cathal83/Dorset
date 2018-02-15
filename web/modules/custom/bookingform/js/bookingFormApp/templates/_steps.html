@@ -12,34 +12,12 @@
         <div>
             <h2>What you may need</h2>
         </div>
-        <!--
-        *
-        * if productData lenght higher than means the course needs document in order
-        * to apply or payment.
-        * 
-        * productData.Application 33 : Application needed - deposit/payment no available
-        * productData.Application 32 : Deposit/ Payment available 
-        *
-        -->
         <ul>
             <div ng-repeat="step in steps">
-                {{ $index }}
-                <li ng-if="$index == 0">
-                    <div>{{ $index + 1 }} {{ step }}</div>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                </li>
-                <li ng-if="$index == 1 && productData[0].document !== ''">
-                    <div>{{ $index + 1 }} {{ step }}</div>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                </li>
-                <li ng-if="$index == 2 && productData[0].application_type == 32">
-                    <div>{{ $index + 1 }} {{ step }}</div>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                </li>
-                <li ng-if="$index == 3">
-                    <div>{{ $index + 1 }} {{ step }}</div>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                </li>
+                <h3>{{ $index + 1 }}. {{ step.title }}</h3>
+                <div>
+                    <span>{{ step.description }}</span>
+                </div>
             </div>    
         </ul>
         <!-- Proceed Button -->

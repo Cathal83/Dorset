@@ -21,15 +21,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
       postalcode : "D7"
     }
   }
-  /**
-   * Step number and show product select
-   */
-  $scope.steps = {
-    1 : "Personal Details",
-    2 : "Required Documents",
-    3 : "Deposit/ Payment",
-    4 : "Completion!"
-  }
+
   $scope.showProductSel = true;
 
   /**
@@ -60,7 +52,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     $scope.user.productnid = productData[0].nid;
     $scope.user.productName = productData[0].title;
     $scope.user.application = productData[0].application_type;
-    
+
     // In case only one option it selects it by default
     if(productData.length == 1) {
 
@@ -119,10 +111,10 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
   */
   var productDocuments = function(productData, productDelivery) {
 
-    var docs = formService.productDocuments(productData, productDelivery);
-    console.log(docs);
-    $scope.productData = docs;
-    return docs;
+    var productData = formService.productDocuments(productData, productDelivery);
+    var steps = formService.getSteps(productData);
+    $scope.productData = productData;
+    $scope.steps = steps;
 
   }
 
