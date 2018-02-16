@@ -131,7 +131,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
       var file = docs[i]
       console.log(file);
       file.upload = Upload.upload({
-        url: 'http://192.168.99.100/web/sites/default/files/dcbookingform/upload.php',
+        url: 'http://192.168.99.100/web/entity/file',
         method: 'POST',
         file: file,
         headers: {
