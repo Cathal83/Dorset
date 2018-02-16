@@ -122,19 +122,33 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
   /**
    * Upload documents settings
   **/
-  $scope.uploadDocs = function(files){
+  $scope.uploadDocs = function(){
     // Number of files
-    var n = files.length;
-    console.log(n);
+    var n = $scope.docs.length;
+    var docs = $scope.docs;
+
     for (var i=0; i<n; i++) {
-      console.log(files[n]);
+      var file = docs[i]
+      console.log(file);
+      file.upload = Upload.upload({
+        url: 'http://192.168.99.100/web/sites/default/files/dcbookingform/upload.php',
+        method: 'POST',
+        file: file,
+        headers: {
+          "Contet-Disposition": 'attachment; filename=' + file.name,
+          "Content-Type": file.type,
+          "Cache-Control": "no-cache",
+          "Data-Binary": file.name
+        },
+        data: { 
+          'targetPath' : '/documents/'
+        }
+      }).then(function (resp) {
+        console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+      }, function (resp) {
+          console.log('Error status: ' + resp.status);
+      });
     }
-    /**
-    file.upload = Upload.upload({
-      url: 'http://192.168.99.100/web/sites/default/files/dcbookingform',
-      data: {}
-    });
-    */
   }
   /**
    * Controller for Templates and Form Steps

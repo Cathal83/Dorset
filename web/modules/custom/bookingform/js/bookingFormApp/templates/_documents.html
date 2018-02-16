@@ -12,7 +12,6 @@
             <div>
                 <div>{{ $index + 1 }}. {{ product.document }}</div>
                 <button type="button" ng-model="docs[$index]" ngf-select ngf-max-size="2MB">Upload</button>
-                {{ docs[$index] }}
                 <div ngf-drop>Remove</div>
             </div>
         </div>  
@@ -21,7 +20,7 @@
         <!-- Proceed Button -->
         <div class="bookingform-btn">
             <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Back</a>
-            <a class="booking-next" ng-click="uploadDocs(docs)" href="">Continue</a>
+            <a class="booking-next" ng-click="uploadDocs()" href="">Continue</a>
         </div>
     </div>
 </div>
