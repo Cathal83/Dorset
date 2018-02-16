@@ -136,7 +136,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
         file: file,
         headers: {
           "Contet-Disposition": 'attachment; filename=' + file.name,
-          "Content-Type": file.type,
+          "Content-Type": 'application/hal+json',
           "Cache-Control": "no-cache",
           "Data-Binary": file.name
         },
