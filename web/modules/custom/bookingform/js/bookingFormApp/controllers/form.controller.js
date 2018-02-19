@@ -128,20 +128,23 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     var docs = $scope.docs;
 
     for (var i=0; i<n; i++) {
-      var file = docs[i]
+      var file = $scope.docs[i]
       console.log(file);
       file.upload = Upload.upload({
-        url: 'http://192.168.99.100/web/entity/file',
+        url: 'http://192.168.99.100/web/jsonapi/file/document',
         method: 'POST',
-        file: file,
-        headers: {
-          "Contet-Disposition": 'attachment; filename=' + file.name,
-          "Content-Type": 'application/hal+json',
-          "Cache-Control": "no-cache",
-          "Data-Binary": file.name
+        data: {
+          "data": {
+            "type": "file--document",
+            "attributes": {
+              "data": "SGV5LCBpdCB3b3JrcyE=",
+              "uri": "public://dcbookingform/documents/filename.jpeg"
+            }
+          }
         },
-        data: { 
-          'targetPath' : '/documents/'
+        headers: {
+          "Content-Type": "application/vnd.api+json",
+          "Accept": "application/vnd.api+json"
         }
       }).then(function (resp) {
         console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);

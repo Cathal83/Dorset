@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9faa39dd58cf2368372498fe9bf6fce6",
+    "content-hash": "b2edc52658ad8a85b8cdd12ff5fa3a77",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4139,17 +4139,11 @@
         },
         {
             "name": "drupal/webform",
-            "version": "5.0.0-rc2",
+            "version": "dev-5.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/webform",
-                "reference": "8.x-5.0-rc2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.0-rc2.zip",
-                "reference": "8.x-5.0-rc2",
-                "shasum": "3ac1dae6ca5df82608981b3cfbca5c7ca1217ca7"
+                "reference": "3a4178a2ee4a9380075b72fd69a1c6f6d4a3b4a0"
             },
             "require": {
                 "drupal/contribute": "^1.0",
@@ -4167,11 +4161,11 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.0-rc2",
-                    "datestamp": "1517359384",
+                    "version": "8.x-5.0-rc3+40-dev",
+                    "datestamp": "1518727980",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
@@ -4191,8 +4185,13 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "Liam Morland",
-                    "homepage": "https://www.drupal.org/user/493050"
+                    "name": "Alexander Trotsenko (bucefal91)",
+                    "homepage": "https://www.drupal.org/u/bucefal91",
+                    "role": "Co-maintainer"
+                },
+                {
+                    "name": "bucefal91",
+                    "homepage": "https://www.drupal.org/user/504128"
                 },
                 {
                     "name": "fenstrat",
@@ -4230,7 +4229,51 @@
                 "issues": "https://www.drupal.org/project/issues/webform?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/webform",
                 "forum": "https://drupal.stackexchange.com/questions/tagged/webform"
-            }
+            },
+            "time": "2018-02-15T21:36:24+00:00"
+        },
+        {
+            "name": "drupal/webform_rest",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/webform_rest",
+                "reference": "86b853440d28a43dcb2c6e35e5615ea7c7e89f35"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/webform": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.x-dev",
+                    "datestamp": "1515536885",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "imclean",
+                    "homepage": "https://www.drupal.org/user/112588"
+                }
+            ],
+            "description": "Allows retrieving webform elements and submitting webforms via REST",
+            "homepage": "https://www.drupal.org/project/webform_rest",
+            "support": {
+                "source": "http://cgit.drupalcode.org/webform_rest"
+            },
+            "time": "2018-01-09T22:24:45+00:00"
         },
         {
             "name": "drush/drush",
@@ -9056,7 +9099,8 @@
         "drupal/facebook_pixel": 15,
         "drupal/file_entity": 10,
         "drupal/page_manager": 10,
-        "drupal/webform": 5
+        "drupal/webform": 20,
+        "drupal/webform_rest": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
