@@ -143,6 +143,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
           }
         },
         headers: {
+          "Authorization": "Basic d2ViZm9ybV91c2VyOmttdm90UWZLa1BtQ2VRWTNmfUti",
           "Content-Type": "application/vnd.api+json",
           "Accept": "application/vnd.api+json"
         }
