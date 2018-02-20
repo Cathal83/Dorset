@@ -30,7 +30,6 @@
         "drupal/facebook_pixel": "^1.0@alpha",
         "drupal/field_group": "^1.0",
         "drupal/file_entity": "^2.0@beta",
-        "drupal/file_permissions": "^1.0",
         "drupal/geolocation": "^1.11",
         "drupal/google_analytics": "^2.2",
         "drupal/jsonapi_file": "^1.1",
