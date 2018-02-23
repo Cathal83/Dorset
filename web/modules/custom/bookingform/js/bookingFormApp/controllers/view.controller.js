@@ -25,7 +25,6 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
       // Documents Sumissions
       case 'customer-details' :
         // if documents needed go to documents submissions, if not payment
-        console.log($scope.productData);
         if($scope.productData.document == ""){
           return 'payment';
         }
@@ -33,16 +32,20 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
           return 'customer-files'
         }
         break;
+      // Go to Payment from Customer Documents
+      case 'customer-files' :
+        return 'payment';
 
     }
   }
 
   // Gets the form current step
   var updateValidityOfCurrentStep = function(updatedValidity) {
-
+  
     var currentStateIndex = _.findIndex(formSteps, function(formStep) {
       return formStep.uiSref === $state.current.name;
     });
+
     formSteps[currentStateIndex].valid = updatedValidity;
 
   };

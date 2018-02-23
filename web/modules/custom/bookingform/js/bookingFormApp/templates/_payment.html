@@ -1,0 +1,25 @@
+<div class="form-content">
+    <div class="form-title">
+        <h2>Application</h2>
+        <div>
+            <h1>{{ user.productName }}</h1>
+            {{ user }}
+        </div>
+    </div>
+    <div class="form-fields">
+        <h3>Step 3: Fees & Deposit</h3>
+        <div class="form-row">
+            <div class="form-opt">
+                
+            </div>
+        </div> 
+        <div class="form-row">
+            <h4>Enter Your Card Details:</h4>
+            <select ng-mode="user.payment.cardtype">
+                <option>Choose a Payment Method</option>
+                <option>Visa</option>
+                <option>MasterCard</option>
+            </select>
+        </div> 
+    </div>
+</div>

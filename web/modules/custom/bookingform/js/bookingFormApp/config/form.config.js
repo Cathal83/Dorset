@@ -35,7 +35,8 @@ bookingformJS.value('formSteps', [
     { uiSref: 'bookingForm', valid: false },
     { uiSref: 'steps', valid: false },
     { uiSref: 'customer-details', valid: false },
-    { uiSref: 'documents', valid: false }
+    { uiSref: 'customer-files', valid: false },
+    { uiSref: 'payment', valid: false}
 ])
   
 bookingformJS.run([

@@ -8,20 +8,28 @@
     <!-- Course Select Box -->
     <div class="form-fields">
         <h3>Step 2: Required Documents</h3>
-        <div class="form-opt" ng-repeat="product in productData">
-            <div>
-                <div>{{ $index + 1 }}. {{ product.document }}</div>
-                <button type="button" ng-model="docs[$index]" ngf-select ngf-max-size="2MB">Upload</button>
-                <div ngf-drop>Remove</div>
-            </div>
-        </div>  
-        {{ docs }}
+        <div class="form-row">
+            <div class="form-opt" ng-repeat="product in productData">
+                <div>
+                    <div>
+                        <span>{{ $index + 1 }}. {{ product.document }}</span><button type="file" name="docs{{$index}}" ng-model="user.docs[$index]" ngf-select ngf-change="docSize(user.docs[$index], $index)" required>Upload</button>
+                    </div>
+                    <ul ng-show="user.docs[$index]">
+                        <li>{{ user.docs[$index].name }}</li>
+                    </ul>
+                    <div ng-click="user.docs[$index] = null" ng-show="user.docs[$index]">Delete</div>
+                    <i ng-show="maxSize[$index]">File is too large, max 5Mb</i>
+                    <div ng-messages="bookingStepForm['docs' + $index].$error" ng-if="formStepSubmitted" class="error-msg">
+                        <div ng-message="required">This document is required.</div>
+                    </div>
+                </div>
+            </div>  
+        </div> 
     </div>
         <!-- Proceed Button -->
         <div class="bookingform-btn">
             <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Back</a>
-            <a class="booking-next" ng-click="uploadDocs()" href="">Continue</a>
+            <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)"href="">Continue</a>
         </div>
     </div>
 </div>
-      

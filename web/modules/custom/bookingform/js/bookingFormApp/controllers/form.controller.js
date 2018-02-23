@@ -4,8 +4,8 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
    */
   $scope.user = {
     date : new Date(),
-    deliverymode : null,
     productName : "Bachelor of Business",
+    deliveryMode : "Part-Time",
     firstname : "Javier",
     surname : "Torrado",
     country : "Ireland",
@@ -22,9 +22,10 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     }
   }
 
-  $scope.productData = [{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'Evidence of Prior Learning'},{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'English Proficiency'},{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'High School Transcripts'}]
-  $scope.docs = [];
+  $scope.productData = [{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'Evidence of Prior Learning'},{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'English Proficiency'},{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'High School Transcripts'}];
   $scope.showProductSel = true;
+  $scope.user.docs;
+  $scope.maxSize = [];
 
   /**
    * Functions that get data from JSON
@@ -117,30 +118,47 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
     var steps = formService.getSteps(productData);
     $scope.productData = productData;
     $scope.steps = steps;
-
+  
   }
   /**
-   * Upload documents settings
+   * Upload documents settings and errors
+   * Give error in case the document is too big
   **/
+  $scope.docSize = function(doc, n){
+
+    if (doc != null) {
+
+      var size = doc.size / 1000000;
+
+      if (size > 5) {
+        $scope.user.docs[n] = null;
+        $scope.maxSize[n] = "error"; // send error
+      }
+      else {
+        $scope.maxSize[n] = null;
+      }
+
+    } else {}
+
+  }
+
   $scope.uploadDocs = function(){
     // Number of files
     var n = $scope.docs.length;
     var docs = $scope.docs;
-
+    /**
+    UPLOAD FILES TO SERVER
     for (var i=0; i<n; i++) {
       var file = $scope.docs[i]
       console.log(file);
-      file.upload = Upload.upload({
+      file.upload = Upload.http({
         url: 'http://192.168.99.100/web/jsonapi/file/document',
         method: 'POST',
         data: {
-          "data": {
-            "type": "file--document",
-            "attributes": {
-              "data": "SGV5LCBpdCB3b3JrcyE=",
-              "uri": "public://dcbookingform/documents/filename.jpeg"
-            }
-          }
+          type: 'file--document',
+          key: file.name,
+          filename: file.name,
+          file: file
         },
         headers: {
           "Authorization": "Basic d2ViZm9ybV91c2VyOmttdm90UWZLa1BtQ2VRWTNmfUti",
@@ -153,6 +171,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
           console.log('Error status: ' + resp.status);
       });
     }
+    */
   }
   /**
    * Controller for Templates and Form Steps
