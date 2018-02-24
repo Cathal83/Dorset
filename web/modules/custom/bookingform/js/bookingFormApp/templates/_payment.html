@@ -7,19 +7,68 @@
         </div>
     </div>
     <div class="form-fields">
-        <h3>Step 3: Fees & Deposit</h3>
-        <div class="form-row">
-            <div class="form-opt">
-                
+        <h3>Step {{ step }}: Fees & Deposit</h3>
+        <div class="form-wrapper">
+            <div class="form-row">
+                <div class="form-opt">
+                    <label>
+                        <input type="radio" name="paymentchoice" value="full" id="paymentfull"> Course Fees
+                    </label>
+                    <label>
+                        <input type="radio" name="paymentchoice" value="deposit" id="paymentdeposit"> Course Deposit
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-wrapper">
+            <div class="form-row">
+                <div class="form-opt">
+                    <select ng-model="user.payment.cardtype">
+                        <option value="" selected>Select Payment Type</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">MasterCard</option>
+                        <option value="paypal">Paypal</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-wrapper" ng-show="user.payment.cardtype">
+            <h4>Enter Your Card Details</h4>
+            <div class="form-row">
+                <div class="form-opt">
+                    <input type="number" placeholder="Card Number" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-opt">
+                    <input ng-model="user.payment.cardexp" placeholder="dd/yyyy" required>
+                </div>
+                <div class="form-opt">
+                    <input ng-model="user.payment.CVV" placeholder="CVV" required>
+                </div>
             </div>
         </div> 
+    </div>
+    <div class="form-summary">
+        <h3>Summary</h3>
         <div class="form-row">
-            <h4>Enter Your Card Details:</h4>
-            <select ng-mode="user.payment.cardtype">
-                <option>Choose a Payment Method</option>
-                <option>Visa</option>
-                <option>MasterCard</option>
-            </select>
-        </div> 
+            <div class="form-opt">
+                <h4>Pre-Application</h4>
+                <label>Course Title: </label>
+                <div>{{ user.productName }}</div>
+                <label>Course Mode: </label>
+                <div>{{ user.deliveryMode }}</div>
+            </div>
+            <div class="form-opt">
+                <label>Email: </label><div>{{ user.email }}</div>
+                <label>Nationality: </label><div>{{ user.nationality }}</div>
+                <label>Residence: </label><div>{{ user.country }}</div>
+            </div>   
+        </div>
+    </div>
+    <!-- Proceed Button -->
+    <div class="bookingform-btn">
+        <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Back</a>
+        <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Continue</a>
     </div>
 </div>
