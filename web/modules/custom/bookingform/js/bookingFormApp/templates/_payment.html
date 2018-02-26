@@ -20,6 +20,7 @@
                 </div>
             </div>
         </div>
+        <!--
         <div class="form-wrapper">
             <div class="form-row">
                 <div class="form-opt">
@@ -32,7 +33,8 @@
                 </div>
             </div>
         </div>
-        <div class="form-wrapper" ng-show="user.payment.cardtype">
+    -->
+        <div class="form-wrapper">
             <h4>Enter Your Card Details</h4>
             <div class="form-row">
                 <div class="form-opt">
@@ -48,27 +50,12 @@
                 </div>
             </div>
         </div> 
+
     </div>
-    <div class="form-summary">
-        <h3>Summary</h3>
-        <div class="form-row">
-            <div class="form-opt">
-                <h4>Pre-Application</h4>
-                <label>Course Title: </label>
-                <div>{{ user.productName }}</div>
-                <label>Course Mode: </label>
-                <div>{{ user.deliveryMode }}</div>
-            </div>
-            <div class="form-opt">
-                <label>Email: </label><div>{{ user.email }}</div>
-                <label>Nationality: </label><div>{{ user.nationality }}</div>
-                <label>Residence: </label><div>{{ user.country }}</div>
-            </div>   
-        </div>
-    </div>
+
     <!-- Proceed Button -->
     <div class="bookingform-btn">
         <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Back</a>
-        <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Continue</a>
+        <a class="booking-next" ng-click="charge()" href="">Continue</a>
     </div>
 </div>

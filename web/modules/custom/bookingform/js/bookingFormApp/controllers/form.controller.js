@@ -1,4 +1,4 @@
-bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $location, $controller, dataService, formService, formSteps, Upload) {
+bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $window, $location, $controller, dataService, formService, formSteps, Upload, stripe) {
   /**
    * Default user settings
    */
@@ -20,6 +20,18 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
       city : "Dublin",
       postalcode : "D7"
     }
+  }
+  $scope.payment = {
+    amount: "300",
+    card : {
+
+      number : "4242424242424242",
+      cvc : "555",
+      exp_month : "12",
+      exp_year : "2020",
+      address_zip: "D7"
+
+    } 
   }
 
   $scope.productData = [{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'Evidence of Prior Learning'},{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'English Proficiency'},{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'High School Transcripts'}];
@@ -177,5 +189,6 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $l
    * Controller for Templates and Form Steps
   */
   $controller('viewCtrl', { $scope, formSteps, $state, productDocuments });
+  $controller('paymentCtrl', { $scope, $http, stripe });
 
 })
