@@ -25,7 +25,8 @@
     */
     class stripePayment extends ResourceBase {
         /**
-        * @var \Drupal\stripe_api\StripeApiService*/
+        * @var \Drupal\stripe_api\StripeApiService
+        */
         protected $stripeApi;
 
         /**
