@@ -35,7 +35,7 @@
          * @throws \Symfony\Component\HttpKernel\Exception\HttpException
          * 
          */
-        public function post() {
+        public function post($stripeApi) {
             /**
             if (!$this->currentUser->hasPermission('access content')) {
 
