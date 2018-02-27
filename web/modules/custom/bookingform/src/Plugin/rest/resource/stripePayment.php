@@ -41,7 +41,7 @@
         }
         /**
          * Responds to entity GET request.
-         */
+        
         public function get() {
             $response = ['message' => 'Hello, this is a Get'];
             return new ResourceResponse($response);
@@ -53,4 +53,5 @@
 
             return new ResourceResponse("Implement REST state GET!");
         }
+         */
     }
