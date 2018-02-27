@@ -25,9 +25,14 @@
     * @stripe_api.stripe_api
     */
     class stripePayment extends ResourceBase {
+        /**
+        * @var \Drupal\stripe_api\StripeApiService*/
+        protected $stripeApi;
+        
         public function __construct(StripeApiService $stripe_api) {
             $this->stripeApi = $stripe_api;
         }
+
         public function loadSubscriptionsMultiple($args = []) {
             $subscriptions = Subscription::all($args);
             if (!count($subscriptions->data)) {
