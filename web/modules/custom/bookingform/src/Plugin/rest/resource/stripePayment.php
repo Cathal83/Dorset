@@ -14,7 +14,7 @@
 
     /**
     * Provides a resource to get view modes by entity and bundle
-    *  @RestResource(
+    * @RestResource(
     *   id = "stripe_rest_resource",
     *   label = @Translation("Stripe Rest Resource"),
     *   uri_paths = {
@@ -23,13 +23,14 @@
     *   },
     *   
     * )
+    * @stripe_api.stripe_api
     */
     class stripePayment extends ResourceBase {
         /**
          * Respons to entity POST request.
          * @return \Drupal\rest\ResourceResponse 
          * @throws \Symfony\Component\HttpKernel\Exception\HttpException
-         * @stripe_api.stripe_api
+         * @throws \Drupal\stripe_api\StripeApiService
          * 
          */
         public function post(StripeApiService $stripe_api) {
