@@ -11,16 +11,16 @@
 
 
     /**
-     * Provides a resource to get view modes by entity and bundle
-     *  @RestResource(
-     *   id = "stripe_rest_resource",
-     *   label = @Translation("Stripe Rest Resource"),
-     *   uri_paths = {
-     *      "canonical" = "/api/payment"
-     *      "https://www.drupal.org/link-relations/create" = "/api/payment"
-     *   }
-     * )
-     */
+    * Provides a resource to get view modes by entity and bundle
+    *  @RestResource(
+    *   id = "stripe_rest_resource",
+    *   label = @Translation("Stripe Rest Resource"),
+    *   uri_paths = {
+    *     "canonical" = "/api/payment",
+    *     "https://www.drupal.org/link-relations/create" = "/api/payment"
+    *   }
+    * )
+    */
     class stripePayment extends ResourceBase {
         /**
          * Respons to entity POST request.
