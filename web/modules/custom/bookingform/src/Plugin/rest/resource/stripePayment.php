@@ -8,6 +8,7 @@
 
     use Drupal\rest\Plugin\ResourceBase;
     use Drupal\rest\ResourceResponse;
+    use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 
     /**
@@ -23,10 +24,19 @@
     class stripePayment extends ResourceBase {
         /**
          * Respons to entity POST request.
-         * @return \Drupal\rest\ResourceResponse
+         * @return \Drupal\rest\ResourceResponse 
+         * @throws \Symfony\Component\HttpKernel\Exception\HttpException
+         * 
          */
         public function post() {
             $response = ['message' => 'Hello, this is a Post'];
             return new ResoruceResponse($response);
+
+            if (!$this->currentUser->hasPermission('access content')) {
+
+                throw new AccessDeniedHttpException();
+            }
+
+            return new ResourceResponse("Implement REST state POST!");
         }
     }
