@@ -31,15 +31,17 @@
          * @throws \Symfony\Component\HttpKernel\Exception\HttpException
          * 
          */
-        public function post() {
+        public function post(StripeApiService $stripe_api) {
             /**
             if (!$this->currentUser->hasPermission('access content')) {
 
                 throw new AccessDeniedHttpException();
             }
             */
+            $this->stripeApi = $stripe_api;
+
             $response = ['message' => 'Hello, this is a Post'];
-            return new ResourceResponse($response);
+            return new ResourceResponse($this->stripeApi);
 
         }
     }
