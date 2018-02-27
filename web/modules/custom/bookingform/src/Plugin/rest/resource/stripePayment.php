@@ -29,16 +29,13 @@
          * 
          */
         public function post() {
-
-
+            // User current authentication to validate access
             if (!$this->currentUser->hasPermission('access content')) {
 
                 throw new AccessDeniedHttpException();
             }
-            else {
-                $response = ['message' => 'Hello, this is a Post'];
-                return new ResourceResponse($response);
-            }
+            $response = ['message' => 'Hello, this is a Post'];
+            return new ResourceResponse($response);
 
         }
     }
