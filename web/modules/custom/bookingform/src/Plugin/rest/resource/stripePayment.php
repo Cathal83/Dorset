@@ -8,6 +8,8 @@
     use Drupal\rest\Plugin\ResourceBase;
     use Drupal\rest\ResourceResponse;
     use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+    use Drupal\stripe_api\StripeApiService;
+    use Stripe\Subscription;
 
 
     /**
@@ -22,6 +24,17 @@
     * )
     */
     class stripePayment extends ResourceBase {
+        public function __construct(StripeApiService $stripe_api) {
+            $this->StripeAPI = $stripe_api;
+        }
+        public function loadSubscriptionsMultiple($args = []) {
+            $subscriptions = Subscription::all($args);
+            if (!count($subscriptions->data)) {
+                return FALSE;
+            }
+
+            return $subscriptions;
+        }
         /**
          * Respons to entity POST request.
          * @return \Drupal\rest\ResourceResponse 
