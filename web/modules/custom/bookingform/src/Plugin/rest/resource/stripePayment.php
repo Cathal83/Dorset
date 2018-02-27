@@ -21,10 +21,14 @@
     *     "canonical" = "/api/payment",
     *     "https://www.drupal.org/link-relations/create" = "/api/payment"
     *   },
-    *   @stripe_api.stripe_api
+    *   
     * )
     */
     class stripePayment extends ResourceBase {
+        /**
+         * @return \Drupal\stripe_api\StripeApiService
+         * @stripe_api.stripe_api
+         */
         public function __construct(StripeApiService $stripe_api) {
             $this->StripeAPI = $stripe_api;
         }
