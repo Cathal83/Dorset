@@ -30,7 +30,6 @@
          * Respons to entity POST request.
          * @return \Drupal\rest\ResourceResponse 
          * @throws \Symfony\Component\HttpKernel\Exception\HttpException
-         * @throws \Drupal\stripe_api\StripeApiService
          * 
          */
         public function post(StripeApiService $stripe_api) {
