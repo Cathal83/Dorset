@@ -43,7 +43,7 @@
             }
             */
             $response = ['message' => 'Hello, this is a Post'];
-            return new ResourceResponse($this->stripeApi);
+            return new ResourceResponse($stripeApi);
 
         }
     }
