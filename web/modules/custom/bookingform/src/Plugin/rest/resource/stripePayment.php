@@ -30,7 +30,7 @@
          */
         public function post() {
             $response = ['message' => 'Hello, this is a Post'];
-            return new ResoruceResponse($response);
+            return new ResourceResponse($response);
 
             if (!$this->currentUser->hasPermission('access content')) {
 
@@ -38,5 +38,16 @@
             }
 
             return new ResourceResponse("Implement REST state POST!");
+        }
+        public function get() {
+            $response = ['message' => 'Hello, this is a Post'];
+            return new ResourceResponse($response);
+
+            if (!$this->currentUser->hasPermission('access content')) {
+
+                throw new AccessDeniedHttpException();
+            }
+
+            return new ResourceResponse("Implement REST state GET!");
         }
     }
