@@ -20,7 +20,7 @@
      *   }
      * )
      */
-    class stripeResource extends ResourceBase {
+    class stripePayment extends ResourceBase {
         /**
          * Responds to entity GET request.
          * @return \Drupal\rest\ResourceResponse
