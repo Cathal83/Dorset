@@ -27,7 +27,7 @@
     class stripePayment extends ResourceBase {
         /**
          * @return \Drupal\stripe_api\StripeApiService
-         * @stripe_api.stripe_api
+         * 
          */
         public function __construct(StripeApiService $stripe_api) {
             $this->StripeAPI = $stripe_api;
