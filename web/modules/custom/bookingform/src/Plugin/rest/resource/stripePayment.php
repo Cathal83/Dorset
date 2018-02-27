@@ -29,4 +29,12 @@
             $response = ['message' => 'Hello, this is a rest service'];
             return new ResourceResponse($response);
         }
+        /**
+         * Respons to entity POST request.
+         * @return \Drupal\rest\ResourceResponse
+         */
+        public function post() {
+            $response = ['message' => 'Hello, this is a Post'];
+            return new ResoruceResponse($response);
+        }
     }

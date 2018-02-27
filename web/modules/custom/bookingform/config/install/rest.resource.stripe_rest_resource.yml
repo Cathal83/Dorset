@@ -6,4 +6,9 @@ configuration:
     supported_formats:
       - json
     supported_auth:
-      -basic_auth
+      - basic_auth
+  POST:
+    supported_formats:
+      - json
+    supported_auth:
+      - basic_auth
