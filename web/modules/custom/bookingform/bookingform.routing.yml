@@ -1,0 +1,7 @@
+example.my_page:
+  path: '/payment'
+  defaults:
+    _controller: '\Drupal\example\Controller\ExampleController::paymentPage'
+    _title: 'My first page in D8'
+  requirements:
+    _permission: 'access content'
