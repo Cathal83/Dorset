@@ -11,7 +11,6 @@
     use Drupal\stripe_api\StripeApiService;
     use Stripe\Subscription;
 
-
     /**
     * Provides a resource to get view modes by entity and bundle
     * @RestResource(
@@ -28,6 +27,14 @@
     class stripePayment extends ResourceBase {
         public function __construct(StripeApiService $stripe_api) {
             $this->stripeApi = $stripe_api;
+        }
+        public function loadSubscriptionsMultiple($args = []) {
+            $subscriptions = Subscription::all($args);
+            if (!count($subscriptions->data)) {
+              return FALSE;
+            }
+        
+            return $subscriptions;
         }
         /**
          * Respons to entity POST request.
