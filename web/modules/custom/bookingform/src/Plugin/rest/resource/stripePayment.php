@@ -22,14 +22,6 @@
      */
     class stripePayment extends ResourceBase {
         /**
-         * Responds to entity GET request.
-         * @return \Drupal\rest\ResourceResponse
-         */
-        public function get() {
-            $response = ['message' => 'Hello, this is a rest service'];
-            return new ResourceResponse($response);
-        }
-        /**
          * Respons to entity POST request.
          * @return \Drupal\rest\ResourceResponse
          */
