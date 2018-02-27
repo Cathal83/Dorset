@@ -22,12 +22,18 @@
     *   },
     *   
     * )
-    * @stripe_api.stripe_api
     */
     class stripePayment extends ResourceBase {
         /**
         * @var \Drupal\stripe_api\StripeApiService*/
         protected $stripeApi;
+
+        /**
+         * @param \Drupal\stripe_api\StripeApiService $stripe_api
+         */
+        public function __construct(StripeApiService $stripe_api) {
+            $this->stripeApi = $stripe_api;
+        }
         
         /**
          * Respons to entity POST request.
@@ -35,7 +41,7 @@
          * @throws \Symfony\Component\HttpKernel\Exception\HttpException
          * 
          */
-        public function post($stripeApi) {
+        public function post() {
             /**
             if (!$this->currentUser->hasPermission('access content')) {
 
