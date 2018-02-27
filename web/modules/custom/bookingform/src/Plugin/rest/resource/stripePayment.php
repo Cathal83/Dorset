@@ -3,7 +3,6 @@
      * @file
      * Contains Drupal\bookingform\Plugin\rest\resource\stripePayment
      */
-
     namespace Drupal\bookingform\Plugin\rest\resource;
 
     use Drupal\rest\Plugin\ResourceBase;
@@ -18,6 +17,7 @@
      *   label = @Translation("Stripe Rest Resource"),
      *   uri_paths = {
      *      "canonical" = "/api/payment"
+     *      "https://www.drupal.org/link-relations/create" = "/api/payment"
      *   }
      * )
      */
@@ -38,19 +38,5 @@
             }
 
             return new ResourceResponse("Implement REST state POST!");
-        }
-        /**
-         * Responds to entity GET request.
-         */
-        public function get() {
-            $response = ['message' => 'Hello, this is a Get'];
-            return new ResourceResponse($response);
-
-            if (!$this->currentUser->hasPermission('access content')) {
-
-                throw new AccessDeniedHttpException();
-            }
-
-            return new ResourceResponse("Implement REST state GET!");
         }
     }
