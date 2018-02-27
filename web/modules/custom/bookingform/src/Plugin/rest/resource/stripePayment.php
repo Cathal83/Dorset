@@ -39,8 +39,11 @@
 
             return new ResourceResponse("Implement REST state POST!");
         }
+        /**
+         * Responds to entity GET request.
+         */
         public function get() {
-            $response = ['message' => 'Hello, this is a Post'];
+            $response = ['message' => 'Hello, this is a Get'];
             return new ResourceResponse($response);
 
             if (!$this->currentUser->hasPermission('access content')) {

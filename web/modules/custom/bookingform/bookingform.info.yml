@@ -5,3 +5,5 @@ description: 'Booking Form Dorset College - AngularJS'
 core: 8.x
 attributes:
   - heading: title
+dependecies:
+  - drupal:rest
