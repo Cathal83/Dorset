@@ -20,7 +20,8 @@
     *   uri_paths = {
     *     "canonical" = "/api/payment",
     *     "https://www.drupal.org/link-relations/create" = "/api/payment"
-    *   }
+    *   },
+    *   @stripe_api.stripe_api
     * )
     */
     class stripePayment extends ResourceBase {
