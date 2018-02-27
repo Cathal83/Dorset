@@ -29,14 +29,16 @@
          * 
          */
         public function post() {
-            $response = ['message' => 'Hello, this is a Post'];
-            return new ResourceResponse($response);
+
 
             if (!$this->currentUser->hasPermission('access content')) {
 
                 throw new AccessDeniedHttpException();
             }
+            else {
+                $response = ['message' => 'Hello, this is a Post'];
+                return new ResourceResponse($response);
+            }
 
-            return new ResourceResponse("Implement REST state POST!");
         }
     }
