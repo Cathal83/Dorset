@@ -4,7 +4,7 @@ granularity: method
 configuration:
   POST:
     supported_formats:
-      - json
+      - hal_json
     supported_auth:
       - basic_auth
 dependencies:
