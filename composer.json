@@ -42,6 +42,7 @@
         "drupal/search_api": "^1.6",
         "drupal/search_autocomplete": "^1.1",
         "drupal/simple_sitemap": "^2.11",
+        "drupal/stripe_api": "^1.0@beta",
         "drupal/svg_image": "^1.8",
         "drupal/video_embed_field": "^1.5",
         "drupal/views_field_formatter": "^1.7",
