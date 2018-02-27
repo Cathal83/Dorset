@@ -15,7 +15,7 @@
      *  @RestResource(
      *   id = "stripe_rest_resource",
      *   label = @Translation("Stripe Rest Resource"),
-     *   uri_paths + {
+     *   uri_paths = {
      *      "canonical" = "/api/payment"
      *   }
      * )
