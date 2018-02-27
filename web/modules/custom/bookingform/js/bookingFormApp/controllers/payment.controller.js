@@ -7,7 +7,7 @@ bookingformJS.controller("paymentCtrl", function($scope, $http, stripe) {
         return stripe.card.createToken($scope.payment.card)
             .then(function (response) {
                 console.log('token created for card ending in ', response.card.last4);
-
+                console.log(stripe.card.createToken($scope.payment.card));
                 var payment = angular.copy($scope.payment);
                 payment.card = undefined;
                 payment.token = response.id;
