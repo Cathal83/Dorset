@@ -29,11 +29,9 @@
          * 
          */
         public function post() {
-            $response = ['message' => 'Hello, this is a Post'];
-            return new ResourceResponse($response);
-
             if (!$this->currentUser->hasPermission('access content')) {
-
+                $response = ['message' => 'Hello, this is a Post'];
+                return new ResourceResponse($response);
                 throw new AccessDeniedHttpException();
             }
 
