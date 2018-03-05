@@ -1,3 +1,12 @@
+## Stripe Library
+stripe:
+  remote: https://github.com/stripe/stripe-php
+  version: "4.3.0"
+  license:
+    name: MIT
+    url: https://github.com/stripe/stripe-php/blob/master/LICENSE
+    gpl-compatible: true
+
 ## Angular libraries
 angularjs:
   js:

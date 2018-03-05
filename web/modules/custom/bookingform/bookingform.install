@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update functions for Booking Form
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+
+function bookingform_requirements($phase) {
+  $requirements = [];
+  if ($phase == 'install') {
+    if (!class_exists('\Stripe\Stripe')) {
+      $requirements['bookingform_library'] = [
+        'description' => t('BookingForm requires the stripe/stripe-php library.'),
+        'severity' => REQUIREMENT_ERROR,
+      ];
+    }
+  }
+
+  return $requirements;
+}

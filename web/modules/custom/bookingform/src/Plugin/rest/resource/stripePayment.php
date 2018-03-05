@@ -7,10 +7,9 @@
 
     use Drupal\rest\Plugin\ResourceBase;
     use Drupal\rest\ResourceResponse;
+    use Psr\Log\LoggerInterface;
     use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
-    use Drupal\stripe_api\StripeApiService;
-    use Stripe\Subscription;
-
+    use Drupal\bookingform\Controller\paymentController;
     /**
     * Provides a resource to get view modes by entity and bundle
     * @RestResource(
@@ -24,33 +23,29 @@
     * )
     */
     class stripePayment extends ResourceBase {
-      /**
-       * Constructs a \Drupal\system\ConfigFormBase object.
-       *
-       * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
-       *   The factory for configuration objects.
-       * @param \Drupal\stripe_api\StripeApiService $stripe_api
-       */
-      public function __construct(ConfigFactoryInterface $config_factory, StripeApiService $stripe_api) {
-        $this->stripeApi = $stripe_api;
 
-        parent::__construct($config_factory);
-      }
+        private $apiKey = "sk_test_zJpfrkdwd8oaD56vZr8eumPO";
+        private $data = [];
 
-      /**
-       * Respons to entity POST request.
+        public function __construct(){
+            \Stripe\Stripe::setApiKey($this->apiKey);
+        }
+
+        /**
+       * Responds to entity POST request.
        * @return \Drupal\rest\ResourceResponse 
        * @throws \Symfony\Component\HttpKernel\Exception\HttpException
-       * 
+       *
        */
-      public function post() {
+      public function post($formData) {
           /**
           if (!$this->currentUser->hasPermission('access content')) {
 
               throw new AccessDeniedHttpException();
           }
           */
-          $response = ['message' => 'Hello, this is a Post'];
-          return new ResourceResponse($this->$stripeApi);
+          $formData = json_decode($formData);
+          $this->data->email = $formData['email'];
+          return new ResourceResponse($this->data);
       }
     }

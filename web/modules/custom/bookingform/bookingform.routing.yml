@@ -1,0 +1,7 @@
+bookingform.testPage:
+  path: '/payment-test'
+  defaults:
+    _controller: '\Drupal\bookingform\Controller\PaymentController::doPayment'
+    _title: 'Stripe Payment Test Page'
+  requirements:
+    _permission: 'access content'
