@@ -24,26 +24,22 @@
     * )
     */
     class stripePayment extends ResourceBase {
-        /**
-        * @var \Drupal\stripe_api\StripeApiService
-        */
-        protected $stripeApi;
-        
-        /**
-         * Respons to entity POST request.
-         * @return \Drupal\rest\ResourceResponse 
-         * @throws \Symfony\Component\HttpKernel\Exception\HttpException
-         * 
-         */
-        public function post() {
-            /**
-            if (!$this->currentUser->hasPermission('access content')) {
 
-                throw new AccessDeniedHttpException();
-            }
-            */
-            $response = ['message' => 'Hello, this is a Post'];
-            return new ResourceResponse($stripeApi);
+      /**
+       * Respons to entity POST request.
+       * @return \Drupal\rest\ResourceResponse 
+       * @throws \Symfony\Component\HttpKernel\Exception\HttpException
+       * 
+       */
+      public function post() {
+          /**
+          if (!$this->currentUser->hasPermission('access content')) {
 
-        }
+              throw new AccessDeniedHttpException();
+          }
+          */
+          $response = ['message' => 'Hello, this is a Post'];
+          return new ResourceResponse($this->$stripeApi);
+
+      }
     }
