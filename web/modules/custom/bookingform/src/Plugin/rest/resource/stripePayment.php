@@ -24,6 +24,18 @@
     * )
     */
     class stripePayment extends ResourceBase {
+      /**
+       * Constructs a \Drupal\system\ConfigFormBase object.
+       *
+       * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
+       *   The factory for configuration objects.
+       * @param \Drupal\stripe_api\StripeApiService $stripe_api
+       */
+      public function __construct(ConfigFactoryInterface $config_factory, StripeApiService $stripe_api) {
+        $this->stripeApi = $stripe_api;
+
+        parent::__construct($config_factory);
+      }
 
       /**
        * Respons to entity POST request.
@@ -40,6 +52,5 @@
           */
           $response = ['message' => 'Hello, this is a Post'];
           return new ResourceResponse($this->$stripeApi);
-
       }
     }
