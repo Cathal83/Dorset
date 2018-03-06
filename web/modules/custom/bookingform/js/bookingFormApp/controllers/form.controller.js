@@ -7,7 +7,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     productName : "Bachelor of Business",
     deliveryMode : "Part-Time",
     firstname : "Javier",
-    surname : "Torrado",
+    lastname : "Torrado",
     country : "Ireland",
     email : "chavi809@gmail.com",
     dob : "2018-08-01",
@@ -24,13 +24,10 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   $scope.payment = {
     amount: "300",
     card : {
-
       number : "4242424242424242",
       cvc : "555",
-      exp_month : "12",
-      exp_year : "2020",
+      exp: "02/2020",
       address_zip: "D7"
-
     } 
   }
 
@@ -189,6 +186,6 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    * Controller for Templates and Form Steps
   */
   $controller('viewCtrl', { $scope, formSteps, $state, productDocuments });
-  $controller('paymentCtrl', { $scope, $http, stripe });
+  $controller('paymentCtrl', { $scope, $http, stripe, dataService });
 
 })

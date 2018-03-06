@@ -23,13 +23,13 @@
     */
     class stripePayment extends ResourceBase {
 
-        private $apiKey = "sk_test_zJpfrkdwd8oaD56vZr8eumPO";
+      private $apiKey = "sk_test_zJpfrkdwd8oaD56vZr8eumPO";
 
-        public function __construct(){
-            \Stripe\Stripe::setApiKey($this->apiKey);
-        }
+      public function __construct(){
+        \Stripe\Stripe::setApiKey($this->apiKey);
+      }
 
-        /**
+      /**
        * Responds to entity POST request.
        * @return \Drupal\rest\ResourceResponse 
        * @throws \Symfony\Component\HttpKernel\Exception\HttpException
@@ -42,7 +42,7 @@
             throw new AccessDeniedHttpException();
         }
         else {
-          
+
           $formData = json_decode($formData);
 
           /**
@@ -57,17 +57,17 @@
            * Creates Charge to Stripe from JSON Data
            */
           try{
-              $charge = \Stripe\Charge::create(array(
-                  'customer' => $customer->id,
-                  'description' => $formData->course,
-                  'receipt_email' => $formData->email,
-                  'amount' => $formData->amount,
-                  'currency' => 'eur',
-                  'metadata' => array(
-                      'firstname' => $formData->firstName,
-                      'lastname' => $formData->lastName
-                  )
-              ));
+            $charge = \Stripe\Charge::create(array(
+              'customer' => $customer->id,
+              'description' => $formData->product,
+              'receipt_email' => $formData->email,
+              'amount' => $formData->amount,
+              'currency' => 'EUR',
+              'metadata' => array(
+                  'firstname' => $formData->firstName,
+                  'lastname' => $formData->lastName
+              )
+            ));
           } catch (\Stripe\Error\Base $e) {
               $error = $e->getMessage();
           } catch (Exception $e) {

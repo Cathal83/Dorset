@@ -20,33 +20,19 @@
                 </div>
             </div>
         </div>
-        <!--
-        <div class="form-wrapper">
-            <div class="form-row">
-                <div class="form-opt">
-                    <select ng-model="user.payment.cardtype">
-                        <option value="" selected>Select Payment Type</option>
-                        <option value="visa">Visa</option>
-                        <option value="mastercard">MasterCard</option>
-                        <option value="paypal">Paypal</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    -->
         <div class="form-wrapper">
             <h4>Enter Your Card Details</h4>
             <div class="form-row">
                 <div class="form-opt">
-                    <input type="number" placeholder="Card Number" required>
+                    <input ng-model="payment.card.number" placeholder="Card Number" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-opt">
-                    <input ng-model="user.payment.cardexp" placeholder="dd/yyyy" required>
+                    <input ng-model="payment.card.exp" placeholder="dd/yyyy" required>
                 </div>
                 <div class="form-opt">
-                    <input ng-model="user.payment.CVV" placeholder="CVV" required>
+                    <input ng-model="payment.card.cvc" placeholder="CVC" required>
                 </div>
             </div>
         </div> 
