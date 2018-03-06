@@ -7,9 +7,8 @@
 
     use Drupal\rest\Plugin\ResourceBase;
     use Drupal\rest\ResourceResponse;
-    use Psr\Log\LoggerInterface;
     use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
-    use Drupal\bookingform\Controller\paymentController;
+
     /**
     * Provides a resource to get view modes by entity and bundle
     * @RestResource(
@@ -25,7 +24,6 @@
     class stripePayment extends ResourceBase {
 
         private $apiKey = "sk_test_zJpfrkdwd8oaD56vZr8eumPO";
-        private $data = [];
 
         public function __construct(){
             \Stripe\Stripe::setApiKey($this->apiKey);
@@ -38,14 +36,44 @@
        *
        */
       public function post($formData) {
-          /**
-          if (!$this->currentUser->hasPermission('access content')) {
 
-              throw new AccessDeniedHttpException();
-          }
-          */
+        if (!$this->currentUser->hasPermission('access content')) {
+
+            throw new AccessDeniedHttpException();
+        }
+        else {
+          
           $formData = json_decode($formData);
-          $this->data->email = $formData['email'];
-          return new ResourceResponse($this->data);
+
+          /**
+           * Creates Customer Element on Stripe
+           */
+          $customer = \Stripe\Customer::create(array(
+              'email' => $formData->email,
+              'source' => $formData->tk_id
+          ));
+
+          /**
+           * Creates Charge to Stripe from JSON Data
+           */
+          try{
+              $charge = \Stripe\Charge::create(array(
+                  'customer' => $customer->id,
+                  'description' => $formData->course,
+                  'receipt_email' => $formData->email,
+                  'amount' => $formData->amount,
+                  'currency' => 'eur',
+                  'metadata' => array(
+                      'firstname' => $formData->firstName,
+                      'lastname' => $formData->lastName
+                  )
+              ));
+          } catch (\Stripe\Error\Base $e) {
+              $error = $e->getMessage();
+          } catch (Exception $e) {
+              $error = $e->getMessage();
+          }
+          return new ResourceResponse($error, $charge);
+        }
       }
     }
