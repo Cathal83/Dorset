@@ -15,8 +15,8 @@
     *   id = "stripe_rest_resource",
     *   label = @Translation("Stripe Rest Resource"),
     *   uri_paths = {
-    *     "canonical" = "stripe",
-    *     "https://www.drupal.org/link-relations/create" = "stripe"
+    *     "canonical" = "/api/payment",
+    *     "https://www.drupal.org/link-relations/create" = "/api/payment"
     *   },
     *   
     * )
@@ -37,43 +37,37 @@
        */
       public function post($formData) {
 
-        if (!$this->currentUser->hasPermission('access content')) {
+        $formData = json_decode($formData);
 
-            throw new AccessDeniedHttpException();
-        }
-        else {
+        /**
+         * Creates Customer Element on Stripe
+         */
+        $customer = \Stripe\Customer::create(array(
+            'email' => $formData->email,
+            'source' => $formData->tk_id
+        ));
 
-          $formData = json_decode($formData);
-
-          /**
-           * Creates Customer Element on Stripe
-           */
-          $customer = \Stripe\Customer::create(array(
-              'email' => $formData->email,
-              'source' => $formData->tk_id
+        /**
+         * Creates Charge to Stripe from JSON Data
+         */
+        try{
+          $charge = \Stripe\Charge::create(array(
+            'customer' => $customer->id,
+            'description' => $formData->product,
+            'receipt_email' => $formData->email,
+            'amount' => $formData->amount,
+            'currency' => 'EUR',
+            'metadata' => array(
+                'firstname' => $formData->firstName,
+                'lastname' => $formData->lastName
+            )
           ));
-
-          /**
-           * Creates Charge to Stripe from JSON Data
-           */
-          try{
-            $charge = \Stripe\Charge::create(array(
-              'customer' => $customer->id,
-              'description' => $formData->product,
-              'receipt_email' => $formData->email,
-              'amount' => $formData->amount,
-              'currency' => 'EUR',
-              'metadata' => array(
-                  'firstname' => $formData->firstName,
-                  'lastname' => $formData->lastName
-              )
-            ));
-          } catch (\Stripe\Error\Base $e) {
-              $error = $e->getMessage();
-          } catch (Exception $e) {
-              $error = $e->getMessage();
-          }
-          return new ResourceResponse($error, $charge);
+        } catch (\Stripe\Error\Base $e) {
+            $error = $e->getMessage();
+        } catch (Exception $e) {
+            $error = $e->getMessage();
         }
+        return new ResourceResponse($error);
+
       }
     }

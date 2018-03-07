@@ -8,7 +8,6 @@
 /**
  * Implements hook_requirements().
  */
-
 function bookingform_requirements($phase) {
   $requirements = [];
   if ($phase == 'install') {
