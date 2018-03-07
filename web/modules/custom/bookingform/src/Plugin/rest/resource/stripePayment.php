@@ -15,8 +15,8 @@
     *   id = "stripe_rest_resource",
     *   label = @Translation("Stripe Rest Resource"),
     *   uri_paths = {
-    *     "canonical" = "/api/payment",
-    *     "https://www.drupal.org/link-relations/create" = "/api/payment"
+    *     "canonical" = "stripe",
+    *     "https://www.drupal.org/link-relations/create" = "stripe"
     *   },
     *   
     * )

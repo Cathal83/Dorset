@@ -6,27 +6,27 @@ bookingformJS.config(function($stateProvider, $urlRouterProvider) {
 
         .state('bookingForm', {
             url : '/',
-            templateUrl : '/web/modules/custom/bookingform/js/bookingFormApp/templates/_booking-details.html'
+            templateUrl : '/modules/custom/bookingform/js/bookingFormApp/templates/_booking-details.html'
         })
 
         .state('steps', {
             url : '/bookingsteps',
-            templateUrl : '/web/modules/custom/bookingform/js/bookingFormApp/templates/_steps.html'
+            templateUrl : '/modules/custom/bookingform/js/bookingFormApp/templates/_steps.html'
         })
 
         .state('customer-details', {
             url : '/details',
-            templateUrl : '/web/modules/custom/bookingform/js/bookingFormApp/templates/_customer-details.html'
+            templateUrl : '/modules/custom/bookingform/js/bookingFormApp/templates/_customer-details.html'
         })
 
         .state('customer-files', {
             url : '/documents',
-            templateUrl : '/web/modules/custom/bookingform/js/bookingFormApp/templates/_documents.html'
+            templateUrl : '/modules/custom/bookingform/js/bookingFormApp/templates/_documents.html'
         })
 
         .state('payment',{
             url : '/payment',
-            templateUrl : '/web/modules/custom/bookingform/js/bookingFormApp/templates/_payment.html'
+            templateUrl : '/modules/custom/bookingform/js/bookingFormApp/templates/_payment.html'
         })
         
 })

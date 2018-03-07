@@ -1,10 +1,13 @@
-bookingformJS.controller("paymentCtrl", function($scope, $http, stripe, dataService) {
+bookingformJS.controller("paymentCtrl", function($scope, $http, $location, stripe, dataService) {
     /**
      * Creates Stripe token for Payment
      * submits payment to Stripe API PHP Plugin
      */
     $scope.charge = function charge() {
-
+      
+      /**
+       * Gets token for payment based on Card collected
+       */
       return stripe.card.createToken($scope.payment.card)
       .then(function (response) {
         var payment = {
@@ -16,22 +19,20 @@ bookingformJS.controller("paymentCtrl", function($scope, $http, stripe, dataServ
           product : $scope.user.productName
         }
         
-        // Get CSRFToken for POST Request
-        var CSRFToken = dataService.getCSRF();
-        
-        CSRFToken.then(function(result){
-          console.log(payment);
-          console.log(CSRFToken);
-          /**return $http.post('http://192.168.99.100/api/payment?_format=json',
+        /**
+         * Gets CSRF token and call Stripe backend for payment charge
+         */
+        return dataService.getCSRF()
+        .then(function(response){
+          return $http.post(window.location.origin + '/api/payment?_format=json',
           {
             headers: {
               'Authorization' : 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q=',
               'Content-Type' : 'application/json',
-              'X-CSRF-Token' : CSRFToken
+              'X-CSRF-Token' : response
             },
             data : payment
-  
-          });*/
+          });
         });
       })
       .then(function (payment) {

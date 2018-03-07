@@ -186,6 +186,6 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    * Controller for Templates and Form Steps
   */
   $controller('viewCtrl', { $scope, formSteps, $state, productDocuments });
-  $controller('paymentCtrl', { $scope, $http, stripe, dataService });
+  $controller('paymentCtrl', { $scope, $http, $location, stripe, dataService });
 
 })
