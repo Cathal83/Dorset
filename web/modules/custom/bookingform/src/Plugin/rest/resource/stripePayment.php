@@ -15,8 +15,8 @@
     *   id = "bookingform_rest_resource",
     *   label = @Translation("Bookingform Rest Resource"),
     *   uri_paths = {
-    *     "canonical" = "/api/payment",
-    *     "https://www.drupal.org/link-relations/create" = "/api/payment"
+    *     "canonical" = "payment",
+    *     "https://www.drupal.org/link-relations/create" = "payment"
     *   },
     *   
     * )
