@@ -6,17 +6,19 @@
     namespace Drupal\bookingform\Plugin\rest\resource;
 
     use Drupal\rest\Plugin\ResourceBase;
+    use Drupal\rest\ModifiedResourceResponse;
     use Drupal\rest\ResourceResponse;
     use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+    use Symfony\Component\HttpKernel\Exception\HttpException;
 
     /**
     * Provides a resource to get view modes by entity and bundle
     * @RestResource(
-    *   id = "bookingform_rest_resource",
+    *   id = "bookingform_rest",
     *   label = @Translation("Bookingform Rest Resource"),
     *   uri_paths = {
-    *     "canonical" = "payment",
-    *     "https://www.drupal.org/link-relations/create" = "payment"
+    *     "canonical" = "api/v1/payment",
+    *     "https://www.drupal.org/link-relations/create" = "api/v1/payment"
     *   },
     *   
     * )

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+id: bookingform_rest
+plugin_id: 'bookingform_rest'
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - hal_json
+    - json
+    - xml
+  authentication:
+    - basic_auth
+    - cookie

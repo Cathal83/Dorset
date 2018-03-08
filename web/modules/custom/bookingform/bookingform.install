@@ -6,6 +6,13 @@
  */
 
 /**
+ * Implements hook_uninstall().
+ 
+function bookingform_uninstall() {
+  Drupal::configFactory()->getEditable('bookingform_rest_resource').delete();
+}
+*/
+/**
  * Implements hook_requirements().
  */
 function bookingform_requirements($phase) {
