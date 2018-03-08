@@ -12,8 +12,8 @@
     /**
     * Provides a resource to get view modes by entity and bundle
     * @RestResource(
-    *   id = "stripe_rest_resource",
-    *   label = @Translation("Stripe Rest Resource"),
+    *   id = "bookingform_rest_resource",
+    *   label = @Translation("Bookingform Rest Resource"),
     *   uri_paths = {
     *     "canonical" = "/api/payment",
     *     "https://www.drupal.org/link-relations/create" = "/api/payment"
