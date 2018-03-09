@@ -27,7 +27,7 @@ bookingformJS.controller("paymentCtrl", function($scope, $http, $location, strip
 
           $http.defaults.headers.post['X-CSRF-Token'] = response;
           
-          return $http.post(window.location.origin + '/api/payment?_format=json',
+          return $http.post(window.location.origin + '/api/v2/payment?_format=json',
           {
             headers: {
               'Authorization' : 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q=',

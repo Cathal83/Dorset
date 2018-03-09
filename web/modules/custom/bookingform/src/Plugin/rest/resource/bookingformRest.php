@@ -28,7 +28,7 @@
 
       public function __construct() {
 
-          \Stripe\Stripe::setApiKey($this->apiKey);
+        \Stripe\Stripe::setApiKey($this->apiKey);
 
       }
 
@@ -57,15 +57,15 @@
       */
      try{
       $charge = \Stripe\Charge::create(array(
-       'customer' => $customer->id,
-       'description' => $formData->product,
-       'receipt_email' => $formData->email,
-       'amount' => $formData->amount,
-       'currency' => 'EUR',
-       'metadata' => array(
-        'firstname' => $formData->firstName,
-        'lastname' => $formData->lastName
-       )
+        'customer' => $customer->id,
+        'description' => $formData->product,
+        'receipt_email' => $formData->email,
+        'amount' => $formData->amount,
+        'currency' => 'EUR',
+        'metadata' => array(
+          'firstname' => $formData->firstName,
+          'lastname' => $formData->lastName
+        )
       ));
      } catch (\Stripe\Error\Base $e) {
 
@@ -76,7 +76,7 @@
       $error = $e->getMessage();
 
      }
-     
+
      return new ResourceResponse($error);
 
     }
