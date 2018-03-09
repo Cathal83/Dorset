@@ -49,7 +49,7 @@
        'email' => $formData->email,
        'source' => $formData->tk_id
       ));
-
+      
      /**
       * Creates Charge to Stripe from JSON Data
       */
