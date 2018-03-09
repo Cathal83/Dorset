@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - basic_auth
-id: bookingformrest
+id: bookingformRest
 plugin_id: 'bookingformRest'
 granularity: method
 configuration:
