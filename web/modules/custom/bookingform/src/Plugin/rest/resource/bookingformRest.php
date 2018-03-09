@@ -75,7 +75,7 @@
 
      }
 
-     return new ResourceResponse($customer);
+     return new ResourceResponse($error->id);
 
     }
   }
