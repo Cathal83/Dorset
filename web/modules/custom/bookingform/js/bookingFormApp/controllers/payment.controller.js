@@ -16,25 +16,15 @@ bookingformJS.controller("paymentCtrl", function($scope, $http, $location, strip
           amount : $scope.payment.amount,
           firstname : $scope.user.firstname,
           lastname : $scope.user.lastname,
-          product : $scope.user.productName
+          product : $scope.user.productname
         }
         
-        /**
-         * Gets CSRF token and call Stripe backend for payment charge
-         */
-        return dataService.getCSRF()
-        .then(function(response){
-
-          $http.defaults.headers.post['X-CSRF-Token'] = response;
-          
-          return $http.post(window.location.origin + '/api/v2/payment?_format=json',
-          {
-            headers: {
-              'Authorization' : 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q=',
-              'Content-Type' : 'application/json'
-            },
-            data : payment
-          });
+        return $http.post(window.location.origin + '/api/v2/payment?_format=json',
+        {
+          headers: {
+            'Content-Type' : 'application/json'
+          },
+          data : payment
         });
       })
       .then(function (payment) {

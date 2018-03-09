@@ -4,7 +4,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    */
   $scope.user = {
     date : new Date(),
-    productName : "Bachelor of Business",
+    productname : "Bachelor of Business",
     deliveryMode : "Part-Time",
     firstname : "Javier",
     lastname : "Torrado",
@@ -62,7 +62,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     $scope.showProductSel = false;
     $scope.productData = productData;
     $scope.user.productnid = productData[0].nid;
-    $scope.user.productName = productData[0].title;
+    $scope.user.productname = productData[0].title;
     $scope.user.application = productData[0].application_type;
 
     // In case only one option it selects it by default

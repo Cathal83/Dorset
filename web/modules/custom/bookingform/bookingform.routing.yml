@@ -1,9 +1,8 @@
 bookingform.rest :
   path: '/api/v2/payment'
+  defaults: 
+    _controller: 'Drupal\bookingform\Controller\bookingformRest::bookingformPost'
+    _title: 'API Resource'
   methods: [POST]
-  options:
-    _auth: [ 'basic_auth' ]
   requirements:
-    _user_is_logged_in: 'TRUE'
-  defaults:
-    _content: 'Drupal\bookingform\Plugin\resource\rest\bookingformRest::bookingformPost'
+    _access: 'TRUE'

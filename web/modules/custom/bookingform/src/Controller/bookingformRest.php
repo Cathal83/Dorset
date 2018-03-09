@@ -1,24 +1,11 @@
 <?php
   namespace Drupal\bookingform\Controller;
-  
-  use Drupal\Core\Controller\ControllerBase;
 
+  use Drupal\Core\Controller\ControllerBase;
   use Symfony\Component\HttpFoundation\Request;
   use Symfony\Component\HttpFoundation\JsonResponse;
-  /**
-  *
-   * Rest Resource for Application Form Payment
-   *
-  * @RestResource(
-  *   id = "bookingformRest",
-  *   label = @Translation("Bookingform Rest Resource"),
-  *   uri_paths = {
-  *     "canonical" = "/api/v2/payment",
-  *     "https://www.drupal.org/link-relations/create" = "/api/v2/payment"
-  *   }
-  * )
-  *
-  */
+  use \Symfony\Component\HttpKernel\Exception\HttpException;
+
   class bookingformRest extends ControllerBase {
 
     private $apiKey = "sk_test_zJpfrkdwd8oaD56vZr8eumPO";
@@ -30,21 +17,21 @@
     }
 
     /**
+     * 
      * Responds to entity POST request.
-     * @return \Drupal\rest\ResourceResponse 
      * @throws \Symfony\Component\HttpKernel\Exception\HttpException
      *
      */
-    public function bookingformPost($formData) {
+    public function bookingformPost(Request $request) {
 
-      $formData = json_decode($formData);
+      $data = json_decode($request->getContent());
 
       /**
        * Creates a customer Element on Stripe
        */
       $customer = \Stripe\Customer::create(array(
-       'email' => $formData->email,
-       'source' => $formData->tk_id
+       'email' => $data->email,
+       'source' => $data->tk_id
       ));
       
      /**
@@ -53,13 +40,13 @@
      try{
       $charge = \Stripe\Charge::create(array(
         'customer' => $customer->id,
-        'description' => $formData->product,
-        'receipt_email' => $formData->email,
-        'amount' => $formData->amount,
+        'description' => $data->product,
+        'receipt_email' => $data->email,
+        'amount' => $data->amount,
         'currency' => 'EUR',
         'metadata' => array(
-          'firstname' => $formData->firstName,
-          'lastname' => $formData->lastName
+          'firstname' => $data->firstName,
+          'lastname' => $data->lastName
         )
       ));
      } catch (\Stripe\Error\Base $e) {
@@ -72,7 +59,7 @@
 
      }
 
-     return new ResourceResponse($error->id);
+     return new Jsonresponse($data);
 
     }
   }
