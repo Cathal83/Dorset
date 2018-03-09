@@ -7,7 +7,7 @@ id: bookingformRest
 plugin_id: bookingformRest
 granularity: method
 configuration:
-  methods:composer update drupal/core --with-dependencies
+  methods:
     - POST
   formats:
     - json
