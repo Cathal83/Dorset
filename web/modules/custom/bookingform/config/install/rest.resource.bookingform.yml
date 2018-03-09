@@ -4,7 +4,7 @@ dependencies:
   module:
     - basic_auth
 id: bookingformRest
-plugin_id: 'bookingformRest'
+plugin_id: bookingformRest
 granularity: method
 configuration:
   methods:

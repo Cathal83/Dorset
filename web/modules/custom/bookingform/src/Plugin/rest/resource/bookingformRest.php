@@ -18,6 +18,7 @@
   *     "https://www.drupal.org/link-relations/create" = "/api/v2/payment"
   *   }
   * )
+  *
   */
   class bookingPayment extends ResourceBase {
 
