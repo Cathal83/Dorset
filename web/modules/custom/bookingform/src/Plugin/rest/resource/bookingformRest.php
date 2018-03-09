@@ -46,10 +46,8 @@
        * Creates a customer Element on Stripe
        */
       $customer = \Stripe\Customer::create(array(
-
        'email' => $formData->email,
        'source' => $formData->tk_id
-
       ));
 
      /**
@@ -77,7 +75,7 @@
 
      }
 
-     return new ResourceResponse($error);
+     return new ResourceResponse($customer);
 
     }
   }

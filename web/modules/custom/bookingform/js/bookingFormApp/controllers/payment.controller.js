@@ -38,7 +38,7 @@ bookingformJS.controller("paymentCtrl", function($scope, $http, $location, strip
         });
       })
       .then(function (payment) {
-        console.log('successfully submitted payment for €', payment.amount);
+        console.log('successfully submitted payment for €', $scope.payment.amount);
       })
       .catch(function (err) {
         if (err.type && /^Stripe/.test(err.type)) {
