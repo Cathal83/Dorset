@@ -28,6 +28,7 @@
         "drupal/core": "~8.4",
         "drupal/custom_search": "^1.0@beta",
         "drupal/devel": "^1.2",
+        "drupal/easy_install": "^10.0",
         "drupal/facebook_pixel": "^1.0@alpha",
         "drupal/field_group": "^1.0",
         "drupal/file_entity": "^2.0@beta",
