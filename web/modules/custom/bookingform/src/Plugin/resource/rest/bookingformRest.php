@@ -1,13 +1,10 @@
 <?php
-  namespace Drupal\bookingform\Plugin\rest\resource;
+  namespace Drupal\bookingform\Controller;
+  
+  use Drupal\Core\Controller\ControllerBase;
 
-  use Drupal\Core\Session\AccountProxyInterface;
-  use Drupal\rest\Plugin\ResourceBase;
-  use Drupal\rest\ResourceResponse;
-  use Symfony\Component\DependencyInjection\ContainerInterface;
-  use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
-  use Psr\Log\LoggerInterface;
-
+  use Symfony\Component\HttpFoundation\Request;
+  use Symfony\Component\HttpFoundation\JsonResponse;
   /**
   *
    * Rest Resource for Application Form Payment
@@ -22,15 +19,15 @@
   * )
   *
   */
-  class bookingformRest extends ResourceBase {
+  class bookingformRest extends ControllerBase {
 
-      private $apiKey = "sk_test_zJpfrkdwd8oaD56vZr8eumPO";
+    private $apiKey = "sk_test_zJpfrkdwd8oaD56vZr8eumPO";
 
-      public function __construct() {
+    public function __construct() {
 
-        \Stripe\Stripe::setApiKey($this->apiKey);
+      \Stripe\Stripe::setApiKey($this->apiKey);
 
-      }
+    }
 
     /**
      * Responds to entity POST request.
@@ -38,7 +35,7 @@
      * @throws \Symfony\Component\HttpKernel\Exception\HttpException
      *
      */
-    public function post($formData) {
+    public function bookingformPost($formData) {
 
       $formData = json_decode($formData);
 
