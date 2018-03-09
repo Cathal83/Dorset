@@ -10,6 +10,8 @@
 
   /**
   *
+   * Rest Resource for Application Form Payment
+   *
   * @RestResource(
   *   id = "bookingformRest",
   *   label = @Translation("Bookingform Rest Resource"),
@@ -20,7 +22,7 @@
   * )
   *
   */
-  class bookingPayment extends ResourceBase {
+  class bookingformRest extends ResourceBase {
 
     /**
      * Responds to entity POST request.
