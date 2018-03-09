@@ -24,7 +24,7 @@
      */
     public function bookingformPost(Request $request) {
 
-      $data = json_decode($request->getContent());
+      $data = json_decode($request->getContent())->data;
 
       /**
        * Creates a customer Element on Stripe
@@ -59,7 +59,7 @@
 
      }
 
-     return new Jsonresponse($data);
+     return new Jsonresponse($error);
 
     }
   }

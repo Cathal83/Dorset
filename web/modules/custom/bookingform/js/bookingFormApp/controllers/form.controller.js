@@ -22,7 +22,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     }
   }
   $scope.payment = {
-    amount: "300",
+    amount: "1000000",
     card : {
       number : "4242424242424242",
       cvc : "555",
