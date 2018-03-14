@@ -1,0 +1,21 @@
+img {
+  max-width: 500px;
+  
+}
+// Image Header
+#zone-header-img {
+  .block-region-headerimage {
+    @include grid-span(12, 1);
+    
+    img{
+      @include grid-span(12, 1);
+      position: absolute;
+      top: 71px;
+      left: 0;
+      height: 309px;
+      z-index: -1;
+      object-fit: cover;
+      
+    }
+  }
+}

@@ -1,16 +1,20 @@
 // Import external libraries.
-@import "breakpoint";
+@import "compass";
+@import 'modular-scale';
 @import "singularitygs";
-@include sgs-change('debug', true);
+@import "breakpoint";
 
-// Variables
-@import "variables/**/*";
+// Plugins
+@import "00_plugins/**/*";
 
-// Mixins
-@import "mixins/**/*";
+// Settings
+@import "01_settings/**/*";
 
 // Base
-@import "base/**/*";
+@import "02_base/**/*";
 
-// Components
-@import "components/**/*";
+// Layouts
+@import "03_layouts/**/*";
+
+// Modules
+@import "04_modules/**/*";

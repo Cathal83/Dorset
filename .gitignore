@@ -23,3 +23,6 @@
 
 # SASS Cache
 /web/themes/dorsetcollege/style/.sass-cache/*
+
+# Gulp libraries
+/web/themes/dorsetcollege/style/node_modules/*

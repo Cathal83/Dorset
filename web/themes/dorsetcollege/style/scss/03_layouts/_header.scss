@@ -1,0 +1,22 @@
+#section-header {
+  @include grid-span(12, 1);
+  height: 71px;
+  background-color: $white;
+
+}
+#logo {
+  display: inline-block;
+  margin-left: 6%;
+  margin-top: 7px;
+  
+  .site-logo {
+    display: inline-block;
+
+    img {
+      width: 57px;
+      height: 57px;
+      display: block !important;
+
+    }
+  }
+}

@@ -1,0 +1,36 @@
+#block-dorsetcollege-main-menu {
+  display: none;
+
+  @include breakpoint($breakpoint('large')) {
+    display: block;
+    
+  }
+}
+
+#main-menu-trigger {
+  width: 28px;
+  height: 19px;
+  position: absolute;
+  top: 26px;
+  right: 6%;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: $dc-nav;
+    left: 0;
+    top: 0;
+
+    &:nth-child(2) {
+      top: 8px;
+      
+    }
+    
+    &:nth-child(3) {
+      top: 16px;
+
+    }
+  }
+}
