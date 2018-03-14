@@ -7,13 +7,18 @@ img {
   .block-region-headerimage {
     @include grid-span(12, 1);
     
-    img{
+    .header-image{
       @include grid-span(12, 1);
       position: absolute;
       top: 71px;
       left: 0;
       height: 309px;
       z-index: -1;
+    
+    }
+    img{
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       
     }

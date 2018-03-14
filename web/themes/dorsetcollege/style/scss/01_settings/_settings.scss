@@ -11,6 +11,7 @@ $dc-outline: #D4D1D1;
 $dc-footer: #14235D;
 $dc-grey: #F8F8F8;
 $dc-nav: #6d6e71;  
+$dc-overlay: rgba(212, 209, 209, 0.38);
 
 
 // Breakpoints
@@ -34,26 +35,13 @@ $grids: 12;
 
 @font-face {
 
-  font-family: Lato_Light;
-  src: url('../fonts/Lato/Lato-Light.ttf');
+  font-family: Lato;
+  @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
   
 }
 
-@font-face {
-
-  font-family: Lato_Regular;
-  src: url('../fonts/Lato/Lato-Regular.ttf');
-
-}
-
-@font-face {
-
-  font-family: Lato_Bold;
-  src: url('../fonts/Lato/Lato-Bold.ttf');
-
-}
-
 $h-weight: 700; //headers font-weight
+$p-weight: 400; //P default font-weight
 
 $h1-font-sizes: (
   small: (20pt, 1.1),
@@ -69,6 +57,11 @@ $h2-font-sizes: (
 $h3-font-sizes: (
   small: (16pt, 1.18),
   xlarge: (25pt, 1.44),
+);
+
+$p-font-sizes: (
+  small: (11pt, 1.63),
+  xlarge: (16pt, 1.68),
 );
 
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
@@ -106,4 +99,4 @@ $h3-font-sizes: (
 
 // SPACING
 
-$content-margin: 6%;
+$content-padding: 6%;

@@ -1,6 +1,14 @@
+.path-frontpage .block-region-headerimage {
+  height: 309px;
+  
+}
 #zone-header-img {
   h1 {
     margin-top: 35px;
+    
+  }
+  .header-image {
+    background-color: $dc-overlay;
     
   }
 }

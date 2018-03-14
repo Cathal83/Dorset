@@ -4,8 +4,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato-Bold";
+  font-family: "Lato";
   
+}
+
+a,
+p,
+div,
+li {
+  font-family: "Lato";
+
+}
+
+p,
+a {
+  font-weight: $p-weight;
+
 }
 
 h1,
@@ -28,5 +42,14 @@ h2 {
 
 h3 {
   @include font-size($h3-font-sizes);
+
+}
+
+p {
+  @include font-size($p-font-sizes);
+
+}
+* {
+  -webkit-font-smoothing: antialiased;
   
 }
