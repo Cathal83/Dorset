@@ -1,0 +1,33 @@
+.block-region-homeactionblocks {
+  @include grid-span(12, 1);
+
+  .block-list-bg-img {
+    height: 196px;
+    position: relative;
+
+    &:first-child {
+      height: 213px;
+      
+    }
+
+    .block-content {
+      @include grid-span(12, 1);
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .block-title {
+        padding: 25px 0 25px 0;
+        padding-left: $content-padding;
+        padding-right: $content-padding;
+        
+      }
+      .block-list {
+        padding-left: $content-padding;
+        padding-right: $content-padding;
+        
+      }
+    }
+  }
+}

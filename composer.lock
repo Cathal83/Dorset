@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "68184c1c2ad6b27e096092cdd78ae402",
+    "content-hash": "d55d2ca3dd6dc2ba00e16fa60ad4bd0d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1549,6 +1549,61 @@
             }
         },
         {
+            "name": "drupal/background_image_formatter",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/background_image_formatter",
+                "reference": "8.x-1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/background_image_formatter-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "5b6d205dcbb009a71891a85e16c0262f252a3145"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.3",
+                    "datestamp": "1505000044",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Zulljin",
+                    "homepage": "https://www.drupal.org/user/3138649"
+                },
+                {
+                    "name": "garethhallnz",
+                    "homepage": "https://www.drupal.org/user/772766"
+                }
+            ],
+            "description": "Background Image Formatter provides an image formatter to display images in background.",
+            "homepage": "https://www.drupal.org/project/background_image_formatter",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/background_image_formatter",
+                "issues": "https://www.drupal.org/project/issues/background_image_formatter"
+            }
+        },
+        {
             "name": "drupal/better_exposed_filters",
             "version": "3.0.0-alpha3",
             "source": {
@@ -1593,75 +1648,6 @@
             "homepage": "https://www.drupal.org/project/better_exposed_filters",
             "support": {
                 "source": "http://cgit.drupalcode.org/better_exposed_filters"
-            }
-        },
-        {
-            "name": "drupal/bg_image_formatter",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/bg_image_formatter",
-                "reference": "8.x-1.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bg_image_formatter-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "c0495437379bec2e844367a4c5a21bd698c778ce"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.7",
-                "phpmd/phpmd": "^2.6",
-                "phpro/grumphp": "^0.12",
-                "sebastian/phpcpd": "^3.0",
-                "sensiolabs/security-checker": "^4.1",
-                "squizlabs/php_codesniffer": "^3.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1516906090",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "scripts": {
-                "grumphp": [
-                    "./vendor/bin/grumphp run"
-                ]
-            },
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Pol Dellaiera",
-                    "homepage": "https://www.drupal.org/user/931394",
-                    "email": "pol.dellaiera@protonmail.com"
-                },
-                {
-                    "name": "Pol",
-                    "homepage": "https://www.drupal.org/user/47194"
-                },
-                {
-                    "name": "garethhallnz",
-                    "homepage": "https://www.drupal.org/user/772766"
-                }
-            ],
-            "description": "This module provides an image formatter who allows you to set an image in background of a container.",
-            "homepage": "https://drupal.org/project/bg_image_formatter",
-            "support": {
-                "source": "http://cgit.drupalcode.org/bg_image_formatter"
             }
         },
         {
@@ -1749,6 +1735,53 @@
             "homepage": "https://www.drupal.org/project/block_class",
             "support": {
                 "source": "http://cgit.drupalcode.org/block_class"
+            }
+        },
+        {
+            "name": "drupal/block_type_templates",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/block_type_templates",
+                "reference": "8.x-1.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/block_type_templates-8.x-1.0-alpha1.zip",
+                "reference": "8.x-1.0-alpha1",
+                "shasum": "e3c1df88982229518001c7930470e896fb9753e9"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha1",
+                    "datestamp": "1489210983",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "nerdstein",
+                    "homepage": "https://www.drupal.org/user/1557710"
+                }
+            ],
+            "description": "Adds a theme suggestion for a template per block type.",
+            "homepage": "https://www.drupal.org/project/block_type_templates",
+            "support": {
+                "source": "http://cgit.drupalcode.org/block_type_templates"
             }
         },
         {
@@ -9520,6 +9553,7 @@
     "stability-flags": {
         "drupal/better_exposed_filters": 15,
         "drupal/block_class": 15,
+        "drupal/block_type_templates": 15,
         "drupal/custom_search": 10,
         "drupal/facebook_pixel": 15,
         "drupal/file_entity": 10,

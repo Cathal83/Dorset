@@ -2,8 +2,7 @@
   set classes = [
     'block',
     'block-' ~ configuration.provider|clean_class,
-    'block-' ~ plugin_id|clean_class,
-    'block-' ~ label,
+    'block-list-bg-img',
   ]
 %}
 <div{{ attributes.addClass(classes) }}>

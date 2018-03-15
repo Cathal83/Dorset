@@ -1,0 +1,23 @@
+// Home Action Blocks overlay
+.block-region-homeactionblocks .block-list-bg-img {
+  &:first-child {
+    .block-content { 
+      box-sizing: border-box;     
+      background:
+      linear-gradient(
+        $dc-blue-overlay,
+        $dc-blue-overlay
+      );
+    }
+  };
+
+  &:last-child {
+    .block-content {
+      background:
+      linear-gradient(
+        $dc-red-overlay,
+        $dc-red-overlay
+      ),
+    }
+  }
+}

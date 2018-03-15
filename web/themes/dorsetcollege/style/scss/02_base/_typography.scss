@@ -53,3 +53,7 @@ p {
   -webkit-font-smoothing: antialiased;
   
 }
+.list-element {
+  @include font-size($p-default-white-bold);
+
+}

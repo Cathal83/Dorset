@@ -12,6 +12,8 @@ $dc-footer: #14235D;
 $dc-grey: #F8F8F8;
 $dc-nav: #6d6e71;  
 $dc-overlay: rgba(212, 209, 209, 0.38);
+$dc-red-overlay: rgba(241, 73, 80, 0.5);
+$dc-blue-overlay: rgba(51, 102, 255, 0.5);
 
 
 // Breakpoints
@@ -60,6 +62,11 @@ $h3-font-sizes: (
 );
 
 $p-font-sizes: (
+  small: (11pt, 1.63),
+  xlarge: (16pt, 1.68),
+);
+
+$p-default-white-bold: (
   small: (11pt, 1.63),
   xlarge: (16pt, 1.68),
 );
