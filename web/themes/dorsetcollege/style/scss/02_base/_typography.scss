@@ -57,3 +57,7 @@ p {
   @include font-size($p-default-white-bold);
 
 }
+.btn-link-white a {
+  @include font-size($p-links);
+  
+}

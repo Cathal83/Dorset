@@ -1,3 +1,8 @@
-.btn-link {
-  
+.btn-link-white {
+  a {
+    background-color: $white;
+    padding: 5px;
+    border-radius: 60px;
+
+  }
 }

@@ -4,9 +4,9 @@
   .block-content .link {
     a {
       float: left;
-      padding: 10px;
+      padding: 7px;
       border: solid 2px $dc-outline;
-      margin: 9px 0 9px 0;
+      margin: $links-margin;
       
     }
     &:first-child a {

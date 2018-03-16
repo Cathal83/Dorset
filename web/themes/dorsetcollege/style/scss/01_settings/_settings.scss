@@ -19,7 +19,8 @@ $dc-blue-overlay: rgba(51, 102, 255, 0.5);
 // Breakpoints
 
 $breakpoints: (
-  small: 0,
+  xmall: 0,
+  small: 375,
   medium: 640px,
   large: 1024px,
   xlarge: 1200px,
@@ -46,12 +47,14 @@ $h-weight: 700; //headers font-weight
 $p-weight: 400; //P default font-weight
 
 $h1-font-sizes: (
+  xsmall: (16pt, 1.1),
   small: (20pt, 1.1),
   medium: (30pt, 1.2),
   xlarge: (60pt, 1.2),
 );
 
 $h2-font-sizes: (
+  xsmall: (16pt, 1.2),
   small: (20pt, 1.2),
   xlarge: (30pt, 1.2),
 );
@@ -68,6 +71,11 @@ $p-font-sizes: (
 
 $p-default-white-bold: (
   small: (11pt, 1.63),
+  xlarge: (16pt, 1.68),
+);
+
+$p-links: (
+  xsmall: (11pt, 1.63),
   xlarge: (16pt, 1.68),
 );
 
@@ -105,5 +113,6 @@ $p-default-white-bold: (
 }
 
 // SPACING
-
+$title-padding: 25px 0 25px 0;
 $content-padding: 6%;
+$links-margin: 4.5px 0;
