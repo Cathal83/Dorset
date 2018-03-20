@@ -3,7 +3,8 @@
 
 $white: #fff;
 $black: #000;
-// Dorset College
+
+// Dorset College Colours
 $dc-blue: #3366FF;
 $dc-red: #F14950;
 $dc-yellow: #E7B929;
@@ -11,9 +12,22 @@ $dc-outline: #D4D1D1;
 $dc-footer: #14235D;
 $dc-grey: #F8F8F8;
 $dc-nav: #6d6e71;  
-$dc-overlay: rgba(212, 209, 209, 0.38);
+$dc-bg: #f2f2f2;
+
+// Overlays
+$dc-overlay: rgba(45, 45, 45, 0.38);
 $dc-red-overlay: rgba(241, 73, 80, 0.5);
 $dc-blue-overlay: rgba(51, 102, 255, 0.5);
+$dc-blue-about: rgba(51, 102, 255, 0.8);
+
+
+// Font Colours
+$p-color: #5D5D5D;
+$h1-color: #fff;
+$h2-color: #fff;
+$h2-grey-color: #5D5D5D;
+$p-pag-color: #919396;
+
 
 
 // Breakpoints
@@ -44,7 +58,10 @@ $grids: 12;
 }
 
 $h-weight: 700; //headers font-weight
+$p-bold-weight: 700;
 $p-weight: 400; //P default font-weight
+$p-stat-weight: 700;
+$link-weight: 700;
 
 $h1-font-sizes: (
   xsmall: (16pt, 1.1),
@@ -69,6 +86,16 @@ $p-font-sizes: (
   xlarge: (16pt, 1.68),
 );
 
+$p-default: (
+  small: (11pt, 1.63),
+  xlarge: (16pt, 1.68), 
+);
+
+$p-default-white: (
+  small: (11pt, 1.63),
+  xlarge: (16pt, 1.68),
+);
+
 $p-default-white-bold: (
   small: (11pt, 1.63),
   xlarge: (16pt, 1.68),
@@ -77,6 +104,11 @@ $p-default-white-bold: (
 $p-links: (
   xsmall: (11pt, 1.63),
   xlarge: (16pt, 1.68),
+);
+
+$p-stat: (
+  xmall: (16pt, 1.43),
+  xlarge: (20pt, 1.5),
 );
 
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
@@ -113,6 +145,27 @@ $p-links: (
 }
 
 // SPACING
-$title-padding: 25px 0 25px 0;
+$title-padding: 25px 0;
+$title-list-padding: 25px 0 20px 0;
 $content-padding: 6%;
 $links-margin: 4.5px 0;
+$list-padding: 7%;
+$block-padding: 25px 0;
+
+/** 
+  *
+  * Statistics/ Block with Icons and Content
+  *
+*/
+$stats-block-padding: 17.5px 0;
+$stats-block-margin: 50px;
+$stat-item-margin: 7.5px 0;
+$stat-intro-margin: 15px 7.5px;
+$stat-content-margin: 0 7.5px;
+
+/**
+  *
+  * About Block
+  *
+*/
+$about-content-padding: 0 10% 20px 10%;

@@ -8,6 +8,11 @@
       border: solid 2px $dc-outline;
       margin: $links-margin;
       
+      &:hover {
+        color: $dc-red;
+        background-color: $dc-outline;
+
+      }
     }
     &:first-child a {
       border-radius: 25px 0 0 25px;
@@ -17,9 +22,11 @@
       border-radius: 0 25px 25px 0;
       
     }
-    &:hover {
-      background-color: $dc-outline;
-      
-    }
   }
+}
+
+.block-link a {
+  text-decoration: underline;
+  @include font-size($p-links);
+  
 }

@@ -1,8 +1,15 @@
 #zone-header-img,
 #zone-header,
 #zone-footer,
-#zone-post-footer {
+#zone-post-footer,
+#zone-stats,
+#zone-about {
   padding-left: $content-padding;
   padding-right: $content-padding;
   
+}
+
+.zone-section {
+  padding: $block-padding;
+
 }

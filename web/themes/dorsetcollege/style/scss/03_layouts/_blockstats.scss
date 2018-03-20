@@ -1,0 +1,24 @@
+.zone-section {
+  padding: $stats-block-padding;
+  
+  .block-stats {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: $stats-block-margin;
+  
+    .stat-item {
+      flex: 1 0 50%;
+      margin: $stat-item-margin;
+      text-align: center;
+      
+      .stat-intro {
+        margin: $stat-intro-margin;
+  
+      }
+      .stat-content {
+        margin: $stat-content-margin;
+  
+      }
+    }
+  }
+}

@@ -3,27 +3,31 @@
   .block-region-headerimage {
     @include grid-span(12, 1);
     
-    .header-image{
+    .header-img{
       @include grid-span(12, 1);
       position: absolute;
       top: 71px;
       left: 0;
       height: 309px;
       z-index: -1;
-    
-    }
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 0 0 64% 64%/0 0 12% 12%;
       
+      div{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; 
+        object-fit: cover;
+        border-radius: 0 0 64% 64%/0 0 12% 12%;
+        box-shadow: inset 0 0 0 2000px $dc-overlay;
+
+      }
     }
   }
 }
 
 // Block list with BG Image
-.block-list-bg-img .bg-img {
+.bg-img {
   @include grid-span(12, 1);
   height: 100%;
   

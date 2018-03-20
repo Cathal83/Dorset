@@ -16,9 +16,14 @@ li {
 
 }
 
-p,
-a {
+p {
   font-weight: $p-weight;
+
+}
+
+a {
+  @include font-size($p-links);
+  font-weight: $link-weight;
 
 }
 
@@ -53,11 +58,32 @@ p {
   -webkit-font-smoothing: antialiased;
   
 }
+
 .list-element {
   @include font-size($p-default-white-bold);
+  font-weight: $p-bold-weight;
 
 }
+
 .btn-link-white a {
   @include font-size($p-links);
+  font-weight: $p-bold-weight;
+
+}
+
+.stat-intro {
+  @include font-size($p-default);
+  font-weight: $p-weight;
   
+}
+
+.stat-content {
+  @include font-size($p-stat);
+  font-weight: $p-stat-weight;
+
+}
+
+.block-content p {
+  @include font-size($p-default-white);
+
 }

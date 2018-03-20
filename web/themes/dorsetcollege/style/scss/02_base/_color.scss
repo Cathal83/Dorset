@@ -2,7 +2,7 @@ h1,
 h2,
 h3,
 a {
-  color: $white;
+  color: $h1-color;
   
 }
 
@@ -16,5 +16,31 @@ a {
 }
 .btn-red {
   color: $dc-red;
+  
+}
+
+#zone-stats {
+  background-color: $dc-bg;
+  
+}
+
+p {
+  color: $p-color;
+  
+}
+
+.stat-intro, 
+.stat-content {
+  color: $p-color;
+  
+}
+
+#zone-about .block-content-with-title {
+  background-color: $dc-blue-about;
+
+}
+
+.block-content p {
+  color: $white;
   
 }

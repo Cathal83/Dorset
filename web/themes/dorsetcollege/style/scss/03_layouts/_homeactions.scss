@@ -1,10 +1,9 @@
 #zone-actionblocks .zone-section{
-  //position: relative;
-
+  padding: 0;
+  top: -60px;
+  
   .block-region-homeactionblocks {
     @include grid-span(12, 1);
-    //position: absolute;
-    top: -60px;
     z-index: -2;
 
     .block-list-bg-img {
@@ -31,15 +30,15 @@
       }
       .block-content {
         @include grid-span(12, 1);
-        padding-left: $content-padding;
-        padding-right: $content-padding;
         height: 100%;
         position: absolute;
         top: 0;
         left: 0;
 
         .block-title {
-          padding: $title-padding;
+          padding: $title-list-padding;
+          padding-left: $content-padding;
+          padding-right: $content-padding;
           
         }
         .btn-link-white {
@@ -47,6 +46,25 @@
           top: 59%;
           right: 12%;
 
+        }
+        .block-list {
+          padding-left: $content-padding;
+          padding-right: $content-padding;
+          
+          .paragraph--type--paragraph-list {
+            padding-left: $list-padding;
+            padding-right: $list-padding;
+            
+            .list-element {
+              display: list-item;
+              margin: 5px 0;
+              
+              &:before {
+                padding-left: -5px;
+                
+              }
+            }
+          }
         }
       }
     }
