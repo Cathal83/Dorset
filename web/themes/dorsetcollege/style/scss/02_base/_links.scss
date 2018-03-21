@@ -25,8 +25,32 @@
   }
 }
 
-.block-link a {
-  text-decoration: underline;
-  @include font-size($p-links);
-  
+.block-link,
+.more-link {
+  a {
+    @include font-size($p-links);
+    display: inline-block;
+    text-align: center;
+    border-bottom: solid 1px $white;
+    padding: $link-border-padding;
+
+  }
 }
+
+// News & Events
+.block-news-events {
+  .views-field-nothing {
+    text-align: center;
+
+    a {
+      border-bottom: solid 1px $white;
+      padding: $link-border-padding;
+    
+    }
+  }
+  .more-link {
+    padding: $link-padding;
+    text-align: center;
+    
+  }
+} 

@@ -71,6 +71,7 @@ p {
 
 }
 
+// Stats
 .stat-intro {
   @include font-size($p-default);
   font-weight: $p-weight;
@@ -84,6 +85,12 @@ p {
 }
 
 .block-content p {
+  @include font-size($p-default-white);
+
+}
+
+// News & Events
+.block-news-events .views-field {
   @include font-size($p-default-white);
 
 }

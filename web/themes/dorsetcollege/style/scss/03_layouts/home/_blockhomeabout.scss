@@ -1,0 +1,33 @@
+#zone-about .zone-section {
+  padding: $block-padding;
+  
+  .block-region-homeabout {
+    .block-content-with-title {
+      margin-left: $content-padding;
+      margin-right: $content-padding;
+      margin-top: $about-margin-over;
+  
+      .block-title {
+        text-align: center;
+        
+      }
+      .block-content {
+        padding: $about-content-padding;
+  
+      }
+      .block-link {
+        padding-bottom: $about-link-padding;
+        text-align: center;
+        
+      }
+    }
+    .block-background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: -1;
+      
+    }
+  }
+}

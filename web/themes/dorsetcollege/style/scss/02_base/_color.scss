@@ -1,9 +1,24 @@
 h1, 
-h2,
 h3,
 a {
   color: $h1-color;
   
+}
+
+h2 {
+  color: $h2-grey-color;
+
+}
+
+/**
+  *
+  * H2 Exception
+  *
+*/
+.block-list-bg-img h2,
+.block-content-with-title h2 {
+  color: $h2-color;
+
 }
 
 .block-list div {
@@ -43,4 +58,34 @@ p {
 .block-content p {
   color: $white;
   
+}
+
+/**
+  *
+  * News & Event
+  *
+*/
+.block-news-events {
+  .views-field {
+    color: $white;
+
+    p {
+      color: $white;
+      
+    }
+  }
+  .views-field-field-event- div {
+    box-shadow: inset 0 0 0 2000px $dc-news-overlay;
+    
+  }
+  .more-link a {
+    color: $dc-blue;
+    border-color: $dc-blue;
+
+  }
+}
+
+#zone-footer {
+  background-color: $dc-footer;
+
 }

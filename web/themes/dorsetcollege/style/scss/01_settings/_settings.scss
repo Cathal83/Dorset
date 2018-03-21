@@ -19,6 +19,7 @@ $dc-overlay: rgba(45, 45, 45, 0.38);
 $dc-red-overlay: rgba(241, 73, 80, 0.5);
 $dc-blue-overlay: rgba(51, 102, 255, 0.5);
 $dc-blue-about: rgba(51, 102, 255, 0.8);
+$dc-news-overlay: rgba(45, 45, 45, 0.7);
 
 
 // Font Colours
@@ -47,6 +48,11 @@ $grids: 12;
 @include add-grid($grids);
 @include add-gutter(1/3);
 @include sgs-change('debug', true);
+
+
+// Base Sizes
+
+$about-height: 243px;
 
 // Base Typography
 
@@ -168,4 +174,23 @@ $stat-content-margin: 0 7.5px;
   * About Block
   *
 */
+$about-margin-over: -75px;
 $about-content-padding: 0 10% 20px 10%;
+$about-link-padding: 25px;
+
+
+/**
+  *
+  * Links
+  *
+*/
+$link-border-padding: 0 5px 5px 5px;
+$link-padding: 25px 0;
+
+/**
+  *
+  * News & Events
+  *
+*/
+$news-field-margin: 13px;
+$news-body-margin: 20px;

@@ -1,0 +1,25 @@
+.block-news-events {
+  .views-row {
+    position: relative;
+    display: none;
+    padding: 10%;
+    
+    &:first-child {
+      display: inline-block;
+      
+    }
+
+    .views-field {
+      margin-bottom: $news-field-margin;
+
+    }
+    .views-field-body {
+      margin-bottom: $news-body-margin;
+
+    }
+    .views-field-nothing {
+      margin-bottom: 0;
+      
+    }
+  }
+}
