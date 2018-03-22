@@ -9,14 +9,16 @@ var cssmin = require('gulp-cssmin');
 var uncss = require('gulp-uncss');
 var stripCssComments = require('gulp-strip-css-comments');
 var uglify = require('gulp-uglify');
-var livereload = require('gulp-livereload')
+var livereload = require('gulp-livereload');
+var neat = require('bourbon-neat').includePaths
 var sass_config = {
   importer: importer,
   includePaths: [
     'node_modules/breakpoint-sass/stylesheets/',
     'node_modules/singularitygs/stylesheets/',
     'node_modules/modularscale-sass/stylesheets',
-    'node_modules/compass-mixins/lib/'
+    'node_modules/compass-mixins/lib/',
+    'node_modules/bourbon-neat/core/'
   ]
 };
 

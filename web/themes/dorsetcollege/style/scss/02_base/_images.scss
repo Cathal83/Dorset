@@ -1,14 +1,8 @@
 // Image Header
-#zone-header-img {
-  .block-region-headerimage {
-    @include grid-span(12, 1);
-    
+#zone-header-img {  
+  .block-region-headerimage {    
     .header-img{
-      @include grid-span(12, 1);
-      position: absolute;
-      top: 71px;
-      left: 0;
-      height: 309px;
+      width: 100%;
       z-index: -1;
       
       div{
@@ -31,6 +25,7 @@
   height: 100%;
   
   div {
+    width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;

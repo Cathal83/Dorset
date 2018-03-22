@@ -1,12 +1,16 @@
-#zone-header-img,
 #zone-header,
-#zone-footer,
 #zone-post-footer,
 #zone-stats,
-#zone-accreditations
+#zone-accreditations,
+.txt-banner
 {
   padding-left: $content-padding;
   padding-right: $content-padding;
+  
+}
+
+#zone-main {
+  margin-top: -27px;
   
 }
 
@@ -28,6 +32,11 @@
   }
 }
 
+#zone-footer {
+  @include grid-container;
+  padding-bottom: $padding-default;
+
+}
 
 #zone-post-footer {
   display: none;

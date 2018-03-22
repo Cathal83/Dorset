@@ -1,10 +1,6 @@
 #block-dorsetcollege-main-menu {
   display: none;
 
-  @include breakpoint($breakpoint('large')) {
-    display: block;
-    
-  }
 }
 
 #main-menu-trigger {

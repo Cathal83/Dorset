@@ -1,0 +1,17 @@
+$grids: 12;
+$neat-grid: (
+  columns: $grids,
+  gutter: 6%,
+);
+
+.col-xm-12 {
+  @include grid-column(12);
+
+}
+
+.col-sm-6 {
+  @include breakpoint(375px) {
+    @include grid-column(6);
+    
+  }
+}

@@ -1,4 +1,11 @@
-#section-footer {
-  @include grid-span(12, 1);
-  
+#zone-footer {
+  .field-label {
+    float: left;
+
+  }
+
+  a {
+    font-weight: 500;
+    
+  }
 }

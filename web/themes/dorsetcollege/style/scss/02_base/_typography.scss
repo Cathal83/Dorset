@@ -60,7 +60,7 @@ p {
 }
 
 .list-element {
-  @include font-size($p-default-white-bold);
+  @include font-size($p-action-white-bold);
   font-weight: $p-bold-weight;
 
 }
@@ -92,5 +92,13 @@ p {
 // News & Events
 .block-news-events .views-field {
   @include font-size($p-default-white);
+
+}
+
+// Footer
+.menu-title {
+  @include font-size($p-stat);
+  font-weight: 700;
+  padding: $title-padding;
 
 }

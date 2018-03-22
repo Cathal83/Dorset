@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Fb</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="4" y="4" width="22" height="24"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Fb">
+            <g id="Rectangle-11">
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <rect stroke="#979797" stroke-width="1" x="4.5" y="4.5" width="21" height="23"></rect>
+            </g>
+            <path d="M20.155,10.656 L18.649,10.657 C17.468,10.657 17.239,11.218 17.239,12.041 L17.239,13.857 L20.056,13.857 L19.689,16.702 L17.239,16.702 L17.239,24 L14.302,24 L14.302,16.702 L11.846,16.702 L11.846,13.857 L14.302,13.857 L14.302,11.76 C14.302,9.325 15.789,8 17.96,8 C19,8 19.894,8.077 20.155,8.112 L20.155,10.656 Z M0,32 L32,32 L32,0 L0,0 L0,32 Z" id="Fill-92" fill="#14235D"></path>
+        </g>
+    </g>
+</svg>

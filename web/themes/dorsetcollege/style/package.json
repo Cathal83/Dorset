@@ -4,6 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
+    "bourbon-neat": "2.1.0",
     "breakpoint-sass": "^2.6.1",
     "browser-sync": "^2.9.3",
     "compass-mixins": "^0.12.7",

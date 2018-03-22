@@ -32,10 +32,9 @@ $p-pag-color: #919396;
 
 
 // Breakpoints
-
 $breakpoints: (
-  xmall: 0,
-  small: 375,
+  xmall: 0px,
+  small: 375px,
   medium: 640px,
   large: 1024px,
   xlarge: 1200px,
@@ -43,12 +42,12 @@ $breakpoints: (
 );
 
 // Grids
-
-$grids: 12;
-@include add-grid($grids);
-@include add-gutter(1/3);
-@include sgs-change('debug', true);
-
+//@include sgs-change('debug', true);
+/**
+#page-wrapper {
+  @include background-grid($color: rgba(51, 102, 255, 0.8));
+}
+*/
 
 // Base Sizes
 
@@ -107,6 +106,11 @@ $p-default-white-bold: (
   xlarge: (16pt, 1.68),
 );
 
+$p-action-white-bold: (
+  small: (11pt, 1.2),
+  xlarge: (16pt, 1.3),
+);
+
 $p-links: (
   xsmall: (11pt, 1.63),
   xlarge: (16pt, 1.68),
@@ -157,6 +161,16 @@ $content-padding: 6%;
 $links-margin: 4.5px 0;
 $list-padding: 7%;
 $block-padding: 25px 0;
+$padding-default: 25px;
+
+/** 
+  *
+  * Social media
+  *
+*/
+$icon-size: 24px;
+$sm-icon-margin: 0 2px;
+$sm-block-margin: 10px;
 
 /** 
   *
@@ -194,3 +208,7 @@ $link-padding: 25px 0;
 */
 $news-field-margin: 13px;
 $news-body-margin: 20px;
+
+// IMAGES
+$hm-head-hg: 309px;
+$default-head-hg: 191px;
