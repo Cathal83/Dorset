@@ -1,0 +1,28 @@
+.block-views-blockfind-a-course-block-1 {
+  .views-exposed-form {
+    display: none;
+  }
+  a {
+    @include font-size($p-default);
+
+  }
+  .views-row {
+    padding: $fc-row-padding;
+
+    .views-field-title {
+      float: left;
+      @include grid-column(8);
+
+      a {
+        color: $p-color;
+        font-weight: 400;
+
+      }
+    }
+    .views-field-view-node {
+      float: right;
+      @include grid-column(4);
+
+    }
+  }
+}

@@ -2,14 +2,16 @@
 #zone-post-footer,
 #zone-stats,
 #zone-accreditations,
-.txt-banner
+.txt-banner,
+.block-links,
+.wrapper
 {
   padding-left: $content-padding;
   padding-right: $content-padding;
   
 }
 
-#zone-main {
+.path-frontpage #zone-main {
   margin-top: -27px;
   
 }

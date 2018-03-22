@@ -13,6 +13,7 @@ $dc-footer: #14235D;
 $dc-grey: #F8F8F8;
 $dc-nav: #6d6e71;  
 $dc-bg: #f2f2f2;
+$dc-border-color: #979797;
 
 // Overlays
 $dc-overlay: rgba(45, 45, 45, 0.38);
@@ -33,7 +34,7 @@ $p-pag-color: #919396;
 
 // Breakpoints
 $breakpoints: (
-  xmall: 0px,
+  xmall: 0,
   small: 375px,
   medium: 640px,
   large: 1024px,
@@ -208,6 +209,13 @@ $link-padding: 25px 0;
 */
 $news-field-margin: 13px;
 $news-body-margin: 20px;
+
+/**
+  *
+  * Find a Course table
+  *
+*/
+$fc-row-padding: 12px 0;
 
 // IMAGES
 $hm-head-hg: 309px;
