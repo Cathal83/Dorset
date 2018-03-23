@@ -1,0 +1,70 @@
+.block-views-blockfind-a-course-block-1 {
+  .views-exposed-form {
+    display: none;
+  }
+  a {
+    @include font-size($p-default);
+
+  }
+  .block-table { 
+    padding-bottom: $padding-default;
+    
+    .table-row {
+      padding: $fc-row-padding;
+      display: flex;
+      flex: wrap;
+      justify-content: space-between;      
+      padding: $fc-row-padding;
+      min-height: $fc-row-min-hg;
+      border-bottom: $fc-row-border;
+
+      .views-field-title {
+        flex: 3;
+        margin: auto;
+        padding-right: 6%;
+        
+        a {
+          color: $p-color;
+          font-weight: 400;
+
+        }
+      }
+      .views-field-view-node {
+        flex: 1;
+        margin: auto;
+        text-align: right;
+        
+        a {
+          color: $dc-blue;
+          
+        }
+      }
+    }
+    // PAGINATION
+    .pager {
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color: $white;
+      padding: $block-padding;
+      
+      .pager__item {
+        display: none;
+        
+      }
+      .pager__item--next {
+        display: block;
+        
+        a {
+          color: $dc-blue;
+
+        }
+      }
+      a {
+        color: $p-color;
+      
+      }
+    }
+  }
+}

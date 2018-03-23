@@ -30,32 +30,23 @@ $h2-color: #fff;
 $h2-grey-color: #5D5D5D;
 $p-pag-color: #919396;
 
-
-
 // Breakpoints
+$bp-medium: 640px;
+
+// Breakpoints to font
 $breakpoints: (
   xmall: 0,
   small: 375px,
-  medium: 640px,
+  medium: $bp-medium,
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px
 );
 
-// Grids
-//@include sgs-change('debug', true);
-/**
-#page-wrapper {
-  @include background-grid($color: rgba(51, 102, 255, 0.8));
-}
-*/
-
 // Base Sizes
-
 $about-height: 243px;
 
 // Base Typography
-
 @font-face {
 
   font-family: Lato;
@@ -163,6 +154,7 @@ $links-margin: 4.5px 0;
 $list-padding: 7%;
 $block-padding: 25px 0;
 $padding-default: 25px;
+$margin-default: 25px;
 
 /** 
   *
@@ -215,7 +207,10 @@ $news-body-margin: 20px;
   * Find a Course table
   *
 */
-$fc-row-padding: 12px 0;
+$fc-row-padding: 0 6%;;
+$fc-row-min-hg: 50px;
+$fc-row-border: solid 1.5px $dc-border-color;
+
 
 // IMAGES
 $hm-head-hg: 309px;

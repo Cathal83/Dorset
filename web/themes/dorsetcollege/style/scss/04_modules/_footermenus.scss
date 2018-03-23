@@ -1,0 +1,34 @@
+#zone-footer {
+  .field-label {
+    float: left;
+
+  }
+
+  a {
+    font-weight: 500;
+    
+  }
+}
+
+#zone-footer .region-footer {
+  padding-top: $padding-default;
+  
+  &:first-child {
+    padding-top: 0;
+  }
+  @include breakpoint($bp-medium) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  .block-menu-footer {
+    box-sizing: border-box;
+    padding-top: $padding-default;
+
+    @include breakpoint($bp-medium) {
+      flex-basis: 40%;
+
+    }
+  }
+}

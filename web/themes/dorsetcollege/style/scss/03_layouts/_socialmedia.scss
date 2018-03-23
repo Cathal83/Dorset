@@ -1,6 +1,5 @@
 #block-blockfootersocialmedia-2 {
-  @include grid-column(12);
-  margin-top: $sm-block-margin;
+  margin-top: $margin-default;
 
   .sm-facebook,
   .sm-google,

@@ -14,9 +14,10 @@ libraries:
   - dorsetcollege/dorsetcollege
 regions:
   header: 'Header'
-  content: Content
+  content: 'Content'
   footer: 'Footer'
   postfooter: 'Post Footer'
+  
 features:
   logo: true
   name: true
