@@ -6,3 +6,36 @@
 
   }
 }
+
+@mixin btn-base {
+  padding: .75em 1.5em;
+  border-radius: 60px;
+
+  @include breakpoint($bp-medium) {
+    padding: 10px;
+    
+  }
+}
+@mixin btn-red {
+  background-color: $dc-red;
+  color: $white !important;
+  @include btn-base;
+
+}
+@mixin btn-blue {
+  background-color: $dc-blue;
+  color: $white !important;
+  @include btn-base;
+
+}
+
+.btn-red a {
+  @include btn-base;
+  @include btn-red;
+
+}
+.btn-blue a {
+  @include btn-base;
+  @include btn-blue;
+  
+}

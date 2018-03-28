@@ -53,17 +53,23 @@
         display: none;
         
       }
-      .pager__item--next {
+      // Next button on Find a Course Table
+      .pager__item--next,
+      .pager__item--previous {
         display: block;
         
-        a {
-          color: $dc-blue;
-
-        }
+        
       }
-      a {
-        color: $p-color;
-      
+
+      .pager__item--next {
+        float: right;
+        margin-right: 25px;
+
+      }
+      .pager__item--previous {
+        float: left;
+        margin-left: 25px;
+        
       }
     }
   }
