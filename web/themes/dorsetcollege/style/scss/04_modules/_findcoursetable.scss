@@ -1,6 +1,7 @@
 .block-views-blockfind-a-course-block-1 {
   .views-exposed-form {
-    display: none;
+    display: block;
+    
   }
   a {
     @include font-size($p-default);

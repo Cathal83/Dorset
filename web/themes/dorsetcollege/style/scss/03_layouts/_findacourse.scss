@@ -1,0 +1,8 @@
+.path-find-a-course .txt-banner {
+  display: none !important;
+  
+  @include breakpoint($bp-medium){
+    display: block;
+
+  }
+}
