@@ -27,9 +27,10 @@ $visual-grid-opacity: 0.4 !default;
 $visual-grid-breakpoints: () !default;
 
 #zone-footer {
-  @include grid-visual;
+  //@include grid-visual;
+  
 }
 #page-wrapper {
-  @include grid-visual;
+  //@include grid-visual;
   
 }

@@ -1,8 +1,15 @@
-.path-find-a-course .txt-banner {
-  display: none !important;
+.path-find-a-course {
+  .txt-banner {
+    display: none !important;
   
-  @include breakpoint($bp-medium){
-    display: block;
+    @include breakpoint($bp-medium){
+      display: block;
+  
+    }
+  }
+  .block-views-blockfind-a-course-block-1 h2 {
+    padding-left: $padding-default;
+    padding-right: $padding-default;
 
   }
 }
