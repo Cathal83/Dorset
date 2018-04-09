@@ -3,7 +3,7 @@
         <h2>Application</h2>
         <div>
             <h1>{{ user.productname }}</h1>
-            {{ user }}
+            {{ productData }}
         </div>
     </div>
     <div class="form-fields">
@@ -41,7 +41,10 @@
 
     <!-- Proceed Button -->
     <div class="bookingform-btn">
-        <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Back</a>
-        <a class="booking-next" ng-click="charge()" href="">Continue</a>
+      <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
+    </div>
+    <div class="bookingform-btn">
+      <!--<a class="btn-next" ng-click="charge()" href="">Continue</a>-->
+      <a class="btn-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Next</a>
     </div>
 </div>

@@ -30,8 +30,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
       address_zip: "D7"
     } 
   }
-
-  $scope.productData = [{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'Evidence of Prior Learning'},{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'English Proficiency'},{'nid':'3','faculty':'Business Accounting Courses','course_type':'Undergraduate','title':'BA in International Business','delivery_mode':'Full-Time','application_type':'33','document':'High School Transcripts'}];
+  
   $scope.showProductSel = true;
   $scope.user.docs;
   $scope.maxSize = [];
@@ -74,6 +73,19 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
 
   }
   
+  /**
+   * 
+   * Removes product selected when cancel button is clicked
+   * 
+  */
+  $scope.remProduct = function() {
+    
+    delete $scope.user.productnid;
+    delete $scope.user.productname;
+    $scope.showProductSel = true;
+
+  }
+
   // Gets product delivery types based on product chosen/selected
   $scope.productIsolate = function(productnid, user) {
     
@@ -161,7 +173,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
       var file = $scope.docs[i]
       console.log(file);
       file.upload = Upload.http({
-        url: 'http://192.168.99.100/web/jsonapi/file/document',
+        url: 'http://localhost/web/jsonapi/file/document',
         method: 'POST',
         data: {
           type: 'file--document',

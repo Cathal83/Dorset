@@ -3,6 +3,7 @@
         <h2>Application</h2>
         <div>
         <h1>{{ user.productname }}</h1>
+        {{ productData }}
         </div>
     </div>
     <!-- Course Select Box -->
@@ -28,8 +29,10 @@
     </div>
         <!-- Proceed Button -->
         <div class="bookingform-btn">
-            <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Back</a>
-            <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)"href="">Continue</a>
+          <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
+        </div>
+        <div>
+          <a class="btn-next" ng-click="goToNextSection(bookingStepForm.$valid)"href="">Continue</a>
         </div>
     </div>
 </div>

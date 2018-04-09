@@ -25,19 +25,63 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
       // Documents Sumissions
       case 'customer-details' :
         // if documents needed go to documents submissions, if not payment
-        if($scope.productData.document == ""){
-          return 'payment';
+        if($scope.productData[0].document == "") {
+          return 'payment'
+        }
+        else {
+          return 'customer-files';
+        }
+        break;
+      // Go to Payment from Customer Documents
+      case 'customer-files' :
+        // Application type 38 = no payment available
+        if($scope.productData[0].application_type == "38") {
+          return 'summary'
+        }
+        else {
+          return 'payment'
+        }
+        break;
+      // Got to the summary step
+      case 'payment' :
+        return 'summary'
+        break;
+    }
+
+  }
+
+  //Form steps - Previous
+  var previousState = function(currentState) {
+
+    switch (currentState) {
+      case 'steps':
+        return 'bookingForm'
+        break;
+      case 'customer-details':
+        return 'steps'
+        break;
+      case 'payment':
+        if($scope.productData[0].document == "") {
+          return 'customer-details'
         }
         else {
           return 'customer-files'
         }
         break;
-      // Go to Payment from Customer Documents
-      case 'customer-files' :
-        return 'payment';
-
+      case 'customer-files':
+        return 'customer-details'
+        break;
+      case 'summary':
+        if($scope.productData[0].application_type == "38") {
+          return 'customer-files'
+        }
+        else {
+          return 'payment'
+        }
+        break; 
     }
-  }
+
+  } 
 
   // Gets the form current step
   var updateValidityOfCurrentStep = function(updatedValidity) {
@@ -67,5 +111,12 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
       updateValidityOfCurrentStep(false /*not valid */);
     }
   };
+  
+  // Function that returns previous State of the form - in case back button is clicked
+  $scope.goToPreviousSection = function() {
+
+    $state.go(previousState($state.current.name));
+
+  }
   
 })

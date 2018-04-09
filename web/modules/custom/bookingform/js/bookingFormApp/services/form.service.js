@@ -13,7 +13,7 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
         return productDocs;
 
     }
-
+    
     var getSteps = function(productData) {
         /**
          * Steps for application
@@ -49,7 +49,7 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
     
         } else {} 
         // Deposit or application and review
-        if(productData[0].application_type == "33") {
+        if(productData[0].application_type == "38") {
             delete steps[3];
             
         } else {}
