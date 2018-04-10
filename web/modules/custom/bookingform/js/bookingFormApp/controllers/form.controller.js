@@ -19,6 +19,14 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
       country : "Ireland",
       city : "Dublin",
       postalcode : "D7"
+    },
+    billingaddress: {
+      address1 : "Flat 2",
+      address2 : "13 Dalymount",
+      county : "Dublin",
+      country : "Ireland",
+      city : "Dublin",
+      postalcode : "D7"
     }
   }
   $scope.payment = {
@@ -92,11 +100,22 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     // Reset delivery mode value
     $scope.user.deliverymode = null;
     var productData = formService.productDelivery(productnid, $scope.products);
-
+    // Scopes variables to UI
     scopeVars(productData);
 
   }
 
+  // Get prices from the product ID and the delivery Mode Id
+  $scope.deliveryIsolate = function(nid, delid) {
+
+    // Get prices based on Product Id and Delivery Id
+    dataService.getProductPrices(nid, delid).then(function(response){
+
+      $scope.productPrices = response;
+
+    });
+
+  }
   /**
    * 
    * Show or hide Product selection depending if there's a product id passed on url
@@ -197,7 +216,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   /**
    * Controller for Templates and Form Steps
   */
-  $controller('viewCtrl', { $scope, formSteps, $state, productDocuments });
+  $controller('viewCtrl', { $scope, formSteps, $state, productDocuments, dataService });
   $controller('paymentCtrl', { $scope, $http, $location, stripe, dataService });
 
 })

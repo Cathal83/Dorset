@@ -16,6 +16,14 @@ bookingformJS.service("dataService", function($http, $filter, $location) {
       });
     }
 
+    var ProductPrices = function(productnid, productdelid) {
+      return $http.get(window.location.origin + '/ng-prices')
+      .then(function(response) {
+        var productPrices = $filter('filter')(response.data, { nid: productnid, delid: productdelid }, true);
+        return productPrices;
+      });
+    }
+
     var Countries = function() {
       return $http.get(window.location.origin + '/modules/custom/bookingform/js/bookingFormApp/data/countries.json')
       .then(function(response) {
@@ -32,6 +40,7 @@ bookingformJS.service("dataService", function($http, $filter, $location) {
     return {
         getProducts: Products,
         getProductData: ProductData,
+        getProductPrices: ProductPrices,
         getCountries: Countries,
         getCSRF : CSRF 
     };

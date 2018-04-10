@@ -1,4 +1,4 @@
-bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, productDocuments) {
+bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, productDocuments,  dataService) {
 
   /**
    * Form Steps Validation
@@ -26,6 +26,9 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
       case 'customer-details' :
         // if documents needed go to documents submissions, if not payment
         if($scope.productData[0].document == "") {
+          // Get prices for the chosen course and delivery mode
+          var prices = dataService.getProductPrices($scope.productData[0].nid, $scope.productData[0].delivery_mode_id);
+          console.log(prices);
           return 'payment'
         }
         else {
@@ -39,6 +42,8 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
           return 'summary'
         }
         else {
+          var prices = dataService.getProductPrices($scope.productData[0].nid, $scope.productData[0].delivery_mode_id);
+          console.log(prices);
           return 'payment'
         }
         break;

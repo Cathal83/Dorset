@@ -43,6 +43,7 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
          * 
          */
         // Requires documents or not
+        console.log(productData);
         if(productData[0].document == "") {
 
             delete steps[2];

@@ -2,8 +2,9 @@
   <div class="form-title">
     <h2>Application</h2>
     {{ productData }}
+    {{ productPrices }}
   </div>
-  <!-- product Select Box -->
+  <!-- product Select Box --> 
   <div class="form-fields">
 
     <!-- product display -->
@@ -26,7 +27,7 @@
     <!-- Select delivery Type -->
     <div class="form-row" ng-if="user.productnid">
       <div class="form-opt">
-        <select ng-model="user.deliverymode" name="productdelivery" ng-options="delivery.delivery_mode as delivery.delivery_mode for delivery in productData | unique: 'delivery_mode'" ng-change="" required>
+        <select ng-model="user.deliverymode" name="productdelivery" ng-options="delivery.delivery_mode_id as delivery.delivery_mode for delivery in productData | unique: 'delivery_mode'" ng-change="deliveryIsolate(user.productnid, user.deliverymode)" required>
            <option value="">Select course mode</option>
         </select>
       </div>
