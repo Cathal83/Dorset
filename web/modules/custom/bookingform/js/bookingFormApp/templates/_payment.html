@@ -3,49 +3,157 @@
         <h2>Application</h2>
         <div>
             <h1>{{ user.productname }}</h1>
-            {{ productData }}
-            {{ productPrices }}
+            {{ user }}
         </div>
     </div>
     <div class="form-fields">
-        <h3>Step {{ step }}: Fees & Deposit</h3>
-        <div class="form-wrapper">
-            <div class="form-row">
-                <div class="form-opt">
-                    <label>
-                        <input type="radio" name="paymentchoice" value="full" id="paymentfull"> Course Fees
-                    </label>
-                    <label>
-                        <input type="radio" name="paymentchoice" value="deposit" id="paymentdeposit"> Course Deposit
-                    </label>
-                </div>
-            </div>
+      <h3>Step {{ step }}: Fees & Deposit</h3>
+      <div class="form-wrapper">
+          <div class="form-row">
+              <div class="form-opt">
+                <label ng-repeat="prices in productPrices">
+                  {{ prices.payment_type_txt }}
+                  <input type="radio" name="paymentchoice" value="{{ prices.payment_type_id }}" ng-model="paymentchoice" ng-change="scopePrices(paymentchoice)"/> {{ prices.price_amount }}
+                </label>
+              </div>
+          </div>
+      </div> 
+      <div class="form-wrapper">
+          <h4>Enter Your Card Details</h4>
+          <div class="form-row">
+              <div class="form-opt">
+                  <input ng-model="payment.card.number" placeholder="Card Number" required>
+              </div>
+          </div>
+          <div class="form-row">
+              <div class="form-opt">
+                  <input ng-model="payment.card.exp" placeholder="dd/yyyy" required>
+              </div>
+              <div class="form-opt">
+                  <input ng-model="payment.card.cvc" placeholder="CVC" required>
+              </div>
+          </div>
+      </div> 
+      <div class="form-wrapper">
+        <div class="form-row">
+          <input type="checkbox" ng-change="billingAddress()" ng-model="user.billingaddress.billingcontact" name="billingcontact" ng-true-value="true" ng-false-value="false" ng-checked="user.billingaddress.billingcontact">
+          <label>Use Contact Address as Billing Address</label>
         </div>
-        <div class="form-wrapper">
-            <h4>Enter Your Card Details</h4>
-            <div class="form-row">
-                <div class="form-opt">
-                    <input ng-model="payment.card.number" placeholder="Card Number" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-opt">
-                    <input ng-model="payment.card.exp" placeholder="dd/yyyy" required>
-                </div>
-                <div class="form-opt">
-                    <input ng-model="payment.card.cvc" placeholder="CVC" required>
-                </div>
-            </div>
-        </div> 
-
+      </div>
+      <div class="form-wrapper" ng-if="user.billingaddress.billingcontact == false">
+        <div class="form-row">
+          <div class="form-opt">
+            <input type="text" ng-model="user.billingaddress.address1" placeholder="Address 1">
+          </div>
+          <div ng-messages="bookingStepForm.address1.$error" ng-if="formStepSubmitted" class="error-msg">
+              <div ng-message="required">The field is required.</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-opt">
+            <input type="text" ng-model="user.billingaddress.address2" placeholder="Address 2">
+          </div>
+          <div ng-messages="bookingStepForm.address2.$error" ng-if="formStepSubmitted" class="error-msg">
+              <div ng-message="required">The field is required.</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-opt">
+            <input type="text" ng-model="user.billingaddress.county" placeholder="County">
+          </div>
+          <div ng-messages="bookingStepForm.county.$error" ng-if="formStepSubmitted" class="error-msg">
+              <div ng-message="required">The field is required.</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-opt">
+            <input type="text" ng-model="user.billingaddress.country" placeholder="Country">
+          </div>
+          <div ng-messages="bookingStepForm.country.$error" ng-if="formStepSubmitted" class="error-msg">
+              <div ng-message="required">The field is required.</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-opt">
+            <input type="text" ng-model="user.billingaddress.city" placeholder="City">
+          </div>
+          <div ng-messages="bookingStepForm.city.$error" ng-if="formStepSubmitted" class="error-msg">
+              <div ng-message="required">The field is required.</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-opt">
+            <input type="text" ng-model="user.billingaddress.postalcode" placeholder="Postal Code">
+          </div>
+          <div ng-messages="bookingStepForm.postalcode.$error" ng-if="formStepSubmitted" class="error-msg">
+              <div ng-message="required">The field is required.</div>
+          </div>
+        </div>
+      </div>
     </div>
-
+    <div class="form-fields">
+      <h3>Summary</h3>
+      <div class="form-wrapper">
+        <div class="form-row">
+          <h4>Pre-application</h4>
+          <div class="form-opt">
+            <label>Course Title:</label>
+            <div>{{ user.productname }}</div>
+          </div>
+          <div class="form-opt">
+            <label>Course Mode:</label>
+            <div>{{ user.deliveryMode }}</div>
+          </div>
+          <div class="form-opt">
+            <label>Email:</label>
+            <div>{{ user.email }}</div>
+          </div>
+          <div class="form-opt">
+            <label>Country:</label>
+            <div>{{ user.country }}</div>
+          </div>
+          <div class="form-opt">
+            <label>Country:</label>
+            <div>{{ user.country }}</div>
+          </div>
+        </div>
+        <div>
+          <a href="" ng-model="target" value="customer-details" ng-click="goToSection('customer-details')">Edit</a>
+        </div>
+      </div>
+      <div class="form-wrapper">
+        <div class="form-row">
+          <h4>Personal Information</h4>
+          <div class="form-opt">
+            <label>Name:</label>
+            <div>{{ user.firstname + ' ' + user.lastname }}</div>
+          </div>
+          <div class="form-opt">
+            <label>DOB:</label>
+            <div>{{ user.dob }}</div>
+          </div>
+          <div class="form-opt">
+            <label>Gender:</label>
+            <div>{{ user.gender }}</div>
+          </div>
+          <h4>Contact Address</h4>
+          <div class="form-opt">
+            <div>{{ user.contactaddress.address1 }}</div>
+            <div>{{ user.contactaddress.address2 }}</div>
+            <div>{{ user.contactaddress.county }}</div>
+            <div>{{ user.contactaddress.country }}</div>
+          </div>
+        </div>
+        <div>
+          <a href="" ng-model="target" value="customer-details" ng-click="goToSection('customer-details')">Edit</a>
+        </div>
+      </div>
+    </div>
     <!-- Proceed Button -->
     <div class="bookingform-btn">
       <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
     </div>
     <div class="bookingform-btn">
-      <!--<a class="btn-next" ng-click="charge()" href="">Continue</a>-->
       <a class="btn-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Next</a>
     </div>
 </div>

@@ -18,23 +18,24 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
         productDocuments($scope.productData, $scope.user.deliverymode);
         return 'steps'
         break;
+
       // Goes to Deposit/ Application depending on Course
       case 'steps' :
         return 'customer-details'
         break;
+
       // Documents Sumissions
       case 'customer-details' :
         // if documents needed go to documents submissions, if not payment
         if($scope.productData[0].document == "") {
           // Get prices for the chosen course and delivery mode
-          var prices = dataService.getProductPrices($scope.productData[0].nid, $scope.productData[0].delivery_mode_id);
-          console.log(prices);
           return 'payment'
         }
         else {
           return 'customer-files';
         }
         break;
+
       // Go to Payment from Customer Documents
       case 'customer-files' :
         // Application type 38 = no payment available
@@ -42,11 +43,10 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
           return 'summary'
         }
         else {
-          var prices = dataService.getProductPrices($scope.productData[0].nid, $scope.productData[0].delivery_mode_id);
-          console.log(prices);
           return 'payment'
         }
         break;
+
       // Got to the summary step
       case 'payment' :
         return 'summary'
@@ -62,9 +62,11 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
       case 'steps':
         return 'bookingForm'
         break;
+
       case 'customer-details':
         return 'steps'
         break;
+
       case 'payment':
         if($scope.productData[0].document == "") {
           return 'customer-details'
@@ -73,9 +75,11 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
           return 'customer-files'
         }
         break;
+
       case 'customer-files':
         return 'customer-details'
         break;
+
       case 'summary':
         if($scope.productData[0].application_type == "38") {
           return 'customer-files'
@@ -87,6 +91,11 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
     }
 
   } 
+
+  // Form Step go to specific state
+  var specificState = function(state) {
+
+  }
 
   // Gets the form current step
   var updateValidityOfCurrentStep = function(updatedValidity) {
@@ -121,6 +130,13 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
   $scope.goToPreviousSection = function() {
 
     $state.go(previousState($state.current.name));
+
+  }
+
+  // Function that goes to a specific section
+  $scope.goToSection = function(section) {
+    
+    $state.go(section);
 
   }
   

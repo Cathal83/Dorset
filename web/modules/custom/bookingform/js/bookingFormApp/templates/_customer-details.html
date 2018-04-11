@@ -3,7 +3,6 @@
       <h2>Application</h2>
       <div>
         <h1>{{ user.productname }}</h1>
-        {{ productData }}
       </div>
     </div>
     <!-- Course Select Box -->
@@ -42,8 +41,8 @@
                 <div class="form-opt">
                     <select name="gender" ng-model="user.gender" placeholder="Gender" required>
                         <option value="" selected>Gender</option>
-                        <option value="F">Female</option>
-                        <option value="M">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
                     </select>
                 </div>
                 <div ng-messages="bookingStepForm.gender.$error" ng-if="formStepSubmitted" class="error-msg">
@@ -68,12 +67,18 @@
             </div>
             <!-- Address Line 1 -->
             <div class="form-row">
-                <div class="form-opt">
-                    <input type="text" placeholder="Address Line 1" name="address1" ng-model="user.contactaddress.address1" required>
-                </div>
-                <div ng-messages="bookingStepForm.address1.$error" ng-if="formStepSubmitted" class="error-msg">
-                    <div ng-message="required">The field is required.</div>
-                </div>
+              <div class="form-opt">
+                  <input type="text" placeholder="Address Line 1" name="address1" ng-model="user.contactaddress.address1" required>
+              </div>
+              <div ng-messages="bookingStepForm.address1.$error" ng-if="formStepSubmitted" class="error-msg">
+                  <div ng-message="required">The field is required.</div>
+              </div>
+            </div>
+            <!-- Address Line 2 -->
+            <div class="form-row">
+              <div class="form-opt">
+                  <input type="text" placeholder="Address Line 2" name="address2" ng-model="user.contactaddress.address2" required>
+              </div>
             </div>
             <!-- County -->
             <div class="form-row">
@@ -81,15 +86,6 @@
                     <input type="text" placeholder="County" name="county" ng-model="user.contactaddress.county" required>
                 </div>
                 <div ng-messages="bookingStepForm.county.$error" ng-if="formStepSubmitted" class="error-msg">
-                    <div ng-message="required">The field is required.</div>
-                </div>
-            </div>
-            <!-- Address Line 2 -->
-            <div class="form-row">
-                <div class="form-opt">
-                    <input type="text" placeholder="Address Line 2" name="address2" ng-model="user.contactaddress.address2" required>
-                </div>
-                <div ng-messages="bookingStepForm.address2.$error" ng-if="formStepSubmitted" class="error-msg">
                     <div ng-message="required">The field is required.</div>
                 </div>
             </div>

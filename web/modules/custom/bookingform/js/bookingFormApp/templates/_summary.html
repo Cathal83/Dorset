@@ -2,17 +2,110 @@
     <div class="form-title">
         <h2>Application</h2>
         <div>
-            <h1>{{ user.productname }}</h1>
-            {{ productData }}
+            <h1>{{ user.productname + ': ' + user.deliverymode }}</h1>
         </div>
     </div>
     <div class="form-fields">
+      <div class="form-wrapper">
+        <div class="form-row">
+          <!-- Pre Application-->
+          <h4>Pre-application</h4>
+          <div class="form-opt">
+            <label>Course Title</label>
+            <div>{{ user.productname }}</div>
+          </div>
+          <div class="form-opt">
+            <label>Course Mode</label>
+            <div>{{ user.deliverymode }}</div>
+          </div>
+          <div>
+              <a href="" ng-model="target" value="bookingForm" ng-click="goToSection('bookingForm')">Edit</a>
+          </div>
+        </div>
+        <!-- Personal Information -->
+        <div class="form-row">
+          <h4>Personal Information</h4>
+          <div>
+            <div class="form-opt">
+                <label>Name:</label>
+                <div>{{ user.firstname + ' ' + user.lastname }}</div>
+              </div>
+              <div class="form-opt">
+                <label>DOB:</label>
+                <div>{{ user.dob }}</div>
+              </div>
+              <div class="form-opt">
+                <label>Email:</label>
+                <div>{{ user.email }}</div>
+              </div>
+              <div class="form-opt">
+                <label>Gender:</label>
+                <div>{{ user.gender }}</div>
+              </div>
+              <div class="form-opt">
+                <label>Country:</label>
+                <div>{{ user.country }}</div>
+              </div>
+          </div>
+          <h4>Contact Address</h4>
+          <div>
+            <div>{{ user.contactaddress.address1 }}</div>
+            <div>{{ user.contactaddress.address2 }}</div>
+            <div>{{ 'Co. ' + user.contactaddress.county }}</div>
+            <div>{{ user.contactaddress.country }}</div>
+          </div>
+          <div>
+              <a href="" ng-model="target" value="customer-details" ng-click="goToSection('customer-details')">Edit</a>
+          </div>
+        </div>
+      </div>
+      <div class="form-wrapper">
+        <!-- Payment Type -->
+        <div class="form-row">
+          <h4>Payment Type</h4>
+          <div class="form-opt">
+            <h4>{{ user.payment.type_txt + ':' }}</h4>
+            <div>{{ user.payment.amount }}</div>
+          </div>
+          <h4>Payment Details</h4>
+          <div class="form-opt">
+            <label>Card Number:</label>
+            <div>{{ payment.card.number }}</div>
+          </div>
+          <div class="form-opt">
+            <label>Expiring Date:</label>
+            <div>{{ payment.card.exp }}</div>
+          </div>
+          <div>
+              <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
+          </div>
+        </div>
+        <div class="form-row">
+          <h4>Billing Address</h4>
+          <div class="form-opt">
+            <div>{{ user.billingaddress.address1 }}</div>
+            <div>{{ user.billingaddress.address2 }}</div>
+            <div>{{ 'Co. ' + user.billingaddress.county }}</div>
+            <div>{{ user.billingaddress.country }}</div>
+          </div>
+          <div>
+              <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
+          </div>
+        </div>
+        <div class="form-row">
+          <h4>Uploaded Documents</h4>
+          <div></div>
+        </div>
+      </div>
     </div>
     <!-- Proceed Button -->
     <div class="bookingform-btn">
       <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
     </div>
     <div class="bookingform-btn">
-      <a class="btn-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Continue</a>
+      <a class="btn-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Submit</a>
+    </div>
+    <div class="bookingform-btn">
+      <a class="btn-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Make Payment</a>
     </div>
 </div>

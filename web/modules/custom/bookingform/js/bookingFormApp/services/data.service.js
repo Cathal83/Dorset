@@ -19,7 +19,7 @@ bookingformJS.service("dataService", function($http, $filter, $location) {
     var ProductPrices = function(productnid, productdelid) {
       return $http.get(window.location.origin + '/ng-prices')
       .then(function(response) {
-        var productPrices = $filter('filter')(response.data, { nid: productnid, delid: productdelid }, true);
+        var productPrices = $filter('filter')(response.data, { course_id: productnid, delivery_id: productdelid }, true);
         return productPrices;
       });
     }
