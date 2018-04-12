@@ -22,15 +22,26 @@
           <h4>Enter Your Card Details</h4>
           <div class="form-row">
               <div class="form-opt">
-                  <input ng-model="payment.card.number" placeholder="Card Number" required>
+                <input ng-model="payment.card.number" name="card_number" placeholder="Card Number" ng-pattern="/^[0-9]+$/" ng-minlength="13" ng-maxlength="19" autocomplete="off" required>
+                <div ng-messages="bookingStepForm.card_number.$error" ng-if="formStepSubmitted" class="error-msg">
+                  <div ng-message="required">Card number is required for payment.</div>
+                  <div ng-message="minlength">Card number must be 15-19 digits.</div>
+                  <div ng-message="pattern">Card number must only contain digits.</div>
+                </div>
               </div>
           </div>
           <div class="form-row">
               <div class="form-opt">
-                  <input ng-model="payment.card.exp" placeholder="dd/yyyy" required>
+                <input ng-model="payment.card.exp" name="card_exp" placeholder="dd/yyyy" required>
+                <div ng-messages="bookingStepForm.card_exp.$error" ng-if="formStepSubmitted" class="error-msg">
+                  <div ng-message="required">Expiring date for the card is required.</div>
+                </div>
               </div>
               <div class="form-opt">
-                  <input ng-model="payment.card.cvc" placeholder="CVC" required>
+                  <input ng-model="payment.card.cvc" name="card_cvc" placeholder="CVC" maxlength="3" ng-pattern="/^[0-9]{1,4}$/" required>
+                  <div ng-messages="bookingStepForm.card_cvc.$error" ng-if="formStepSubmitted" class="error-msg">
+                    <div ng-message="required">The field is required.</div>
+                  </div>
               </div>
           </div>
       </div> 
@@ -43,7 +54,7 @@
       <div class="form-wrapper" ng-if="user.billingaddress.billingcontact == false">
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="user.billingaddress.address1" placeholder="Address 1">
+            <input type="text" ng-model="user.billingaddress.address1" placeholder="Address 1" required>
           </div>
           <div ng-messages="bookingStepForm.address1.$error" ng-if="formStepSubmitted" class="error-msg">
               <div ng-message="required">The field is required.</div>
@@ -51,7 +62,7 @@
         </div>
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="user.billingaddress.address2" placeholder="Address 2">
+            <input type="text" ng-model="user.billingaddress.address2" placeholder="Address 2" required>
           </div>
           <div ng-messages="bookingStepForm.address2.$error" ng-if="formStepSubmitted" class="error-msg">
               <div ng-message="required">The field is required.</div>
@@ -59,7 +70,7 @@
         </div>
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="user.billingaddress.county" placeholder="County">
+            <input type="text" ng-model="user.billingaddress.county" placeholder="County" required>
           </div>
           <div ng-messages="bookingStepForm.county.$error" ng-if="formStepSubmitted" class="error-msg">
               <div ng-message="required">The field is required.</div>
@@ -67,7 +78,7 @@
         </div>
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="user.billingaddress.country" placeholder="Country">
+            <input type="text" ng-model="user.billingaddress.country" placeholder="Country" required>
           </div>
           <div ng-messages="bookingStepForm.country.$error" ng-if="formStepSubmitted" class="error-msg">
               <div ng-message="required">The field is required.</div>
@@ -75,7 +86,7 @@
         </div>
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="user.billingaddress.city" placeholder="City">
+            <input type="text" ng-model="user.billingaddress.city" placeholder="City" required>
           </div>
           <div ng-messages="bookingStepForm.city.$error" ng-if="formStepSubmitted" class="error-msg">
               <div ng-message="required">The field is required.</div>
@@ -83,7 +94,7 @@
         </div>
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="user.billingaddress.postalcode" placeholder="Postal Code">
+            <input type="text" ng-model="user.billingaddress.postalcode" placeholder="Postal Code" required>
           </div>
           <div ng-messages="bookingStepForm.postalcode.$error" ng-if="formStepSubmitted" class="error-msg">
               <div ng-message="required">The field is required.</div>
