@@ -41,6 +41,7 @@
                   <input ng-model="payment.card.cvc" name="card_cvc" placeholder="CVC" maxlength="3" ng-pattern="/^[0-9]{1,4}$/" required>
                   <div ng-messages="bookingStepForm.card_cvc.$error" ng-if="formStepSubmitted" class="error-msg">
                     <div ng-message="required">The field is required.</div>
+                    <div ng-message="pattern">CVC number must be only digits.</div>
                   </div>
               </div>
           </div>
