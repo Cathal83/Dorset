@@ -6,21 +6,48 @@ stripe:
     name: MIT
     url: https://github.com/stripe/stripe-php/blob/master/LICENSE
     gpl-compatible: true
+  js: {}
+  css: {}
+  drupalSettings: {}
+
+stripe-js:
+  remote: https://js.stripe.com/v2/
+  version: 2
+  license:
+    name: MIT
+    url: https://js.stripe.com/v2/
+    gpl-compatible: true
+  js:
+    https://js.stripe.com/v2/: { type: external, minified: true }
+
+## File upload 
+
+ngFileUpload:
+  js:
+    js/library/ng-file-upload.min.js: {}
+  dependencies:
+    - bookingform/angularjs
+
+ngFileUploadShim:
+  js:
+    js/library/ng-file-upload-shim.min.js: {}
+  dependencies:
+    - bookingform/angularjs
 
 ## Angular libraries
 angularjs:
   js:
     js/library/angular.min.js: {}
 
-angular-messages:
-  js:
-    js/library/angular-messages.min.js: {}
-  dependencies:
-    - bookingform/angularjs
-
 angular-ui-router:
   js:
     js/library/angular-ui-router.min.js: {}
+  dependencies:
+    - bookingform/angularjs
+
+angular-messages:
+  js:
+    js/library/angular-messages.min.js: {}
   dependencies:
     - bookingform/angularjs
 
@@ -48,7 +75,7 @@ angular-material:
   dependencies:
     - bookingform/angularjs
 
-moment:
+moment:   
   js:
     js/library/moment.min.js: {}
   dependencies:
@@ -59,6 +86,12 @@ lodash:
     js/library/lodash.min.js: {}
   dependencies:
     - bookingform/angularjs
+
+angular-stripe:
+  js:
+    js/library/angular-stripe.js: {}
+  dependencies:
+      - bookingform/angularjs
 
 ## Angular Material css dependecy for Datepicker
 
@@ -81,6 +114,12 @@ bookingFormConfig:
   dependencies:
       - bookingform/angularjs
 
+bookingFormDateConfig:
+    js:
+      js/bookingFormApp/config/date.config.js: {}
+    dependencies:
+      - bookingform/angularjs
+
 bookingDataService:
     js:
       js/bookingFormApp/services/data.service.js: {}
@@ -92,12 +131,6 @@ bookingFormService:
       js/bookingFormApp/services/form.service.js: {}
     dependencies:
       - bookingform/angularjs
-
-bookingPostService:
-    js:
-      js/bookingFormApp/services/post.service.js: {}
-    dependencies:
-      - bookingform/angularjs
       
 bookingFormController:
     js:
@@ -105,8 +138,15 @@ bookingFormController:
     dependencies:
       - bookingform/angularjs
 
-bookingFormDateConfig:
-    js:
-      js/bookingFormApp/config/date.config.js: {}
-    dependencies:
-      - bookingform/angularjs
+bookingPaymentController:
+  js:
+    js/bookingFormApp/controllers/payment.controller.js: {}
+  dependencies:
+  - bookingform/angularjs
+
+bookingViewController:
+  js:
+    js/bookingFormApp/controllers/view.controller.js: {}
+  dependencies:
+  - bookingform/angularjs
+
