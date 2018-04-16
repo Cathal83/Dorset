@@ -4,30 +4,30 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    */
   $scope.user = {
     date : new Date(),
-    //productname : "Bachelor of Business",
-    //deliverymode : "Part-Time",
-    //firstname : "Javier",
-    //lastname : "Torrado",
-    //country : "Ireland",
-    //email : "chavi809@gmail.com",
-    //dob : "2018-08-01",
-    //gender : "Female",
-    //contactaddress : {
-      //address1 : "Flat 2",
-      //address2 : "13 Dalymount",
-      //county : "Dublin",
-      //country : "Ireland",
-      //city : "Dublin",
-      //postalcode : "D7"
-    //},
+    productname : "Bachelor of Business",
+    deliverymode : "Part-Time",
+    firstname : "Javier",
+    lastname : "Torrado",
+    country : "Ireland",
+    email : "chavi809@gmail.com",
+    dob : "2018-08-01",
+    gender : "Female",
+    contactaddress : {
+      address1 : "Flat 2",
+      address2 : "13 Dalymount",
+      county : "Dublin",
+      country : "Ireland",
+      city : "Dublin",
+      postalcode : "D7"
+    },
     billingaddress: {
       billingcontact: true,
-      //address1 : "Flat 2",
-      //address2 : "13 Dalymount",
-      //county : "Dublin",
-      //country : "Ireland",
-      //city : "Dublin",
-      //postalcode : "D7"
+      address1 : "Flat 2",
+      address2 : "13 Dalymount",
+      county : "Dublin",
+      country : "Ireland",
+      city : "Dublin",
+      postalcode : "D7"
     },
     // Payment details chosen
     payment: {
@@ -48,9 +48,9 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   }
   **/
 
-  //$scope.productData = [{"nid":"22","faculty":"Business Accounting Courses","course_type":"Undergraduate","title":"ACCA Diploma in Accounting and Finance","application_type":"33","document":"","delivery_mode":"Part-Time","delivery_mode_id":"12"}];
-  //$scope.productPrices = [{"delivery_id":"13","price_amount":"\u20ac3,000.00","payment_type_txt":"Full Payment","course_id":"22","payment_type_id":"3"},{"delivery_id":"13","price_amount":"\u20ac300.00","payment_type_txt":"Deposit","course_id":"22","payment_type_id":"4"}];
-  $scope.showProductSel = true;
+  $scope.productData = [{"nid":"22","faculty":"Business Accounting Courses","course_type":"Undergraduate","title":"ACCA Diploma in Accounting and Finance","application_type":"33","document":"test","delivery_mode":"Part-Time","delivery_mode_id":"12"}];
+  $scope.productPrices = [{"delivery_id":"13","price_amount":"\u20ac3,000.00","payment_type_txt":"Full Payment","course_id":"22","payment_type_id":"3"},{"delivery_id":"13","price_amount":"\u20ac300.00","payment_type_txt":"Deposit","course_id":"22","payment_type_id":"4"}];
+  $scope.showProductSel = true; 
   $scope.user.docs;
   $scope.maxSize = [];
 
