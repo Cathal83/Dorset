@@ -1,37 +1,43 @@
-<div id="bookingform" ng-app="BookingForm" ng-controller="formCtrl">
-  <!-- Content UI-View -->
-  <form name="bookingStepForm" ng-submit="processForm()">
-      <div ui-view>
-      </div>
-  </form>
-</div>
-<!-- AngularJS Includes **Only for Dev** -->
-<link rel="stylesheet" href="../css/angular-material.min.css">
-<!-- Angular Libraries -->
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-<script type="text/javascript" src="../js/library/angular.min.js"></script>
-<script type="text/javascript" src="../js/library/angular-aria.min.js"></script>
-<script type="text/javascript" src="../js/library/angular-stripe.js"></script>
-<script type="text/javascript" src="../js/library/angular-animate.min.js"></script>
-<script type="text/javascript" src="../js/library/angular-material.min.js"></script>
-<script type="text/javascript" src="../js/library/angular-messages.min.js"></script>
-<script type="text/javascript" src="../js/library/angular-ui-router.min.js"></script>
-<script type="text/javascript" src="../js/library/angular-filter.min.js"></script>
-<script type="text/javascript" src="../js/library/lodash.min.js"></script>
-<script type="text/javascript" src="../js/library/moment.min.js"></script>
-<script type="text/javascript" src="../js/library/ng-file-upload-shim.min.js"></script>
-<script type="text/javascript" src="../js/library/ng-file-upload.min.js"></script>
-
-<!-- App Components -->
-<script type="text/javascript" src="../js/bookingFormApp/app.js"></script>
-<script type="text/javascript" src="../js/bookingFormApp/config/payment.config.js"></script>
-<script type="text/javascript" src="../js/bookingFormApp/config/form.config.js"></script>
-<script type="text/javascript" src="../js/bookingFormApp/config/date.config.js"></script>
-<script type="text/javascript" src="../js/bookingFormApp/services/data.service.js"></script>
-<script type="text/javascript" src="../js/bookingFormApp/services/form.service.js"></script>
-<script type="text/javascript" src="../js/bookingFormApp/controllers/view.controller.js"></script>
-<script type="text/javascript" src="../js/bookingFormApp/controllers/payment.controller.js"></script>
-<script type="text/javascript" src="../js/bookingFormApp/controllers/form.controller.js"></script>
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <div id="bookingform" ng-app="BookingForm" ng-controller="formCtrl">
+      <!-- Content UI-View -->
+      <form name="bookingStepForm" ng-submit="processForm()">
+        <div ui-view>
+        </div>
+      </form>
+    </div>
+    <!-- AngularJS Includes **Only for Dev** -->
+    <link rel="stylesheet" href="../css/angular-material.min.css">
+    <!-- Angular Libraries -->
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript" src="../js/library/angular.min.js"></script>
+    <script type="text/javascript" src="../js/library/angular-aria.min.js"></script>
+    <script type="text/javascript" src="../js/library/angular-stripe.js"></script>
+    <script type="text/javascript" src="../js/library/angular-animate.min.js"></script>
+    <script type="text/javascript" src="../js/library/angular-material.min.js"></script>
+    <script type="text/javascript" src="../js/library/angular-messages.min.js"></script>
+    <script type="text/javascript" src="../js/library/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="../js/library/angular-filter.min.js"></script>
+    <script type="text/javascript" src="../js/library/lodash.min.js"></script>
+    <script type="text/javascript" src="../js/library/moment.min.js"></script>
+    <script type="text/javascript" src="../js/library/ng-file-upload-shim.min.js"></script>
+    <script type="text/javascript" src="../js/library/ng-file-upload.min.js"></script>
+    
+    <!-- App Components -->
+    <script type="text/javascript" src="../js/bookingFormApp/app.js"></script>
+    <script type="text/javascript" src="../js/bookingFormApp/config/payment.config.js"></script>
+    <script type="text/javascript" src="../js/bookingFormApp/config/form.config.js"></script>
+    <script type="text/javascript" src="../js/bookingFormApp/services/data.service.js"></script>
+    <script type="text/javascript" src="../js/bookingFormApp/services/form.service.js"></script>
+    <script type="text/javascript" src="../js/bookingFormApp/controllers/view.controller.js"></script>
+    <script type="text/javascript" src="../js/bookingFormApp/controllers/documents.controller.js"></script>
+    <script type="text/javascript" src="../js/bookingFormApp/controllers/payment.controller.js"></script>
+    <script type="text/javascript" src="../js/bookingFormApp/controllers/form.controller.js"></script>
+    <script type="text/javascript" src="../js/bookingFormApp/config/date.config.js"></script>
+  </body>
+</html>

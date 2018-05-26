@@ -5,6 +5,7 @@
           <h1>{{ user.productname + ': ' + user.deliverymode }}</h1>
       </div>
       {{ productData[0] }}
+      {{ $scope.user.payment.amount }}
   </div>
   <div class="form-fields">
     <div class="form-wrapper">
@@ -33,7 +34,7 @@
             </div>
             <div class="form-opt">
               <label>DOB:</label>
-              <div>{{ user.dob }}</div>
+              <div>{{ user.dob | date:'dd/MM/yyyy' }}</div>
             </div>
             <div class="form-opt">
               <label>Email:</label>
@@ -47,6 +48,9 @@
               <label>Country:</label>
               <div>{{ user.country }}</div>
             </div>
+        </div>
+        <div>
+          <a href="" ng-model="target" value="customer-details" ng-click="goToSection('customer-details')">Edit</a>
         </div>
         <h4>Contact Address</h4>
         <div>
@@ -71,7 +75,7 @@
         <h4>Payment Details</h4>
         <div class="form-opt">
           <label>Card Number:</label>
-          <div>{{ payment.card.number }}</div>
+          <div>{{ payment.ccencoded }}</div>
         </div>
         <div class="form-opt">
           <label>Expiring Date:</label>
@@ -103,10 +107,10 @@
   <div class="bookingform-btn">
     <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
   </div>
-  <div class="bookingform-btn" ng-if="">
+  <div class="bookingform-btn" ng-if="productData[0].application_type == '38'">
     <a class="btn-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Submit</a>
   </div>
   <div class="bookingform-btn" ng-if="productData[0].application_type == '33'">
-    <a class="btn-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Make Payment</a>
+    <a class="btn-next" ng-click="charge()" href="">Make Payment</a>
   </div>
 </div>

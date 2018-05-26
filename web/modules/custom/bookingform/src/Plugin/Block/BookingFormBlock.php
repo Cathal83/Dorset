@@ -47,7 +47,8 @@
             'bookingform/bookingFormController',
             'bookingform/bookingFormDateConfig',
             'bookingform/bookingPaymentController',
-            'bookingform/bookingViewController'
+            'bookingform/bookingViewController',
+            'bookingform/bookingDocumentsController'
 
           ),
         ),

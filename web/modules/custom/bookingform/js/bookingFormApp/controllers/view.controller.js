@@ -51,6 +51,11 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
       case 'payment' :
         return 'summary'
         break;
+      
+    // Go to thank you page
+      case 'summary' :
+        return 'thank-you'
+        break;
     }
 
   }
