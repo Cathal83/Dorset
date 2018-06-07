@@ -1,4 +1,4 @@
-bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, productDocuments) {
+bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, productDocuments,  dataService) {
 
   /**
    * Form Steps Validation
@@ -18,25 +18,83 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
         productDocuments($scope.productData, $scope.user.deliverymode);
         return 'steps'
         break;
+
       // Goes to Deposit/ Application depending on Course
       case 'steps' :
         return 'customer-details'
         break;
+
       // Documents Sumissions
       case 'customer-details' :
         // if documents needed go to documents submissions, if not payment
-        if($scope.productData.document == ""){
-          return 'payment';
+        if($scope.productData[0].document == "") {
+          // Get prices for the chosen course and delivery mode
+          return 'payment'
+        }
+        else {
+          return 'customer-files';
+        }
+        break;
+
+      // Go to Payment from Customer Documents
+      case 'customer-files' :
+        // Application type 38 = no payment available
+        if($scope.productData[0].application_type == "38") {
+          return 'summary'
+        }
+        else {
+          return 'payment'
+        }
+        break;
+
+      // Got to the summary step
+      case 'payment' :
+        return 'summary'
+        break;
+    }
+
+  }
+
+  //Form steps - Previous
+  var previousState = function(currentState) {
+
+    switch (currentState) {
+      case 'steps':
+        return 'bookingForm'
+        break;
+
+      case 'customer-details':
+        return 'steps'
+        break;
+
+      case 'payment':
+        if($scope.productData[0].document == "") {
+          return 'customer-details'
         }
         else {
           return 'customer-files'
         }
         break;
-      // Go to Payment from Customer Documents
-      case 'customer-files' :
-        return 'payment';
 
+      case 'customer-files':
+        return 'customer-details'
+        break;
+
+      case 'summary':
+        if($scope.productData[0].application_type == "38") {
+          return 'customer-files'
+        }
+        else {
+          return 'payment'
+        }
+        break; 
     }
+
+  } 
+
+  // Form Step go to specific state
+  var specificState = function(state) {
+
   }
 
   // Gets the form current step
@@ -67,5 +125,19 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
       updateValidityOfCurrentStep(false /*not valid */);
     }
   };
+  
+  // Function that returns previous State of the form - in case back button is clicked
+  $scope.goToPreviousSection = function() {
+
+    $state.go(previousState($state.current.name));
+
+  }
+
+  // Function that goes to a specific section
+  $scope.goToSection = function(section) {
+    
+    $state.go(section);
+
+  }
   
 })

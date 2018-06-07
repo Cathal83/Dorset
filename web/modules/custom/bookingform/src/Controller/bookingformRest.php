@@ -4,10 +4,11 @@
   use Drupal\Core\Controller\ControllerBase;
   use Symfony\Component\HttpFoundation\Request;
   use Symfony\Component\HttpFoundation\JsonResponse;
-  use \Symfony\Component\HttpKernel\Exception\HttpException;
+  use Symfony\Component\HttpKernel\Exception\HttpException;
 
   class bookingformRest extends ControllerBase {
 
+    // Replace this with live key once on Live stage
     private $apiKey = "sk_test_zJpfrkdwd8oaD56vZr8eumPO";
 
     public function __construct() {

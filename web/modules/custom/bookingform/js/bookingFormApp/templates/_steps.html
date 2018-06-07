@@ -4,7 +4,6 @@
     </div>
     <!-- Course Select Box -->
     <div class="form-fields">
-        {{ productData }}
         <!-- Course display -->
         <div ng-if="user.productnid">
             <h1>{{ user.productname }}</h1>
@@ -22,7 +21,10 @@
         </ul>
         <!-- Proceed Button -->
         <div class="bookingform-btn">
-            <a class="booking-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Start</a>
+          <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
+        </div>
+        <div class="bookingform-btn">
+            <a class="btn-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Start</a>
         </div>
     </div>
   </div>

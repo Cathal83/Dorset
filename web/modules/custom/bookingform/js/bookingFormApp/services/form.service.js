@@ -2,15 +2,22 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
 
     var productDelivery = function(productnid, products) {
 
-        var productDelivery = $filter('filter')(products, { nid: productnid }, true);
-        return productDelivery;
+      var productDelivery = $filter('filter')(products, { nid: productnid }, true);
+      return productDelivery;
 
     }
 
     var productDocuments = function(productData, productDelivery) {
 
-        var productDocs = $filter('filter')(productData, { delivery_mode: productDelivery }, true);
-        return productDocs;
+      var productDocs = $filter('filter')(productData, { delivery_mode_id: productDelivery }, true);
+      return productDocs;
+
+    }
+    
+    var productPrices = function(type_id, productPrices) {
+
+      var price = $filter('filter')(productPrices, { payment_type_id: type_id }, true);
+      return price;
 
     }
 
@@ -20,20 +27,20 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
          */
         var steps = {
             1 : {
-                title: "Personal Details",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              title: "Personal Details",
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             2 : {
-                title: "Required Documents",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              title: "Required Documents",
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             3 : {
-                title: "Payment/ Deposit",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              title: "Payment/ Deposit",
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             4 : {
-                title: "Completion!",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              title: "Completion!",
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             }
         }
         /**
@@ -49,7 +56,7 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
     
         } else {} 
         // Deposit or application and review
-        if(productData[0].application_type == "33") {
+        if(productData[0].application_type == "38") {
             delete steps[3];
             
         } else {}
@@ -58,6 +65,7 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
     }
     return {
         productDelivery : productDelivery,
+        productPrices : productPrices,
         productDocuments : productDocuments,
         getSteps: getSteps
     };
