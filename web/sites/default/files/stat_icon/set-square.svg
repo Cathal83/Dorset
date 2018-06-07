@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="508" height="508" viewBox="0 0 508 508">
+  <g fill="none">
+    <circle cx="254" cy="254" r="254" fill="#E3A900"/>
+    <path fill="#FFF" d="M109.2,386.4 L366.8,386.4 L366.8,128.8 L109.2,386.4 Z M324.8,344 L211.2,344 L324.4,230.8 L324.8,344 Z"/>
+    <g fill="#E6E9EE" transform="translate(90 113)">
+      <rect width="19.6" height="6.8" x="257.2" y="53"/>
+      <rect width="19.6" height="6.8" x="257.2" y="75"/>
+      <rect width="19.6" height="6.8" x="257.2" y="97"/>
+      <rect width="19.6" height="6.8" x="257.2" y="119"/>
+      <rect width="19.6" height="6.8" x="257.2" y="141"/>
+      <rect width="19.6" height="6.8" x="257.2" y="163"/>
+      <rect width="19.6" height="6.8" x="257.2" y="185"/>
+      <rect width="19.6" height="6.8" x="257.2" y="207"/>
+      <rect width="19.6" height="6.8" x="257.2" y="229"/>
+      <rect width="6.8" height="19.6" x="232.4" y="253.8"/>
+      <rect width="6.8" height="19.6" x="210.4" y="253.8"/>
+      <rect width="6.8" height="19.6" x="188.4" y="253.8"/>
+      <rect width="6.8" height="19.6" x="166.4" y="253.8"/>
+      <rect width="6.8" height="19.6" x="144.4" y="253.8"/>
+      <rect width="6.8" height="19.6" x="122.4" y="253.8"/>
+      <rect width="6.8" height="19.6" x="100.4" y="253.8"/>
+      <rect width="6.8" height="19.6" x="78.4" y="253.8"/>
+      <rect width="6.8" height="19.6" x="56.4" y="253.8"/>
+      <rect width="285.194" height="42.4" x="-26.743" y="95.288" transform="rotate(-45 115.854 116.488)"/>
+    </g>
+    <path fill="#FFF" d="M129.6,276.4 C47.2,194.4 170.4,71.2 252.4,153.2 C262.4,143.2 272.4,133.2 282.4,123.2 C160.4,1.6 -22.4,184.4 99.6,306.4 C109.6,296.4 119.6,286.4 129.6,276.4 Z"/>
+    <g fill="#CED5E0" transform="translate(121 145)">
+      <rect width="9.2" height="19.6" x="171.159" y=".512" transform="rotate(-45 175.76 10.312)"/>
+      <rect width="9.2" height="19.6" x="150.519" y="21.49" transform="rotate(-45 155.12 31.29)"/>
+      <rect width="9.2" height="19.6" x="129.879" y="41.899" transform="rotate(-45 134.48 51.699)"/>
+      <rect width="9.2" height="19.6" x="109.239" y="62.315" transform="rotate(-45 113.839 72.114)"/>
+      <rect width="9.2" height="19.6" x="88.599" y="83.313" transform="rotate(-45 93.2 93.113)"/>
+      <rect width="9.2" height="19.6" x="67.959" y="103.697" transform="rotate(-45 72.559 113.497)"/>
+      <rect width="9.2" height="19.6" x="47.319" y="124.687" transform="rotate(-45 51.919 134.487)"/>
+      <rect width="9.2" height="19.6" x="26.679" y="145.111" transform="rotate(-45 31.279 154.911)"/>
+      <rect width="9.2" height="19.6" x="6.039" y="165.496" transform="rotate(-45 10.64 175.296)"/>
+    </g>
+    <rect width="24.8" height="203.6" x="380" y="161.2" fill="#324A5E"/>
+    <polygon fill="#FFD05B" points="404.8 161.2 392.4 128.8 380 161.2"/>
+    <polygon fill="#324A5E" points="397.2 141.2 392.4 128.8 387.6 141.2"/>
+    <path fill="#FF7058" d="M380,364.8 L380,383.2 C380,385.2 381.6,386.4 383.2,386.4 L401.6,386.4 C403.6,386.4 404.8,384.8 404.8,383.2 L404.8,364.8 L380,364.8 Z"/>
+  </g>
+</svg>
