@@ -14,6 +14,7 @@ bookingformJS.controller("paymentCtrl", function($scope, $http, $location, strip
       delete stripecard.year;
       var amount = Number($scope.user.payment.amount.replace(/[^0-9\.-]+/g, ""));
       console.log(amount);
+      console.log(payment.tk_id);
       
       return stripe.card.createToken
       (stripecard, $scope)

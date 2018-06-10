@@ -92,6 +92,7 @@ angular-stripe:
     js/library/angular-stripe.js: {}
   dependencies:
       - bookingform/angularjs
+## Need to add file uploads
 
 ## Angular Material css dependecy for Datepicker
 
