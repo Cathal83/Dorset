@@ -53,7 +53,7 @@
 %}
 
 {# Pass classname based on number to array classes #}
-{% set classes = classes | merge([viewPricesClass])} %}
+{% set classes = classes | merge([viewPricesClass]) %}
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
