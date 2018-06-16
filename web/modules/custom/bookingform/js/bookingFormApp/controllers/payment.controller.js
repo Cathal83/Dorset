@@ -7,13 +7,21 @@ bookingformJS.controller("paymentCtrl", function($scope, $http, $location, strip
       
       /**
        * Gets token for payment based on Card collected
+       * and amount in the correct format
        */
-      return stripe.card.createToken($scope.payment.card)
+      var stripecard = $scope.payment.card;
+      delete stripecard.month;
+      delete stripecard.year;
+      var amount = Number($scope.user.payment.amount.replace(/[^0-9\.-]+/g, ""));
+      console.log(amount);
+      
+      return stripe.card.createToken
+      (stripecard, $scope)
       .then(function (response) {
         var payment = {
           tk_id : response.id,
           email : $scope.user.email,
-          amount : $scope.payment.amount,
+          amount: amount * 100, //Amount in cents
           firstname : $scope.user.firstname,
           lastname : $scope.user.lastname,
           product : $scope.user.productname
@@ -29,6 +37,7 @@ bookingformJS.controller("paymentCtrl", function($scope, $http, $location, strip
       })
       .then(function (payment) {
         console.log('successfully submitted payment for €', $scope.payment.amount);
+
       })
       .catch(function (err) {
         if (err.type && /^Stripe/.test(err.type)) {

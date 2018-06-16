@@ -33,16 +33,22 @@ bookingformJS.config(function($stateProvider, $urlRouterProvider) {
         url: '/summary',
         templateUrl : '/modules/custom/bookingform/js/bookingFormApp/templates/_summary.html'
       })
+
+      .state('thank-you', {
+          url : '/thank-you',
+          templateUrl: '/modules/custom/bookingform/js/bookingFormApp/templates/_thank-you.html'
+      })
         
 })
 
 bookingformJS.value('formSteps', [
-    { uiSref: 'bookingForm', valid: false },
-    { uiSref: 'steps', valid: false },
-    { uiSref: 'customer-details', valid: false },
-    { uiSref: 'customer-files', valid: false },
-    { uiSref: 'payment', valid: false},
-    { uiSref: 'summary', valid: false}
+    { uiSref : 'bookingForm', valid : false },
+    { uiSref : 'steps', valid : false },
+    { uiSref : 'customer-details', valid : false },
+    { uiSref : 'customer-files', valid : false },
+    { uiSref : 'payment', valid : false },
+    { uiSref : 'summary', valid : false },
+    { uiSref : 'thank-you', valid : false }
 ])
   
 bookingformJS.run([

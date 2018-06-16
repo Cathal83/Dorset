@@ -1,0 +1,1192 @@
+// Marc CSS Starts Here
+
+.block-views-blockcourses-view-block-2 {
+  width: 49.95%;
+  height: 479px;
+  display: inline-block;
+  float: left;
+}
+
+.block-views-blockcourses-view-block-2 div{
+  .views-field{
+  width: 33%;
+  height: 239.5px;
+  display: inline-block;
+  text-align: center;
+  float: left;
+
+    background-image: url('http://localhost:8888/sites/default/files/stat_icon/paper-plane.svg');
+    background-size: 82px 82px;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+  }
+
+  .field-content{
+    position: relative;
+    top: 50%;
+    padding: 28px;
+    font-size: 20px;
+    color: #5D5D5D;
+    text-align: center;
+  }
+
+    .field-content a{
+      font-size: 20px;
+      color: #5D5D5D;
+      text-align: center;
+  }
+    .views-label {
+      position: relative;
+      top: 8.5em;
+      font-size: 16px;
+      color: #5D5D5D;
+      text-align: center;
+  }
+}
+
+
+.block-views-blockcourses-view-block-14 {
+  width: 16.65% !important;
+  height: 479px;
+  background-image: url('http://localhost:8888/sites/default/files/stat_icon/paper-plane.svg') !important;
+  background-size: 82px 82px !important;
+  background-position: 50% 8.5% !important;
+  background-repeat: no-repeat !important;
+  background-color: #ffffff !important;
+  float: left;
+}
+
+.block-views-blockcourses-view-block-14 div{
+  .views-field{
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+
+  }
+  .field-content{
+    position: relative;
+    top: 8.5em;
+    font-size: 20px;
+    color: #5D5D5D;
+    text-align: center;
+  }
+}
+
+.block-views-blockcourses-view-block-7{
+  width: 33.3% !important;
+  height: 539px;
+  display: inline-block;
+  margin-top: -60px;
+  background-image: linear-gradient(rgba(241,73,80,0.5),rgba(241,73,80,0.5)), url('//localhost:8888/sites/default/files/styles/large/public/block_list/how_to_apply_0.jpg?itok=aKX80AYP');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.block-views-blockcourses-view-block-7 h2{
+  font-size: 30px;
+  color: #FFFFFF;
+  padding: 27.5% 20% 0% 20%;
+  text-align: left;
+}
+
+.block-views-blockcourses-view-block-7 .list-element{
+  font-size: 16px;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 10% 20% 20% 20%;
+}
+
+.block-views-blockcourses-view-block-7 .list-element div{
+  visibility: visible !important;
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.block-views-blockcourses-view-block-7 .paragraph--view-mode--default div{
+  visibility: hidden;
+}
+
+
+// Mobile CSS
+
+@media only screen and (max-width: 600px) {
+  .block-views-blockcourses-view-block-2 {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .block-views-blockcourses-view-block-2 div{
+    .views-field{
+    width: 50%;
+    height: 162px;
+
+      background-size: 61px 61px;
+      background-position: 50% 30%;
+    }
+    .field-content{
+      font-size: 16px;
+    }
+
+    .field-content a{
+      font-size: 16px;
+    }
+    .views-label {
+        top: 9.5em;
+        font-size: 11px;
+    }
+}
+
+  .block-views-blockcourses-view-block-14 {
+    width: 100% !important;
+    height: 182px;
+    background-size: 61px 61px !important;
+    background-position: 50% 10% !important;
+  }
+
+  .block-views-blockcourses-view-block-14 div{
+    .views-field{
+    width: 100%;
+    display: inline-block;
+
+    }
+    .field-content{
+      top: 110px;
+      font-size: 16px;
+    }
+  }
+
+  .block-views-blockcourses-view-block-7{
+    width: 100% !important;
+    height: 195px;
+    display: block;
+    margin-top: 0px;
+  }
+
+  .block-views-blockcourses-view-block-7 h2{
+    font-size: 20px;
+    padding: 10% 5% 0%;
+  }
+
+  .block-views-blockcourses-view-block-7 .list-element{
+    font-size: 11px;
+    padding: 5% 10% 20%;
+  }
+}
+
+// Tablet CSS
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .block-views-blockcourses-view-block-2 {
+    height: 354px;
+  }
+
+  .block-views-blockcourses-view-block-2 div{
+    .views-field{
+    height: 192px;
+      background-size: 61px 61px;
+    }
+    .field-content{
+      top: 40%;
+      font-size: 16px;
+    }
+
+    .field-content a{
+      font-size: 16px;
+    }
+    .views-label {
+        top: 8em;
+        font-size: 11px;
+    }
+  }
+
+
+  .block-views-blockcourses-view-block-14 {
+    height: 354px;
+    background-size: 61px 61px !important;
+  }
+
+  .block-views-blockcourses-view-block-14 div{
+
+    .field-content{
+      position: relative;
+      top: 125px;
+      font-size: 16px;
+    }
+  }
+
+  .block-views-blockcourses-view-block-7{
+    height: 394px;
+    margin-top: -40px;
+  }
+
+  .block-views-blockcourses-view-block-7 h2{
+    font-size: 20px;
+    padding: 30% 20% 0% 20%;
+  }
+
+  .block-views-blockcourses-view-block-7 .list-element{
+    font-size: 11px;
+  }
+}
+
+// iPad Pro CSS
+
+@media screen and (max-width: 1024px) and (min-width: 900px) {
+  .block-views-blockcourses-view-block-2 {
+    height: 324px;
+  }
+  .block-views-blockcourses-view-block-2 div{
+    .views-field{
+    height: 162px;
+      background-size: 61px 61px;
+    }
+    .field-content{
+      top: 40%;
+      font-size: 16px;
+    }
+
+    .field-content a{
+      font-size: 16px;
+    }
+    .views-label {
+        top: 8em;
+        font-size: 11px;
+    }
+  }
+
+
+  .block-views-blockcourses-view-block-14 {
+    height: 324px;
+    background-size: 61px 61px !important;
+  }
+
+  .block-views-blockcourses-view-block-14 div{
+
+    .field-content{
+      position: relative;
+      top: 92px;
+      font-size: 16px;
+    }
+  }
+
+  .block-views-blockcourses-view-block-7{
+    height: 384px;
+    margin-top: -40px;
+  }
+
+  .block-views-blockcourses-view-block-7 h2{
+    font-size: 20px;
+    padding: 30% 20% 0% 20%;
+  }
+
+  .block-views-blockcourses-view-block-7 .list-element{
+    font-size: 11px;
+  }
+}
+
+
+// Marc CSS Starts Here - Course Page
+
+.block-views-blockcourses-view-block-2 {
+  width: 49.95%;
+  height: 479px;
+  display: inline-block;
+  float: left;
+}
+
+.block-views-blockcourses-view-block-2 div{
+  .views-field{
+  width: 33%;
+  height: 239.5px;
+  display: inline-block;
+  text-align: center;
+  float: left;
+
+    background-image: url('http://localhost:8888/sites/default/files/stat_icon/paper-plane.svg');
+    background-size: 82px 82px;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+  }
+
+  .field-content{
+    position: relative;
+    top: 50%;
+    padding: 28px;
+    font-size: 20px;
+    color: #5D5D5D;
+    text-align: center;
+  }
+
+    .field-content a{
+      font-size: 20px;
+      color: #5D5D5D;
+      text-align: center;
+  }
+    .views-label {
+      position: relative;
+      top: 8.5em;
+      font-size: 16px;
+      color: #5D5D5D;
+      text-align: center;
+  }
+}
+
+
+.block-views-blockcourses-view-block-14 {
+  width: 16.65% !important;
+  height: 479px;
+  background-image: url('http://localhost:8888/sites/default/files/stat_icon/paper-plane.svg') !important;
+  background-size: 82px 82px !important;
+  background-position: 50% 8.5% !important;
+  background-repeat: no-repeat !important;
+  background-color: #ffffff !important;
+  float: left;
+}
+
+.block-views-blockcourses-view-block-14 div{
+  .views-field{
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+
+  }
+  .field-content{
+    position: relative;
+    top: 8.5em;
+    font-size: 20px;
+    color: #5D5D5D;
+    text-align: center;
+  }
+}
+
+.block-views-blockcourses-view-block-7{
+  width: 33.3% !important;
+  height: 539px;
+  display: inline-block;
+  margin-top: -60px;
+  background-image: linear-gradient(rgba(241,73,80,0.5),rgba(241,73,80,0.5)), url('//localhost:8888/sites/default/files/styles/large/public/block_list/how_to_apply_0.jpg?itok=aKX80AYP');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.block-views-blockcourses-view-block-7 h2{
+  font-size: 30px;
+  color: #FFFFFF;
+  padding: 27.5% 20% 0% 20%;
+  text-align: left;
+}
+
+.block-views-blockcourses-view-block-7 .list-element{
+  font-size: 16px;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 10% 20% 20% 20%;
+}
+
+.block-views-blockcourses-view-block-7 .list-element div{
+  visibility: visible !important;
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.block-views-blockcourses-view-block-7 .paragraph--view-mode--default div{
+  visibility: hidden;
+}
+
+
+// Course Page Mobile CSS
+
+@media only screen and (max-width: 600px) {
+  .block-views-blockcourses-view-block-2 {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .block-views-blockcourses-view-block-2 div{
+    .views-field{
+    width: 50%;
+    height: 162px;
+
+      background-size: 61px 61px;
+      background-position: 50% 30%;
+    }
+    .field-content{
+      font-size: 16px;
+    }
+
+    .field-content a{
+      font-size: 16px;
+    }
+    .views-label {
+        top: 9.5em;
+        font-size: 11px;
+    }
+}
+
+  .block-views-blockcourses-view-block-14 {
+    width: 100% !important;
+    height: 182px;
+    background-size: 61px 61px !important;
+    background-position: 50% 10% !important;
+  }
+
+  .block-views-blockcourses-view-block-14 div{
+    .views-field{
+    width: 100%;
+    display: inline-block;
+
+    }
+    .field-content{
+      top: 110px;
+      font-size: 16px;
+    }
+  }
+
+  .block-views-blockcourses-view-block-7{
+    width: 100% !important;
+    height: 195px;
+    display: block;
+    margin-top: 0px;
+  }
+
+  .block-views-blockcourses-view-block-7 h2{
+    font-size: 20px;
+    padding: 10% 5% 0%;
+  }
+
+  .block-views-blockcourses-view-block-7 .list-element{
+    font-size: 11px;
+    padding: 5% 10% 20%;
+  }
+}
+
+// Course Page Tablet CSS
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .block-views-blockcourses-view-block-2 {
+    height: 354px;
+  }
+
+  .block-views-blockcourses-view-block-2 div{
+    .views-field{
+    height: 192px;
+      background-size: 61px 61px;
+    }
+    .field-content{
+      top: 40%;
+      font-size: 16px;
+    }
+
+    .field-content a{
+      font-size: 16px;
+    }
+    .views-label {
+        top: 8em;
+        font-size: 11px;
+    }
+  }
+
+
+  .block-views-blockcourses-view-block-14 {
+    height: 354px;
+    background-size: 61px 61px !important;
+  }
+
+  .block-views-blockcourses-view-block-14 div{
+
+    .field-content{
+      position: relative;
+      top: 125px;
+      font-size: 16px;
+    }
+  }
+
+  .block-views-blockcourses-view-block-7{
+    height: 394px;
+    margin-top: -40px;
+  }
+
+  .block-views-blockcourses-view-block-7 h2{
+    font-size: 20px;
+    padding: 30% 20% 0% 20%;
+  }
+
+  .block-views-blockcourses-view-block-7 .list-element{
+    font-size: 11px;
+  }
+}
+
+// Course Page iPad Pro CSS
+
+@media screen and (max-width: 1024px) and (min-width: 900px) {
+  .block-views-blockcourses-view-block-2 {
+    height: 324px;
+  }
+  .block-views-blockcourses-view-block-2 div{
+    .views-field{
+    height: 162px;
+      background-size: 61px 61px;
+    }
+    .field-content{
+      top: 40%;
+      font-size: 16px;
+    }
+
+    .field-content a{
+      font-size: 16px;
+    }
+    .views-label {
+        top: 8em;
+        font-size: 11px;
+    }
+  }
+
+
+  .block-views-blockcourses-view-block-14 {
+    height: 324px;
+    background-size: 61px 61px !important;
+  }
+
+  .block-views-blockcourses-view-block-14 div{
+
+    .field-content{
+      position: relative;
+      top: 92px;
+      font-size: 16px;
+    }
+  }
+
+  .block-views-blockcourses-view-block-7{
+    height: 384px;
+    margin-top: -40px;
+  }
+
+  .block-views-blockcourses-view-block-7 h2{
+    font-size: 20px;
+    padding: 30% 20% 0% 20%;
+  }
+
+  .block-views-blockcourses-view-block-7 .list-element{
+    font-size: 11px;
+  }
+}
+
+//To Become Bullet Items
+
+.paragraph--type--dorset-course-become {
+  padding: 1em 0em;
+}
+
+.paragraph--type--dorset-course-become div div div{
+  background-size: 32px 32px;
+  padding: 2em 0em 2em 2.5em;
+  font-family: Lato;
+  font-size: 18px;
+  color: #5D5D5D;
+}
+
+//Mobile To Become
+
+@media only screen and (max-width: 600px) {
+  .paragraph--type--dorset-course-become div div div{
+    background-size: 30px 30px;
+    padding: 2em 2em 2em 4.5em;
+    font-family: Lato;
+    font-size: 11px;
+    color: #5D5D5D;
+  }
+}
+
+// News & Events Page
+
+.block-views-blocknews-events-block-1 .views-row {
+    position: relative;
+    width: 33%;
+    height: 374px;
+    display: inline-block;
+}
+
+.block-views-blocknews-events-block-1 .views-row .views-field-title .field-content a{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.block-views-blocknews-events-block-1 .views-row .views-field {
+    z-index: 1;
+    color: #fff;
+    margin: 0% 10%;
+}
+
+.block-views-blocknews-events-block-1 .views-row .views-field-body .field-content p{
+    color: #fff;
+    float: left;
+}
+
+.block-views-blocknews-events-block-1 .views-row .views-field-body .field-content a{
+    border-bottom: 1px solid #FFF;
+    margin-top: 2em;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 38%;
+    margin-right: 30%;
+}
+
+.block-views-blocknews-events-block-1 .views-field-field-event- .field-content div{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    box-shadow: inset 0 0 0 2000px rgba(45,45,45,.7);
+}
+
+.block-views-blocknews-events-block-1 .views-row .views-field:nth-child(1){
+    font-weight: bold;
+    margin-top: 2.5em;
+}
+
+.block-views-blocknews-events-block-1 .views-row .views-field:nth-child(2){
+    margin-top: 0.5em;
+}
+
+.block-views-blocknews-events-block-1 .views-row .views-field:nth-child(3){
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.block-views-blocknews-events-block-1 .views-row .views-field:nth-child(4){
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    margin: 0;
+}
+
+.block-views-blocknews-events-block-1 .views-row .views-field:nth-child(5){
+    overflow-x: hidden;
+}
+
+.block-views-blocknews-events-block-1:nth-child(even) {
+    background: none;
+}
+
+.block-views-blocknews-events-block-1 .views-row:nth-child(2){
+    box-shadow: inset 0 0 0 2000px rgba(241, 73, 80, 1);
+}
+
+.block-views-blocknews-events-block-1 .views-row:nth-child(4){
+    box-shadow: inset 0 0 0 2000px rgba(41, 82, 204, 1);
+}
+
+.block-views-blocknews-events-block-1 .views-row:nth-child(6){
+    box-shadow: inset 0 0 0 2000px rgba(231, 185, 41, 1);
+}
+
+//News & Events Mobile CSS
+
+@media only screen and (max-width: 600px) {
+
+    .block-views-blocknews-events-block-1 .views-row {
+        width: 100%;
+        height: 230px;
+    }
+
+    .block-views-blocknews-events-block-1 .views-row .views-field-title .field-content a{
+        font-size: 16px;
+    }
+
+    .block-views-blocknews-events-block-1 .views-row .views-field{
+        font-size: 11px;
+    }
+}
+
+// News & Events Tablet CSS
+
+@media screen and (max-width: 975px) and (min-width: 600px) {
+
+    .block-views-blocknews-events-block-1 .views-row {
+        height: 270px;
+    }
+
+    .block-views-blocknews-events-block-1 .views-row .views-field {
+        font-size: 11px;
+    }
+
+    .block-views-blocknews-events-block-1 .views-row .views-field-title .field-content a{
+        font-size: 16px;
+    }
+
+    .block-views-blocknews-events-block-1 .views-row .views-field-body .field-content p{
+        font-size: 11px;
+    }
+
+    .block-views-blocknews-events-block-1 .views-row .views-field-body .field-content a{
+        font-size: 11px;
+    }
+}
+
+// Home Page
+
+.block-links{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.block-views-blocknews-events-block-pre-news-events .block-news-events .views-row{
+    padding: 0;
+}
+
+.block-views-blocknews-events-block-pre-news-events .block-news-events .more-link{
+    display: none;
+}
+
+.block-views-blocknews-events-block-pre-news-events .views-row .views-field {
+    margin: 0% 10%;
+}
+
+.block-views-blocknews-events-block-pre-news-events .views-row .views-field-nothing{
+    margin-top: 2em;
+}
+
+.block-views-blocknews-events-block-pre-news-events .block-news-events .views-row .views-field{
+    margin-bottom: 0px;
+}
+
+.block-views-blocknews-events-block-pre-news-events .views-row .views-field:nth-child(1){
+    font-weight: bold;
+    margin-top: 2.5em;
+}
+
+.block-views-blocknews-events-block-pre-news-events .views-row .views-field:nth-child(3){
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.block-views-blocknews-events-block-pre-news-events .views-row .views-field:nth-child(3) h3{
+    color: #FFF;
+}
+
+.block-views-blocknews-events-block-pre-news-events .views-row .views-field:nth-child(6){
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    margin: 0;
+}
+
+.block-views-blocknews-events-block-pre-news-events .views-row:nth-child(2){
+    box-shadow: inset 0 0 0 2000px rgba(241, 73, 80, 1);
+}
+
+.block-views-blocknews-events-block-pre-news-events .views-row:nth-child(4){
+    box-shadow: inset 0 0 0 2000px rgba(41, 82, 204, 1);
+}
+
+.block-views-blocknews-events-block-pre-news-events .views-row:nth-child(6){
+    box-shadow: inset 0 0 0 2000px rgba(231, 185, 41, 1);
+}
+
+.block-region-homeaccreditations .block-accreditations .block-icons div{
+  width: 20%;
+}
+
+.block-region-homeaccreditations .block-accreditations .block-icons div div{
+  width: 120px;
+  height: 120px;
+}
+
+// Home Page Desktop CSS
+
+@media only screen and (min-width: 600px) {
+
+  .path-frontpage #zone-main{
+    margin-top: -40px;
+  }
+
+  .zone-section .block-region-homeactionblocks .block-list-bg-img{
+      width: 49.75%;
+      display: inline-block;
+      height: 340px !important;
+  }
+
+  .zone-section .block-region-homeactionblocks .block-list-bg-img:nth-child(1) .block-title{
+      margin-top: 1.15em;
+  }
+
+  .zone-section .block-region-homeactionblocks .block-list-bg-img:nth-child(2) .block-title{
+      margin-top: 1.75em;
+  }
+
+  .zone-section .block-region-homeactionblocks .block-list-bg-img .block-content .block-title{
+      margin-left: 7.5%;
+  }
+
+  .zone-section .block-region-homeactionblocks .block-list-bg-img .block-content .block-list{
+      margin-left: 7.5%;
+  }
+
+  .zone-section .block-region-homeactionblocks .block-list-bg-img .block-content .btn-link-white a{
+      padding: 10px 12px;
+  }
+
+  .block-news-events .views-row:first-child{
+      display: inline-block;
+  }
+
+  .block-views-blocknews-events-block-pre-news-events .block-news-events .views-row{
+      position: relative;
+      width: 33%;
+      height: 374px;
+      display: inline-block;
+      padding: 0;
+  }
+}
+
+// Home Page Desktop CSS - Stats
+
+@media only screen and (min-width: 975px) {
+    .block-region-homestats .block-stats .stat-item{
+        width: 25%;
+        flex: inherit !important;
+        padding: 50px 0px;
+  }
+}
+
+//Home Page Mobile CSS
+
+@media only screen and (max-width: 600px) {
+
+    .block-views-blocknews-events-block-pre-news-events .views-row {
+        height: 230px;
+    }
+    .block-region-homeaccreditations .block-accreditations .block-icons div{
+      width: inherit;
+    }
+}
+
+// News & Events Tablet CSS
+
+@media screen and (max-width: 975px) and (min-width: 600px) {
+
+    .block-views-blocknews-events-block-pre-news-events .block-news-events .views-row {
+        height: 270px;
+    }
+    .zone-section .block-region-homeactionblocks .block-list-bg-img{
+      height: 215px !important;
+    }
+}
+
+// Home Page iPad Pro CSS
+
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+  .block-views-blocknews-events-block-pre-news-events .views-row .views-field:nth-child(3) h3{
+    font-size: 25px;
+  }
+}
+
+//About Page Map Desktop CSS
+.paragraph--type--paragraph-map{
+  height: 450px;
+  margin: 0 5%;
+}
+
+.geolocation-formatter-map-wrapper{
+  display: inline-block;
+  width: 31%;
+  padding: 1%;
+  float: left;
+}
+
+.geolocation-formatter-map-wrapper .geolocation-google-map{
+  height: 400px !important;
+}
+
+//About Page Mobile CSS Map
+
+@media only screen and (max-width: 975px) {
+
+  .paragraph--type--paragraph-map{
+    margin: 0;
+  }
+
+  .geolocation-formatter-map-wrapper{
+    display: inline-block;
+    width: 100%;
+    padding: 3% 0;
+    float: left;
+  }
+  .geolocation-formatter-map-wrapper .geolocation-google-map{
+    height: 300px !important;
+  }
+}
+
+// Home Page iPad Pro CSS
+
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+
+  .geolocation-formatter-map-wrapper .geolocation-google-map{
+    height: 350px !important;
+  }
+}
+
+//Menu CSS
+
+#section-header{
+  height: 131px !important;
+}
+
+#block-dorsetcollege-main-menu{
+  display: block !important;
+  float: right;
+  margin-top: 55px;
+}
+
+#block-dorsetcollege-main-menu ul li{
+  display: inline-block;
+}
+
+#block-dorsetcollege-main-menu ul li a{
+  color: #6D6E71;
+  margin-right: 25px;
+  padding-bottom: 10px;
+}
+
+#block-dorsetcollege-main-menu ul li a:hover{
+  color: #3366FF;
+  border-bottom: 2px solid #3366FF;
+}
+
+#block-dorsetcollege-main-menu ul li:nth-child(6) a{
+  color: #FFF;
+  background-color: #3366FF;
+  border-radius: 60px;
+  padding: 10px;
+}
+
+#block-dorsetcollege-main-menu ul li:nth-child(6) a:hover{
+  border-bottom: none;
+}
+
+#block-dorsetcollege-main-menu ul li:nth-child(7) a{
+  color: #FFF;
+  background-color: #F14950;
+  border-radius: 60px;
+  padding: 10px;
+}
+
+#block-dorsetcollege-main-menu ul li:nth-child(7) a:hover{
+  border-bottom: none;
+}
+
+#block-dorsetcollege-branding{
+  float: left;
+  margin-top: 8px;
+}
+
+#block-dorsetcollege-branding #logo a img{
+  height: 102px;
+  width: 102px;
+}
+
+#block-dorsetcollege-branding #main-menu-trigger{
+  display: none;
+}
+
+//Menu Mobile CSS
+
+@media only screen and (max-width: 975px) {
+
+  #section-header{
+    height: 71px !important;
+  }
+
+  #block-dorsetcollege-main-menu{
+    display: none !important;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    right: 0;
+    left: 0;
+    margin-top: 71px;
+  }
+
+  #block-dorsetcollege-main-menu ul{
+    margin-top: 10%;
+    margin-left: 20%;
+  }
+
+  #block-dorsetcollege-main-menu ul li{
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  #block-dorsetcollege-main-menu ul li:nth-child(6){
+    width: inherit;
+    display: inline-block;
+  }
+
+  #block-dorsetcollege-main-menu ul li:nth-child(7){
+    width: inherit;
+    display: inline-block;
+  }
+
+  #block-dorsetcollege-main-menu ul li:nth-child(6) a{
+    display: inline-block;
+    float: left;
+  }
+
+  #block-dorsetcollege-main-menu ul li:nth-child(7) a{
+    display: inline-block;
+    float: left;
+  }
+
+  #block-dorsetcollege-branding #logo a img{
+    height: 57px;
+    width: 57px;
+  }
+
+  #block-dorsetcollege-branding #logo{
+    margin-top: 0;
+  }
+
+  #block-dorsetcollege-branding #main-menu-trigger{
+    display: block;
+  }
+}
+
+// Menu Tablet CSS
+
+@media screen and (max-width: 975px) and (min-width: 600px) {
+
+  #block-dorsetcollege-main-menu ul li a{
+    font-size: 25px;
+  }
+
+  #block-dorsetcollege-main-menu ul li:nth-child(6) a{
+    padding: 15px;
+  }
+
+  #block-dorsetcollege-main-menu ul li:nth-child(7) a{
+    padding: 15px;
+  }
+
+  #block-dorsetcollege-main-menu ul{
+    margin-left: 25%;
+  }
+}
+
+// Menu Awkward Nudging Fix CSS
+
+@media screen and (max-width: 1175px) and (min-width: 1024px) {
+
+  #block-dorsetcollege-main-menu ul li a{
+    margin-right: 10px;
+  }
+}
+
+// Course Module page
+
+.page-node-type-course-module{
+
+  #section-header{
+    display: none;
+  }
+
+  #section-footer{
+    display: none;
+  }
+
+  footer{
+    display: none;
+  }
+
+  .region-content article{
+    position: absolute;
+    padding: 5%;
+  }
+
+  .modtitle{
+    display: inline-block;
+    float: left;
+    background-color: $dc-grey;
+    width: 34%;
+    height: 40px;
+    padding: 2%;
+  }
+
+  .modstat{
+    display: inline-block;
+    float: right;
+    background-color: $dc-grey;
+    width: 16.66%;
+    height: 40px;
+    padding: 2%;
+  }
+
+  .modsemester{
+    display: inline-block;
+    float: right;
+    background-color: $dc-grey;
+    width: 16.66%;
+    height: 40px;
+    padding: 2%;
+  }
+
+  .modcred{
+    display: inline-block;
+    float: right;
+    background-color: $dc-grey;
+    width: 16.66%;
+    height: 40px;
+    padding: 2%;
+  }
+
+  .moddesc{
+    display: block;
+    clear: both;
+    padding: 2%;
+  }
+
+  .modindc{
+    display: block;
+    clear: both;
+    padding: 2%;
+  }
+
+  .modass{
+    display: block;
+    clear: both;
+    padding: 2%;
+    background-color: $dc-grey;
+    height: 60px;
+  }
+
+  .modass .paragraph--type--dorset-module-detail div{
+    display: inline-block;
+  }
+
+  .modass div .paragraph--type--dorset-module-detail div{
+    float: left;
+  }
+
+  .modass div .paragraph--type--dorset-module-detail div div:nth-child(1){
+    clear: both;
+  }
+
+  .modass div .paragraph--type--dorset-module-detail div div:nth-child(2){
+    clear: both;
+  }
+
+}

@@ -1,4 +1,4 @@
-bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $window, $location, $controller, dataService, formService, formSteps, Upload, stripe) {
+bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $window, $location, $controller, dataService, formService, formSteps, stripe) {
   /**
    * Default user settings
    */
@@ -33,30 +33,44 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     payment: {
       type_id: "",
       type_txt: "",
-      amount: ""
+      amount: "\u20ac3,000.00"
     }
   }
-  /**
+
   $scope.payment = {
-    amount: "1000000",
+    amount: "\u20ac3,000.00",
+    ccencoded: "",
     card : {
       number : "4242424242424242",
       cvc : "555",
-      exp: "02/2020",
-      address_zip: "D7"
+      month: "12",
+      year: "2028",
+      exp: "12" + '/' + "2028",
+      //address_zip: "D7"
     } 
   }
-  **/
 
-  $scope.productData = [{"nid":"22","faculty":"Business Accounting Courses","course_type":"Undergraduate","title":"ACCA Diploma in Accounting and Finance","application_type":"33","document":"test","delivery_mode":"Part-Time","delivery_mode_id":"12"}];
+  $scope.productData = [{ "nid": "22", "faculty": "Business Accounting Courses", "course_type": "Undergraduate", "title": "ACCA Diploma in Accounting and Finance", "application_type": "33", "document": "test", "delivery_mode": "Part-Time", "delivery_mode_id": "12" }, { "nid": "22", "faculty": "Business Accounting Courses", "course_type": "Undergraduate", "title": "ACCA Diploma in Accounting and Finance", "application_type": "33", "document": "test2", "delivery_mode": "Part-Time", "delivery_mode_id": "12" }];
   $scope.productPrices = [{"delivery_id":"13","price_amount":"\u20ac3,000.00","payment_type_txt":"Full Payment","course_id":"22","payment_type_id":"3"},{"delivery_id":"13","price_amount":"\u20ac300.00","payment_type_txt":"Deposit","course_id":"22","payment_type_id":"4"}];
   $scope.showProductSel = true; 
-  $scope.user.docs;
   $scope.maxSize = [];
+  /**
+   * Needed Scopes by default
+   */
+  $scope.years = [];
 
   /**
-   * Functions that get data from JSON
-   * callable by function
+   * Generates future 10 years
+   * for card expiring date date picker
+   */
+  var date = new Date();
+  var year = date.getFullYear();
+  for(var y=0; y<11; y++) {
+    $scope.years.push(year+y);
+  }
+
+  /**
+   * Changes on credit card number
    */
   var getProducts = function() {
     dataService.getProducts().then(function(response) {
@@ -93,16 +107,41 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   }
   
   /**
+   * Date checked for expiring date
+   */
+  $scope.cardExp = function(month, year) {
+
+    if(month != '' &&  year != '') {
+      $scope.payment.card.exp = month + '/' + year;
+    }
+
+  }
+
+  /**
+   * Encode credit card number
+   */
+  $scope.ccEncode = function(number) {
+
+    if( number != undefined ) {
+      $scope.payment.ccencoded = number.replace(/.(?=.{4,}$)/g, "•");
+    }
+
+  }
+
+  /**
    * Scopes prices to the user data
    */
   $scope.scopePrices = function(type_id) {
-
-    var prices = formService.productPrices(type_id, $scope.productPrices);
+    
+    var id = type_id.toString();
+    var prices = formService.productPrices(id, $scope.productPrices);
     $scope.user.payment.type_id = prices[0].payment_type_id;
+    console.log(prices);
     $scope.user.payment.type_txt = prices[0].payment_type_txt; 
     $scope.user.payment.amount = prices[0].price_amount;
 
   }
+
   /**
    * 
    * Removes product selected when cancel button is clicked
@@ -212,64 +251,10 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     }
 
   }
-
-  /**
-   * Upload documents settings and errors
-   * Give error in case the document is too big
-  **/
-  $scope.docSize = function(doc, n){
-
-    if (doc != null) {
-
-      var size = doc.size / 1000000;
-
-      if (size > 5) {
-        $scope.user.docs[n] = null;
-        $scope.maxSize[n] = "error"; // send error
-      }
-      else {
-        $scope.maxSize[n] = null;
-      }
-
-    } else {}
-
-  }
-
-  $scope.uploadDocs = function(){
-    // Number of files
-    var n = $scope.docs.length;
-    var docs = $scope.docs;
-    /**
-    UPLOAD FILES TO SERVER
-    for (var i=0; i<n; i++) {
-      var file = $scope.docs[i]
-      console.log(file);
-      file.upload = Upload.http({
-        url: 'http://localhost/web/jsonapi/file/document',
-        method: 'POST',
-        data: {
-          type: 'file--document',
-          key: file.name,
-          filename: file.name,
-          file: file
-        },
-        headers: {
-          "Authorization": "Basic d2ViZm9ybV91c2VyOmttdm90UWZLa1BtQ2VRWTNmfUti",
-          "Content-Type": "application/vnd.api+json",
-          "Accept": "application/vnd.api+json"
-        }
-      }).then(function (resp) {
-        console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
-      }, function (resp) {
-          console.log('Error status: ' + resp.status);
-      });
-    }
-    */
-  }
   /**
    * Controller for Templates and Form Steps
   */
   $controller('viewCtrl', { $scope, formSteps, $state, productDocuments, dataService });
   $controller('paymentCtrl', { $scope, $http, $location, stripe, dataService });
-
+  $controller('docsCtrl', { $scope, $http, $filter });
 })

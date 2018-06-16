@@ -11,7 +11,7 @@ $dc-yellow: #E7B929;
 $dc-outline: #D4D1D1;
 $dc-footer: #14235D;
 $dc-grey: #F8F8F8;
-$dc-nav: #6d6e71;  
+$dc-nav: #6d6e71;
 $dc-bg: #f2f2f2;
 $dc-border-color: #979797;
 
@@ -51,7 +51,7 @@ $about-height: 243px;
 
   font-family: Lato;
   @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
-  
+
 }
 
 $h-weight: 700; //headers font-weight
@@ -61,56 +61,70 @@ $p-stat-weight: 700;
 $link-weight: 700;
 
 $h1-font-sizes: (
-  xsmall: (16pt, 1.1),
-  small: (20pt, 1.1),
-  medium: (30pt, 1.2),
-  xlarge: (60pt, 1.2),
+  xsmall: (16px, 1.1),
+  small: (20px, 1.1),
+  medium: (30px, 1.2),
+  xlarge: (60px, 1.2),
 );
 
 $h2-font-sizes: (
-  xsmall: (16pt, 1.2),
-  small: (20pt, 1.2),
-  xlarge: (30pt, 1.2),
+  xsmall: (16px, 1.2),
+  small: (20px, 1.2),
+  xlarge: (30px, 1.2),
 );
 
 $h3-font-sizes: (
-  small: (16pt, 1.18),
-  xlarge: (25pt, 1.44),
+  small: (16px, 1.18),
+  medium: (16px, 1.18),
+  large: (16px, 1.44),
+  xlarge: (25px, 1.44),
 );
 
 $p-font-sizes: (
-  small: (11pt, 1.63),
-  xlarge: (16pt, 1.68),
+  small: (11px, 1.63),
+  medium: (11px, 1.63),
+  large: (16px, 1.68),
+  xlarge: (16px, 1.68),
 );
 
 $p-default: (
-  small: (11pt, 1.63),
-  xlarge: (16pt, 1.68), 
+  small: (11px, 1.63),
+  medium: (11px, 1.63),
+  large: (16px, 1.68),
+  xlarge: (16px, 1.68),
 );
 
 $p-default-white: (
-  small: (11pt, 1.63),
-  xlarge: (16pt, 1.68),
+  small: (11px, 1.63),
+  medium: (11px, 1.63),
+  large: (16px, 1.68),
+  xlarge: (16px, 1.68),
 );
 
 $p-default-white-bold: (
-  small: (11pt, 1.63),
-  xlarge: (16pt, 1.68),
+  small: (11px, 1.63),
+  medium: (11px, 1.63),
+  large: (16px, 1.68),
+  xlarge: (16px, 1.68),
 );
 
 $p-action-white-bold: (
-  small: (11pt, 1.2),
-  xlarge: (16pt, 1.3),
+  small: (11px, 1.2),
+  medium: (11px, 1.2),
+  large: (16px, 1.68),
+  xlarge: (16px, 1.3),
 );
 
 $p-links: (
-  xsmall: (11pt, 1.63),
-  xlarge: (16pt, 1.68),
+  xsmall: (11px, 1.63),
+  medium: (11px, 1.2),
+  large: (16px, 1.68),
+  xlarge: (16px, 1.68),
 );
 
 $p-stat: (
-  xmall: (16pt, 1.43),
-  xlarge: (20pt, 1.5),
+  xsmall: (16px, 1.43),
+  xlarge: (20px, 1.5),
 );
 
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
@@ -156,7 +170,7 @@ $block-padding: 25px 0;
 $padding-default: 25px;
 $margin-default: 25px;
 
-/** 
+/**
   *
   * Social media
   *
@@ -165,7 +179,7 @@ $icon-size: 24px;
 $sm-icon-margin: 0 2px;
 $sm-block-margin: 10px;
 
-/** 
+/**
   *
   * Statistics/ Block with Icons and Content
   *

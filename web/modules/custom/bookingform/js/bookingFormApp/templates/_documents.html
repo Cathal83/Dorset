@@ -26,6 +26,12 @@
             </div>  
         </div> 
     </div>
+    <div>
+        <input type="file" ng-model="user.doc" name="doc"/>
+        {{ user.doc }}
+        <a ng-click="docsUp()" href="">Upload</a>
+    </div>
+    <div>
         <!-- Proceed Button -->
         <div class="bookingform-btn">
           <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>

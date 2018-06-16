@@ -37,8 +37,9 @@
             'bookingform/angular-material-CSS',
             'bookingform/moment',
             'bookingform/lodash',
-            'bookingform/ngFileUpload',
-            'bookingform/ngFileUploadShim',
+            'bookingform/angular-cookies',
+            'bookingform/query-string',
+            'bookingform/angular-oauth2',
             'bookingform/bookingFormApp',
             'bookingform/bookingFormConfig',
             'bookingform/bookingDateConfig',
@@ -47,7 +48,8 @@
             'bookingform/bookingFormController',
             'bookingform/bookingFormDateConfig',
             'bookingform/bookingPaymentController',
-            'bookingform/bookingViewController'
+            'bookingform/bookingViewController',
+            'bookingform/bookingDocumentsController'
 
           ),
         ),
