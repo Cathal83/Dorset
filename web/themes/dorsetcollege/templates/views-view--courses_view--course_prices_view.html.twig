@@ -32,13 +32,29 @@
  * @ingroup themeable
  */
 #}
-{% set rowsCount = view.total_rows %}
+{# Classes based on the number of elements in price box #}
+{% set rowsCount = rows | length %}
+{% set viewPricesClass = 'no-col' %}
+
+{% if rowsCount == 1 %}
+  {% set viewPricesClass = 'one-col' %}
+{% elseif rowsCount == 2 %}
+  {% set viewPricesClass = 'two-col'}
+{% elseif rowsCount == 3 %}
+  {% set viewPricesClass = 'three-col'%}
+{% else %
+  {% set viewPricesClass = 'max-col' %}
+{% endif %}
+
 {%
   set classes = [
-    dom_id ? 'js-view-dom-id-' ~ dom_id,
-    rowsCount,
+    'course-prices-view',
   ]
 %}
+
+{# Pass classname based on number to array classes #}
+{% set classes = classes | merge([viewPricesClass])} %}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title }}
