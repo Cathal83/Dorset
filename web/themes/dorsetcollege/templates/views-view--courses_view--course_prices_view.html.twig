@@ -33,7 +33,7 @@
  */
 #}
 {# Classes based on the number of elements in price box #}
-{% set rowsCount = rows | length %}
+{% set rowsCount = rows.0['#rows'] | length %}
 {% set viewPricesClass = 'no-col' %}
 
 {% if rowsCount == 1 %}
@@ -53,7 +53,6 @@
   ]
 %}
 {{ rowsCount }}
-{{ dump(_context|keys) }}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title }}
