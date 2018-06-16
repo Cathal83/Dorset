@@ -52,8 +52,8 @@
     viewPricesClass,
   ]
 %}
-{{ dump(rows) }}
 {{ rowsCount }}
+{{ dump(_context|keys) }}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title }}
