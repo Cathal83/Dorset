@@ -49,12 +49,11 @@
 {%
   set classes = [
     'course-prices-view',
+    viewPricesClass,
   ]
 %}
-
-{# Pass classname based on number to array classes #}
-{% set classes = classes | merge([viewPricesClass]) %}
-
+{{ dump(rows) }}
+{{ rowsCount }}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title }}
