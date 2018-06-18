@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $window, $location, $controller, dataService, formService, formSteps, stripe) {
-=======
 bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $window, $location, $controller, dataService, formService, postService, formSteps, stripe) {
->>>>>>> Application-Form
   /**
    * Default user settings
    */
@@ -62,20 +58,6 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    * Needed Scopes by default
    */
   $scope.years = [];
-<<<<<<< HEAD
-
-  /**
-   * Generates future 10 years
-   * for card expiring date date picker
-   */
-  var date = new Date();
-  var year = date.getFullYear();
-  for(var y=0; y<11; y++) {
-    $scope.years.push(year+y);
-  }
-
-  /**
-=======
   $scope.nationalities;
   $scope.countries;
 
@@ -90,7 +72,6 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   }
 
   /**
->>>>>>> Application-Form
    * Changes on credit card number
    */
   var getProducts = function() {
@@ -291,15 +272,12 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     }
 
   }
-<<<<<<< HEAD
-=======
   /** 
    * Final submit 
    * */
   $scope.submitForm = function() {
     postService.submitData($scope.user);
   }
->>>>>>> Application-Form
   /**
    * Controller for Templates and Form Steps
   */

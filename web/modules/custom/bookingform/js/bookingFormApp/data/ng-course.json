@@ -1,155 +1,5 @@
 [
   {
-<<<<<<< HEAD
-    "nid": "52",
-    "faculty": "Short Evening Courses",
-    "course_type": "Undergraduate",
-    "title": "Diploma in Office \u0026amp; Administration Skills",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "Full-Time",
-    "delivery_mode_id": "13"
-  },
-  {
-    "nid": "51",
-    "faculty": "Short Evening Courses",
-    "course_type": "Undergraduate",
-    "title": "Principles of Mediation, Conciliation \u0026amp; Arbitration",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "Part-Time",
-    "delivery_mode_id": "12"
-  },
-  {
-    "nid": "50",
-    "faculty": "Short Evening Courses",
-    "course_type": "Undergraduate",
-    "title": "Diploma in Retail Management",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "49",
-    "faculty": "Short Evening Courses",
-    "course_type": "Undergraduate",
-    "title": "Event Management \u0026amp; Public Relations",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "48",
-    "faculty": "Short Evening Courses",
-    "course_type": "Undergraduate",
-    "title": "Marketing and Social Media Skills",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "47",
-    "faculty": "Short Evening Courses",
-    "course_type": "Undergraduate",
-    "title": "Predictive Data Analytics",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "46",
-    "faculty": "Short Evening Courses",
-    "course_type": "Undergraduate",
-    "title": "Digital Marketing for SMEs",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "45",
-    "faculty": "Short Evening Courses",
-    "course_type": "Undergraduate",
-    "title": "Diploma in Web Design",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "44",
-    "faculty": "Short Evening Courses",
-    "course_type": "Undergraduate",
-    "title": "Mobile App Development",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "43",
-    "faculty": "International \u0026amp; Other",
-    "course_type": "Undergraduate",
-    "title": "Train the Trainer Level 6",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "42",
-    "faculty": "International \u0026amp; Other",
-    "course_type": "Undergraduate",
-    "title": "Academic English Courses",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "41",
-    "faculty": "International \u0026amp; Other",
-    "course_type": "Undergraduate",
-    "title": "General English Language",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "40",
-    "faculty": "International \u0026amp; Other",
-    "course_type": "Undergraduate",
-    "title": "International Foundation Business",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "39",
-    "faculty": "International \u0026amp; Other",
-    "course_type": "Undergraduate",
-    "title": "International Foundation Engineering",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "38",
-    "faculty": "International \u0026amp; Other",
-    "course_type": "Undergraduate",
-    "title": "International Foundation Science and Health",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-=======
     "nid": "86",
     "faculty": "Childcare Healthcare Courses",
     "application_type": "",
@@ -538,114 +388,60 @@
     "document": "",
     "price_group_id": "",
     "price_group": ""
->>>>>>> Application-Form
   },
   {
     "nid": "37",
     "faculty": "Childcare Healthcare Courses",
-<<<<<<< HEAD
-    "course_type": "Undergraduate",
-    "title": "Special Needs Assistant",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-=======
     "application_type": "",
     "course_type": "Minor Award",
     "title": "Special Needs Assisting Level 5",
     "document": "",
     "price_group_id": "",
     "price_group": ""
->>>>>>> Application-Form
   },
   {
     "nid": "36",
     "faculty": "Childcare Healthcare Courses",
-<<<<<<< HEAD
-    "course_type": "Undergraduate",
-    "title": "Healthcare Support Level 5",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-=======
     "application_type": "",
     "course_type": "Major Award",
     "title": "Healthcare Support (MAJOR AWARD)",
     "document": "",
     "price_group_id": "",
     "price_group": ""
->>>>>>> Application-Form
   },
   {
     "nid": "35",
     "faculty": "Childcare Healthcare Courses",
-<<<<<<< HEAD
-    "course_type": "Undergraduate",
-    "title": "Nursing Studies Level 5",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-=======
     "application_type": "",
     "course_type": "Major Award",
     "title": "Nursing Studies (MAJOR AWARD)",
     "document": "",
     "price_group_id": "",
     "price_group": ""
->>>>>>> Application-Form
   },
   {
     "nid": "34",
     "faculty": "Childcare Healthcare Courses",
-<<<<<<< HEAD
-    "course_type": "Undergraduate",
-    "title": "Supervision in Early Childhood Care",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-=======
     "application_type": "",
     "course_type": "Minor Award",
     "title": "Supervision in Early Childhood Care Level 6",
     "document": "",
     "price_group_id": "",
     "price_group": ""
->>>>>>> Application-Form
   },
   {
     "nid": "33",
     "faculty": "Childcare Healthcare Courses",
-<<<<<<< HEAD
-    "course_type": "Undergraduate",
-    "title": "Montessori \u0026amp; Early Childhood Care \u0026amp; Education L6",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-=======
     "application_type": "",
     "course_type": "Major Award",
     "title": "Early Childhood Care \u0026amp; Education (ECCE with Montessori)",
     "document": "",
     "price_group_id": "",
     "price_group": ""
->>>>>>> Application-Form
   },
   {
     "nid": "32",
     "faculty": "Childcare Healthcare Courses",
-<<<<<<< HEAD
-    "course_type": "Undergraduate",
-    "title": "BSc in Early Childhood Care, Health and Education",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-=======
     "application_type": "",
     "course_type": "Undergraduate",
     "title": "Bachelor of Science in Early Childhood Care, Health \u0026amp; Education (Letterkenny Institute of Technology in Collaboration with Dorset College)",
@@ -762,78 +558,20 @@
     "document": "Transcript of Results",
     "price_group_id": "53",
     "price_group": "Full-Time"
->>>>>>> Application-Form
   },
   {
     "nid": "31",
     "faculty": "Computer Programming Courses",
-<<<<<<< HEAD
-    "course_type": "Undergraduate",
-    "title": "Games Analysis Design",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-=======
     "application_type": "",
     "course_type": "Short-Term",
     "title": "3D Modelling \u0026amp; Animation Level 5 (+Introduction to Game Design)",
     "document": "",
     "price_group_id": "",
     "price_group": ""
->>>>>>> Application-Form
   },
   {
     "nid": "30",
     "faculty": "Computer Programming Courses",
-<<<<<<< HEAD
-    "course_type": "Undergraduate",
-    "title": "Microsoft Certified Solutions Associate (MCSA)",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "29",
-    "faculty": "Computer Programming Courses",
-    "course_type": "Undergraduate",
-    "title": "ECDL European Computer Driving Licence",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "28",
-    "faculty": "Computer Programming Courses",
-    "course_type": "Undergraduate",
-    "title": "CompTIA A+ Network Essentials",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "27",
-    "faculty": "Computer Programming Courses",
-    "course_type": "Undergraduate",
-    "title": "CISCO CCNA Cisco Certified Network Associate",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "26",
-    "faculty": "Computer Programming Courses",
-    "course_type": "Undergraduate",
-    "title": "Java Programming QQI Level 7",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-=======
     "application_type": "",
     "course_type": "Professional",
     "title": "MCSA - Microsoft Windows Server 2016 ",
@@ -910,19 +648,10 @@
     "document": "International Equivalent to Leaving Certificate",
     "price_group_id": "53",
     "price_group": "Full-Time"
->>>>>>> Application-Form
   },
   {
     "nid": "25",
     "faculty": "Computer Programming Courses",
-<<<<<<< HEAD
-    "course_type": "Undergraduate",
-    "title": "BSc in Computing and Multimedia QQI Level 7",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-=======
     "application_type": "",
     "course_type": "Undergraduate",
     "title": "Bachelor of Science in Computing \u0026amp; Multimedia",
@@ -939,179 +668,10 @@
     "document": "Transcript of Results",
     "price_group_id": "53",
     "price_group": "Full-Time"
->>>>>>> Application-Form
   },
   {
     "nid": "24",
     "faculty": "Business Accounting Courses",
-<<<<<<< HEAD
-    "course_type": "Undergraduate",
-    "title": "CIPD Certificate in Human Resource Practice",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "23",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "Accounting Manual and Computerised",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "22",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "ACCA Diploma in Accounting and Finance",
-    "application_type": "33",
-    "document": "",
-    "delivery_mode": "Full-Time",
-    "delivery_mode_id": "13"
-  },
-  {
-    "nid": "22",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "ACCA Diploma in Accounting and Finance",
-    "application_type": "33",
-    "document": "",
-    "delivery_mode": "Part-Time",
-    "delivery_mode_id": "12"
-  },
-  {
-    "nid": "21",
-    "faculty": "Business Accounting Courses, Short Evening Courses",
-    "course_type": "Undergraduate",
-    "title": "Lean Six Sigma Green Belt",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "20",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "Governance, Compliance \u0026amp; Data Protection in Financial Services",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "19",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "Bachelor of Business in International Business QQI Level 8",
-    "application_type": "",
-    "document": "",
-    "delivery_mode": "",
-    "delivery_mode_id": ""
-  },
-  {
-    "nid": "18",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "Bachelor of Business Level 7",
-    "application_type": "38",
-    "document": "Evidence of Prior Learning",
-    "delivery_mode": "Full-Time",
-    "delivery_mode_id": "13"
-  },
-  {
-    "nid": "18",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "Bachelor of Business Level 7",
-    "application_type": "38",
-    "document": "English Proficiency",
-    "delivery_mode": "Full-Time",
-    "delivery_mode_id": "13"
-  },
-  {
-    "nid": "18",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "Bachelor of Business Level 7",
-    "application_type": "38",
-    "document": "Evidence of Prior Learning",
-    "delivery_mode": "Part-Time",
-    "delivery_mode_id": "12"
-  },
-  {
-    "nid": "18",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "Bachelor of Business Level 7",
-    "application_type": "38",
-    "document": "English Proficiency",
-    "delivery_mode": "Part-Time",
-    "delivery_mode_id": "12"
-  },
-  {
-    "nid": "3",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "BA in International Business",
-    "application_type": "33",
-    "document": "High School Transcripts",
-    "delivery_mode": "Part-Time",
-    "delivery_mode_id": "12"
-  },
-  {
-    "nid": "3",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "BA in International Business",
-    "application_type": "33",
-    "document": "English Proficiency",
-    "delivery_mode": "Full-Time",
-    "delivery_mode_id": "13"
-  },
-  {
-    "nid": "3",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "BA in International Business",
-    "application_type": "33",
-    "document": "Evidence of Prior Learning",
-    "delivery_mode": "Part-Time",
-    "delivery_mode_id": "12"
-  },
-  {
-    "nid": "3",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "BA in International Business",
-    "application_type": "33",
-    "document": "English Proficiency",
-    "delivery_mode": "Part-Time",
-    "delivery_mode_id": "12"
-  },
-  {
-    "nid": "3",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "BA in International Business",
-    "application_type": "33",
-    "document": "High School Transcripts",
-    "delivery_mode": "Full-Time",
-    "delivery_mode_id": "13"
-  },
-  {
-    "nid": "3",
-    "faculty": "Business Accounting Courses",
-    "course_type": "Undergraduate",
-    "title": "BA in International Business",
-    "application_type": "33",
-    "document": "Evidence of Prior Learning",
-    "delivery_mode": "Full-Time",
-    "delivery_mode_id": "13"
-=======
     "application_type": "",
     "course_type": "Professional",
     "title": "CIPD Certificate in Human Resource Practice",
@@ -1318,6 +878,5 @@
     "document": "Transcript of Results",
     "price_group_id": "54",
     "price_group": "Irish Resident"
->>>>>>> Application-Form
   }
 ]

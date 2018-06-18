@@ -1,47 +1,5 @@
 [
   {
-<<<<<<< HEAD
-    "delivery_id": "13",
-    "price_amount": "\u20ac3,000.00",
-    "payment_type_txt": "Full Payment",
-    "course_id": "18",
-    "payment_type_id": "3"
-  },
-  {
-    "delivery_id": "13",
-    "price_amount": "\u20ac300.00",
-    "payment_type_txt": "Deposit",
-    "course_id": "18",
-    "payment_type_id": "4"
-  },
-  {
-    "delivery_id": "12",
-    "price_amount": "\u20ac3,000.00",
-    "payment_type_txt": "Full Payment",
-    "course_id": "22",
-    "payment_type_id": "3"
-  },
-  {
-    "delivery_id": "12",
-    "price_amount": "\u20ac300.00",
-    "payment_type_txt": "Deposit",
-    "course_id": "22",
-    "payment_type_id": "4"
-  },
-  {
-    "delivery_id": "13",
-    "price_amount": "\u20ac3,000.00",
-    "payment_type_txt": "Full Payment",
-    "course_id": "22",
-    "payment_type_id": "3"
-  },
-  {
-    "delivery_id": "13",
-    "price_amount": "\u20ac300.00",
-    "payment_type_txt": "Deposit",
-    "course_id": "22",
-    "payment_type_id": "4"
-=======
     "course_id": "73",
     "deposit": "",
     "full_amount": "5950.00",
@@ -100,6 +58,5 @@
     "deposit": "350.00",
     "full_amount": "750.00",
     "delivery_mode": "Part-Time"
->>>>>>> Application-Form
   }
 ]
