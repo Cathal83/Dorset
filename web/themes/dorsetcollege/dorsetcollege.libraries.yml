@@ -11,11 +11,15 @@ dorsetcollege:
     # Custom Javascript file for your own JS modifications.
     # Examples of behaviors in JS file.
     js/dorsetcollege.js: {}
-
+    
+  dependencies:
+      - core/jquery
+      - core/jquery.once
+      - core/drupal
+      
   css:
     theme:
       # Custom CSS file to be loaded in all media circumstances
       style/css/dorsetcollege.css: {}
 
-  dependencies:
-      - core/jquery
+  

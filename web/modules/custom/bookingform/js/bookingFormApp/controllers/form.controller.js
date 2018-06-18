@@ -1,4 +1,4 @@
-bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $window, $location, $controller, dataService, formService, formSteps, stripe) {
+bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $window, $location, $controller, dataService, formService, postService, formSteps, stripe) {
   /**
    * Default user settings
    */
@@ -58,6 +58,8 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    * Needed Scopes by default
    */
   $scope.years = [];
+  $scope.nationalities;
+  $scope.countries;
 
   /**
    * Generates future 10 years
@@ -151,6 +153,8 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     
     delete $scope.user.productnid;
     delete $scope.user.productname;
+    delete $scope.user.deliverymode;
+    delete $scope.productData;
     $scope.showProductSel = true;
 
   }
@@ -161,6 +165,22 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     // Reset delivery mode value
     $scope.user.deliverymode = null;
     var productData = formService.productDelivery(productnid, $scope.products);
+    
+    if(productData[0].application_type == 60) {
+
+      dataService.getCountries().then(function(response){
+
+        $scope.countries = response;
+
+      });
+
+      dataService.getNationalities().then(function(response){
+
+        $scope.nationalities = response;
+
+      });
+    }
+
     // Scopes variables to UI
     scopeVars(productData);
 
@@ -216,6 +236,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   var productDocuments = function(productData, productDelivery) {
 
     var data = formService.productDocuments(productData, productDelivery);
+    console.log(data);
     var steps = formService.getSteps(data);
     $scope.productData = data;
     $scope.steps = steps;
@@ -250,6 +271,12 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
 
     }
 
+  }
+  /** 
+   * Final submit 
+   * */
+  $scope.submitForm = function() {
+    postService.submitData($scope.user);
   }
   /**
    * Controller for Templates and Form Steps

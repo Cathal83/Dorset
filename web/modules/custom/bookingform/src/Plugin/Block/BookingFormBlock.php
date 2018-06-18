@@ -45,6 +45,7 @@
             'bookingform/bookingDateConfig',
             'bookingform/bookingDataService',
             'bookingform/bookingFormService',
+            'bookingform/bookingPostService',
             'bookingform/bookingFormController',
             'bookingform/bookingFormDateConfig',
             'bookingform/bookingPaymentController',

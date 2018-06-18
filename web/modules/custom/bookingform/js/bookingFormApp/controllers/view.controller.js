@@ -115,6 +115,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
 
   // Check if form is filled before next step
   $scope.goToNextSection = function(isFormValid) {
+    console.log(isFormValid);
     // set to true to show all error messages (if there are any)
     $scope.formStepSubmitted = true;
     if(isFormValid) {
