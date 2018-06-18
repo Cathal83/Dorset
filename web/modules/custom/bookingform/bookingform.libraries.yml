@@ -157,7 +157,7 @@ bookingViewController:
   dependencies:
   - bookingform/angularjs
 
-documentsController:
+bookingDocumentsController:
   js:
     js/bookingFormApp/controllers/documents.controller.js: {}
   dependencies:
