@@ -715,3 +715,23 @@ p.arrow-right::after, a.arrow-right::after{
   text-align: center;
   font-size: 25px;
 }
+
+.one-col {
+  .col-1 {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.two-col {
+  text-align: center;
+  .col-1, .col-2 {
+    width: 50%;
+    margin: 0%;
+   }
+}
+
+.block-views-blockcourses-view-block-6, .block-views-blockcourses-view-block-9, .block-views-blockcourses-view-block-10 {
+  margin-bottom: 1.5em;
+}
