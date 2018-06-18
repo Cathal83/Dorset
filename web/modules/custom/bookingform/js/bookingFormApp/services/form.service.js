@@ -63,7 +63,7 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
     
         } else {} 
         // Deposit or application and review
-        if(productData[0].application_type == "60") {
+        if(productData[0].application_type == "61") {
 
             delete steps[3];
             

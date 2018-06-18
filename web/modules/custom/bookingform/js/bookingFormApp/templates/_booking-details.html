@@ -51,7 +51,7 @@
     <!-- Nationality input -->
     <div class="form-row" ng-if="productData[0].application_type == '60'">
       <div class="form-opt">
-        <select ng-model="user.nationality" ng-options="country.code as country.name for country in countries | unique: 'code'" required>
+        <select ng-model="user.nationality" ng-options="nationality for nationality in nationalities" required>
           <option value="">Please choose your Nationality</option>
         </select>
       </div>
@@ -63,7 +63,7 @@
     <!-- Country of residence -->
     <div class="form-row" ng-if="productData[0].application_type == '60'">
       <div class="form-opt">
-        <select ng-model="user.residence" ng-options="nationality for nationality in nationalities | unique: 'code'" name="residence" required>
+        <select ng-model="user.residence" ng-options="country.name for country in countries" name="residence" required>
           <option value="">Please choose your Country of Residence</option>
         </select>
       </div>

@@ -4,8 +4,6 @@
       <div>
           <h1>{{ user.productname + ': ' + user.deliverymode }}</h1>
       </div>
-      {{ productData[0] }}
-      {{ $scope.user.payment.amount }}
   </div>
   <div class="form-fields">
     <div class="form-wrapper">
@@ -66,7 +64,7 @@
     </div>
     <div class="form-wrapper">
       <!-- Payment Type -->
-      <div class="form-row" ng-if="productData[0].application_type == '33'">
+      <div class="form-row" ng-if="productData[0].application_type == '61'">
         <h4>Payment Type</h4>
         <div class="form-opt">
           <h4>{{ user.payment.type_txt + ':' }}</h4>
@@ -85,7 +83,7 @@
             <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
         </div>
       </div>
-      <div class="form-row" ng-if="productData[0].application_type == '33'">
+      <div class="form-row" ng-if="productData[0].application_type == '61'">
         <h4>Billing Address</h4>
         <div class="form-opt">
           <div>{{ user.billingaddress.address1 }}</div>
@@ -103,7 +101,6 @@
         <div ng-repeat="doc in Docs">
           <div>{{ doc }}</div>
         </div>
-
       </div>
     </div>
   </div>
@@ -111,10 +108,10 @@
   <div class="bookingform-btn">
     <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
   </div>
-  <div class="bookingform-btn" ng-if="productData[0].application_type == '38'">
+  <div class="bookingform-btn" ng-if="productData[0].application_type == '61'">
     <a class="btn-next" ng-click="submitForm()" href="">Submit</a>
   </div>
-  <div class="bookingform-btn" ng-if="productData[0].application_type == '33'">
+  <div class="bookingform-btn" ng-if="productData[0].application_type == '60'">
     <a class="btn-next" ng-click="submitForm()" href="">Make Payment</a>
   </div>
 </div>
