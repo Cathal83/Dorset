@@ -677,6 +677,7 @@ p.arrow-right::after, a.arrow-right::after{
 .block-views-blockcourses-view-block-3{
   display: inline-block;
   margin-bottom: 2em;
+  width: 100%;
 }
 .test-body{
   background: #efefef;
@@ -708,8 +709,9 @@ p.arrow-right::after, a.arrow-right::after{
   width: 100%;
 }
 
-#cboxWrapper {
-  header, footer {
-    display: none;
-  }
+.cols-3 {
+  text-align: center;
+  padding: 1em 0 2em 0;
+  text-align: center;
+  font-size: 25px;
 }
