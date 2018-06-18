@@ -179,8 +179,9 @@ input {
   clear:both;
 }
 
-.paragraph--type--dorset-semester-modules a{
-  color: red;
+.views-field-field-dorset-module-option a{
+  color: $p-color;
+  text-decoration: underline;
 }
 
 .wrapper{
