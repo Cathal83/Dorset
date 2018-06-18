@@ -64,7 +64,7 @@
     </div>
     <div class="form-wrapper">
       <!-- Payment Type -->
-      <div class="form-row" ng-if="productData[0].application_type == '61'">
+      <div class="form-row" ng-if="productData[0].application_type == '60'">
         <h4>Payment Type</h4>
         <div class="form-opt">
           <h4>{{ user.payment.type_txt + ':' }}</h4>
@@ -83,7 +83,7 @@
             <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
         </div>
       </div>
-      <div class="form-row" ng-if="productData[0].application_type == '61'">
+      <div class="form-row" ng-if="productData[0].application_type == '60'">
         <h4>Billing Address</h4>
         <div class="form-opt">
           <div>{{ user.billingaddress.address1 }}</div>
@@ -98,7 +98,7 @@
       <!-- Documents required -->
       <div class="form-row" ng-if="productData[0].document != ''">
         <h4>Uploaded Documents</h4>
-        <div ng-repeat="doc in Docs">
+        <div ng-repeat="doc in user.docs">
           <div>{{ doc }}</div>
         </div>
       </div>

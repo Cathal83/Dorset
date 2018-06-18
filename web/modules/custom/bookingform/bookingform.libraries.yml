@@ -93,11 +93,6 @@ angular-stripe:
   dependencies:
       - bookingform/angularjs
 
-ng-file-upload:
-  js:
-    js/library/ng-file-upload.min.js: {}
-  dependencies:
-      - bookingform/angularjs
 
 ## Need to add file uploads
 
