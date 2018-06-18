@@ -35,6 +35,7 @@
             'bookingform/angular-aria',
             'bookingform/angular-material',
             'bookingform/angular-material-CSS',
+            'bookingform/ngFileUpload',
             'bookingform/moment',
             'bookingform/lodash',
             'bookingform/angular-cookies',
