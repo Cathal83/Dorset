@@ -152,6 +152,13 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     delete $scope.user.productname;
     delete $scope.user.deliverymode;
     delete $scope.productData;
+
+    dataService.getProducts().then(function (response) {
+
+      $scope.products = response;
+
+    });
+    
     $scope.showProductSel = true;
 
   }

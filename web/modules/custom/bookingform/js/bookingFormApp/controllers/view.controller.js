@@ -86,7 +86,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
         break;
 
       case 'summary':
-        if($scope.productData[0].application_type == "38") {
+        if($scope.productData[0].application_type == "61") {
           return 'customer-files'
         }
         else {
@@ -115,7 +115,6 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
 
   // Check if form is filled before next step
   $scope.goToNextSection = function(isFormValid) {
-    console.log(isFormValid);
     // set to true to show all error messages (if there are any)
     $scope.formStepSubmitted = true;
     if(isFormValid) {
