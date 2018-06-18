@@ -9,7 +9,13 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
 
     var productDocuments = function(productData, productDelivery) {
 
-      var productDocs = $filter('filter')(productData, { delivery_mode_id: productDelivery }, true);
+      if(productDelivery) {
+        var productDocs = $filter('filter')(productData, { price_group_id: productDelivery }, true);
+      }
+      else {
+        var productDocs = productData;
+      }
+
       return productDocs;
 
     }
@@ -50,13 +56,15 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
          * 
          */
         // Requires documents or not
-        if(productData[0].document == "") {
+        console.log(productData);
+        if(productData[0].document == "" || productData.document == "") {
 
             delete steps[2];
     
         } else {} 
         // Deposit or application and review
-        if(productData[0].application_type == "38") {
+        if(productData[0].application_type == "60") {
+
             delete steps[3];
             
         } else {}

@@ -9,7 +9,11 @@
     <div ng-if="user.productnid">
         <h1>{{ user.productname }}</h1>
     </div>
+    <div class="form-row">
+      <div class="form-opt">
 
+      </div>
+    </div>
     <!-- Select product -->
     <div class="form-row" ng-show="showProductSel">
       <div class="form-opt">
@@ -23,9 +27,9 @@
     </div>
 
     <!-- Select delivery Type -->
-    <div class="form-row" ng-if="user.productnid">
+    <div class="form-row" ng-if="productData[0].application_type == '61'">
       <div class="form-opt">
-        <select ng-model="user.deliverymode" name="productdelivery" ng-options="delivery.delivery_mode_id as delivery.delivery_mode for delivery in productData | unique: 'delivery_mode'" ng-change="deliveryIsolate(user.productnid, user.deliverymode)" required>
+        <select ng-model="user.deliverymode" name="productdelivery" ng-options="delivery.price_group_id as delivery.price_group for delivery in productData | unique: 'price_group'" ng-change="deliveryIsolate(user.productnid, user.deliverymode)" required>
            <option value="">Select course mode</option>
         </select>
       </div>
@@ -35,7 +39,7 @@
     </div>
 
     <!-- Email input -->
-    <div class="form-row" ng-if="user.deliverymode">
+    <div class="form-row" ng-if="productData[0].application_type == '60' || user.deliverymode">
       <div class="form-opt">
         <input type="email" name="email" ng-model="user.email" placeholder="Your Email" required>
       </div>
@@ -43,6 +47,31 @@
           <div ng-message="required">Please type email address.</div>
       </div>
     </div>
+
+    <!-- Nationality input -->
+    <div class="form-row" ng-if="productData[0].application_type == '60'">
+      <div class="form-opt">
+        <select ng-model="user.nationality" ng-options="country.code as country.name for country in countries | unique: 'code'" required>
+          <option value="">Please choose your Nationality</option>
+        </select>
+      </div>
+      <div ng-messages="bookingStepForm.nationality.$error" name="nationality" ng-if="formStepSubmitted" class="error-msg">
+        <div ng-message="required">Please choose your nationality.</div>
+      </div>
+    </div>
+
+    <!-- Country of residence -->
+    <div class="form-row" ng-if="productData[0].application_type == '60'">
+      <div class="form-opt">
+        <select ng-model="user.residence" ng-options="nationality for nationality in nationalities | unique: 'code'" name="residence" required>
+          <option value="">Please choose your Country of Residence</option>
+        </select>
+      </div>
+      <div ng-messages="bookingStepForm.residence.$error" ng-if="formStepSubmitted" class="error-msg">
+        <div ng-message="required">Please choose your country of residence.</div>
+      </div>
+    </div>
+
     <!-- Cancel Button -->
     <div class="bookingform-btn">
       <a class="btn-cancel" ng-click="remProduct()" href="">Cancel</a>

@@ -34,6 +34,13 @@ bookingformJS.service("dataService", function($http, $filter, $location) {
       });
     }
 
+    var Nationalities = function () {
+      return $http.get(window.location.origin + '/modules/custom/bookingform/js/bookingFormApp/data/nationalities.json')
+        .then(function (response) {
+          return response.data;
+        });
+    }
+
     var CSRF = function() {
       return $http.get(window.location.origin + '/rest/session/token')
       .then(function(response) {
@@ -45,6 +52,7 @@ bookingformJS.service("dataService", function($http, $filter, $location) {
         getProductData: ProductData,
         getProductPrices: ProductPrices,
         getCountries: Countries,
+        getNationalities: Nationalities,
         getCSRF : CSRF 
     };
 
