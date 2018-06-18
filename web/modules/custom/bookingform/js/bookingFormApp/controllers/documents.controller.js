@@ -1,8 +1,5 @@
 bookingformJS.controller("docsCtrl", function($scope, $http, $filter) {
-  $scope.user.docs = [
-    { name: "Invoice.pdf", team: 1 },
-    { name: "Payment.pdf", team: 1 }
-  ];
+  $scope.user.docs = [];
   /**
    * Document upload to DropBox controller
    */
