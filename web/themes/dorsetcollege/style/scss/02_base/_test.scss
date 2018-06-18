@@ -336,16 +336,19 @@ p.arrow-right::after, a.arrow-right::after{
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
+    display: inline-block;
+    text-align: left;
 }
 
 .lecturer-image {
     width: 20%;
-    display: inline-block;
+    float: left;
 }
 
 .lecturer-info {
-    width: 80%;
-    float: right;
+    width: 70%;
+    float: left;
+    margin-left:5%;
 }
 
 /* The Close Button */
