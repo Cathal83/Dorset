@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "delivery_id": "13",
     "price_amount": "\u20ac3,000.00",
     "payment_type_txt": "Full Payment",
@@ -40,5 +41,65 @@
     "payment_type_txt": "Deposit",
     "course_id": "22",
     "payment_type_id": "4"
+=======
+    "course_id": "73",
+    "deposit": "",
+    "full_amount": "5950.00",
+    "delivery_mode": "EU"
+  },
+  {
+    "course_id": "73",
+    "deposit": "",
+    "full_amount": "6950.00",
+    "delivery_mode": "NON-EU"
+  },
+  {
+    "course_id": "73",
+    "deposit": "",
+    "full_amount": "3600.00",
+    "delivery_mode": "Irish Resident"
+  },
+  {
+    "course_id": "61",
+    "deposit": "350.00",
+    "full_amount": "3000.00",
+    "delivery_mode": "EU"
+  },
+  {
+    "course_id": "61",
+    "deposit": "350.00",
+    "full_amount": "3500.00",
+    "delivery_mode": "Full-Time"
+  },
+  {
+    "course_id": "61",
+    "deposit": "350.00",
+    "full_amount": "5000.00",
+    "delivery_mode": "NON-EU"
+  },
+  {
+    "course_id": "32",
+    "deposit": "350.00",
+    "full_amount": "3333.00",
+    "delivery_mode": "EU"
+  },
+  {
+    "course_id": "32",
+    "deposit": "350.00",
+    "full_amount": "1111.00",
+    "delivery_mode": "Full-Time"
+  },
+  {
+    "course_id": "25",
+    "deposit": "350.00",
+    "full_amount": "2222.00",
+    "delivery_mode": "Full-Time"
+  },
+  {
+    "course_id": "23",
+    "deposit": "350.00",
+    "full_amount": "750.00",
+    "delivery_mode": "Part-Time"
+>>>>>>> Application-Form
   }
 ]
