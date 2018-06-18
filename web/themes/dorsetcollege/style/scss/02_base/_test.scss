@@ -160,8 +160,12 @@ input {
   }
 }
 
-.paragraph--type--dorset-course-become div{
-  display: inline-block
+//.paragraph--type--dorset-course-become div{
+//  display: inline-block
+//}
+
+.become-icon div:first-child{
+  display: none;
 }
 
 .block-views:not(:first-child){
