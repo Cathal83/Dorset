@@ -132,6 +132,12 @@ bookingFormService:
       js/bookingFormApp/services/form.service.js: {}
     dependencies:
       - bookingform/angularjs
+
+bookingPostService:
+    js:
+      js/bookingFormApp/services/post.service.js: {}
+    dependencies:
+      - bookingform/angularjs
       
 bookingFormController:
     js:
