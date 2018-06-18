@@ -195,10 +195,20 @@ input {
 
 }
 
-.col-sm-3.lecturer-profile{
-margin: 0 !important;
-width: 25% !important;
-  
+.lecturer-row.views-row.clearfix.row-2{
+  margin-top: 5em !important;
+}
+
+.lecturer-row .col-sm-4{
+  margin: 0 !important;
+  width: 100%;
+  @include breakpoint(640px) {
+    width: 33% !important;
+  }
+}
+
+.lecturer-row .row-2{
+  margin-top: 5em;
 }
 
 .lecturer-profile{
@@ -237,11 +247,6 @@ width: 25% !important;
   min-height: 100px;
 }
 
-.block-views-blockcourses-view-block-3 img{
-  border-radius: 200px;
-  width: 50%;
-  height: auto;
-}
 
 .btn-more{
   color: #36F;
@@ -667,3 +672,44 @@ p.arrow-right::after, a.arrow-right::after{
   z-index: 2;
 }
 
+//STUDENT TESTIMONIALS
+
+.block-views-blockcourses-view-block-3{
+  display: inline-block;
+  margin-bottom: 2em;
+}
+.test-body{
+  background: #efefef;
+  padding: 3.5em 1em 1em 1em;
+  margin-top: -23%;
+  
+  & h3{
+    text-align: center;
+  }
+}
+
+.test-image img{
+
+  border-radius: 200px;
+  width: 50%;
+  height: auto;
+  display:block;
+  margin:auto;
+
+}
+
+.quote-top, .quote-bottom {
+  font-size: 3em;
+}
+
+.quote-bottom {
+  text-align: right;
+  display: inline-block;
+  width: 100%;
+}
+
+#cboxWrapper {
+  header, footer {
+    display: none;
+  }
+}
