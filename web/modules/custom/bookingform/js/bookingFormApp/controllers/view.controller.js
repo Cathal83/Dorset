@@ -39,7 +39,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
       // Go to Payment from Customer Documents
       case 'customer-files' :
         // Application type 38 = no payment available
-        if($scope.productData[0].application_type == "61") {
+        if($scope.productData[0].application_type == "60") {
           return 'summary'
         }
         else {
@@ -86,7 +86,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
         break;
 
       case 'summary':
-        if($scope.productData[0].application_type == "61") {
+        if($scope.productData[0].application_type == "60") {
           return 'customer-files'
         }
         else {
