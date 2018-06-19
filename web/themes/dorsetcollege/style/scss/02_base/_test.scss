@@ -472,7 +472,6 @@ p.arrow-right::after, a.arrow-right::after{
       display: inline-block !important;
       padding: 0;
       float: left;
-      text-align: center;
       
       .bg-img div{
         background-position: center;
@@ -494,14 +493,17 @@ p.arrow-right::after, a.arrow-right::after{
       .block-title{
         position: absolute;
         top: 10%;
-        width: 100%;
+        width: 80%;
+        text-align: left;
+        margin: 0 10%;
         
       }
       
       .btn-link-white{
+        text-align: center;
         position: absolute;
         width: 100%;
-        top: 55%;
+        top: 70%;
         a {
           color: blue;
         }
