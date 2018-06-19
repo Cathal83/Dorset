@@ -462,3 +462,48 @@ p.arrow-right::after, a.arrow-right::after{
   display: inline-block;
   width: 100%;
 }
+
+//Student Life Index Page
+
+.path-student-life .block-list-bg-img{
+      position: relative;
+      width: 25%;
+      height: 300px;
+      display: inline-block !important;
+      padding: 0;
+      float: left;
+      text-align: center;
+      
+      .bg-img div{
+        background-position: center;
+        box-shadow: inset 0 0 0 2000px rgba(45,45,45,.7);
+      }
+      &:nth-child(2)  {
+        .bg-img div{
+          box-shadow: inset 0 0 0 2000px #f14950;
+          }
+      }
+      &:nth-child(4)  {
+       .bg-img div{
+           box-shadow: inset 0 0 0 2000px #2952cc;
+         }
+      }
+      
+      
+      
+      .block-title{
+        position: absolute;
+        top: 10%;
+        width: 100%;
+        
+      }
+      
+      .btn-link-white{
+        position: absolute;
+        width: 100%;
+        top: 55%;
+        a {
+          color: blue;
+        }
+      }
+}
