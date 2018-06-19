@@ -20,13 +20,13 @@
           <div class="form-opt">
               <label>
                 <p>Full Amount:</p>
-                <input type="radio" name="paymentchoice" ng-value="full_amount" ng-model="user.paymentchoice" ng-change="scopePrices(user.paymentchoice)"
-                required /> '€'{{ productPrices[0].full_amount }}
+                <input type="radio" name="paymentchoice" ng-value="full_amount" value="full_amount" ng-model="user.paymentchoice" ng-click="scopePrices(user.paymentchoice)" checked="checked"
+                required /> €{{ productPrices[0].full_amount }}
               </label>
               <label>
                 <p>Deposit:</p>
-                <input type="radio" name="paymentchoice" ng-value="deposit" ng-model="user.paymentchoice" ng-change="scopePrices(user.paymentchoice)"
-                required /> '€'{{ productPrices[0].deposit }}
+                <input type="radio" name="paymentchoice" ng-value="deposit" value="deposit" ng-model="user.paymentchoice" ng-click="scopePrices(user.paymentchoice)"
+                required /> €{{ productPrices[0].deposit }}
               </label>
             </div>
             <div ng-messages="bookingStepForm.paymentchoice.$error" ng-if="formStepSubmitted" class="error-msg">

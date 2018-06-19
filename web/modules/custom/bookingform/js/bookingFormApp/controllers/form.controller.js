@@ -140,6 +140,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    */
   $scope.scopePrices = function(price_type) {
     console.log(price_type);
+    console.log('trigered');
     $scope.user.payment.type_txt = price_type; 
     $scope.user.payment.amount = $scope.productPrices[0].full_amount;
     console.log(prices);
