@@ -87,7 +87,14 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
 
   });
 
-  // Scope all product data from functions
+  // Get Nationalities
+  dataService.getNationalities().then(function(response){
+
+    $scope.nationalities = response;
+
+  });
+
+  // Scope all product data from functions§
   var scopeVars = function(productData) {
 
     // Hide Product Select
@@ -175,13 +182,12 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
       dataService.getCountries().then(function(response){
 
         $scope.countries = response;
-        console.log(response);
+
       });
 
       dataService.getNationalities().then(function(response){
 
         $scope.nationalities = response;
-        console.log(response);
 
       });
     }
