@@ -27,7 +27,7 @@
     </div>
 
     <!-- Select delivery Type -->
-    <div class="form-row" ng-if="productData[0].application_type == '61'">
+    <div class="form-row" ng-if="productData[0].application_type == '60'">
       <div class="form-opt">
         <select ng-model="user.deliverymode" name="productdelivery" ng-options="delivery.price_group_id as delivery.price_group for delivery in productData | unique: 'price_group'" ng-change="deliveryIsolate(user.productnid, user.deliverymode)" required>
            <option value="">Select course mode</option>
