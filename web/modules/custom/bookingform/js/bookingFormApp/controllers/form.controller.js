@@ -204,7 +204,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     dataService.getProductPrices(nid, delid).then(function(response){
 
       $scope.productPrices = response;
-
+      console.log(response);
     });
 
   }
