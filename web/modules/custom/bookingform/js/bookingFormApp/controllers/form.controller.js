@@ -138,14 +138,13 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   /**
    * Scopes prices to the user data
    */
-  $scope.scopePrices = function(type_id) {
+  $scope.scopePrices = function(price_type) {
     
-    var id = type_id.toString();
-    var prices = formService.productPrices(id, $scope.productPrices);
+    var prices = formService.productPrices(price_type, $scope.productPrices);
     $scope.user.payment.type_id = prices[0].payment_type_id;
     $scope.user.payment.type_txt = prices[0].payment_type_txt; 
     $scope.user.payment.amount = prices[0].price_amount;
-
+    console.log(prices);
   }
 
   /**

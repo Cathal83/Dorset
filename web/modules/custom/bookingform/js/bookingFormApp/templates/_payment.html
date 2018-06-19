@@ -15,13 +15,18 @@
     <div class="form-fields">
       <h3>Step {{ step }}: Fees & Deposit</h3>
       <div class="form-wrapper">
+        <h4>Choose a payment Option:</h4>
         <div class="form-row">
           <div class="form-opt">
-            <div ng-repeat="prices in productPrices">
               <label>
-                {{ prices.payment_type_txt }}
-                <input type="radio" name="paymentchoice" ng-value="{{ prices.payment_type_id }}" ng-model="user.paymentchoice" ng-change="scopePrices(user.paymentchoice)"
-                required /> {{ prices.price_amount }}
+                <p>Full Amount:</p>
+                <input type="radio" name="paymentchoice" ng-value="full_amount" ng-model="user.paymentchoice" ng-change="scopePrices(user.paymentchoice)"
+                required /> {{ productPrices.full_amount }}
+              </label>
+              <label>
+                <p>Deposit:</p>
+                <input type="radio" name="paymentchoice" ng-value="deposit" ng-model="user.paymentchoice" ng-change="scopePrices(user.paymentchoice)"
+                required /> {{ productPrices.deposit }}
               </label>
             </div>
             <div ng-messages="bookingStepForm.paymentchoice.$error" ng-if="formStepSubmitted" class="error-msg">
