@@ -61,12 +61,18 @@
 
 
 
-#views-exposed-form-find-a-course-block-1{
+#views-exposed-form-find-a-course-block-1,
+#views-exposed-form-find-a-course-block-2,
+#views-exposed-form-find-a-course-block-3,
+#views-exposed-form-find-a-course-block-4,
+#views-exposed-form-find-a-course-block-6,
+#views-exposed-form-find-a-course-block-8{
   display: block;
   width: 25%;
   float: right;
   position: relative;
   min-height: 320px;
+  margin-left: 5%;
 
   summary {
     color: #fff;

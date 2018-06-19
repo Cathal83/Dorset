@@ -14,35 +14,13 @@
   display: inline-block;
   text-align: center;
   float: left;
-  background-size: 82px 82px;
-  background-position: 50% 20%;
-  background-repeat: no-repeat;
+
+    background-image: url('http://localhost:8888/sites/default/files/stat_icon/paper-plane.svg');
+    background-size: 82px 82px;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
   }
 
-    .views-field-field-type-of-course{
-      background-image: url('/sites/default/files/block-bg/open-book-1.svg');
-    }
-    
-    .views-field-field-course-delivery-mode{
-      background-image: url('/sites/default/files/block-bg/diploma.svg');
-    }
-    
-    .views-field-field-nfq-level{
-      background-image: url('/sites/default/files/block-bg/graduation.svg');      
-    }
-    
-    .views-field-field-validated-by{
-      background-image: url('/sites/default/files/block-bg/diploma-2.svg');      
-    }
-    
-    .views-field-field-campus{
-      background-image: url('/sites/default/files/block-bg/museum-1.svg');      
-    }
-    
-    .views-field-field-dorset-course-duration{
-      background-image: url('/sites/default/files/block-bg/hourglass.svg');      
-    }
-    
   .field-content{
     position: relative;
     top: 50%;
@@ -70,7 +48,7 @@
 .block-views-blockcourses-view-block-14 {
   width: 16.65% !important;
   height: 479px;
-  background-image: url('/sites/default/files/block-bg/wallet.svg')  !important;
+  background-image: url('http://localhost:8888/sites/default/files/stat_icon/paper-plane.svg') !important;
   background-size: 82px 82px !important;
   background-position: 50% 8.5% !important;
   background-repeat: no-repeat !important;
@@ -99,7 +77,7 @@
   height: 539px;
   display: inline-block;
   margin-top: -60px;
-  background-image: linear-gradient(rgba(241,73,80,0.5),rgba(241,73,80,0.5)), url('/sites/default/files/styles/large/public/block_list/how_to_apply_0.jpg?itok=aKX80AYP');
+  background-image: linear-gradient(rgba(241,73,80,0.5),rgba(241,73,80,0.5)), url('//localhost:8888/sites/default/files/styles/large/public/block_list/how_to_apply_0.jpg?itok=aKX80AYP');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -256,6 +234,297 @@
 }
 
 // iPad Pro CSS
+
+@media screen and (max-width: 1024px) and (min-width: 900px) {
+  .block-views-blockcourses-view-block-2 {
+    height: 324px;
+  }
+  .block-views-blockcourses-view-block-2 div{
+    .views-field{
+    height: 162px;
+      background-size: 61px 61px;
+    }
+    .field-content{
+      top: 40%;
+      font-size: 16px;
+    }
+
+    .field-content a{
+      font-size: 16px;
+    }
+    .views-label {
+        top: 8em;
+        font-size: 11px;
+    }
+  }
+
+
+  .block-views-blockcourses-view-block-14 {
+    height: 324px;
+    background-size: 61px 61px !important;
+  }
+
+  .block-views-blockcourses-view-block-14 div{
+
+    .field-content{
+      position: relative;
+      top: 92px;
+      font-size: 16px;
+    }
+  }
+
+  .block-views-blockcourses-view-block-7{
+    height: 384px;
+    margin-top: -40px;
+  }
+
+  .block-views-blockcourses-view-block-7 h2{
+    font-size: 20px;
+    padding: 30% 20% 0% 20%;
+  }
+
+  .block-views-blockcourses-view-block-7 .list-element{
+    font-size: 11px;
+  }
+}
+
+
+// Marc CSS Starts Here - Course Page
+
+.block-views-blockcourses-view-block-2 {
+  width: 49.95%;
+  height: 479px;
+  display: inline-block;
+  float: left;
+}
+
+.block-views-blockcourses-view-block-2 div{
+  .views-field{
+  width: 33%;
+  height: 239.5px;
+  display: inline-block;
+  text-align: center;
+  float: left;
+
+    background-image: url('http://localhost:8888/sites/default/files/stat_icon/paper-plane.svg');
+    background-size: 82px 82px;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+  }
+
+  .field-content{
+    position: relative;
+    top: 50%;
+    padding: 28px;
+    font-size: 20px;
+    color: #5D5D5D;
+    text-align: center;
+  }
+
+    .field-content a{
+      font-size: 20px;
+      color: #5D5D5D;
+      text-align: center;
+  }
+    .views-label {
+      position: relative;
+      top: 8.5em;
+      font-size: 16px;
+      color: #5D5D5D;
+      text-align: center;
+  }
+}
+
+
+.block-views-blockcourses-view-block-14 {
+  width: 16.65% !important;
+  height: 479px;
+  background-image: url('http://localhost:8888/sites/default/files/stat_icon/paper-plane.svg') !important;
+  background-size: 82px 82px !important;
+  background-position: 50% 8.5% !important;
+  background-repeat: no-repeat !important;
+  background-color: #ffffff !important;
+  float: left;
+}
+
+.block-views-blockcourses-view-block-14 div{
+  .views-field{
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+
+  }
+  .field-content{
+    position: relative;
+    top: 8.5em;
+    font-size: 20px;
+    color: #5D5D5D;
+    text-align: center;
+  }
+}
+
+.block-views-blockcourses-view-block-7{
+  width: 33.3% !important;
+  height: 539px;
+  display: inline-block;
+  margin-top: -60px;
+  background-image: linear-gradient(rgba(241,73,80,0.5),rgba(241,73,80,0.5)), url('//localhost:8888/sites/default/files/styles/large/public/block_list/how_to_apply_0.jpg?itok=aKX80AYP');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.block-views-blockcourses-view-block-7 h2{
+  font-size: 30px;
+  color: #FFFFFF;
+  padding: 27.5% 20% 0% 20%;
+  text-align: left;
+}
+
+.block-views-blockcourses-view-block-7 .list-element{
+  font-size: 16px;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 10% 20% 20% 20%;
+}
+
+.block-views-blockcourses-view-block-7 .list-element div{
+  visibility: visible !important;
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.block-views-blockcourses-view-block-7 .paragraph--view-mode--default div{
+  visibility: hidden;
+}
+
+
+// Course Page Mobile CSS
+
+@media only screen and (max-width: 600px) {
+  .block-views-blockcourses-view-block-2 {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .block-views-blockcourses-view-block-2 div{
+    .views-field{
+    width: 50%;
+    height: 162px;
+
+      background-size: 61px 61px;
+      background-position: 50% 30%;
+    }
+    .field-content{
+      font-size: 16px;
+    }
+
+    .field-content a{
+      font-size: 16px;
+    }
+    .views-label {
+        top: 9.5em;
+        font-size: 11px;
+    }
+}
+
+  .block-views-blockcourses-view-block-14 {
+    width: 100% !important;
+    height: 182px;
+    background-size: 61px 61px !important;
+    background-position: 50% 10% !important;
+  }
+
+  .block-views-blockcourses-view-block-14 div{
+    .views-field{
+    width: 100%;
+    display: inline-block;
+
+    }
+    .field-content{
+      top: 110px;
+      font-size: 16px;
+    }
+  }
+
+  .block-views-blockcourses-view-block-7{
+    width: 100% !important;
+    height: 195px;
+    display: block;
+    margin-top: 0px;
+  }
+
+  .block-views-blockcourses-view-block-7 h2{
+    font-size: 20px;
+    padding: 10% 5% 0%;
+  }
+
+  .block-views-blockcourses-view-block-7 .list-element{
+    font-size: 11px;
+    padding: 5% 10% 20%;
+  }
+}
+
+// Course Page Tablet CSS
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .block-views-blockcourses-view-block-2 {
+    height: 354px;
+  }
+
+  .block-views-blockcourses-view-block-2 div{
+    .views-field{
+    height: 192px;
+      background-size: 61px 61px;
+    }
+    .field-content{
+      top: 40%;
+      font-size: 16px;
+    }
+
+    .field-content a{
+      font-size: 16px;
+    }
+    .views-label {
+        top: 8em;
+        font-size: 11px;
+    }
+  }
+
+
+  .block-views-blockcourses-view-block-14 {
+    height: 354px;
+    background-size: 61px 61px !important;
+  }
+
+  .block-views-blockcourses-view-block-14 div{
+
+    .field-content{
+      position: relative;
+      top: 125px;
+      font-size: 16px;
+    }
+  }
+
+  .block-views-blockcourses-view-block-7{
+    height: 394px;
+    margin-top: -40px;
+  }
+
+  .block-views-blockcourses-view-block-7 h2{
+    font-size: 20px;
+    padding: 30% 20% 0% 20%;
+  }
+
+  .block-views-blockcourses-view-block-7 .list-element{
+    font-size: 11px;
+  }
+}
+
+// Course Page iPad Pro CSS
 
 @media screen and (max-width: 1024px) and (min-width: 900px) {
   .block-views-blockcourses-view-block-2 {
@@ -526,7 +795,7 @@
   }
   //&.views-field-body{
   //  margin: 0;
-  //} 
+  //}
   &.views-field-field-event-{
     position: absolute;
     width: 100%;
@@ -579,9 +848,10 @@
   }
 
   .zone-section .block-region-homeactionblocks .block-list-bg-img{
-      width: 49.75%;
+      width: 50%;
       display: inline-block;
       height: 340px !important;
+      float: left;
   }
 
   .zone-section .block-region-homeactionblocks .block-list-bg-img:nth-child(1) .block-title{
@@ -864,7 +1134,8 @@
 
 // Course Module page
 
-.page-node-type-course-module, #cboxWrapper {
+.page-node-type-course-module{
+
   #section-header{
     display: none;
   }
@@ -887,8 +1158,15 @@
     float: left;
     background-color: $dc-grey;
     width: 34%;
-    height: 40px;
+    height: 50px;
     padding: 2%;
+    font-size: 16px;
+    line-height: 1.68;
+    color: #5D5D5D;
+  }
+
+  .modtitle div:first-child{
+    font-weight: 700;
   }
 
   .modstat{
@@ -896,8 +1174,20 @@
     float: right;
     background-color: $dc-grey;
     width: 16.66%;
-    height: 40px;
+    height: 50px;
     padding: 2%;
+    font-size: 16px;
+    line-height: 1.68;
+    color: #5D5D5D;
+  }
+
+  .modstat div:first-child{
+    font-weight: 700;
+  }
+
+  .modstat a{
+    color: #5D5D5D;
+    font-weight: 400;
   }
 
   .modsemester{
@@ -905,8 +1195,15 @@
     float: right;
     background-color: $dc-grey;
     width: 16.66%;
-    height: 40px;
+    height: 50px;
     padding: 2%;
+    font-size: 16px;
+    line-height: 1.68;
+    color: #5D5D5D;
+  }
+
+  .modsemester div:first-child{
+    font-weight: 700;
   }
 
   .modcred{
@@ -914,8 +1211,15 @@
     float: right;
     background-color: $dc-grey;
     width: 16.66%;
-    height: 40px;
+    height: 50px;
     padding: 2%;
+    font-size: 16px;
+    line-height: 1.68;
+    color: #5D5D5D;
+  }
+
+  .modcred div:first-child{
+    font-weight: 700;
   }
 
   .moddesc{
@@ -924,10 +1228,36 @@
     padding: 2%;
   }
 
+  .moddesc p:first-child{
+    font-size: 25px;
+    line-height: 1.44;
+    color: #505D5D;
+    font-weight: 700;
+    margin: 0 0 25px;
+  }
+
   .modindc{
     display: block;
     clear: both;
     padding: 2%;
+  }
+
+  .modindc p:first-child{
+    font-size: 25px;
+    line-height: 1.44;
+    color: #505D5D;
+    font-weight: 700;
+    margin: 0 0 25px;
+  }
+
+  .modindc ul{
+    margin: 2%;
+  }
+
+  .modindc ul li{
+    font-size: 16px;
+    line-height: 1.68;
+    color: #5D5D5D;
   }
 
   .modass{
@@ -935,8 +1265,16 @@
     clear: both;
     padding: 2%;
     background-color: $dc-grey;
-    height: 60px;
+    height: 80px;
+    font-size: 16px;
+    line-height: 1.68;
+    color: #5D5D5D;
   }
+
+  .modass div:nth-child(3){
+    font-weight: 700;
+  }
+
 
   .modass .paragraph--type--dorset-module-detail div{
     display: inline-block;
@@ -944,10 +1282,13 @@
 
   .modass div .paragraph--type--dorset-module-detail div{
     float: left;
+    width: 25%;
   }
 
   .modass div .paragraph--type--dorset-module-detail div div:nth-child(1){
     clear: both;
+    width: 100%;
+    font-weight: 700;
   }
 
   .modass div .paragraph--type--dorset-module-detail div div:nth-child(2){
@@ -959,4 +1300,295 @@
 // Cathal
 .views-element-container.block.block-views.block-views-blocknews-events-block-1{
   background: none;
+}
+
+//Marc AGAIN - About CSS
+
+.block-accreditations .block-icons{
+  display: flex;
+}
+
+.block-accreditations .block-icons div{
+  width: 20%;
+}
+
+.block-accreditations .block-icons div div{
+  width: 120px;
+  height: 120px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .cat.choose .zone-section .block-region-headerimage{
+    height: 300px;
+  }
+}
+
+//Why Choose DC CSS
+
+.path-student-life .choose .block-block-contentb55b3ca8-6c7b-417e-9db1-9c64ad146be9{
+
+  padding: 5%;
+  background-color: #F8F8F8;
+  height: 130px;
+
+  .paragraph--type--statistics-wrapper div:nth-child(1){
+    font-size: 60px;
+    color: #E3A900;
+    font-weight: 700;
+  }
+
+  .paragraph--type--statistics-wrapper div:nth-child(2){
+    font-size: 16px;
+    font-weight: 700;
+    color: #5D5D5D;
+  }
+}
+
+//Why Choose DC Mobile CSS
+
+@media only screen and (max-width: 600px) {
+
+  .path-student-life .choose .block-block-contentb55b3ca8-6c7b-417e-9db1-9c64ad146be9{
+
+    height: 300px;
+    padding-left: 10%;
+
+    .paragraph--type--statistics-wrapper{
+      width: 50%;
+      display: inline-block;
+      float: left;
+      margin-top: 2em;
+    }
+
+    .paragraph--type--statistics-wrapper div:nth-child(1){
+      font-size: 35px;
+    }
+
+    .paragraph--type--statistics-wrapper div:nth-child(2){
+      font-size: 11px;
+    }
+  }
+}
+
+// Why Choose DC Tablet CSS
+
+@media screen and (max-width: 975px) and (min-width: 600px) {
+
+  .path-student-life .choose .block-block-contentb55b3ca8-6c7b-417e-9db1-9c64ad146be9{
+
+    height: 70px;
+
+    .paragraph--type--statistics-wrapper div:nth-child(1){
+      font-size: 35px;
+    }
+
+    .paragraph--type--statistics-wrapper div:nth-child(2){
+      font-size: 11px;
+    }
+  }
+}
+
+//Paragraph CSS
+
+.left-paragraph, .right-paragraph{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.left-paragraph p{
+  font-size: 20px;
+}
+
+// Paragraph Tablet CSS
+
+@media screen and (max-width: 975px) and (min-width: 600px) {
+
+  .left-paragraph p{
+    font-size: 14px;
+  }
+}
+
+//Paragraph Mobile CSS
+
+@media only screen and (max-width: 600px) {
+
+  .left-paragraph p{
+    font-size: 14px;
+  }
+
+  .left-paragraph, {
+    padding: 0 5%;
+  }
+
+  .right-paragraph, {
+    padding: 0 5%;
+  }
+}
+
+// Brendan CSS Starts Here
+
+//Brendan - Admissions
+
+.path-node.page-node-type-page .header-image{
+  background-color: #F2F2F2;
+  padding-bottom: 2em;
+}
+
+.path-node.page-node-type-page .paragraph.paragraph--type--page-introduction.paragraph--view-mode--default{
+  margin-top: 1.15em;
+}
+
+.path-node.page-node-type-page .paragraph.paragraph--type--linked-icons.paragraph--view-mode--default{
+  background-color: #F2F2F2;
+  height: 20em;
+}
+
+.path-node.page-node-type-page .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default{
+  width: 25%;
+  flex: inherit !important;
+  padding: 50px 0px;
+  float:left;
+  text-align: center;
+}
+
+.path-node.page-node-type-page .paragraph.paragraph--type--page-introduction.paragraph--view-mode--default{
+  margin-bottom: 1.15em;
+}
+
+//Admissions Mobile CSS
+
+@media only screen and (max-width: 600px) {
+
+  .path-node.page-node-type-page .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default{
+    width: 50%;
+    padding: 25px 0;
+  }
+  .path-node.page-node-type-page .paragraph.paragraph--type--linked-icons.paragraph--view-mode--default{
+    height: 22.5em;
+  }
+}
+//Brendan - About Us
+
+.path-about-us .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7 .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default{
+    width: 14%;
+    flex: inherit !important;
+    float:left;
+    text-align: center;
+    padding-left: 5%;
+}
+
+.path-about-us .block-accreditations .block-icons{
+     display: flex;
+     padding-left: 6%;
+     padding-right: 6%;
+}
+
+.path-about-us .block-accreditations .block-icons div{
+     width: 20%;
+}
+
+.path-about-us .block-accreditations .block-icons div div{
+     width: 120px;
+     height: 120px;
+}
+
+.path-about-us .zone-section .block-region-main .block.block-block-content.block-block-content9a926964-2fcd-47e3-ae00-d27d424e58b0{
+    margin-top: 1.15em;
+}
+
+.path-about-us  .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7{
+    background-color: #F2F2F2;
+    height: 35em;
+}
+
+.path-about-us .block.block-block-content.block-block-content9787f3ed-e413-44bf-9825-1c0d6963ef1b .geolocation-formatter-map-wrapper{
+    display: flex;
+    flex: 33.33%;
+}
+
+.path-about-us .block.block-block-content.block-accreditations{
+    margin-bottom: 3.15em;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 975px) {
+  .path-about-us  .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7{
+      height: 25em;
+  }
+}
+
+@media screen and (max-width: 975px) and (min-width: 600px) {
+  .path-about-us  .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7{
+      height: 30em;
+  }
+}
+
+//About Mobile CSS
+
+@media only screen and (max-width: 600px) {
+
+  .path-about-us .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7 .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default{
+      width: inherit;
+      float:none;
+      text-align: inherit;
+      padding-left: 7.5%;
+      margin-bottom: 2em;
+  }
+
+  .path-about-us .block-accreditations .block-icons {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .path-about-us .block-accreditations .block-icons div {
+    width: inherit;
+  }
+
+  .path-about-us .block.block-block-content.block-accreditations{
+    margin-bottom: 0em;
+  }
+
+  .path-about-us .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7{
+    height: 55em;
+  }
+}
+//Brendan - College Faculties
+
+.paragraph.paragraph--type--icons-block-with-text.paragraph--view-mode--default{
+  background-color: #F2F2F2;
+}
+
+.paragraph.paragraph--type--icons-block-with-text.paragraph--view-mode--default, .path-about-us .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default, .path-node.page-node-type-page .header-image, .path-node.page-node-type-page .paragraph.paragraph--type--linked-icons.paragraph--view-mode--default{
+  margin: 0px;
+}
+
+.paragraph.paragraph--type--icons-block-with-text.paragraph--view-mode--default .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default{
+  width: 25%;
+  flex: inherit !important;
+  float:left;
+  text-align: center;
+  padding: 4%;
+}
+
+.paragraph.paragraph--type--icons-block-with-text.paragraph--view-mode--default .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default .stat-content{
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+// Brendan - Mobile College Faculties
+
+
+@media only screen and (max-width: 600px) {
+
+  .paragraph.paragraph--type--icons-block-with-text.paragraph--view-mode--default .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default{
+    width: 90%;
+    display: inline-block;
+    text-align: center;
+  }
 }
