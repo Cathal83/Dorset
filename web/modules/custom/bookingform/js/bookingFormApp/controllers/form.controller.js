@@ -175,7 +175,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
       dataService.getCountries().then(function(response){
 
         $scope.countries = response;
-
+        console.log(response);
       });
 
       dataService.getNationalities().then(function(response){
