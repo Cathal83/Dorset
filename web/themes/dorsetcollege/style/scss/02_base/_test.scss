@@ -810,3 +810,29 @@ p.arrow-right::after, a.arrow-right::after{
 .lecturer-row .col-sm-4.lecturer-profile{
   margin-bottom: 5em !important; 
 }
+
+/*MAIN HEADER IMAGE*/
+.header-image-update {
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.header-image-update img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 70%;
+}
+
+.hero-title h2{
+	margin: 0;
+	color: #fff;
+}
