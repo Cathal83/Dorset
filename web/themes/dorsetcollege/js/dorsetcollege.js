@@ -6,7 +6,7 @@
   Drupal.behaviors.customBehavior = {
     attach: function(context, settings) {
       // Menu Navigation
-      $("#block-mainnavigation .menu-lv-0 > .menu-item--expanded").mouseenter(function () {
+      $("#block-dorsetcollege-main-menu .menu-lv-0 > .menu-item--expanded").mouseenter(function () {
         $(this).find(".sub-menu").animate({ height: "toggle" }, 300);
 
       }).mouseleave(function () {
