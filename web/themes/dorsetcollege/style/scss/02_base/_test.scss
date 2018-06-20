@@ -552,29 +552,29 @@ p.arrow-right::after, a.arrow-right::after{
 
   }
   
-        .views-field-field-course-delivery-mode{
-            background-image: url('/sites/default/files/block-bg/diploma.svg');
-      }
-      //      Validated By
-      .views-field-field-validated-by{
-            background-image: url('/sites/default/files/block-bg/diploma-2.svg');
-      }
-      //      NFQ Level
-      .views-field-field-nfq-level{
-            background-image: url('/sites/default/files/block-bg/graduation.svg');
-      }
-      //      
-      .views-field-field-dorset-course-duration{
-             background-image: url('/sites/default/files/block-bg/hourglass.svg');
-      }
-      //      Campus
-      .views-field-field-campus{
-            background-image: url('/sites/default/files/block-bg/museum-1.svg');
-      }
-      //      Type     
-      .views-field-field-type-of-course{
-      background-image: url('/sites/default/files/block-bg/open-book-1.svg');
-      }
+  .views-field-field-course-delivery-mode{
+      background-image: url('/sites/default/files/block-bg/diploma.svg');
+  }
+  //      Validated By
+  .views-field-field-validated-by{
+      background-image: url('/sites/default/files/block-bg/diploma-2.svg');
+  }
+  //      NFQ Level
+  .views-field-field-nfq-level{
+      background-image: url('/sites/default/files/block-bg/graduation.svg');
+  }
+  //      
+  .views-field-field-dorset-course-duration{
+      background-image: url('/sites/default/files/block-bg/hourglass.svg');
+  }
+  //      Campus
+  .views-field-field-campus{
+      background-image: url('/sites/default/files/block-bg/museum-1.svg');
+  }
+  //      Type     
+  .views-field-field-type-of-course{
+    background-image: url('/sites/default/files/block-bg/open-book-1.svg');
+  }
 
   .field-content{
     position: relative;
@@ -600,6 +600,17 @@ p.arrow-right::after, a.arrow-right::after{
 }
 
 
+.block-views-blockcourses-view-block-7{
+  width: 33.3% !important;
+  height: 539px;
+  display: inline-block;
+  margin-top: -60px;
+  background-image: linear-gradient(rgba(241,73,80,0.5),rgba(241,73,80,0.5)), url('/sites/default/files/styles/large/public/block_list/how_to_apply_0.jpg?itok=aKX80AYP');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
 .block-views-blockcourses-view-block-14 {
   width: 16.65% !important;
   height: 479px;
@@ -611,13 +622,22 @@ p.arrow-right::after, a.arrow-right::after{
   float: left;
 }
 
-.block-views-blockcourses-view-block-7{
-  width: 33.3% !important;
-  height: 539px;
+.block-views-blockcourses-view-block-14 div{
+  .views-field{
+  width: 100%;
   display: inline-block;
-  margin-top: -60px;
-  background-image: linear-gradient(rgba(241,73,80,0.5),rgba(241,73,80,0.5)), url('/sites/default/files/styles/large/public/block_list/how_to_apply_0.jpg?itok=aKX80AYP');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+  text-align: center;
+
+  }
+  .field-content{
+    position: relative;
+    top: 8.5em;
+    font-size: 20px;
+    color: #5D5D5D;
+    text-align: center;
+  }
+}
+
+#zone-actionblocks .zone-section .block-region-homeactionblocks .block-list-bg-img {
+  z-index: 1;
 }
