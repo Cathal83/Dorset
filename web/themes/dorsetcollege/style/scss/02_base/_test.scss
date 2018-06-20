@@ -550,7 +550,9 @@ p.arrow-right::after, a.arrow-right::after{
   background-position: 50% 20%;
   background-repeat: no-repeat;
 
-      .views-field-field-course-delivery-mode{
+  }
+  
+        .views-field-field-course-delivery-mode{
             background-image: url('/sites/default/files/block-bg/diploma.svg');
       }
       //      Validated By
@@ -573,8 +575,6 @@ p.arrow-right::after, a.arrow-right::after{
       .views-field-field-type-of-course{
       background-image: url('/sites/default/files/block-bg/open-book.svg');
       }
-
-  }
 
   .field-content{
     position: relative;
