@@ -639,5 +639,5 @@ p.arrow-right::after, a.arrow-right::after{
 }
 
 #zone-actionblocks .zone-section .block-region-homeactionblocks .block-list-bg-img {
-  z-index: 1;
+  z-index: 1 !important; 
 }
