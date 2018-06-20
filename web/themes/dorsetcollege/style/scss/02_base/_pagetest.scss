@@ -44,41 +44,41 @@
 
 
 .cat.choose {
-	.block-views-blockstudent-testimonials-block-1 .views-row{
-		@include breakpoint(640px) { 
-			width: 33%;
-			float: left;
-			display: block;
-		}
-
-		.field-content {
-		text-align: center;
-		}
-
-		.field-content img{
-		border-radius: 500px;
-		}
-	}
+	//.block-views-blockstudent-testimonials-block-1 .views-row{
+	//	@include breakpoint(640px) { 
+	//		width: 33%;
+	//		float: left;
+	//		display: block;
+	//	}
+	//
+	//	.field-content {
+	//	text-align: center;
+	//	}
+	//
+	//	.field-content img{
+	//	border-radius: 500px;
+	//	}
+	//}
+	//.pager {
+	//	clear: both;
+	//}
+	//
+	//.block-views-blocklecturer-profiles-block-1 .views-row{
+	//	@include breakpoint(640px) { 
+	//		width: 25%;
+	//		float: left;
+	//		display: block;
+	//	}
+	//	img {
+	//	width: 100%;
+	//	height: auto;
+	//	}
+	//}
 	.pager {
 		clear: both;
 	}
 
-	.block-views-blocklecturer-profiles-block-1 .views-row{
-		@include breakpoint(640px) { 
-			width: 25%;
-			float: left;
-			display: block;
-		}
-		img {
-		width: 100%;
-		height: auto;
-		}
-	}
-	.pager {
-		clear: both;
-	}
-
-	block-block-contentb55b3ca8-6c7b-417e-9db1-9c64ad146be9{
+	.block-block-contentb55b3ca8-6c7b-417e-9db1-9c64ad146be9{
 	display: inline-block;
 	width: 100%;
 	clear: both;
