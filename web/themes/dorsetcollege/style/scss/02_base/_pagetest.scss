@@ -1,0 +1,128 @@
+.node_53, .node_55, {
+  .paragraph--type--content-wrapper{
+  	display: inline-block;
+  	clear: both;
+  	width: 100%;
+  	@include breakpoint(640px) {
+		.paragraph--type--paragraph-course-item{
+		width: 50%;
+		float: left;
+		}
+	}
+  }
+
+  .paragraph--type--icons-block-with-text {
+  clear: both;
+  margin: 25px; 
+  display: inline-block;
+  width: 100%;
+
+	@include breakpoint(640px) {  
+	  	.paragraph--type--paragraph-statistic {
+		  width: 33%;
+		  float: left;
+		  }
+	}
+
+	.icon {
+	text-align: center;
+	
+		img {
+		width: 25%;
+		height: auto;
+		}
+	}  
+  }
+
+  img{
+  width: 100%;
+  height: auto;
+  }
+
+}
+
+
+
+.cat.choose {
+	.block-views-blockstudent-testimonials-block-1 .views-row{
+		@include breakpoint(640px) { 
+			width: 33%;
+			float: left;
+			display: block;
+		}
+
+		.field-content {
+		text-align: center;
+		}
+
+		.field-content img{
+		border-radius: 500px;
+		}
+	}
+	.pager {
+		clear: both;
+	}
+
+	.block-views-blocklecturer-profiles-block-1 .views-row{
+		@include breakpoint(640px) { 
+			width: 25%;
+			float: left;
+			display: block;
+		}
+		img {
+		width: 100%;
+		height: auto;
+		}
+	}
+	.pager {
+		clear: both;
+	}
+
+	block-block-contentb55b3ca8-6c7b-417e-9db1-9c64ad146be9{
+	display: inline-block;
+	width: 100%;
+	clear: both;
+	background: $dc-grey;
+	}
+
+	.block-region-headerimage{
+	height: 400px;
+	.bg-img {
+		height: 400px;
+		}
+	}
+
+	.paragraph--type--statistics-wrapper{
+		@include breakpoint(640px) { 
+			width: 20%;
+			float: left;
+			display: block;
+			text-align: center;
+			}
+		}
+
+}
+
+
+.node_58 {
+	.paragraph--type--paragraph-course-wrapper{
+	  	display: inline-block;
+	  	clear: both;
+	  	width: 100%;
+	  	@include breakpoint(640px) {
+			.paragraph--type--paragraph-course-item{ 
+			width: 50%;
+			float: left;
+			}
+		}
+	}
+	.paragraph--type--wrapper-image-and-content{
+	clear: both;
+	width: 100%;
+	display: inline-block;
+	.paragraph.paragraph--type--paragraph-course-wrapper.paragraph--view-mode--default{
+	width: 50%;
+	float: left;
+	}
+	}
+}
