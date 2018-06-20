@@ -813,8 +813,6 @@ p.arrow-right::after, a.arrow-right::after{
 
 /*MAIN HEADER IMAGE*/
 .header-image.update {
-    text-align: center;
-    position: relative;
     width: 100%;
 }
 
@@ -825,11 +823,12 @@ p.arrow-right::after, a.arrow-right::after{
 
 .hero-title{
     position: absolute;
-    top: 30%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    width: 70%;
+    //top: 30%;
+    //left: 40%;
+    //transform: translate(-50%, -50%);
+    //-ms-transform: translate(-50%, -50%);
+    margin-top: 3rem;
+    padding-left: 6%;
 }
 
 .hero-title h2{
