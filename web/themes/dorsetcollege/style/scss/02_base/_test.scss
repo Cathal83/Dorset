@@ -819,6 +819,8 @@ p.arrow-right::after, a.arrow-right::after{
 .header-image-update img {
     width: 100%;
     height: auto;
+    border-radius: 0 0 64% 64%/0 0 12% 12%;
+    box-shadow: inset 0 0 0 2000px rgba(45,45,45,.38);
 }
 
 .hero-title{
