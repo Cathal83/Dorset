@@ -524,3 +524,100 @@ p.arrow-right::after, a.arrow-right::after{
   margin: 2em 6%;
 }
 
+.sub-menu{
+  display: none;
+}
+
+// Marc CSS
+
+// Courses Page
+
+.block-views-blockcourses-view-block-2 {
+  width: 49.95%;
+  height: 479px;
+  display: inline-block;
+  float: left;
+}
+
+.block-views-blockcourses-view-block-2 div{
+  .views-field{
+  width: 33%;
+  height: 239.5px;
+  display: inline-block;
+  text-align: center;
+  float: left;
+  background-size: 82px 82px;
+  background-position: 50% 20%;
+  background-repeat: no-repeat;
+
+      .views-field-field-course-delivery-mode{
+            background-image: url('/sites/default/files/block-bg/diploma.svg');
+      }
+      //      Validated By
+      .views-field-field-validated-by{
+            background-image: url('/sites/default/files/block-bg/diploma-2.svg');
+      }
+      //      NFQ Level
+      .views-field-field-nfq-level{
+            background-image: url('/sites/default/files/block-bg/graduation.svg');
+      }
+      //      
+      .views-field-field-dorset-course-duration{
+             background-image: url('/sites/default/files/block-bg/hourglass.svg');
+      }
+      //      Campus
+      .views-field-field-campus{
+            background-image: url('/sites/default/files/block-bg/museum-1.svg');
+      }
+      //      Type     
+      .views-field-field-type-of-course{
+      background-image: url('/sites/default/files/block-bg/open-book.svg');
+      }
+
+  }
+
+  .field-content{
+    position: relative;
+    top: 50%;
+    padding: 28px;
+    font-size: 20px;
+    color: #5D5D5D;
+    text-align: center;
+  }
+
+    .field-content a{
+      font-size: 20px;
+      color: #5D5D5D;
+      text-align: center;
+  }
+    .views-label {
+      position: relative;
+      top: 8.5em;
+      font-size: 16px;
+      color: #5D5D5D;
+      text-align: center;
+  }
+}
+
+
+.block-views-blockcourses-view-block-14 {
+  width: 16.65% !important;
+  height: 479px;
+  background-image: url('/sites/default/files/block-bg/wallet.svg') !important;
+  background-size: 82px 82px !important;
+  background-position: 50% 8.5% !important;
+  background-repeat: no-repeat !important;
+  background-color: #ffffff !important;
+  float: left;
+}
+
+.block-views-blockcourses-view-block-7{
+  width: 33.3% !important;
+  height: 539px;
+  display: inline-block;
+  margin-top: -60px;
+  background-image: linear-gradient(rgba(241,73,80,0.5),rgba(241,73,80,0.5)), url('/sites/default/files/styles/large/public/block_list/how_to_apply_0.jpg?itok=aKX80AYP');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
