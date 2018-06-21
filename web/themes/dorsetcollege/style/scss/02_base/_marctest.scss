@@ -277,6 +277,138 @@
 
 }
 
+// Mobile CSS
+
+@media only screen and (max-width: 600px) {
+  .block-views-blockcourses-view-block-2 {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .block-views-blockcourses-view-block-2 div{
+    .views-field{
+    width: 50%;
+    height: 162px;
+
+      background-size: 61px 61px;
+      background-position: 50% 30%;
+    }
+    .field-content{
+      font-size: 16px;
+    }
+
+    .field-content a{
+      font-size: 16px;
+    }
+
+    .field-content p{
+      font-size: 16px;
+    }
+
+    .views-label {
+        top: 9.5em;
+        font-size: 11px;
+    }
+}
+
+  .block-views-blockcourses-view-block-14 {
+    width: 100% !important;
+    height: 182px;
+    background-size: 61px 61px !important;
+    background-position: 50% 10% !important;
+  }
+
+  .block-views-blockcourses-view-block-14 div{
+    .views-field{
+    width: 100%;
+    display: inline-block;
+
+    }
+    .field-content{
+      top: 110px;
+      font-size: 16px;
+    }
+  }
+
+  .block-views-blockcourses-view-block-7{
+    width: 100% !important;
+    height: 195px;
+    display: block;
+    margin-top: 0px;
+  }
+
+  .block-views-blockcourses-view-block-7 h2{
+    font-size: 20px;
+    padding: 10% 5% 0%;
+  }
+
+  .block-views-blockcourses-view-block-7 .list-element{
+    font-size: 11px;
+    padding: 5% 10% 20%;
+  }
+}
+
+// Tablet CSS
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .block-views-blockcourses-view-block-2 {
+    height: 375px;
+  }
+
+  .block-views-blockcourses-view-block-2 div{
+    .views-field{
+    height: 192px;
+      background-size: 61px 61px;
+    }
+    .field-content{
+      top: 40%;
+      font-size: 16px;
+    }
+
+    .field-content a{
+      font-size: 16px;
+    }
+
+    .field-content p{
+      font-size: 16px;
+    }
+
+    .views-label {
+        top: 8em;
+        font-size: 11px;
+    }
+  }
+
+
+  .block-views-blockcourses-view-block-14 {
+    height: 354px;
+    background-size: 61px 61px !important;
+  }
+
+  .block-views-blockcourses-view-block-14 div{
+
+    .field-content{
+      position: relative;
+      top: 125px;
+      font-size: 16px;
+    }
+  }
+
+  .block-views-blockcourses-view-block-7{
+    height: 415px;
+    margin-top: -40px;
+  }
+
+  .block-views-blockcourses-view-block-7 h2{
+    font-size: 20px;
+    padding: 30% 20% 0% 20%;
+  }
+
+  .block-views-blockcourses-view-block-7 .list-element{
+    font-size: 11px;
+  }
+}
+
 // iPad Pro CSS
 
 @media screen and (max-width: 1024px) and (min-width: 900px) {
