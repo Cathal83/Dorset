@@ -581,5 +581,7 @@ p.arrow-right::after, a.arrow-right::after{
 .news-intro {
   text-align: center;
   margin: 2em 0;
-  color: #6D6E71;
+  p {
+    color: #6D6E71;
+  }
 }
