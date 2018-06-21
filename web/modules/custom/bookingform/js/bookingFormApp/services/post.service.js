@@ -22,9 +22,8 @@ bookingformJS.service("postService", function ($filter, $location, $http) {
       country: data.contactaddress.country,
       city_town: data.contactaddress.city,
       postal_code: data.contactaddress.postalcode,
-      payment: "", // Yes/No
       stripe_id: "",
-      payment_type: "",
+      payment_type: data.payment.type_id,
       payment_amount: data.payment.amount,
       contact_address_as_billing: data.billingaddress.billingcontact,
       billing_address_1: data.billingaddress.address1,
@@ -43,12 +42,12 @@ bookingformJS.service("postService", function ($filter, $location, $http) {
         'Authorization': 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q=',
       }
     }
-    console.log(data.date);
 
     $http.post('/webform_rest/submit', data, config)
     .then( function(data, status, headers, config){
       console.log(data);
       console.log(status);
+      console.log(headers);
     });
   }
   return {
