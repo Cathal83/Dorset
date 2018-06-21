@@ -39,8 +39,9 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
     var postData = JSON.stringify(postData);
 
     // Get CSRF code for post request
-    var token = dataService.getCSRF().then(function(response){return response.value;});
+    var token = dataService.getCSRF().then(function(response){return response;});
 
+    console.log(token.data);
     console.log(token);
 
     $http.post(window.location.origin + '/webform_rest/submit?_format=json',
@@ -48,7 +49,7 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
       headers: {
         'Content-Type' : 'application/json',
         'Authorization' : 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q=',
-        'X-CSRF-Token:' : token
+        'X-CSRF-Token' : token
       },
       data : postData
     });
