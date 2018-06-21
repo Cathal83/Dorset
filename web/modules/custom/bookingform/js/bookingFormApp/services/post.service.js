@@ -36,24 +36,17 @@ bookingformJS.service("postService", function ($filter, $location, $http) {
 
     };
 
-    var config = {
-      headers : {
-        'Content-Type' : 'application/json',
-        'Authorization': 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q=',
-      }
-    }
-
     var postData = JSON.stringify(postData);
 
-    $http.post('/webform_rest/submit', postData, config).
-    success(function(data, status, headers, config) {
-      // this callback will be called asynchronously
-      // when the response is available
-      console.log(status);
-    }).
-    error(function(data, status, headers, config) {
-      console.log(status)
+    $http.post(window.location.origin + '/webform_rest/submit?_format=json',
+    {
+      headers: {
+        'Content-Type' : 'application/json',
+        'Authorization': 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q=',
+      },
+      data : postData
     });
+
   }
   return {
     submitData: submitData,
