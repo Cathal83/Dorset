@@ -1,0 +1,93 @@
+.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-8 {
+
+  margin: 0 5%;
+
+  a {
+    @include font-size($p-default);
+
+  }
+  .block-table {
+    padding-bottom: $padding-default;
+
+    .table-row {
+      padding: $fc-row-padding;
+      display: flex;
+      flex: wrap;
+      justify-content: space-between;
+      padding: $fc-row-padding;
+      min-height: $fc-row-min-hg;
+      border-bottom: $fc-row-border;
+
+      .views-field-title {
+        flex: 5;
+        margin: auto;
+        padding-right: 6%;
+
+        a {
+          color: $p-color;
+          font-weight: 400;
+
+        }
+      }
+      .views-field-view-node {
+        flex: 1;
+        margin: auto;
+        text-align: right;
+
+        a {
+          color: $dc-blue;
+
+        }
+      }
+    }
+    // PAGINATION
+    .pager {
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      bottom: 0;
+      left: 0;
+      background-color: $white;
+      padding: $block-padding;
+
+      .pager__item {
+        display: inline-block;
+        padding: 0 5px;
+
+      }
+      // Next button on Find a Course Table
+      .pager__item--next,
+      .pager__item--previous {
+        display: block;
+
+
+      }
+
+      .pager__item--next {
+        float: right;
+
+      }
+      .pager__item--previous {
+        float: left;
+
+      }
+    }
+  }
+}
+
+//Mobile CSS
+
+@media only screen and (max-width: 600px) {
+
+  #views-exposed-form-find-a-course-block-1, #views-exposed-form-find-a-course-block-2, #views-exposed-form-find-a-course-block-3, #views-exposed-form-find-a-course-block-4, #views-exposed-form-find-a-course-block-6, #views-exposed-form-find-a-course-block-8{
+    width: 100%;
+    min-height: 200px;
+    margin-left: 5%;
+  }
+
+  .block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-8 {
+      .block-table .table-row .views-field-title {
+        flex: 3;
+    }
+  }
+}
