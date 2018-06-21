@@ -288,7 +288,11 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    * */
   $scope.submitForm = function() {
     // Get CSRF code for post request
-    dataService.getCSRF().then(function(response){$scope.token = response;});
+    dataService.getCSRF().then(function(response){
+      console.log(response);
+      console.log(response.data);
+      $scope.token = response.data;
+    });
     console.log($scope.token);
     postService.submitData($scope.user, $scope.token);  
   }
