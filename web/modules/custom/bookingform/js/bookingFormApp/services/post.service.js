@@ -39,7 +39,7 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
     var postData = JSON.stringify(postData);
 
     // Get CSRF code for post request
-    dataService.getCSRF().then(function(response){ var token = response; });
+    var token = dataService.getCSRF().then(function(response){return response;});
 
     console.log(token);
 
