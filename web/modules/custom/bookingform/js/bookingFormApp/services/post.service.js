@@ -1,7 +1,7 @@
-bookingformJS.service("postService", function ($filter, $location, $http) {
+bookingformJS.service("postService", function ($filter, $location, $http, dataService) {
   // Elements to bankFormat Process
-  var submitData = function(data) {
-    console.log(data);
+  var submitData = function(data, token) {
+
     // Bookingform Fields
     var postData = {
 
@@ -22,9 +22,8 @@ bookingformJS.service("postService", function ($filter, $location, $http) {
       country: data.contactaddress.country,
       city_town: data.contactaddress.city,
       postal_code: data.contactaddress.postalcode,
-      payment: "", // Yes/No
       stripe_id: "",
-      payment_type: "",
+      payment_type: data.payment.type_id,
       payment_amount: data.payment.amount,
       contact_address_as_billing: data.billingaddress.billingcontact,
       billing_address_1: data.billingaddress.address1,
@@ -33,23 +32,29 @@ bookingformJS.service("postService", function ($filter, $location, $http) {
       billing_postal_code: "",
       documents: "",
       documents_submitted: "",
-      dropbox_folder_name: "",
+      dropbox_folder_name: ""
 
     };
 
+    var postData = JSON.stringify(postData);
+
+    console.log(token);
+
     var config = {
       headers : {
-        'Content-Type' : 'application/json',
-        'Authorization': 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q=',
+        'X-CSRF-Token' : token,
+        'Content-Type': 'application/json',
+        'Authorization' : 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q='
       }
     }
-    console.log(data.date);
 
-    $http.post('/webform_rest/submit', data, config)
-    .then( function(data, status, headers, config){
-      console.log(data);
-      console.log(status);
+    $http.post('/webform_rest/submit', postData, config)
+    .then(function successCallback(response) {
+      console.log(response);
+    }, function errorCallback(response) {
+      console.log(response);
     });
+    
   }
   return {
     submitData: submitData,

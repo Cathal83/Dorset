@@ -58,6 +58,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   $scope.years = [];
   $scope.nationalities;
   $scope.countries;
+  $scope.token = '';
 
   /**
    * Generates future 10 years
@@ -92,6 +93,14 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
 
     $scope.nationalities = response;
 
+  });
+
+  // Get CSRF code for post request
+  dataService.getCSRF().then(function(response){
+
+    console.log(response);
+    $scope.token = response;
+    
   });
 
   // Scope all product data from functions§
@@ -283,12 +292,17 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     }
 
   }
+
   /** 
    * Final submit 
    * */
   $scope.submitForm = function() {
-    postService.submitData($scope.user);  
+
+    console.log($scope.token);
+    postService.submitData($scope.user, $scope.token);  
+
   }
+
   /**
    * Controller for Templates and Form Steps
   */
