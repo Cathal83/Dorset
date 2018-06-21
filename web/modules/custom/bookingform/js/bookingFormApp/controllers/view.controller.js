@@ -27,8 +27,11 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
       // Documents Sumissions
       case 'customer-details' :
         // if documents needed go to documents submissions, if not payment
-        if($scope.productData[0].document == "") {
+        if($scope.productData[0].document == "" && $scope.productData[0].application_type == "60") {
           // Get prices for the chosen course and delivery mode
+          return 'summary'
+        }
+        else if ($scope.productData[0].application_type == "61") {
           return 'payment'
         }
         else {
