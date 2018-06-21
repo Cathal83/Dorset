@@ -97,8 +97,10 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
 
   // Get CSRF code for post request
   dataService.getCSRF().then(function(response){
+
     console.log(response);
     $scope.token = response;
+    
   });
 
   // Scope all product data from functions§

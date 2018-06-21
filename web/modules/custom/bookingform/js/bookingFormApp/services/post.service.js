@@ -43,9 +43,10 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
     $http.post(window.location.origin + '/webform_rest/submit?_format=json',
     {
       headers: {
+        'X-CSRF-Token' : token,
         'Content-Type' : 'application/json',
-        'Authorization' : 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q=',
-        'X-CSRF-Token' : token
+        'Authorization' : 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q='
+        
       },
       data : postData
     });
