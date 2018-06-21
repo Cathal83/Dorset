@@ -66,7 +66,7 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
       }
     }
 
-    $http.post('/ServerRequest/PostDataResponse', postData, config)
+    $http.post('/webform_rest/submit', postData, config)
     .success(function (data, status, headers, config) {
       console.log(data);
     })
