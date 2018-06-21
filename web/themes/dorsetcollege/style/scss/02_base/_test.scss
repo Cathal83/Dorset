@@ -593,3 +593,7 @@ p.arrow-right::after, a.arrow-right::after{
      color: #5D5D5D;   
   }
 }
+
+#cboxContent {
+  overflow: scroll !important;
+}
