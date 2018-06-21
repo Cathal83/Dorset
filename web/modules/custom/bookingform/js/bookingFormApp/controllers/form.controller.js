@@ -58,6 +58,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   $scope.years = [];
   $scope.nationalities;
   $scope.countries;
+  $scope.token = '';
 
   /**
    * Generates future 10 years
@@ -290,8 +291,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     // Get CSRF code for post request
     dataService.getCSRF().then(function(response){
       console.log(response);
-      console.log(response.data);
-      $scope.token = response.data;
+      $scope.token = response;
     });
     console.log($scope.token);
     postService.submitData($scope.user, $scope.token);  
