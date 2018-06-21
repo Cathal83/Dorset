@@ -1,0 +1,160 @@
+//About Page
+
+@media only screen and (max-width: 975px) {
+
+///updated padding
+  .geolocation-formatter-map-wrapper{
+    display: inline-block;
+    width: 95%;
+    padding: 1.5% 3%;
+    float: left;
+  }
+
+}
+
+//Paragraph CSS
+
+.left-paragraph p{
+  font-size: 11px;
+}
+
+// Paragraph Tablet CSS
+
+@media screen and (max-width: 975px) and (min-width: 600px) {
+
+  .left-paragraph p{
+    font-size: 11px;
+  }
+}
+
+//Admissions Page
+
+.path-about-us .right-paragraph p{
+  font-size: 11px;
+}
+
+//Remove lines below from original SCSS file:
+
+/*.paragraph--type--page-introduction{
+  margin-top: 1.15em;
+  margin-bottom: 1.15em;
+}*/
+
+//Overwrite existing code
+.node_54 .paragraph--type--linked-icons{
+  background-color: #F2F2F2;
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 1em;
+}
+
+//Overwrite existing code and add screen size
+
+@media only screen and (min-width: 600px) {
+
+.node_54 .paragraph--type--paragraph-statistic{
+  display: inline-block;
+  width: 21% !important;
+  flex: inherit !important;
+  float:left;
+  text-align: center;
+  padding: 2%;
+}
+}
+
+// - About Us Page
+
+.path-frontpage .views-field.views-field-view-node .field-content a{
+    border-bottom: 1px solid #F2F2F2;
+    margin-top: 2em;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 38%;
+    margin-right: 30%;
+}
+
+.path-about-us .paragraph--type--paragraph-statistic{
+    display: inline-block;
+    width: 16%;
+    flex: inherit !important;
+    float:left;
+    text-align: center;
+    padding: 2%;
+}
+
+.path-about-us  .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7{
+    background-color: #F2F2F2;
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 1em;
+}
+
+//Removed lines:
+/*@media screen and (max-width: 1200px) and (min-width: 975px) {
+  .path-about-us  .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7{
+      //height: 25em;
+  }
+}
+
+@media screen and (max-width: 975px) and (min-width: 600px) {
+  .path-about-us  .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7{
+      height: 30em;
+  }
+}*/
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+  ///About US - mobile
+  .path-about-us .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default img{
+    float: left;
+    padding: 2%;
+  }
+
+  //Removed lines:
+
+    /*.path-about-us .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7{
+      height: 55em;
+    }
+  }*/
+
+  ///Admissions - mobile
+  .node_54 .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default img{
+    float: left;
+    padding: 2%;
+  }
+
+  .paragraph--type--paragraph-statistic{
+    width: 50%;
+    padding: 6%;
+  }
+  //Remove lines below from existing file
+  /*.paragraph--type--linked-icons{
+    height: 22.5em;
+  }*/
+
+  .node_54 .left-paragraph.col-sm-6 {
+    float:none;
+    width: 90%;
+  }
+
+  .node_54 .right-paragraph.col-sm-6 {
+    width: 90%;
+  }
+
+  //Paragraph CSS
+  .left-paragraph p{
+    font-size: 11px;
+  }
+
+  .left-paragraph, {
+    padding: 0 5%;
+  }
+
+  .right-paragraph, {
+    padding: 0 5%;
+  }
+
+}
