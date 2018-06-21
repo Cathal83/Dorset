@@ -1,7 +1,7 @@
-bookingformJS.service("postService", function ($filter, $location, $http) {
+bookingformJS.service("postService", function ($filter, $location, $http, dataService) {
   // Elements to bankFormat Process
   var submitData = function(data) {
-    console.log(data);
+
     // Bookingform Fields
     var postData = {
 
@@ -38,11 +38,15 @@ bookingformJS.service("postService", function ($filter, $location, $http) {
 
     var postData = JSON.stringify(postData);
 
+    // Get CSRF code for post request
+    var token = dataService.getCSRF();
+    console.log(token);
     $http.post(window.location.origin + '/webform_rest/submit?_format=json',
     {
       headers: {
         'Content-Type' : 'application/json',
-        'Authorization': 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q=',
+        'Authorization' : 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q=',
+        'X-CSRF-Token:' : token
       },
       data : postData
     });
