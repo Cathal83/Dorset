@@ -1,6 +1,6 @@
 bookingformJS.service("postService", function ($filter, $location, $http, dataService) {
   // Elements to bankFormat Process
-  var submitData = function(data) {
+  var submitData = function(data, token) {
 
     // Bookingform Fields
     var postData = {
@@ -38,10 +38,6 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
 
     var postData = JSON.stringify(postData);
 
-    // Get CSRF code for post request
-    var token = dataService.getCSRF().then(function(response){return response;});
-
-    console.log(token.data);
     console.log(token);
 
     $http.post(window.location.origin + '/webform_rest/submit?_format=json',
