@@ -565,3 +565,15 @@ p.arrow-right::after, a.arrow-right::after{
 #zone-actionblocks .zone-section .block-region-homeactionblocks .block-list-bg-img {
   z-index: 1 !important; 
 }
+
+.node_56 .paragraph.paragraph--type--icons-block-with-text.paragraph--view-mode--default{
+  display: inline-block;
+  width: 100%;
+  
+  .paragraph--type--paragraph-statistic {
+    width: 33%;
+    float: left;
+    margin: 2em 0;
+    text-align: center;
+  }
+}
