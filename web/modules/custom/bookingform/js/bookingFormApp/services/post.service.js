@@ -40,7 +40,7 @@ bookingformJS.service("postService", function ($filter, $location, $http) {
     var config = {
       headers : {
         'Content-Type' : 'application/json',
-        'Authorization': 'Basic d2ViZm9ybV91c2VyOlhDV2lXYkY5RnlUcGNGZmdBb3p1QVp0TA==',
+        'Authorization': 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q=',
       }
     }
     console.log(data.date);

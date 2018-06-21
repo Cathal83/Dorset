@@ -141,7 +141,6 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   $scope.scopePrices = function(price_type) {
     console.log(price_type);
     console.log('trigered');
-    $scope.user.payment.type_txt = price_type; 
     $scope.user.payment.amount = $scope.productPrices[0].full_amount;
     console.log(prices);
   }
@@ -285,7 +284,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    * Final submit 
    * */
   $scope.submitForm = function() {
-    postService.submitData($scope.user);
+    postService.submitData($scope.user);  
   }
   /**
    * Controller for Templates and Form Steps
