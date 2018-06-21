@@ -102,3 +102,8 @@ p {
   font-weight: 700;
 
 }
+
+li{
+    @include font-size($p-font-sizes);
+    font-weight: $p-weight;
+}
