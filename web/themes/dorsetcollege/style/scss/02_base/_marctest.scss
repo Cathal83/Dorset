@@ -56,8 +56,6 @@
 
 // Marc CSS Starts Here - Course Page
 
-
-
 .block-views-blockcourses-view-block-7 h2{
   font-size: 30px;
   color: #FFFFFF;
@@ -86,10 +84,45 @@
 }
 
 
-
 // Course Page Mobile CSS
 
 @media only screen and (max-width: 600px) {
+
+  .become{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .block-views-blockcourses-view-block-9 .cols-2{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .block-views-blockcourses-view-block-10 .cols-2{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .block-views-blockcourses-view-block-4 .price-element{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .block-views-blockcourses-view-course-prices-view .cols-3{
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+  }
+
+  .block-views-blockcourses-view-course-prices-view .cols-3 .col-sm-4{
+    padding-right: 8%;
+  }
+
+  .block-views-blockcourses-view-block-5 .col-sm-12{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
   .block-views-blockcourses-view-block-2 {
     width: 100%;
     height: auto;
@@ -115,6 +148,11 @@
         font-size: 11px;
     }
 }
+
+   .course-apply{
+    margin-left: 9em;
+    margin-top: -6.5em;
+  }
 
   .block-views-blockcourses-view-block-14 {
     width: 100% !important;
@@ -157,7 +195,7 @@
 
 @media screen and (max-width: 900px) and (min-width: 600px) {
   .block-views-blockcourses-view-block-2 {
-    height: 354px;
+    height: 375px;
   }
 
   .block-views-blockcourses-view-block-2 div{
@@ -195,7 +233,7 @@
   }
 
   .block-views-blockcourses-view-block-7{
-    height: 394px;
+    height: 415px;
     margin-top: -40px;
   }
 
@@ -266,11 +304,11 @@
 
 //To Become Bullet Items
 
-.paragraph--type--dorset-course-become {
+.become .paragraph--type--dorset-course-become {
   padding: 1em 0em;
 }
 
-.paragraph--type--dorset-course-become div div div{
+ .become .paragraph--type--dorset-course-become div div div{
   background-size: 32px 32px;
   padding: 2em 0em 2em 2.5em;
   font-family: Lato;
@@ -281,7 +319,7 @@
 //Mobile To Become
 
 @media only screen and (max-width: 600px) {
-  .paragraph--type--dorset-course-become div div div{
+  .become .paragraph--type--dorset-course-become div div div{
     background-size: 30px 30px;
     padding: 2em 2em 2em 4.5em;
     font-family: Lato;
@@ -524,6 +562,16 @@
   height: 120px;
 }
 
+.price-element .field-content{
+  font-weight: 700;
+}
+
+.price-element .field-content p{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: normal;
+}
+
 // Home Page Desktop CSS
 
 @media only screen and (min-width: 600px) {
@@ -720,6 +768,14 @@
 }
 
 #block-dorsetcollege-branding #main-menu-trigger{
+  display: none;
+}
+
+#block-dorsetcollege-main-menu .sub-menu{
+  display: none;
+}
+
+#block-dorsetcollege-main-menu #main-menu-trigger{
   display: none;
 }
 
@@ -1039,7 +1095,7 @@
     height: 300px;
     padding-left: 10%;
 
-    .paragraph--type--statistics-wrapper{
+    .path-student-life .paragraph--type--statistics-wrapper{
       width: 50%;
       display: inline-block;
       float: left;
@@ -1082,7 +1138,7 @@
 }
 
 .left-paragraph p{
-  font-size: 20px;
+  font-size: 16px;
 }
 
 // Paragraph Tablet CSS
@@ -1090,7 +1146,7 @@
 @media screen and (max-width: 975px) and (min-width: 600px) {
 
   .left-paragraph p{
-    font-size: 14px;
+    font-size: 11px;
   }
 }
 
@@ -1099,7 +1155,7 @@
 @media only screen and (max-width: 600px) {
 
   .left-paragraph p{
-    font-size: 14px;
+    font-size: 11px;
   }
 
   .left-paragraph, {
@@ -1115,12 +1171,6 @@
 
 //Brendan - Admissions
 
-//.header-image, .header-img{
-//  background-color: #F2F2F2;
-//  padding-bottom: 2em;
-//}
-
-
 .paragraph--type--page-introduction{
   margin-top: 1.15em;
   margin-bottom: 1.15em;
@@ -1132,7 +1182,7 @@
 }
 
 
-.node_54 .paragraph--type--paragraph-statistic{ 
+.node_54 .paragraph--type--paragraph-statistic{
   width: 25% !important;
   flex: inherit !important;
   padding: 50px 0px;
@@ -1144,7 +1194,7 @@
 
 @media only screen and (max-width: 600px) {
 
-  .paragraph--type--paragraph-statistic{
+  .node_54 .paragraph--type--paragraph-statistic{
     width: 50%;
     padding: 25px 0;
   }
@@ -1166,10 +1216,10 @@
      display: flex;
      padding-left: 6%;
      padding-right: 6%;
-     
+
       div{
         width: 20%;
-        
+
         div{
               width: 120px;
               height: 120px;
@@ -1268,7 +1318,7 @@
   float:left;
   text-align: center;
   padding: 4%;
-  
+
   .stat-content{
     padding-left: 2%;
     padding-right: 2%;
@@ -1290,4 +1340,115 @@
     display: inline-block;
     text-align: center;
   }
+}
+
+// Find a Course pagination
+
+.block-views-blockfind-a-course-block-1 .block-table .pager .pager__item a{
+  color: #5D5D5D;
+}
+
+.block-views-blockfind-a-course-block-1 .block-table .pager .pager__item--first{
+  display: none!important;
+}
+
+.block-views-blockfind-a-course-block-1 .block-table .pager .pager__item--last{
+  display: none!important;
+}
+
+.block-views-blockfind-a-course-block-1 .block-table .pager .btn-red{
+  padding: 0;
+  background-color: #FFF;
+}
+
+.block-views-blockfind-a-course-block-1 .block-table .js-pager__items{
+  float: left;
+}
+
+.pager .is-active a{
+  background-color: $dc-blue!important;
+  color: $white !important;
+  padding: 4px 8px;
+}
+
+#views-exposed-form-find-a-course-block-1 .form-checkboxes label{
+  padding-left: 1em;
+  color: #6D6E71;
+}
+
+#views-exposed-form-find-a-course-block-1 .js-form-item{
+  padding: 10px 20px;
+}
+
+#views-exposed-form-find-a-course-block-1 .form-checkboxes .form-checkbox{
+  background-color: $white;
+  cursor: pointer;
+  border-radius: 0;
+  border: 1px solid #979797;
+}
+
+.menu-item--active-trail a{
+  color: #3366FF !important;
+  border-bottom: 2px solid #3366FF !important;
+}
+
+
+@media screen and (max-width: 975px) and (min-width: 600px) {
+  #views-exposed-form-find-a-course-block-1 .js-form-item{
+    padding: 10px 0px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #views-exposed-form-find-a-course-block-1 summary{
+    font-size: 11px;
+    padding: 1em 1.5em!important;
+  }
+
+  #views-exposed-form-find-a-course-block-1 .filter-trigger{
+    font-size: 11px;
+  }
+
+  #views-exposed-form-find-a-course-block-1 .form-checkboxes label{
+    font-size: 11px;
+  }
+}
+
+.block-views-blockcourses-view-block-14 .price-element:nth-child(1) span{
+    position: relative;
+    top: 8.5em;
+    color: #5D5D5D;
+}
+
+.block-views-blockcourses-view-block-14 .price-element:nth-child(2) span{
+  display: none;
+}
+
+@media screen and (max-width: 975px) and (min-width: 600px) {
+  .block-views-blockcourses-view-block-14 .price-element:nth-child(1) span{
+      top: 8em;
+      font-size: 11px;
+  }
+  .block-views-blockcourses-view-block-14 div .field-content{
+    top: 6.5em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .block-views-blockcourses-view-block-14 .price-element:nth-child(1) span{
+      top: 8em;
+      font-size: 11px;
+  }
+  .block-views-blockcourses-view-block-14 div .field-content{
+    top: 6em;
+  }
+
+  .page-node-type-course .cat.choose .zone-section .block-region-headerimage{
+    height: 200px;
+  }
+}
+
+.block-views-blockcourses-view-block-4 div{
+  padding: 2.5px 0px;
 }
