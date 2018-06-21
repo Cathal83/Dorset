@@ -32,7 +32,7 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
       billing_postal_code: "",
       documents: "",
       documents_submitted: "",
-      dropbox_folder_name: "",
+      dropbox_folder_name: ""
 
     };
 
@@ -40,17 +40,6 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
 
     console.log(token);
     /**
-    $http.post(window.location.origin + '/webform_rest/submit',
-    {
-      headers: {
-        "X-CSRF-Token" : token,
-        "Content-Type" : "application/json",
-        "Authorization" : "Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q="
-        
-      },
-      data : postData
-    });
-    */
     $http({
       url: window.location.origin + '/webform_rest/submit',
       method: "POST",
@@ -68,7 +57,26 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
     function(response) { // optional
       console.log(response);
     });
+    */
+    var config = {
+      headers : {
+        'X-CSRF-Token' : token,
+        'Content-Type': 'application/json',
+        'Authorization' : 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q='
+      }
+    }
 
+    $http.post('/ServerRequest/PostDataResponse', postData, config)
+    .success(function (data, status, headers, config) {
+      console.log(data);
+    })
+    .error(function (data, status, header, config) {
+      var ResponseDetails = "Data: " + data +
+        "<hr />status: " + status +
+        "<hr />headers: " + header +
+        "<hr />config: " + config;
+      console.log(ResponseDetails);
+    });
   }
   return {
     submitData: submitData,
