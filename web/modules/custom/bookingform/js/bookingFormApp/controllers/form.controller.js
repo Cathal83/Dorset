@@ -95,6 +95,12 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
 
   });
 
+  // Get CSRF code for post request
+  dataService.getCSRF().then(function(response){
+    console.log(response);
+    $scope.token = response;
+  });
+
   // Scope all product data from functions§
   var scopeVars = function(productData) {
 
@@ -284,18 +290,17 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     }
 
   }
+
   /** 
    * Final submit 
    * */
   $scope.submitForm = function() {
-    // Get CSRF code for post request
-    dataService.getCSRF().then(function(response){
-      console.log(response);
-      $scope.token = response;
-    });
+
     console.log($scope.token);
     postService.submitData($scope.user, $scope.token);  
+
   }
+
   /**
    * Controller for Templates and Form Steps
   */
