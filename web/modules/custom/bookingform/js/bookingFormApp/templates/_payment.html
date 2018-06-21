@@ -18,14 +18,14 @@
         <h4>Choose a payment Option:</h4>
         <div class="form-row">
           <div class="form-opt">
-              <label>
+              <label ng-if="productPrices[0].full_amount">
                 <p>Full Amount:</p>
-                <input type="radio" name="paymentchoice" ng-value="full_amount" value="full_amount" ng-model="user.paymentchoice" ng-click="scopePrices(user.paymentchoice)" checked="checked"
+                <input type="radio" name="paymentchoice" value="full_amount" value="full_amount" ng-model="user.payment.type_id" ng-click="scopePrices(user.payment.type_id)" checked="checked"
                 required /> €{{ productPrices[0].full_amount }}
               </label>
-              <label>
+              <label ng-if="productPrices[0].deposit">
                 <p>Deposit:</p>
-                <input type="radio" name="paymentchoice" ng-value="deposit" value="deposit" ng-model="user.paymentchoice" ng-click="scopePrices(user.paymentchoice)"
+                <input type="radio" name="paymentchoice" value="deposit" value="deposit" ng-model="user.payment.type_id" ng-click="scopePrices(user.payment.type_id)"
                 required /> €{{ productPrices[0].deposit }}
               </label>
             </div>
