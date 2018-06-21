@@ -139,10 +139,14 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    * Scopes prices to the user data
    */
   $scope.scopePrices = function(price_type) {
-    console.log(price_type);
-    console.log('trigered');
-    $scope.user.payment.amount = $scope.productPrices[0].full_amount;
-    console.log(prices);
+
+    if (price_type == 'full_amount') {
+      $scope.user.payment.amount = $scope.productPrices[0].full_amount;
+    }
+    else {
+      $scope.user.payment.amount = $scope.productPrices[0].deposit;
+    }
+
   }
 
   /**
@@ -201,7 +205,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     dataService.getProductPrices(nid, delid).then(function(response){
 
       $scope.productPrices = response;
-      console.log(response);
+
     });
 
   }
@@ -244,7 +248,6 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   var productDocuments = function(productData, productDelivery) {
 
     var data = formService.productDocuments(productData, productDelivery);
-    console.log(data);
     var steps = formService.getSteps(data);
     $scope.productData = data;
     $scope.steps = steps;
