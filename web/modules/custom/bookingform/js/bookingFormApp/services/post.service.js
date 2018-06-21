@@ -39,25 +39,7 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
     var postData = JSON.stringify(postData);
 
     console.log(token);
-    /**
-    $http({
-      url: window.location.origin + '/webform_rest/submit',
-      method: "POST",
-      data: { postData },
-      headers: {
-        'X-CSRF-Token' : token,
-        'Content-Type' : 'application/json',
-        'Authorization' : 'Basic ZGNhZG1pbjpKQHYxM3JEMHJzM3Q='
-        
-      }
-    })
-    .then(function(response) {
-      console.log(response);
-    }, 
-    function(response) { // optional
-      console.log(response);
-    });
-    */
+
     var config = {
       headers : {
         'X-CSRF-Token' : token,
@@ -67,16 +49,12 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
     }
 
     $http.post('/webform_rest/submit', postData, config)
-    .success(function (data, status, headers, config) {
-      console.log(data);
-    })
-    .error(function (data, status, header, config) {
-      var ResponseDetails = "Data: " + data +
-        "<hr />status: " + status +
-        "<hr />headers: " + header +
-        "<hr />config: " + config;
-      console.log(ResponseDetails);
+    .then(function successCallback(response) {
+      console.log(response);
+    }, function errorCallback(response) {
+      console.log(response);
     });
+    
   }
   return {
     submitData: submitData,
