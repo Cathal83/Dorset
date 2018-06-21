@@ -561,3 +561,7 @@ p.arrow-right::after, a.arrow-right::after{
   font-size: 60px;
   text-align: left;
 }
+
+#zone-actionblocks .zone-section .block-region-homeactionblocks .block-list-bg-img {
+  z-index: 1 !important; 
+}

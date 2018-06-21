@@ -59,6 +59,7 @@
       font-size: 20px;
       color: #5D5D5D;
       text-align: center;
+      line-height: initial;
   }
     .views-label {
       position: relative;
@@ -68,7 +69,6 @@
       text-align: center;
   }
 }
-
 
 .block-views-blockcourses-view-block-7{
   width: 33.3% !important;
@@ -80,6 +80,34 @@
   background-size: cover;
   background-position: 50% 50%;
 }
+
+.block-views-blockcourses-view-block-7 h2{
+  font-size: 30px;
+  color: #FFFFFF;
+  padding: 27.5% 20% 0% 20%;
+  text-align: left;
+}
+
+.block-views-blockcourses-view-block-7 .list-element{
+  font-size: 16px;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 10% 20% 20% 20%;
+}
+
+.block-views-blockcourses-view-block-7 .list-element div{
+  visibility: visible !important;
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.block-views-blockcourses-view-block-7 .paragraph--view-mode--default div{
+  visibility: hidden;
+}
+
 
 .block-views-blockcourses-view-block-14 {
   width: 16.65% !important;
@@ -101,180 +129,11 @@
   }
   .field-content{
     position: relative;
-    top: 8.5em;
+    top: 7.5em;
     font-size: 20px;
     color: #5D5D5D;
     text-align: center;
   }
-}
-
-#zone-actionblocks .zone-section .block-region-homeactionblocks .block-list-bg-img {
-  z-index: 1 !important; 
-}
-
-// Course Module page
-
-.page-node-type-course-module, #cboxContent{
-
-  #section-header{
-    display: none;
-  }
-
-  #section-footer{
-    display: none;
-  }
-
-  footer{
-    display: none;
-  }
-
-  .region-content article{
-    position: absolute;
-    padding: 5%;
-  }
-
-  .modtitle{
-    display: inline-block;
-    float: left;
-    background-color: $dc-grey;
-    width: 34%;
-    height: 50px;
-    padding: 2%;
-    font-size: 16px;
-    line-height: 1.68;
-    color: #5D5D5D;
-  }
-
-  .modtitle div:first-child{
-    font-weight: 700;
-  }
-
-  .modstat{
-    display: inline-block;
-    float: right;
-    background-color: $dc-grey;
-    width: 16.66%;
-    height: 50px;
-    padding: 2%;
-    font-size: 16px;
-    line-height: 1.68;
-    color: #5D5D5D;
-  }
-
-  .modstat div:first-child{
-    font-weight: 700;
-  }
-
-  .modstat a{
-    color: #5D5D5D;
-    font-weight: 400;
-  }
-
-  .modsemester{
-    display: inline-block;
-    float: right;
-    background-color: $dc-grey;
-    width: 16.66%;
-    height: 50px;
-    padding: 2%;
-    font-size: 16px;
-    line-height: 1.68;
-    color: #5D5D5D;
-  }
-
-  .modsemester div:first-child{
-    font-weight: 700;
-  }
-
-  .modcred{
-    display: inline-block;
-    float: right;
-    background-color: $dc-grey;
-    width: 16.66%;
-    height: 50px;
-    padding: 2%;
-    font-size: 16px;
-    line-height: 1.68;
-    color: #5D5D5D;
-  }
-
-  .modcred div:first-child{
-    font-weight: 700;
-  }
-
-  .moddesc{
-    display: block;
-    clear: both;
-    padding: 2%;
-  }
-
-  .moddesc p:first-child{
-    font-size: 25px;
-    line-height: 1.44;
-    color: #505D5D;
-    font-weight: 700;
-    margin: 0 0 25px;
-  }
-
-  .modindc{
-    display: block;
-    clear: both;
-    padding: 2%;
-  }
-
-  .modindc p:first-child{
-    font-size: 25px;
-    line-height: 1.44;
-    color: #505D5D;
-    font-weight: 700;
-    margin: 0 0 25px;
-  }
-
-  .modindc ul{
-    margin: 2%;
-  }
-
-  .modindc ul li{
-    font-size: 16px;
-    line-height: 1.68;
-    color: #5D5D5D;
-  }
-
-  .modass{
-    display: block;
-    clear: both;
-    padding: 2%;
-    background-color: $dc-grey;
-    height: 80px;
-    font-size: 16px;
-    line-height: 1.68;
-    color: #5D5D5D;
-  }
-
-  .modass div:nth-child(3){
-    font-weight: 700;
-  }
-
-
-  .modass .paragraph--type--dorset-module-detail div{
-    display: inline-block;
-  }
-
-  .modass div .paragraph--type--dorset-module-detail div{
-    float: left;
-    width: 25%;
-  }
-
-  .modass div .paragraph--type--dorset-module-detail div div:nth-child(1){
-    clear: both;
-    width: 100%;
-    font-weight: 700;
-  }
-
-  .modass div .paragraph--type--dorset-module-detail div div:nth-child(2){
-    clear: both;
-  }
-
 }
 
 // Mobile CSS
