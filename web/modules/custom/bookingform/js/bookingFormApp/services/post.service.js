@@ -43,11 +43,16 @@ bookingformJS.service("postService", function ($filter, $location, $http) {
       }
     }
 
-    $http.post('/webform_rest/submit', data, config)
-    .then( function(data, status, headers, config){
-      console.log(data);
+    var postData = JSON.stringify(postData);
+
+    $http.post('/webform_rest/submit', postData, config).
+    success(function(data, status, headers, config) {
+      // this callback will be called asynchronously
+      // when the response is available
       console.log(status);
-      console.log(headers);
+    }).
+    error(function(data, status, headers, config) {
+      console.log(status)
     });
   }
   return {

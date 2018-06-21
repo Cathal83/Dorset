@@ -86,7 +86,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
         break;
 
       case 'summary':
-        if($scope.productData[0].application_type == "60") {
+        if($scope.productData[0].application_type == "61") {
           return 'customer-files'
         }
         else {
