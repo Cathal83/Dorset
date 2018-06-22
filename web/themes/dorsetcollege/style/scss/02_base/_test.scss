@@ -597,3 +597,22 @@ p.arrow-right::after, a.arrow-right::after{
 #cboxContent {
   overflow: scroll !important;
 }
+
+// INDIVIDUAL NEWS ARTICLES
+.news-image {
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+    }
+}
+
+.detail-news-story{
+  h3, h1{
+    color: $h2-grey-color;
+  }
+  
+  .col-sm-12{
+    margin-bottom: 1.5em;
+  }
+}
