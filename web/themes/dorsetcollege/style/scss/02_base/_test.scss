@@ -610,9 +610,11 @@ p.arrow-right::after, a.arrow-right::after{
 .detail-news-story{
   h3, h1{
     color: $h2-grey-color;
+    margin: 0 0.5em;
   }
   
   .col-sm-12{
     margin-bottom: 1.5em;
+    padding: 1em;
   }
 }
