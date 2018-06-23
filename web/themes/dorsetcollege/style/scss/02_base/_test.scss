@@ -623,3 +623,9 @@ p.arrow-right::after, a.arrow-right::after{
 .block-views-blockacademic-calendar-view-block-pre-academic-calendar{
   background: none !important;
 }
+
+.left-paragraph, .right-paragraph{
+  h2 {
+    text-align: left;
+  }
+}
