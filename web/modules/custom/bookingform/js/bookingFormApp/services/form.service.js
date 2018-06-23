@@ -33,18 +33,22 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
          */
         var steps = {
             1 : {
+              number: 1,
               title: "Personal Details",
               description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             2 : {
+              number: 2,
               title: "Required Documents",
               description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             3 : {
+              number: 3,
               title: "Payment/ Deposit",
               description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             4 : {
+              number: 4,
               title: "Completion!",
               description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             }
@@ -56,7 +60,7 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
          * 
          */
         // Requires documents or not
-        if(productData[0].application_type == '60') {
+        if(productData[0].application_type == '60' || productData.document == "") {
 
             delete steps[2];
     

@@ -2,7 +2,8 @@
   <div class="form-title">
       <h2>Application</h2>
       <div>
-          <h1>{{ user.productname + ': ' + user.deliverymode }}</h1>
+          <h1>{{ user.productname + ': ' + user.deliveryname }}</h1>
+          {{ user }}
       </div>
   </div>
   <div class="form-fields">
@@ -16,7 +17,7 @@
         </div>
         <div class="form-opt">
           <label>Course Mode</label>
-          <div>{{ user.deliverymode }}</div>
+          <div>{{ productData[0].price_group }}</div>
         </div>
         <div>
             <a href="" ng-model="target" value="bookingForm" ng-click="goToSection('bookingForm')">Edit</a>
@@ -99,7 +100,7 @@
       <div class="form-row" ng-if="productData[0].document != ''">
         <h4>Uploaded Documents</h4>
         <div ng-repeat="doc in user.docs">
-          <div>{{ doc }}</div>
+          <div>{{ doc.name }}</div>
         </div>
       </div>
     </div>

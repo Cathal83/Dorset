@@ -9,7 +9,7 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
       application_date: data.date,
       courseid: data.productnid,
       course_name: data.productname,
-      delivery_mode: data.deliverymode,
+      delivery_mode: data.deliveryname,
       email: data.email,
       nationality: data.nationality,
       country_of_residence: data.residence,
@@ -37,9 +37,6 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
     };
 
     var postData = JSON.stringify(postData);
-
-    console.log(token);
-
     var config = {
       headers : {
         'X-CSRF-Token' : token,
