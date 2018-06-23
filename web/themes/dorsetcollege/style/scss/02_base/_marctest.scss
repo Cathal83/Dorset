@@ -1457,9 +1457,9 @@
   @include breakpoint(640px) {
     width: 25% !important;
     float:left;
+    padding: 50px 0px;
     }
     flex: inherit !important;
-    padding: 50px 0px;
     float:left;
     text-align: center;
 }
@@ -1552,6 +1552,7 @@
       text-align: inherit;
       padding-left: 7.5%;
       margin-bottom: 2em;
+      
   }
 
   .path-about-us .block-accreditations .block-icons {
