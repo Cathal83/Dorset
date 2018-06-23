@@ -1453,24 +1453,28 @@
 
 
 .node_54 .paragraph--type--paragraph-statistic{
-  width: 25% !important;
-  flex: inherit !important;
-  padding: 50px 0px;
-  float:left;
-  text-align: center;
+  
+  @include breakpoint(640px) {
+    width: 25% !important;
+    float:left;
+    }
+    flex: inherit !important;
+    padding: 50px 0px;
+    float:left;
+    text-align: center;
 }
 
 //Admissions Mobile CSS
 
 @media only screen and (max-width: 600px) {
 
-  .node_54 .paragraph--type--paragraph-statistic{
-    width: 50%;
-    padding: 25px 0;
-  }
-  .paragraph--type--linked-icons{
-    height: 22.5em;
-  }
+  //.node_54 .paragraph--type--paragraph-statistic{
+  //  width: 50%;
+  //  padding: 25px 0;
+  //}
+  //.paragraph--type--linked-icons{
+  //  height: 22.5em;
+  //}
 }
 //Brendan - About Us
 
