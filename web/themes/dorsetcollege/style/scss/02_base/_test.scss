@@ -27,7 +27,7 @@
 
 //SEARCH FORM
 .block-region-headerimage .views-exposed-form {
-    width: 100%;
+    width: 80% !important;
     position: absolute;
     top: 0;
     margin-top: 12rem;
@@ -39,7 +39,7 @@
   }
 
   input{
-  width: 40%;
+  width: 60%;
   padding: 0.75em;
   float:left;
   border-radius: 60px;
