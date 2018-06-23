@@ -220,6 +220,21 @@ input {
 
 }
 
+@media screen and (max-width: 600px) {
+.hero-image {
+  height: 309px;
+  overflow: hidden;
+  border-radius: 0 0 64% 64%/0 0 12% 12%;
+  box-shadow: inset 0 0 0 2000px rgba(45,45,45,.38);
+  
+    & img {
+      height: 309px;
+      width: auto;
+      overflow: hidden;
+    }
+  }
+}
+
 .lecturer-row.views-row.clearfix.row-2{
   margin-top: 5em !important;
 }
@@ -573,13 +588,6 @@ p.arrow-right::after, a.arrow-right::after{
     margin-top: 3rem;
     padding-left: 6%;
 }
-
-//.hero-title h2{
-//	margin: 0;
-//	color: #fff;
-//  font-size: 60px;
-//  text-align: left;
-//}
 
 #zone-actionblocks .zone-section .block-region-homeactionblocks .block-list-bg-img {
   z-index: 1 !important; 
