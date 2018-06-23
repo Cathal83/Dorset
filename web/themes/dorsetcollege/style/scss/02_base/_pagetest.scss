@@ -85,12 +85,12 @@
 	background: $dc-grey;
 	}
 
-	.block-region-headerimage{
-	height: 400px;
-	.bg-img {
-		height: 400px;
-		}
-	}
+	//.block-region-headerimage{
+	//height: 400px;
+	//.bg-img {
+	//	height: 400px;
+	//	}
+	//}
 
 	.paragraph--type--statistics-wrapper{
 		@include breakpoint(640px) { 
