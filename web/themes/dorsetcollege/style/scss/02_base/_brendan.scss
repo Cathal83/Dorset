@@ -64,14 +64,32 @@
 
 // - About Us Page
 
-.path-frontpage .views-field.views-field-view-node .field-content a{
-    border-bottom: 1px solid #F2F2F2;
-    margin-top: 2em;
-    display: inline-block;
-    font-weight: bold;
-    margin-left: 38%;
-    margin-right: 30%;
+//.contentpath-frontpage .views-field.views-field-view-node .field-content a{
+.col-news-4{
+  .main-news-link{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 85%;
+    left: 0;
+    
+    a{
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      font-weight: bold;
+      //margin-left: 38%;
+      //margin-right: 30%;
+        &:hover {
+          color: #F14950;
+          border-bottom: 2px solid #F14950;
+        } 
+    }
+  }
 }
+    
+
+
+
 
 .path-about-us .paragraph--type--paragraph-statistic{
     display: inline-block;
