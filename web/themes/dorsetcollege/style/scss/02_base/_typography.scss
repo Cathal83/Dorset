@@ -107,3 +107,7 @@ li{
     @include font-size($p-font-sizes);
     font-weight: $p-weight;
 }
+
+.hero-title h2{
+  color: #fff;
+}
