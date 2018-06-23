@@ -1,0 +1,203 @@
+
+// Form Styling
+
+.path-apply-now .form-title h2{
+  text-align: left;
+}
+
+.path-apply-now .form-row {
+  float: left;
+}
+
+.path-apply-now .form-fields {
+  display: inline-block;
+  margin-top: .5em;
+}
+
+.path-apply-now .form-fields .ng-binding{
+  color: #000;
+  font-size: 16px;
+  padding: 1.2em 0;
+}
+
+.path-apply-now .form-fields .form-row{
+  float: left;
+  padding-bottom: 1em;
+  width: 100%;
+}
+
+.path-apply-now .form-fields h2{
+  padding: 0 0 25px;
+}
+
+.path-apply-now .form-fields .form-row .ng-scope{
+  position: relative;
+}
+
+.block-bookingform{
+  width: 50%;
+  float: left;
+  background-color: #FFF;
+  margin: 2em;
+  transition: all .6s ease-in-out;
+}
+
+.path-apply-now .block-bookingform-block {
+
+  .ng-scope{
+    float: left;
+    width: 90%;
+    margin-left: 3.5%;
+  }
+
+  .ng-scope h1{
+    font-size: 30px;
+  }
+
+  .ng-binding{
+  color: #000000;
+  }
+}
+
+.path-apply-now .form-content {
+
+  .btn-cancel {
+    color: #FFF;
+      position: relative;
+      background-color: #F14950;
+      border-radius: 60px;
+      padding: 10px;
+      float:left;
+      margin-top: 1.2em;
+      margin-bottom: 1.2em;
+  }
+
+  .btn-next {
+    color: #FFF;
+      position: relative;
+      background-color: #36F;
+      border-radius: 60px;
+      padding: 10px;
+      float: left;
+      margin-top: 1.2em;
+      margin-bottom: 1.2em;
+  }
+}
+
+.error-msg{
+  padding-top: .25em;
+  margin-left: 0 !important;
+  color: $dc-red;
+}
+
+.path-apply-now .form-fields .form-wrapper h4{
+  padding: .5em 0 1em;
+}
+
+#bookingform .form-opt{
+  position: relative;
+}
+
+#bookingform .form-opt input{
+  width: 95%;
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+#bookingform .form-opt input:focus{
+  outline: none;
+}
+
+#bookingform .form-content{
+  width: 100%;
+}
+
+#bookingform .form-fields h2{
+  float: left;
+}
+
+#bookingform .form-opt input::placeholder{
+  color: #999;
+  font-size: 16px;
+  pointer-events: none;
+  position: absolute;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+#bookingform .form-opt input:focus::placeholder{
+  display: none;
+}
+
+#bookingform .form-opt input:focus{
+  border-bottom: 2px solid #757575;
+}
+
+#bookingform .form-opt select{
+  background-color: #FAFAFA;
+  height: 40px;
+  width: 92.75%;
+}
+
+.path-apply-now .bookingform-btn .btn-next, .path-apply-now .bookingform-btn .btn-back {
+    color: #FFF;
+    border-radius: 60px;
+    padding: 10px;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    position: relative;
+    float: left;
+}
+
+.path-apply-now .bookingform-btn .btn-next{
+  background-color: $dc-blue;
+  padding: 10px 12px;
+  min-width: 4em;
+  text-align: center;
+  margin-left: 10%;
+}
+
+.path-apply-now .bookingform-btn .btn-back{
+  background-color: $dc-red;
+  padding: 10px 12px;
+  min-width: 4em;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.md-datepicker-input-container.md-datepicker-invalid{
+  border-bottom: none;
+}
+
+// Form Tablet
+
+@media screen and (max-width: 975px) and (min-width: 600px) {
+
+  .block-bookingform{
+    width: 90%;
+    margin: 5%;
+  }
+}
+
+// Form Mobile
+
+@media only screen and (max-width: 600px) {
+
+  .block-bookingform{
+    width: 90%;
+    margin: 5%;
+  }
+}
+
+//Find a Course pagination fix
+
+.block-views-blockfind-a-course-block-1 .block-table .pager .pager__item{
+  display: block!important;
+  float: left;
+  list-style: none;
+}
