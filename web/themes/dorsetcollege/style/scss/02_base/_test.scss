@@ -489,8 +489,11 @@ p.arrow-right::after, a.arrow-right::after{
 //Student Life Index Page
 
 .path-student-life .block-list-bg-img, .path-current-students .block-list-bg-img{
+      width: 100%;
+      @include breakpoint(640px) {
+        width: 33.33333%;
+      }
       position: relative;
-      width: 33.33333%;
       height: 300px;
       display: inline-block !important;
       padding: 0;
