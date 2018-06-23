@@ -27,14 +27,14 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
       // Documents Sumissions
       case 'customer-details' :
         // if documents needed go to documents submissions, if not payment
-        if($scope.productData[0].document == "" && $scope.productData[0].application_type == "60") {
+        if(!$scope.productData[0].document && $scope.productData[0].application_type == "61") {
           // Get prices for the chosen course and delivery mode
           return 'summary'
         }
-        else if ($scope.productData[0].application_type == "61") {
+        else if ($scope.productData[0].application_type == "60") {
           return 'payment'
         }
-        else {
+        else if ($scope.productData[0].application_type == "61") {
           return 'customer-files';
         }
         break;
@@ -42,7 +42,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
       // Go to Payment from Customer Documents
       case 'customer-files' :
         // Application type 38 = no payment available
-        if($scope.productData[0].application_type == "60") {
+        if($scope.productData[0].application_type == "61") {
           return 'summary'
         }
         else {
@@ -89,10 +89,13 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
         break;
 
       case 'summary':
-        if ($scope.productData[0].application_type == "60" && $scope.productData[0].document != "") {
+        if ($scope.productData[0].application_type == "61") {
           return 'customer-files'
         }
-        else {
+        else if (!$scope.productData[0].document && $scope.productData[0].application_type == "60") {
+          return 'customer-details'
+        }
+        else if ($scope.productData[0].application_type == "60"){
           return 'payment'
         }
         break; 

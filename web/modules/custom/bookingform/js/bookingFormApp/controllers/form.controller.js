@@ -6,6 +6,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     date : new Date(),
     productname : "",
     deliverymode : "",
+    deliveryname : "",
     firstname : "",
     lastname : "",
     country : "Ireland",
@@ -34,7 +35,9 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
       type_id: "",
       type_txt: "",
       amount: ""
-    }
+    },
+    // Document Details
+    docs : {}
   }
 
   $scope.payment = {
@@ -98,7 +101,6 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   // Get CSRF code for post request
   dataService.getCSRF().then(function(response){
 
-    console.log(response);
     $scope.token = response;
     
   });
@@ -111,6 +113,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     $scope.productData = productData;
     $scope.user.productnid = productData[0].nid;
     $scope.user.productname = productData[0].title;
+    $scope.user.deliveryname = productData[0].price_group;
     $scope.user.application = productData[0].application_type;
 
     // In case only one option it selects it by default
@@ -258,6 +261,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
 
     var data = formService.productDocuments(productData, productDelivery);
     var steps = formService.getSteps(data);
+
     $scope.productData = data;
     $scope.steps = steps;
   
