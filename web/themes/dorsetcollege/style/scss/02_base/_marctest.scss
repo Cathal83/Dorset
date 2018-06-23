@@ -1611,10 +1611,10 @@
 
 @media only screen and (max-width: 600px) {
 
-  .paragraph.paragraph--type--icons-block-with-text.paragraph--view-mode--default .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default{
+  .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default{
     width: 90%;
     display: inline-block;
-    text-align: center;
+    text-align: left !important;
   }
 }
 
