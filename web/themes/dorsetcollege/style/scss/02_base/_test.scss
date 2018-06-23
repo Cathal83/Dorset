@@ -127,6 +127,7 @@
 .block-links {
     @include breakpoint(640px) {  
       margin-top: 15rem !important;
+      width: 80% !important;
       }
     padding-left: 6% !important;
 }
