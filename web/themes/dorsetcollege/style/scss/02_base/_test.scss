@@ -393,6 +393,17 @@ p.arrow-right::after, a.arrow-right::after{
   clear: both;
 }
 
+
+.header-image {
+  width: 100%;
+
+  img{
+  width: 100%;
+  height: auto;
+  border-radius: 0 0 64% 64%/0 0 12% 12%;
+  }
+}
+
 @media screen and (max-width: 600px) {
 .hero-image {
   height: 309px;
@@ -406,16 +417,6 @@ p.arrow-right::after, a.arrow-right::after{
       overflow: hidden;
       border-radius: 0;
     }
-  }
-}
-
-.header-image {
-  width: 100%;
-
-  img{
-  width: 100%;
-  height: auto;
-  border-radius: 0 0 64% 64%/0 0 12% 12%;
   }
 }
 
