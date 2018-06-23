@@ -212,6 +212,7 @@ input {
 }
 
 .header-img{
+    height: 309px !important;
   @include breakpoint(640px) {
     height: 390px !important;
     

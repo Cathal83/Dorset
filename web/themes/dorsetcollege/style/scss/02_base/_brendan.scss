@@ -145,7 +145,10 @@
   }
 
   .paragraph--type--paragraph-statistic{
-    width: 50%;
+    width: 100%;
+    @include breakpoint(640px) {  
+      width: 50%;
+    }
     padding: 6%;
   }
   //Remove lines below from existing file
