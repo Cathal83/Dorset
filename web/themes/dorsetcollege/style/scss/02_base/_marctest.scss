@@ -1544,7 +1544,9 @@
 
 @media only screen and (max-width: 600px) {
 
-  .path-about-us .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7 .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default{
+  //.path-about-us .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7 .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default{
+   .paragraph--type--paragraph-statistic{
+  
       width: inherit;
       float:none;
       text-align: inherit;
@@ -1571,9 +1573,9 @@
     margin-bottom: 0em;
   }
 
-  .path-about-us .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7{
-    height: 55em;
-  }
+  //.path-about-us .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7{
+  //  height: 55em;
+  //}
 }
 //Brendan - College Faculties
 
