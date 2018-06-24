@@ -35,13 +35,6 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
       documents_submitted: "",
 
     };
-    
-    // folder name in case of file upload
-    if( data.user.docs.foldeId ) {
-      var postData = {
-        dropbox_folder_name = data.user.docs.folderId
-      };
-    }
 
     var postData = JSON.stringify(postData);
     var config = {
