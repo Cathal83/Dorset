@@ -123,6 +123,12 @@ bookingFormDateConfig:
     dependencies:
       - bookingform/angularjs
 
+bookingPaymentConfig:
+  js:
+    js/bookingFormApp/config/payment.config.js: {}
+  dependencies:
+      - bookingform/angularjs
+
 bookingDataService:
     js:
       js/bookingFormApp/services/data.service.js: {}

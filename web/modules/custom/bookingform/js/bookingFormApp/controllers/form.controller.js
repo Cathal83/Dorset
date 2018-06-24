@@ -324,7 +324,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
         // Status Data
         delete $scope.status.processing;
         $scope.status.payment = 1;
-
+        // 200 = no errors
         if (response == '200') {
           // Payment status update
           $scope.payment.status = 'Yes';
@@ -355,11 +355,35 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
       /**
        * Documents Application
        */
-      $scope.docsUp().then(function(response) {
+      delete $scope.status.processing;
+
+      function uploadResult() {
+        var result = $scope.docsUp();
+        console.log(result);
+        return result;
+
+      }
+
+      return uploadResult.then(function(response) {
+        console.log(response);
+      });
+      console.log(uploadResult);
+      console.log($scope.status);
+
+      // Sends Data
+      postService.submitData($scope.user, $scope.token).then(function (response) {
         // Status Data
-        delete $scope.status.processing;
-        $scope.status.upload = 1;
-        
+        delete $scope.status.payment;
+        $scope.status.data = 1;
+
+        console.log(response);
+        if (response == 200) {
+          console.log('Data submitted');
+          $scope.goToNextSection(true);
+        }
+        else {
+          console.log('Error uploading Data')
+        }
       });
     }   
   }

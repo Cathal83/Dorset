@@ -44,6 +44,7 @@
             'bookingform/bookingFormApp',
             'bookingform/bookingFormConfig',
             'bookingform/bookingDateConfig',
+            'bookingform/bookingPaymentConfig',
             'bookingform/bookingDataService',
             'bookingform/bookingFormService',
             'bookingform/bookingPostService',

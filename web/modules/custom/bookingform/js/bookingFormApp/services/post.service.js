@@ -33,7 +33,7 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
       billing_postal_code: "",
       documents: "",
       documents_submitted: "",
-      dropbox_folder_name: ""
+      dropbox_folder_name: data.user.docs.folderId
 
     };
 
