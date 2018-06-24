@@ -13,6 +13,7 @@ bookingformJS.controller("docsCtrl", function($scope, $http, $filter) {
     var folderId = $filter('date')(folderId, 'yyMMddhhmmss');
     var dropboxToken = 'DVM0SFXgDugAAAAAAAASuqKrBV3NKj78SvEYngK-of8SmPyOosGQvECnzMlh28oY';
     var i = 0;
+    var status = 0;
 
     for (i == 0; i < docs.length; i++) {
       var xhr = new XMLHttpRequest();
@@ -25,10 +26,12 @@ bookingformJS.controller("docsCtrl", function($scope, $http, $filter) {
       xhr.onload = function () {
         if (xhr.status === 200) {
           var fileInfo = JSON.parse(xhr.response);
+          var status = 200;
         }
         else {
           var errorMessage = xhr.response || 'Unable to upload file';
           // Upload failed. Do something here with the error.
+          var status = 100;
         }
       };
 
@@ -45,6 +48,8 @@ bookingformJS.controller("docsCtrl", function($scope, $http, $filter) {
 
       xhr.send(docs[i])
     }
+
+    return status;
   }
   /**
    * Upload documents settings and errors

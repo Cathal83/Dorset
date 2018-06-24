@@ -22,12 +22,12 @@
               <label ng-if="productPrices[0].full_amount">
                 <p>Full Amount:</p>
                 <input type="radio" name="paymentchoice" value="full_amount" value="full_amount" ng-model="user.payment.type_id" ng-click="scopePrices(user.payment.type_id)" checked="checked"
-                required /> €{{ productPrices[0].full_amount }}
+                required /> € {{ productPrices[0].full_amount }}
               </label>
               <label ng-if="productPrices[0].deposit">
                 <p>Deposit:</p>
                 <input type="radio" name="paymentchoice" value="deposit" value="deposit" ng-model="user.payment.type_id" ng-click="scopePrices(user.payment.type_id)"
-                required /> €{{ productPrices[0].deposit }}
+                required /> € {{ productPrices[0].deposit }}
               </label>
             </div>
             <div ng-messages="bookingStepForm.paymentchoice.$error" ng-if="formStepSubmitted" class="error-msg">

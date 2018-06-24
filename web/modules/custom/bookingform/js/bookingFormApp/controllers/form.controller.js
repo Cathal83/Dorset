@@ -39,8 +39,8 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     // Document Details
     docs : {}
   }
-
   $scope.payment = {
+    status: "",
     amount: "",
     ccencoded: "",
     card : {
@@ -55,9 +55,12 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
 
   $scope.showProductSel = true; 
   $scope.maxSize = [];
+
   /**
    * Needed Scopes by default
    */
+  $scope.status = [];
+  $scope.status.error = 0;
   $scope.years = [];
   $scope.nationalities;
   $scope.countries;
@@ -153,9 +156,15 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   $scope.scopePrices = function(price_type) {
 
     if (price_type == 'full_amount') {
+      // Upercase and replaces underscore for Payment Type display
+      var price_type = price_type.replace('_', ' ');
+      $scope.user.payment.type_txt = price_type.charAt(0).toUpperCase() + price_type.slice(1);
       $scope.user.payment.amount = $scope.productPrices[0].full_amount;
     }
     else {
+      // Upercase and replaces underscore for Payment Type display
+      var price_type = price_type.replace('_', ' ')
+      $scope.user.payment.type_txt = price_type.charAt(0).toUpperCase() + price_type.slice(1);
       $scope.user.payment.amount = $scope.productPrices[0].deposit;
     }
 
@@ -302,9 +311,57 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    * */
   $scope.submitForm = function() {
 
-    console.log($scope.token);
-    postService.submitData($scope.user, $scope.token);  
+    $scope.status.processing = 1;
+    if ($scope.status.error == 1) {
+      delete $scope.status.error;
+    }
+    if($scope.productData[0].application_type == "60") {
+      /**
+       * Payment Applications
+       */
+      // Submits payment and data
+      $scope.charge().then(function (response) {
+        // Status Data
+        delete $scope.status.processing;
+        $scope.status.payment = 1;
 
+        if (response == '200') {
+          // Payment status update
+          $scope.payment.status = 'Yes';
+
+          // Sends Data
+          postService.submitData($scope.user, $scope.token).then(function (response) {
+            // Status Data
+            delete $scope.status.payment;
+            $scope.status.data = 1;
+
+            console.log(response);
+            if (response == 200) {
+              console.log('Data submitted');
+              $scope.goToNextSection(true);
+            }
+            else {
+              console.log('Error uploading Data')
+            }
+          });
+        }
+        else {
+          $scope.status.payment.error = 1;
+          console.log('There was a problem with the Payment');
+        }
+      });
+    }
+    else if ($scope.productData[0].application_type == "61"){
+      /**
+       * Documents Application
+       */
+      $scope.docsUp().then(function(response) {
+        // Status Data
+        delete $scope.status.processing;
+        $scope.status.upload = 1;
+        
+      });
+    }   
   }
 
   /**
