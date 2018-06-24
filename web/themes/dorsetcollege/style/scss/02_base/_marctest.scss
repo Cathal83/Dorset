@@ -987,7 +987,7 @@
 }
 
 #block-dorsetcollege-main-menu{
-  display: block !important;
+  display: block;
   float: right;
   margin-top: 55px;
 }
@@ -1060,7 +1060,7 @@
   }
 
   #block-dorsetcollege-main-menu{
-    display: none !important;
+    display: none;
     position: fixed;
     z-index: 1000;
     width: 100%;
@@ -1699,9 +1699,9 @@
     color: #5D5D5D;
 }
 
-.block-views-blockcourses-view-block-14 .price-element:nth-child(2) span{
-  display: none;
-}
+//.block-views-blockcourses-view-block-14 .price-element:nth-child(2) span{
+//  display: none;
+//}
 
 @media screen and (max-width: 975px) and (min-width: 600px) {
   .block-views-blockcourses-view-block-14 .price-element:nth-child(1) span{

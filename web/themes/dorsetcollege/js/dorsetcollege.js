@@ -48,6 +48,12 @@
           });
       }); 
 
+      $(document).ready(function(){
+          $('#site-branding').click(function(){
+              $('#block-dorsetcollege-main-menu').toggle();
+          });
+      }); 
+
     }
   };
 })(jQuery);
