@@ -11,16 +11,31 @@ bookingformJS.controller("docsCtrl", function($scope, $http, $filter) {
     var folderId = new Date();
     var text = 'test';
     var folderId = $filter('date')(folderId, 'yyMMddhhmmss');
+    $scope.user.docs.folderId = folderId; // Pass the folder name to the post Service.
     var dropboxToken = 'DVM0SFXgDugAAAAAAAASuqKrBV3NKj78SvEYngK-of8SmPyOosGQvECnzMlh28oY';
     var i = 0;
+    $scope.status = 0;
 
+    // Multi file upload process
     for (i == 0; i < docs.length; i++) {
+
       var xhr = new XMLHttpRequest();
+      var counter = 0;
+
       // Upload Progress
       xhr.upload.onprogress = function (evt) {
         var percentComplete = parseInt(100.0 * evt.loaded / evt.total);
         console.log(percentComplete);
+        console.log(docs.length);
+        console.log(counter);
+        if (percentComplete == 100) {
+          $scope.status = '200'
+          console.log(counter);
+          counter++;
+          console.log('uploaded');
+        }
       };
+
       // Upload Status
       xhr.onload = function () {
         if (xhr.status === 200) {
@@ -33,17 +48,18 @@ bookingformJS.controller("docsCtrl", function($scope, $http, $filter) {
       };
 
       //Upload Request
-      xhr.open('POST', 'https://content.dropboxapi.com/2/files/upload');
+      xhr.open('POST', 'https://content.dropboxapi.com/2/files/upload', false);
       xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
       xhr.setRequestHeader('Content-Type', 'application/octet-stream');
       xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
         path: '/' + folderId + '/' + docs[i].name,
         mode: 'add',
-        autorename: true,
+        autorename: true,    
         mute: false
       }));
-
-      xhr.send(docs[i])
+      xhr.send(docs[i]);
+      
+      return xhr.status;
     }
   }
   /**

@@ -22,6 +22,7 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
       country: data.contactaddress.country,
       city_town: data.contactaddress.city,
       postal_code: data.contactaddress.postalcode,
+      payment: data.payment.status,
       stripe_id: "",
       payment_type: data.payment.type_id,
       payment_amount: data.payment.amount,
@@ -32,7 +33,6 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
       billing_postal_code: "",
       documents: "",
       documents_submitted: "",
-      dropbox_folder_name: ""
 
     };
 
@@ -45,13 +45,13 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
       }
     }
 
-    $http.post('/webform_rest/submit', postData, config)
+    return $http.post('/webform_rest/submit', postData, config)
     .then(function successCallback(response) {
-      console.log(response);
+      return response.status;
     }, function errorCallback(response) {
-      console.log(response);
-    });
-    
+      return response.status;
+    }); 
+
   }
   return {
     submitData: submitData,

@@ -3,7 +3,6 @@
       <h2>Application</h2>
       <div>
           <h1>{{ user.productname + ': ' + user.deliveryname }}</h1>
-          {{ user }}
       </div>
   </div>
   <div class="form-fields">
@@ -69,7 +68,7 @@
         <h4>Payment Type</h4>
         <div class="form-opt">
           <h4>{{ user.payment.type_txt + ':' }}</h4>
-          <div>{{ user.payment.amount }}</div>
+          <div>€ {{ user.payment.amount }}</div>
         </div>
         <h4>Payment Details</h4>
         <div class="form-opt">
@@ -104,6 +103,12 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="form-status-area">
+    <div ng-if="status.error.payment">There was a problem processing the payment, please check your Card Details.</div>
+    <div ng-if="status.processing">Processing Payment</div>
+    <div ng-if="status.upload">Uploading Documents</div>
+    <div ng-if="status.data">Sending Data</div>
   </div>
   <!-- Proceed Button -->
   <div class="bookingform-btn">

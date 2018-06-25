@@ -13,11 +13,8 @@ bookingformJS.controller("paymentCtrl", function($scope, $http, $location, strip
       delete stripecard.month;
       delete stripecard.year;
       var amount = Number($scope.user.payment.amount.replace(/[^0-9\.-]+/g, ""));
-      console.log(amount);
-      console.log(payment.tk_id);
-      
-      return stripe.card.createToken
-      (stripecard, $scope)
+
+      return stripe.card.createToken(stripecard)
       .then(function (response) {
         var payment = {
           tk_id : response.id,
@@ -27,7 +24,7 @@ bookingformJS.controller("paymentCtrl", function($scope, $http, $location, strip
           lastname : $scope.user.lastname,
           product : $scope.user.productname
         }
-        
+
         return $http.post(window.location.origin + '/api/v2/payment?_format=json',
         {
           headers: {
@@ -37,14 +34,16 @@ bookingformJS.controller("paymentCtrl", function($scope, $http, $location, strip
         });
       })
       .then(function (payment) {
-        console.log('successfully submitted payment for €', $scope.payment.amount);
-
+        console.log('successfully submitted payment');
+        return '200';
       })
       .catch(function (err) {
         if (err.type && /^Stripe/.test(err.type)) {
+          return '100';
           console.log('Stripe error: ', err.message);
         }
         else {
+          return '100';
           console.log('Other error occurred, possibly with your API', err.message);
         }
       })

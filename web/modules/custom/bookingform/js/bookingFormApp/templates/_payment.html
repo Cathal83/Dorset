@@ -10,11 +10,10 @@
       <h2>Application</h2>
       <div>
           <h1>{{ user.productname }}{{ ': ' + user.deliveryname }}</h1>
-          {{ user }}
       </div>
     </div>
     <div class="form-fields">
-      <h3>Step {{ step }}: Fees & Deposit</h3>
+      <h3>Step 3: Fees & Deposit</h3>
       <div class="form-wrapper">
         <h4>Choose a payment Option:</h4>
         <div class="form-row">
@@ -22,12 +21,12 @@
               <label ng-if="productPrices[0].full_amount">
                 <p>Full Amount:</p>
                 <input type="radio" name="paymentchoice" value="full_amount" value="full_amount" ng-model="user.payment.type_id" ng-click="scopePrices(user.payment.type_id)" checked="checked"
-                required /> €{{ productPrices[0].full_amount }}
+                required /> € {{ productPrices[0].full_amount }}
               </label>
               <label ng-if="productPrices[0].deposit">
                 <p>Deposit:</p>
                 <input type="radio" name="paymentchoice" value="deposit" value="deposit" ng-model="user.payment.type_id" ng-click="scopePrices(user.payment.type_id)"
-                required /> €{{ productPrices[0].deposit }}
+                required /> € {{ productPrices[0].deposit }}
               </label>
             </div>
             <div ng-messages="bookingStepForm.paymentchoice.$error" ng-if="formStepSubmitted" class="error-msg">
