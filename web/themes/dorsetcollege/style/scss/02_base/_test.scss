@@ -661,4 +661,11 @@ p.arrow-right::after, a.arrow-right::after{
 
 p a{
   color: $dc-blue;
+  
+}
+
+#section-content {
+  ol, ul {
+    margin-left: 10%;
+  }
 }
