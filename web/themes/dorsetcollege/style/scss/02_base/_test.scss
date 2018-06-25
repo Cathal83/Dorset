@@ -658,3 +658,7 @@ p.arrow-right::after, a.arrow-right::after{
 #cboxLoadedContent {
   position: fixed !important;
 }
+
+p a{
+  color: $dc-blue;
+}
