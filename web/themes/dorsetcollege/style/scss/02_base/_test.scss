@@ -659,12 +659,14 @@ p.arrow-right::after, a.arrow-right::after{
   position: fixed !important;
 }
 
-p a{
-  color: $dc-blue;
-  
-}
-
 #section-content {
+  
+  p,li {
+    a{
+    color: $dc-blue;
+      
+    }
+  }
   ol, ul {
     margin-left: 10%;
   }
