@@ -29,8 +29,25 @@
     @include font-size($p-links);
     display: inline-block;
     text-align: center;
-    border-bottom: solid 1px $white;
+    border-bottom: solid 5px $white;
     padding: $link-border-padding;
+    &:hover {
+      opacity: 0.8;
+      border-bottom: 2px solid (255,255,255, 0.8);
+    }
+    
+    &::after{
+      position: absolute;
+      content: "";
+      transform: translateY(75%);
+      margin-left: 10px;
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 7px solid #FFF;
+
+    }
 
   }
 }
