@@ -3,6 +3,9 @@
     background-color: $white;
     padding: 7px 12px;
     border-radius: 60px;
+    &:hover {
+      opacity: 0.8;
+    }
 
   }
 }
