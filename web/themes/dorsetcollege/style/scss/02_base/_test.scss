@@ -568,7 +568,7 @@ p.arrow-right::after, a.arrow-right::after{
         left: 0;
                 
         a{
-          border-bottom: 5px solid #fff;
+          border-bottom: 2px solid #fff;
           display: inline-block;
           font-weight: bold;
           padding: $link-border-padding;
@@ -580,18 +580,18 @@ p.arrow-right::after, a.arrow-right::after{
               border-bottom: 2px solid (255,255,255, 0.8);
             }
             
-            &::after{
-              position: absolute;
-              content: "";
-              transform: translateY(75%);
-              margin-left: 10px;
-              width: 0;
-              height: 0;
-              border-top: 7px solid transparent;
-              border-bottom: 7px solid transparent;
-              border-left: 7px solid #FFF;
-
-            }
+            //&::after{
+            //  position: absolute;
+            //  content: "";
+            //  transform: translateY(75%);
+            //  margin-left: 10px;
+            //  width: 0;
+            //  height: 0;
+            //  border-top: 7px solid transparent;
+            //  border-bottom: 7px solid transparent;
+            //  border-left: 7px solid #FFF;
+            //
+            //}
         }
       }
 }
