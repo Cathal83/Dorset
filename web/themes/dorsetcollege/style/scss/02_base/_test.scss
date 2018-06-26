@@ -692,6 +692,9 @@ p.arrow-right::after, a.arrow-right::after{
   p,li {
     a{
     color: $dc-blue;
+    &:hover {
+      opacity: 0.8;
+    }
       
     }
   }
