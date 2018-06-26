@@ -568,7 +568,7 @@ p.arrow-right::after, a.arrow-right::after{
           border-bottom: 5px solid #fff;
           display: inline-block;
           font-weight: bold;
-          padding: 0;
+          padding: $link-border-padding;
           border-radius: 0;
           background: none;
         
