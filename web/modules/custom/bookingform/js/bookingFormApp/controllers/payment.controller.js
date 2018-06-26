@@ -35,6 +35,8 @@ bookingformJS.controller("paymentCtrl", function($scope, $http, $location, strip
       })
       .then(function (payment) {
         console.log('successfully submitted payment');
+        console.log(payment);
+        $scope.stripeId = '';
         return '200';
       })
       .catch(function (err) {

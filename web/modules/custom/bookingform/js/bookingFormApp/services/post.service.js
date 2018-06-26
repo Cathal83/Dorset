@@ -1,20 +1,40 @@
 bookingformJS.service("postService", function ($filter, $location, $http, dataService) {
   // Elements to bankFormat Process
   var submitData = function(data, token) {
+    console.log(data);
+
+    // Document values process
+    // If no documents
+    if (Object.keys(data.docs).length === 0) {
+      var docsBoolean = "No";
+    }
+    else {
+      var docsBoolean = "Yes";
+      var docs = Object.keys(data.docs).map(function (k) { return data.docs[k].name }).join(", ");
+    }
+    // If payment
+    if (Object.keys(data.payment).length === 0) {
+      var paymentBoolean = "No";
+    }
+    else {
+      var paymentBoolean = "Yes";
+    }
 
     // Bookingform Fields
     var postData = {
 
       webform_id: "application_form",
       application_date: data.date,
+      application_type: data.application,
       courseid: data.productnid,
       course_name: data.productname,
       delivery_mode: data.deliveryname,
       email: data.email,
-      nationality: data.nationality,
-      country_of_residence: data.residence,
+      nationality: data.nationality.name,
+      country_of_residence: data.residence.name,
       firstname: data.firstname,
       lastname: data.lastname,
+      phone_number: data.phonenumber,
       date_of_birth: data.dob,
       address_line_1: data.contactaddress.address1,
       address_line_2: data.contactaddress.address2,
@@ -22,17 +42,18 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
       country: data.contactaddress.country,
       city_town: data.contactaddress.city,
       postal_code: data.contactaddress.postalcode,
-      payment: data.payment.status,
-      stripe_id: "",
+      payment: paymentBoolean,
+      stripe_id: data.stripeId,
+      dropbox_folder_name: data.docs.folderId, 
       payment_type: data.payment.type_id,
       payment_amount: data.payment.amount,
       contact_address_as_billing: data.billingaddress.billingcontact,
       billing_address_1: data.billingaddress.address1,
       billing_address_2: data.billingaddress.address2,
-      billing_country: "",
-      billing_postal_code: "",
-      documents: "",
-      documents_submitted: "",
+      billing_country: data.billingaddress.country,
+      billing_postal_code: data.billingaddress.postalcode,
+      documents: docs,
+      documents_submitted: docsBoolean,
 
     };
 

@@ -4,7 +4,7 @@ bookingformJS.controller("docsCtrl", function($scope, $http, $filter) {
    * Document upload to DropBox controller
    */
   $scope.user.doc = [];
-  $scope.docsUp = function() {
+  $scope.docsUp = function docsUp() {
 
     var docs = $scope.user.docs;
     var numFiles = $scope.user.docs.length;
@@ -57,9 +57,9 @@ bookingformJS.controller("docsCtrl", function($scope, $http, $filter) {
         autorename: true,    
         mute: false
       }));
-      xhr.send(docs[i]);
       
-      return xhr.status;
+      return xhr.send(docs[i]);
+      
     }
   }
   /**
