@@ -1034,7 +1034,7 @@
     opacity: 0.8;
     border-bottom: none;
   }
-    .is-active {
+    &.is-active {
       color: #FFF !important;
       border-bottom: none !important;
   }
@@ -1682,7 +1682,7 @@
 
 //.menu-item--active-trail a{
 .is-active{
-  color: #3366FF;
+  color: #3366FF !important;
   border-bottom: 2px solid #3366FF;
 }
 
