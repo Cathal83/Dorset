@@ -558,12 +558,22 @@ p.arrow-right::after, a.arrow-right::after{
       }
       
       .btn-link-white{
+        width: 100%;
         text-align: center;
         position: absolute;
-        width: 100%;
-        top: 70%;
-        a {
-          color: blue;
+        top: 85%;
+        left: 0;
+        
+        a{
+          border-bottom: 2px solid #fff;
+          display: inline-block;
+          font-weight: bold;
+          //margin-left: 38%;
+          //margin-right: 30%;
+            &:hover {
+              color: #F14950;
+              border-bottom: 2px solid #F14950;
+            } 
         }
       }
 }
