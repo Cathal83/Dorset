@@ -1680,9 +1680,10 @@
   border: 1px solid #979797;
 }
 
-.menu-item--active-trail a{
-  color: #3366FF !important;
-  border-bottom: 2px solid #3366FF !important;
+//.menu-item--active-trail a{
+.is-active{
+  color: #3366FF;
+  border-bottom: 2px solid #3366FF;
 }
 
 
