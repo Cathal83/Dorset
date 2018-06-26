@@ -572,8 +572,10 @@ p.arrow-right::after, a.arrow-right::after{
           border-bottom: 2px solid #fff;
           display: inline-block;
           font-weight: bold;
-          //margin-left: 38%;
-          //margin-right: 30%;
+          padding: 0;
+          border-radius: 0;
+          background: none;
+        
             &:hover {
               color: #F14950;
               border-bottom: 2px solid #F14950;
