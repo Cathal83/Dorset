@@ -65,11 +65,12 @@
     background-color: $dc-red;
     color: $white !important;
     @include btn-base;
-    cursor: pointer
+    cursor: pointer;
       &:hover {
-      opacity: 0.8;
+        opacity: 0.8;
+        
+      }   
     }
-  }
 
 
 
