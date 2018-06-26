@@ -1012,22 +1012,37 @@
   background-color: #3366FF;
   border-radius: 60px;
   padding: 10px;
+  &:hover {
+    opacity: 0.8;
+    border-bottom: none;
+  }
+    &:active {
+      color: #FFF !important;
+      border-bottom: none !important;
+  }
 }
-
-#block-dorsetcollege-main-menu ul li:nth-child(6) a:hover{
-  border-bottom: none;
-}
+//#block-dorsetcollege-main-menu ul li:nth-child(6) a:hover{
+//  border-bottom: none;
+//}
 
 #block-dorsetcollege-main-menu ul li:nth-child(7) a{
   color: #FFF;
   background-color: #F14950;
   border-radius: 60px;
   padding: 10px;
+  &:hover {
+    opacity: 0.8;
+    border-bottom: none;
+  }
+    &:active {
+      color: #FFF !important;
+      border-bottom: none !important;
+  }
 }
 
-#block-dorsetcollege-main-menu ul li:nth-child(7) a:hover{
-  border-bottom: none;
-}
+//#block-dorsetcollege-main-menu ul li:nth-child(7) a:hover{
+//  border-bottom: none;
+//}
 
 #block-dorsetcollege-branding{
   float: left;
