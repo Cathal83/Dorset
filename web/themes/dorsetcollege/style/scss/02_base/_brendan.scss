@@ -74,16 +74,31 @@
     left: 0;
     
     a{
-      border-bottom: 2px solid #fff;
-      display: inline-block;
-      font-weight: bold;
-      //margin-left: 38%;
-      //margin-right: 30%;
-        &:hover {
-          color: #F14950;
-          border-bottom: 2px solid #F14950;
-        } 
-    }
+       border-bottom: 2px solid #fff;
+       display: inline-block;
+       font-weight: bold;
+       padding: 0;
+       border-radius: 0;
+       background: none;
+     
+         &:hover {
+           opacity: 0.8;
+           border-bottom: 2px solid (255,255,255, 0.8);
+         }
+         
+         &::after{
+           position: absolute;
+           content: "";
+           transform: translateY(75%);
+           margin-left: 10px;
+           width: 0;
+           height: 0;
+           border-top: 7px solid transparent;
+           border-bottom: 7px solid transparent;
+           border-left: 7px solid #FFF;
+
+         }
+     }
   }
 }
     
