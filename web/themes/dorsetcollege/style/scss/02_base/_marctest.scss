@@ -1321,6 +1321,49 @@
   .modass div .paragraph--type--dorset-module-detail div div:nth-child(2){
     clear: both;
   }
+  
+    @media screen and (max-width: 975px) and (min-width: 600px) {
+
+    .modtitle, .modcred, .modsemester, .modstat {
+      height: 75px;
+    }
+
+    .modstat a{
+      font-size: inherit;
+    }
+
+    .moddesc p{
+      font-size: inherit;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    .modtitle, .modcred, .modsemester, .modstat {
+      width: 95%;
+      float: left;
+    }
+
+    .modindc ul{
+      margin: 5% !important;
+    }
+
+    .modass {
+      height: 18em;
+    }
+
+    .modass div .paragraph--type--dorset-module-detail div{
+      width: 100%;
+    }
+
+    .modass div .paragraph--type--dorset-module-detail div div:nth-child(1) {
+      padding: 1%;
+    }
+
+    .modass div .paragraph--type--dorset-module-detail div div:nth-child(2) {
+      padding: 1%;
+    }
+  }
 
 }
 
