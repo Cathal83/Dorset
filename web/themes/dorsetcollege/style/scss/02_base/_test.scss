@@ -702,3 +702,9 @@ p.arrow-right::after, a.arrow-right::after{
     margin-left: 10%;
   }
 }
+
+@media screen and (max-width: 600px){
+  .price-element .header-img {
+    max-height: 191px;
+  }
+}
