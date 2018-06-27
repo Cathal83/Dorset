@@ -289,7 +289,13 @@ input {
 
 .btn-more{
   color: #36F;
+  padding: 0 5px 5px;
   border-bottom: 1px solid #36F;
+}
+@media only screen and (min-width: 600px) {
+  .block-views-blocknews-events-block-pre-news-events .block-news-events .more-link {
+    display: none;
+  }
 }
 
 p.arrow-right::after, a.arrow-right::after{
