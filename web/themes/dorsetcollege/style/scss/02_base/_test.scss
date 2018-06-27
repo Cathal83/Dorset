@@ -266,6 +266,11 @@ input {
   
   &.btn-modal{
     border-bottom: 2px solid #fff;
+    display: inline-block;
+    &:hover {
+      opacity: 0.8;
+      border-bottom: 2px solid (255,255,255, 0.8);
+    }
   }
 }
 
@@ -378,6 +383,11 @@ p.arrow-right::after, a.arrow-right::after{
     float: left;
     margin-left:5%;
 }
+
+.lecturer-info h3{
+  margin-top: 0px !important;
+}
+
 
 /* The Close Button */
 .close {
