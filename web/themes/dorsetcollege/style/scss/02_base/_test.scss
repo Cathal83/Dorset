@@ -724,3 +724,10 @@ p.arrow-right::after, a.arrow-right::after{
     max-height: 191px;
   }
 }
+
+#zone-about {
+  height: 500px;
+}
+#zone-about .zone-section .block-region-homeabout .block-content-with-title{
+      margin-top: -85px !important;
+}
