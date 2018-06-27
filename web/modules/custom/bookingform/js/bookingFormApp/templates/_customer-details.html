@@ -39,6 +39,14 @@
         </div>
         <div class="form-row">
           <div class="form-opt">
+            <input type="number" name="phonenumber" ng-model="user.phonenumber" placeholder="Phone Number" required>
+          </div>
+          <div ng-messages="bookingStepForm.phonenumber.$error" ng-if="formStepSubmitted" class="error-msg">
+            <div ng-message="required">Phone Number is required for application.</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-opt">
             <select name="gender" ng-model="user.gender" placeholder="Gender" required>
               <option value="" selected>Gender</option>
               <option value="Female">Female</option>

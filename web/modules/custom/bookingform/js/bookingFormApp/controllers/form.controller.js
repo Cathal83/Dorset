@@ -9,8 +9,15 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     deliveryname : "",
     firstname : "",
     lastname : "",
-    country : "Ireland",
+    country : "",
+    nationality : {
+      name: ""
+    },
+    residence : {
+      name: ""
+    },
     email : "",
+    phonenumber: "",
     dob : "",
     gender : "",
     contactaddress : {
@@ -353,21 +360,16 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     }
     else if ($scope.productData[0].application_type == "61"){
       /**
-       * Documents Application
+       * Documents Application submit everything
        */
       delete $scope.status.processing;
 
-      function uploadResult() {
-        var result = $scope.docsUp();
-        console.log(result);
-        return result;
-
-      }
-
-      return uploadResult.then(function(response) {
+      $scope.docsUp(); /**.then(function(response){
         console.log(response);
-      });
-      console.log(uploadResult);
+      }).catch(function (err) {
+        console.log(err);
+      });*/
+
       console.log($scope.status);
 
       // Sends Data
