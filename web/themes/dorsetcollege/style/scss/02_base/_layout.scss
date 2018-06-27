@@ -28,7 +28,7 @@
 //
 //}
 
-#zone-about {
+#zone-about {  
   height: 500px;
   
   .zone-section{
@@ -37,6 +37,21 @@
     .block-background-image {
       height: 500px;
       
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #zone-about {  
+    height: 250px;
+    
+    .zone-section{
+      position: relative;  
+  
+      .block-background-image {
+        height: 250px;
+        
+      }
     }
   }
 }

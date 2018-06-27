@@ -725,10 +725,13 @@ p.arrow-right::after, a.arrow-right::after{
   }
 }
 
+@media only screen and (min-width: 600px) {
 
 #zone-about .zone-section .block-region-homeabout .block-content-with-title{
     margin-left: 20% !important;
     margin-right: 20% !important;
     margin-top: -85px !important;
+}
+
 }
 
