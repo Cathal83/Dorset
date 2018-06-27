@@ -263,6 +263,10 @@ input {
   color: #fff;
   text-align: center;
   margin: 1em 0;
+  
+  &.btn-modal{
+    border-bottom: 2px solid #fff;
+  }
 }
 
 .page-node-type-course h3{
