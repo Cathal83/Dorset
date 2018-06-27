@@ -4,7 +4,7 @@
 
 .block-views-blockcourses-view-block-2 {
   width: 49.95%;
-  height: 479px;
+  height: 500px;
   display: inline-block;
   float: left;
 }
@@ -72,7 +72,7 @@
 
 .block-views-blockcourses-view-block-7{
   width: 33.3% !important;
-  height: 539px;
+  height: 559px;
   display: inline-block;
   margin-top: -60px;
   background-image: linear-gradient(rgba(241,73,80,0.5),rgba(241,73,80,0.5)), url('/sites/default/files/styles/large/public/block_list/how_to_apply_0.jpg?itok=aKX80AYP');
@@ -136,12 +136,16 @@
   }
 }
 
+.price-boxes .views-view-grid .views-row{
+  color: #5D5D5D;
+}
+
 // Mobile CSS
 
 @media only screen and (max-width: 600px) {
   .block-views-blockcourses-view-block-2 {
     width: 100%;
-    height: auto;
+    //height: auto;
     display: block;
   }
   .block-views-blockcourses-view-block-2 div{
@@ -172,7 +176,8 @@
 
   .block-views-blockcourses-view-block-14 {
     width: 100% !important;
-    height: 182px;
+    //height: 182px;
+    height: 200px;
     background-size: 61px 61px !important;
     background-position: 50% 10% !important;
   }
@@ -211,7 +216,8 @@
 
 @media screen and (max-width: 900px) and (min-width: 600px) {
   .block-views-blockcourses-view-block-2 {
-    height: 375px;
+    //height: 375px;
+    height: 410px;    
   }
 
   .block-views-blockcourses-view-block-2 div{
@@ -254,7 +260,8 @@
   }
 
   .block-views-blockcourses-view-block-7{
-    height: 415px;
+    //height: 415px;
+    height: 450px;    
     margin-top: -40px;
   }
 
@@ -385,7 +392,9 @@
   }
 
   .block-views-blockcourses-view-course-prices-view .cols-3 .col-sm-4{
-    padding-right: 8%;
+    //padding-right: 8%;
+    padding-bottom: 5%;
+    width: 100%;
   }
 
   .block-views-blockcourses-view-block-5 .col-sm-12{
@@ -395,7 +404,7 @@
 
   .block-views-blockcourses-view-block-2 {
     width: 100%;
-    height: auto;
+    //height: auto;
     display: block;
   }
   .block-views-blockcourses-view-block-2 div{
@@ -426,7 +435,8 @@
 
   .block-views-blockcourses-view-block-14 {
     width: 100% !important;
-    height: 182px;
+    //height: 182px;
+    height: 200px;   
     background-size: 61px 61px !important;
     background-position: 50% 10% !important;
   }
@@ -459,13 +469,18 @@
     font-size: 11px;
     padding: 5% 10% 20%;
   }
+  
+  .block-views-blockcourses-view-block-6 .col-sm-12 {
+    margin: 0 5%;
+  }
 }
 
 // Course Page Tablet CSS
 
 @media screen and (max-width: 900px) and (min-width: 600px) {
   .block-views-blockcourses-view-block-2 {
-    height: 375px;
+    //height: 375px;
+    height: 410px;
   }
 
   .block-views-blockcourses-view-block-2 div{
@@ -503,7 +518,8 @@
   }
 
   .block-views-blockcourses-view-block-7{
-    height: 415px;
+    //height: 415px;
+    height: 450px;
     margin-top: -40px;
   }
 
@@ -575,26 +591,49 @@
 //To Become Bullet Items
 
 .become .paragraph--type--dorset-course-become {
-  padding: 1em 0em;
+  padding-bottom: 1em;
+}
+
+.become .col-sm-6 h3 {
+  font-size: 30px;
+  padding-top: 0.5em;
 }
 
  .become .paragraph--type--dorset-course-become div div div{
   background-size: 32px 32px;
-  padding: 2em 0em 2em 2.5em;
+  //padding: 2em 0em 2em 2.5em;
+  padding: 1em 0em 1em 2.5em;
   font-family: Lato;
   font-size: 18px;
   color: #5D5D5D;
 }
 
+.become .paragraph--type--dorset-course-become .become-icon {
+  padding-bottom: 1.25em;
+}
+
 //Mobile To Become
 
 @media only screen and (max-width: 600px) {
+  
+  .become .col-sm-6 h3 {
+    font-size: 20px;
+    padding-top: 0;
+  }
+  
   .become .paragraph--type--dorset-course-become div div div{
     background-size: 30px 30px;
     padding: 2em 2em 2em 4.5em;
     font-family: Lato;
     font-size: 11px;
     color: #5D5D5D;
+  }
+}
+
+@media screen and (max-width: 975px) and (min-width: 600px) {
+
+  .become .col-sm-6 h3 {
+    font-size: 20px;
   }
 }
 
@@ -1278,7 +1317,7 @@
   }
 
   .modindc ul{
-    margin: 2%;
+    margin: 2% !important;
   }
 
   .modindc ul li{
@@ -1793,4 +1832,26 @@
 
 .block-views-blockcourses-view-block-4 div{
   padding: 2.5px 0px;
+}
+
+.block-views-blockcourses-view-block-4 div{
+  padding: 2.5px 0px;
+}
+
+.block-views-blockcourses-view-course-prices-view {
+  margin-bottom: 1em;
+}
+
+.become .col-sm-12 h3 {
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 975px) {
+  .become .col-sm-12 h3 {
+    font-size: 20px;
+  }
+}
+
+.block-views-blockcourses-view-block-9, .block-views-blockcourses-view-block-10 h2 {
+  padding-bottom: 5px;
 }
