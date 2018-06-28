@@ -70,14 +70,15 @@
       // });
       animation: "slide",
       animationLoop: true,
-      itemWidth: 400,
-      itemMargin: 5,
+      itemWidth: 250,
+      itemMargin: 10,
       controlNav: false,
       prevText: "",
       nextText: "",
       maxItems: 3,
       keyboard: true,
-      touch: true
+      touch: true,
+      animationLoop: true
 
     });
 

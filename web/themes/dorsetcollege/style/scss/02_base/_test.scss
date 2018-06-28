@@ -807,3 +807,9 @@ p.arrow-right::after, a.arrow-right::after{
     }
   }
 }
+
+.flexslider-slider {
+  ul.slides{
+  margin-left: 0!important;
+  }
+}
