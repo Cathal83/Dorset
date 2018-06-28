@@ -35,22 +35,22 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
             1 : {
               number: 1,
               title: "Personal Details",
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              description: "We are going to need some details like your name and contact information."
             },
             2 : {
               number: 2,
               title: "Required Documents",
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              description: "You will need to upload documents to show your prior learning/experience and to verify your identity. Upload all that apply: (Passport or ID, English Level Cert, Leaving Cert Results, FETAC Level 5 & 6 Major Award, International Equivalent to Leaving Cert, Transcript of Results)"
             },
             3 : {
               number: 3,
-              title: "Payment/ Deposit",
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              title: "Payment/Deposit",
+              description: "You will be able to pay either a deposit or the full payment for your course."
             },
             4 : {
               number: 4,
-              title: "Completion!",
-              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              title: "Review & Submit",
+              description: "Review all your provided information one last time before submitting your application."
             }
         }
         /**
