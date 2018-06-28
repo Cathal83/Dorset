@@ -71,7 +71,7 @@
       animation: "slide",
       animationLoop: true,
       itemWidth: 250,
-      itemMargin: 10,
+      // itemMargin: 10,
       controlNav: false,
       prevText: "",
       nextText: "",
