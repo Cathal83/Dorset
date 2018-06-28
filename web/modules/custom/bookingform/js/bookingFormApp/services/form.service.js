@@ -4,7 +4,7 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
 
       var productDelivery = $filter('filter')(products, { nid: productnid }, true);
       return productDelivery;
-
+      console.log(productDelivery);
     }
 
     var productDocuments = function(productData, productDelivery) {

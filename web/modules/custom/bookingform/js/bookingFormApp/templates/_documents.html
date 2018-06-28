@@ -16,7 +16,7 @@
     <div class="form-fields">
         <h3>Step 2: Required Documents</h3>
         <div class="form-row">
-            <div class="form-opt" ng-repeat="product in productData">
+            <div class="form-opt" ng-repeat="product in productData | unique:'document'">
                 <div>
                     <div>
                         <span>{{ $index + 1 }}. {{ product.document }}</span>

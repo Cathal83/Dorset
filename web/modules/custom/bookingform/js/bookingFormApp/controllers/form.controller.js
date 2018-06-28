@@ -205,7 +205,8 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     // Reset delivery mode value
     $scope.user.deliverymode = null;
     var productData = formService.productDelivery(productnid, $scope.products);
-    
+    console.log(productData);
+    console.log(1);
     if(productData[0].application_type == 60) {
 
       dataService.getCountries().then(function(response){
