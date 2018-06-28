@@ -1,8 +1,15 @@
 <div class="form-content">
+    <div class="form-progression">
+        <div class="form-step marked"></div>
+        <span class="form-step-line marked"></span>
+        <div class "form-step marked"></div>
+        <span class="form-step-line"></span>
+        <div class="form-step"></div>
+    </div>
     <div class="form-title">
-        <h2>Application</h2>
+        <h2>Online Application</h2>
         <div>
-            <h1>{{ user.productname }}{{ ': ' + user.deliveryname }}</h1>
+            <h1>{{ user.productname }}<span ng-if="productData[0].application_type == '60'">{{ ': ' + user.deliveryname }}</span></h1>
         </div>
     </div>
     <!-- Course Select Box -->
@@ -12,18 +19,28 @@
             <div class="form-opt" ng-repeat="product in productData">
                 <div>
                     <div>
-                        <span>{{ $index + 1 }}. {{ product.document }}</span><button type="file" name="docs{{$index}}" ng-model="user.docs[$index]" ngf-select ngf-change="docSize(user.docs[$index], $index)" required>Upload</button>
+                        <span>{{ $index + 1 }}. {{ product.document }}</span>
                     </div>
-                    <ul ng-show="user.docs[$index]">
-                        <li>{{ user.docs[$index].name }}</li>
-                    </ul>
-                    <div ng-click="user.docs[$index] = null" ng-show="user.docs[$index]">Delete</div>
-                    <i ng-show="maxSize[$index]">File is too large, max 5Mb</i>
-                    <div ng-messages="bookingStepForm['docs' + $index].$error" ng-if="formStepSubmitted" class="error-msg">
-                        <div ng-message="required">This document is required.</div>
+                </div>  
+            </div>  
+            <div class="form-upload" ng-repeat="product in productData">
+                <div ng-if="$index == 0">
+                    <button type="file" name="docs0" ng-model="user.docs[0]" ngf-select ngf-change="docSize(user.docs[0], 0)" ng-hide="user.docs[0]" required>Upload Documents</button>
+                    <i ng-show="maxSize[0]">File is too large, max 5Mb</i>
+                    <div ng-messages="bookingStepForm['docs0'].$error" ng-if="formStepSubmitted" class="error-msg">
+                        <div ng-message="required">At least one document is required.</div>
                     </div>
                 </div>
-            </div>  
+                <div ng-if="$index != 0">
+                    <button type="file" name="docs{{$index}}" ng-model="user.docs[$index]" ngf-select ngf-change="docSize(user.docs[$index], $index)" ng-show="user.docs[$index - 1] && !user.docs[$index]">Upload Documents</button>
+                    <i ng-show="maxSize[$index]">File is too large, max 5Mb</i>
+                </div>
+            </div>
+            <div class="form-documents">
+                <ul ng-show="user.docs[$index]" ng-repeat="product in productData">
+                    <li>{{ user.docs[$index].name }} <div ng-click="user.docs[$index] = null" ng-show="user.docs[$index]">Delete</div> </li>
+                </ul>
+            </div>
         </div> 
     </div>
     <div>

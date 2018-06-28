@@ -6,10 +6,17 @@
 </head>
 <body>
   <div class="form-content">
+    <div class="form-progression">
+      <div class="form-step marked"></div>
+      <span class="form-step-line marked"></span>
+      <div class "form-step marked"></div>
+      <span class="form-step-line"></span>
+      <div class="form-step"></div>
+    </div>
     <div class="form-title">
-      <h2>Application</h2>
+      <h2>Online Application</h2>
       <div>
-          <h1>{{ user.productname }}{{ ': ' + user.deliveryname }}</h1>
+          <h1>{{ user.productname }}<span ng-if="productData[0].application_type == '60'">{{ ': ' + user.deliveryname }}</span></h1>
       </div>
     </div>
     <div class="form-fields">
