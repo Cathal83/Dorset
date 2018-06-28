@@ -1,0 +1,12 @@
+<?php
+
+function dorsetcollege_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'views_exposed_form') {
+  	// When usin gthe 'Reset' button on an ajax block view, the page
+  	// redirects to /views/ajax instead of the correct URL.
+  	// https://www.drupal.org/project/drupal/issues/2820347#comment-11930682
+    if ($form['#id'] == 'views-exposed-form-find-a-course-block-1') {
+      $form['#action'] = '/find-a-course';
+    }
+  }
+}

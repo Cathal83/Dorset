@@ -54,6 +54,37 @@
           });
       }); 
 
+    // jQuery to get the flexslider(s).
+      // Calling flexslider.
+      // Using this method, we can call different flexslider settings on each class
+      // This one calls flexslider on the .flexslider-slider class.
+      $('.flexslider-slider').flexslider({
+      //   animation: "fade",
+      //   prevText: "",
+      //   nextText: "",
+      //   controlNav: false,
+      //   animationSpeed: 800,
+      //   easing: 'linear',
+      //   slideshowSpeed: 5000,
+      //   fadeFirstSlide: false,
+      // });
+      animation: "slide",
+      animationLoop: true,
+      itemWidth: 400,
+      itemMargin: 5,
+      controlNav: false,
+      prevText: "",
+      nextText: "",
+      maxItems: 2,
+      keyboard: true,
+      touch: true
+
+    });
+
+
+
+
+
     }
   };
 })(jQuery);

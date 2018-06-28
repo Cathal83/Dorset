@@ -10,12 +10,15 @@ dorsetcollege:
   js:
     # Custom Javascript file for your own JS modifications.
     # Examples of behaviors in JS file.
+    js/libraries/jquery.flexslider-min.js: {}
     js/dorsetcollege.js: {}
     
   dependencies:
-      - core/jquery
-      - core/jquery.once
-      - core/drupal
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
       
   css:
     theme:
