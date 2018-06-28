@@ -75,7 +75,7 @@
       controlNav: false,
       prevText: "",
       nextText: "",
-      maxItems: 2,
+      maxItems: 3,
       keyboard: true,
       touch: true
 
