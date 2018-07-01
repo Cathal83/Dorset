@@ -91,6 +91,9 @@
 .block-views-blockcourses-view-block-7 .list-element{
   font-size: 16px;
   color: #FFFFFF;
+  div {
+    color: #FFFFFF;
+  }
   text-align: left;
   padding: 10% 20% 20% 20%;
 }
@@ -279,7 +282,7 @@
 
 @media screen and (max-width: 1024px) and (min-width: 900px) {
   .block-views-blockcourses-view-block-2 {
-    height: 324px;
+    height: 400px;
   }
   .block-views-blockcourses-view-block-2 div{
     .views-field{
@@ -316,7 +319,7 @@
   }
 
   .block-views-blockcourses-view-block-7{
-    height: 384px;
+    height: 440px;
     margin-top: -40px;
   }
 
@@ -537,7 +540,7 @@
 
 @media screen and (max-width: 1024px) and (min-width: 900px) {
   .block-views-blockcourses-view-block-2 {
-    height: 324px;
+    height: 400px;
   }
   .block-views-blockcourses-view-block-2 div{
     .views-field{
@@ -574,7 +577,7 @@
   }
 
   .block-views-blockcourses-view-block-7{
-    height: 384px;
+    height: 440px;
     margin-top: -40px;
   }
 
@@ -651,8 +654,8 @@
   font-weight: bold;
 }
 
-.col-news-4 .views-field {
-    color: #fff;
+.col-news-4 .views-field, .col-news-4 .field-content {
+    color: #fff !important;
     //margin: 0% 10%;
 }
 
@@ -1552,27 +1555,33 @@
 
 .node_54 .paragraph--type--paragraph-statistic{
   
+
+
   @include breakpoint(640px) {
     width: 25% !important;
     float:left;
     padding: 0px 0px 50px 0px;
-    }
     flex: inherit !important;
     float:left;
     text-align: center;
+    }
 }
 
 //Admissions Mobile CSS
 
 @media only screen and (max-width: 600px) {
 
-  //.node_54 .paragraph--type--paragraph-statistic{
+  .node_54 .paragraph--type--paragraph-statistic{
   //  width: 50%;
   //  padding: 25px 0;
   //}
   //.paragraph--type--linked-icons{
   //  height: 22.5em;
-  //}
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  }
 }
 //Brendan - About Us
 
@@ -1805,7 +1814,7 @@
 //  display: none;
 //}
 
-@media screen and (max-width: 975px) and (min-width: 600px) {
+@media screen and (max-width: 1024px) and (min-width: 600px) {
   .block-views-blockcourses-view-block-14 .price-element:nth-child(1) span{
       top: 8em;
       font-size: 11px;

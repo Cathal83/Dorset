@@ -166,29 +166,31 @@ input {
   background: #efefef;
 }
 
-.paragraph--type--dorset-course-become div{
-  div {
+//.paragraph--type--dorset-course-become
+.become-icon{
+  //div {
 
     div {
       width: 20%;
       display: inline-block;
-      padding: 1em 1em 1em 0.75em;
+      padding: 1em 1em 1em 2em;
         background-image: url('/sites/default/files/block-bg/tick_desktop.svg');
         background-position: left center;
         background-repeat: no-repeat;
-        padding-left: 20px; 
+     //   padding-left: 20px; 
         background-size: 20px 20px;
+            color: #5D5D5D;
     }
-  }
+  //}
 }
 
 //.paragraph--type--dorset-course-become div{
 //  display: inline-block
 //}
 
-.become-icon div:first-child{
-  display: none;
-}
+//.become-icon div:first-child{
+//  display: none;
+//}
 
 .block-views:not(:first-child){
   display:inline-block;
@@ -818,7 +820,11 @@ p.arrow-right::after, a.arrow-right::after{
   }
 }
 
-.testimonial {
+.slides .testimonial {
   width:90%;
   margin: auto;
+}
+
+.lecturer-slider .views-field{
+  padding-bottom: 5em;
 }
