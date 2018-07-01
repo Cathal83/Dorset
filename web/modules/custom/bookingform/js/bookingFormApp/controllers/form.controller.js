@@ -1,4 +1,4 @@
-bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $window, $location, $controller, dataService, formService, postService, formSteps, stripe) {
+bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $window, $location, $q, $controller, dataService, formService, postService, formSteps, stripe) {
   /**
    * Default user settings
    */
@@ -205,8 +205,6 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     // Reset delivery mode value
     $scope.user.deliverymode = null;
     var productData = formService.productDelivery(productnid, $scope.products);
-    console.log(productData);
-    console.log(1);
     if(productData[0].application_type == 60) {
 
       dataService.getCountries().then(function(response){
@@ -365,21 +363,17 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
        */
       delete $scope.status.processing;
 
-      $scope.docsUp(); /**.then(function(response){
+      $scope.docsUp().then(function(response){
         console.log(response);
       }).catch(function (err) {
         console.log(err);
-      });*/
-
-      console.log($scope.status);
-
+      });
+      
       // Sends Data
       postService.submitData($scope.user, $scope.token).then(function (response) {
         // Status Data
         delete $scope.status.payment;
         $scope.status.data = 1;
-
-        console.log(response);
         if (response == 200) {
           console.log('Data submitted');
           $scope.goToNextSection(true);
@@ -396,5 +390,5 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   */
   $controller('viewCtrl', { $scope, formSteps, $state, productDocuments, dataService });
   $controller('paymentCtrl', { $scope, $http, $location, stripe, dataService });
-  $controller('docsCtrl', { $scope, $http, $filter });
+  $controller('docsCtrl', { $scope, $http, $filter, $q });
 })
