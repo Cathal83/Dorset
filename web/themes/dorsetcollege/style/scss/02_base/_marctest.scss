@@ -1555,9 +1555,7 @@
 
 .node_54 .paragraph--type--paragraph-statistic{
   
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+
 
   @include breakpoint(640px) {
     width: 25% !important;
@@ -1573,13 +1571,17 @@
 
 @media only screen and (max-width: 600px) {
 
-  //.node_54 .paragraph--type--paragraph-statistic{
+  .node_54 .paragraph--type--paragraph-statistic{
   //  width: 50%;
   //  padding: 25px 0;
   //}
   //.paragraph--type--linked-icons{
   //  height: 22.5em;
-  //}
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  }
 }
 //Brendan - About Us
 
