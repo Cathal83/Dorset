@@ -377,7 +377,8 @@ p.arrow-right::after, a.arrow-right::after{
     //display: block;
     position: absolute;
 }
-.lecturer-slider .slides{
+
+.lecturer-slider .lecturer-row{
     &::nth-of-type(1){
       .modal{
         top: 50%;
