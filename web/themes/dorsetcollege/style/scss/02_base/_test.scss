@@ -830,7 +830,7 @@ p.arrow-right::after, a.arrow-right::after{
 }
 
 .statistic-content {
-  margin: 0 6%;
+  padding: 0 6%;
   h3 {
   font-size: 35px;
   }
@@ -839,4 +839,8 @@ p.arrow-right::after, a.arrow-right::after{
     font-size: 60px;
     }
   }
+}
+
+#zone-stats{
+  padding-bottom: 6em;
 }
