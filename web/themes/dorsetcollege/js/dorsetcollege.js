@@ -82,10 +82,17 @@
 
     });
 
-
-
-
-
+    // $("#hide").on("click", function (){
+    //   // if ($(".node_54 .paragraph--type--page-introduction").height() == 200) {
+    //   //      $(".node_54 .paragraph--type--page-introduction").animate(
+    //   //          {height: "2000px"});
+    //   //      }
+    //   //   else if ($(".node_54 .paragraph--type--page-introduction").height() == 2000) {
+    //   //      $(".node_54 .paragraph--type--page-introduction").animate({height: "200px"});
+    //   //      }
+    
+    //       $(".paragraph--type--page-introduction:nth-of-type(2)").slideToggle('slow');
+    //     });
     }
   };
 })(jQuery);

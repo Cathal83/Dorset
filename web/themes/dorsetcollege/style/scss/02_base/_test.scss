@@ -828,3 +828,15 @@ p.arrow-right::after, a.arrow-right::after{
 .lecturer-slider .views-field{
   padding-bottom: 5em;
 }
+
+.statistic-content {
+  margin: 0 6%
+  h3 {
+  font-size: 35px;
+  }
+    @include breakpoint(640px) { 
+    h3{
+    fon-size: 60px;
+    }
+  }
+}
