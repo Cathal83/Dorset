@@ -3,6 +3,7 @@
 
 .path-apply-now .form-title h2{
   text-align: left;
+  padding: 25px 0 !important;
 }
 
 .path-apply-now .form-row {
@@ -17,7 +18,7 @@
 .path-apply-now .form-fields .ng-binding{
   color: #000;
   font-size: 16px;
-  padding: 1.2em 0;
+  padding-bottom: 1em;
 }
 
 .path-apply-now .form-fields .form-row{
@@ -52,6 +53,7 @@
 
   .ng-scope h1{
     font-size: 30px;
+    padding: .5em 0!important;
   }
 
   .ng-binding{
@@ -92,6 +94,11 @@
 
 .path-apply-now .form-fields .form-wrapper h4{
   padding: .5em 0 1em;
+}
+
+#bookingform .form-opt{
+  position: relative;
+  padding: 1% 0;
 }
 
 #bookingform .form-opt{
@@ -162,6 +169,19 @@
   margin-left: 10%;
 }
 
+.path-apply-now .bookingform-btn a{
+  color: #FFF !important;
+}
+
+#bookingform .form-fields a {
+  color: #5D5D5D;
+  border-bottom: 1px solid;
+}
+
+#bookingform .form-fields h3 {
+  color: #5D5D5D;
+}
+
 .path-apply-now .bookingform-btn .btn-back{
   background-color: $dc-red;
   padding: 10px 12px;
@@ -194,10 +214,166 @@
   }
 }
 
+.form-opt button{
+  float: right;
+  height: 25px;
+  border-radius: 25px;
+  color: #FFF;
+  background-color: #F14950;
+  padding: 0px 12px;
+  min-width: 4em;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.68;
+  font-weight: 700;
+  font-family: Lato;
+}
+
+.ng-scope button{
+  border-radius: 25px;
+  color: #FFF;
+  background-color: #F14950;
+  padding: 10px 12px;
+  min-width: 4em;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.68;
+  font-weight: 700;
+  font-family: Lato;
+}
+
 //Find a Course pagination fix
 
 .block-views-blockfind-a-course-block-1 .block-table .pager .pager__item{
   display: block!important;
   float: left;
   list-style: none;
+}
+
+
+.thankicon {
+  background-size: 120px 120px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin-left: 30%;
+  padding: 5% 0;
+  height: 120px;
+  width: 120px;
+}
+
+.md-datepicker-triangle-button {
+  display: none;
+}
+
+.md-datepicker-button {
+  float: left!important;
+  background-color: inherit!important;
+  z-index: 2!important;
+  width: 22.25em!important;
+}
+
+.md-datepicker-input-container {
+  position: absolute;
+  z-index: 1!important;
+  margin-left: -23em!important;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .md-datepicker-button {
+    width: 17.25em!important;
+  }
+
+  .md-datepicker-input-container {
+    margin-left: -18em!important;
+  }
+}
+
+.form-progression {
+  position: relative;
+  display: block;
+  width: 90%;
+  border-bottom: 1px solid #ddd;
+  z-index: 1;
+  margin: 1em 0;
+}
+
+.form-progression h3 {
+  color: $h2-grey-color;
+  font-size: 16px;
+}
+
+.form-step {
+  position: relative;
+  top: 16px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+  transition-delay: .3s;
+  will-change: transform;
+  margin-left: 20%;
+  z-index: 2;
+}
+
+.form-step-line {
+
+}
+
+.marked {
+  position: relative;
+  top: 16px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+  transition-delay: .3s;
+  will-change: transform;
+  margin-left: 20%;
+  z-index: 2;
+  background-color: #ddd;
+}
+
+.form-documents ul {
+  padding-top: 1em;
+}
+
+.stepsov {
+  margin-left: -10.5%!important;
+  width: 100%!important;
+}
+
+.h1ng {
+  margin-left: -3.5%!important;
+}
+
+.upbtn {
+  padding-top: 1em;
+  margin-left: -3.5%!important;
+}
+
+.fixw {
+  width: 33.3%!important;
+}
+
+.thx {
+  padding-bottom: 2em;
+}
+
+@media only screen and (max-width: 600px) {
+  .form-progression h3 {
+    font-size: 11px;
+  }
+  .form-step, .marked {
+    width: 12px;
+    height: 12px;
+    margin-left: 18%;
+    top: 12px;
+  }
 }
