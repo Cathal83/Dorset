@@ -92,7 +92,19 @@
 	//	}
 	//}
 
-	.paragraph--type--statistics-wrapper{
+	//.paragraph--type--statistics-wrapper{
+	//	@include breakpoint(640px) { 
+	//		width: 20%;
+	//		float: left;
+	//		display: block;
+	//		text-align: center;
+	//		}
+	//	}
+
+}
+
+
+.statistic-content .paragraph--type--statistics-wrapper{
 		@include breakpoint(640px) { 
 			width: 20%;
 			float: left;
@@ -100,8 +112,6 @@
 			text-align: center;
 			}
 		}
-
-}
 
 
 .node_58 {
