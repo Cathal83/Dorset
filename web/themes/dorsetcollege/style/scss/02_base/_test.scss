@@ -376,7 +376,8 @@ p.arrow-right::after, a.arrow-right::after{
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
     //display: block;
     position: absolute;
-  
+}
+.lecturer-slider .modal{
     &:nth-of-type(1){
     top: 50%;
     left: 30%;
@@ -393,7 +394,6 @@ p.arrow-right::after, a.arrow-right::after{
     transform: translate(-10%, -20%);
     }
 }
-
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
