@@ -376,9 +376,22 @@ p.arrow-right::after, a.arrow-right::after{
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
     //display: block;
     position: absolute;
+  
+    &:nth-of-type(1){
     top: 50%;
-    left: -50%;
-    transform: translate(-50%, -20%);
+    left: 30%;
+    transform: translate(-10%, -20%);
+    }
+    &:nth-of-type(1){
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    &:nth-of-type(1){
+    top: 50%;
+    left: 30%;
+    transform: translate(-10%, -20%);
+    }
 }
 
 /* Modal Content/Box */
