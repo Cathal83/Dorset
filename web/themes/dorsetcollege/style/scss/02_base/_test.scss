@@ -365,7 +365,7 @@ p.arrow-right::after, a.arrow-right::after{
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    //position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
@@ -374,6 +374,11 @@ p.arrow-right::after, a.arrow-right::after{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    //display: block;
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%, -20%);
 }
 
 /* Modal Content/Box */
