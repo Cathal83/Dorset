@@ -41,7 +41,7 @@ $neat-grid: (
 .paragraph--type--dorset-semester-modules{
   @include breakpoint(640px) {
     @include grid-column(6);
-    &:nth-child(3n+3){
+    &:nth-child(2n+3){
       clear: both;
       }
       margin-top:1.5em;
