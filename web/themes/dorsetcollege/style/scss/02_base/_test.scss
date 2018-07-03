@@ -816,7 +816,7 @@ p.arrow-right::after, a.arrow-right::after{
   }
 }
 
-.flexslider-slider {
+.flexslider-slider, .flexslider-slider-lecturer {
   ul.slides{
   margin-left: 0!important;
   }
@@ -851,3 +851,29 @@ p.arrow-right::after, a.arrow-right::after{
   padding-bottom: 10em;
   padding-top: 2em;
 }
+
+
+//.lecturer .lecturer-image {
+//  width: 30%;
+//  float: left;
+//  
+//  img{
+//    width: 100%;
+//    height: auto;
+//  }
+//}
+//
+//.lecturer{
+//  .lecturer-name, .lecturer-studies{
+//    width: 100%;
+//    padding: 0.5em 0em;
+//    font-size: 1.5em;
+//  }
+//  
+//  .lecturer-profile{
+//    width: 65%;
+//    float: right;
+//    padding: 0em 0.5em;
+//  }
+//}
+

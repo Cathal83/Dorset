@@ -1,16 +1,16 @@
 // Image Header
-#zone-header-img {  
-  .block-region-headerimage {    
-    .header-img{
+#zone-header-img {
+  .block-region-headerimage {
+    .header-img, {
       width: 100%;
       z-index: -1;
-      
+
       div{
         width: 100%;
         height: 100%;
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
         object-fit: cover;
         border-radius: 0 0 64% 64%/0 0 12% 12%;
         box-shadow: inset 0 0 0 2000px $dc-overlay;
@@ -20,10 +20,27 @@
   }
 }
 
+.header-image-update .hero-image{
+  width: 100%;
+  z-index: -1;
+
+  .paragraph--type--background-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 0 0 64% 64%/0 0 12% 12%;
+    box-shadow: inset 0 0 0 2000px $dc-overlay;
+
+  }
+}
+
 // Block list with BG Image
 .bg-img {
   height: 100%;
-  
+
   div {
     width: 100%;
     height: 100%;
@@ -41,7 +58,5 @@
   left: 0;
   top: 0;
   z-index: -1;
-  
+
 }
-
-

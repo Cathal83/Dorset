@@ -1218,7 +1218,8 @@
   }
 
   .region-content article{
-    position: absolute;
+    //position: absolute;
+    position: relative;
     padding: 5%;
   }
 
@@ -1669,7 +1670,7 @@
       
   }
 
-  .path-about-us .paragraph--type--paragraph-statistic {
+  .paragraph--type--paragraph-statistic {
 
     .stat-intro {
      margin-left: 10%;
@@ -1981,9 +1982,23 @@
   padding-bottom: 5px;
 }
 
-//Filter Button Fix Mobile
+//Filter Button Fix
+.block-links .block-content .link a{
+  border: 1px solid #D4D1D1;
+}
+
+//Student Service Mobile Fix
 @media only screen and (max-width: 600px) {
-  .block-links .block-content .link a{
-    border: 1px solid #D4D1D1;
-  }
+ .col-sm-6 {
+   padding: 2% 5%;
+ }
+ .col-sm-6 p{
+
+ }
+ .col-sm-6 img{
+
+ }
+ .news-intro {
+   padding: 0 5%;
+ }
 }
