@@ -16,7 +16,7 @@
 }
 
 .path-apply-now .form-fields .ng-binding{
-  color: #000;
+  color: #5D5D5D;
   font-size: 16px;
   padding-bottom: 1em;
 }
@@ -57,7 +57,7 @@
   }
 
   .ng-binding{
-  color: #000000;
+  color: #5D5D5D;
   }
 }
 
@@ -244,12 +244,14 @@
 
 //Find a Course pagination fix
 
-.block-views-blockfind-a-course-block-1 .block-table .pager .pager__item{
+.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-8{
+
+.block-table .pager .pager__item{
   display: block!important;
   float: left;
   list-style: none;
 }
-
+}
 
 .thankicon {
   background-size: 120px 120px;

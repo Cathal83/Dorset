@@ -83,13 +83,13 @@
 
   #views-exposed-form-find-a-course-block-1, #views-exposed-form-find-a-course-block-2, #views-exposed-form-find-a-course-block-3, #views-exposed-form-find-a-course-block-4, #views-exposed-form-find-a-course-block-6, #views-exposed-form-find-a-course-block-8{
     width: 100%;
-    min-height: 280px;
+    min-height: 200px;
     margin-left: 5%;
   }
 
   .block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-8 {
       .block-table .table-row .views-field-title {
-        flex: 3;
+        flex: 3!important;
     }
   }
 }
@@ -111,7 +111,7 @@
       display: flex;
       flex: wrap;
       justify-content: space-between;
-      padding: $fc-row-padding;
+      padding: 0 3%;
       min-height: $fc-row-min-hg;
       border-bottom: $fc-row-border;
 
