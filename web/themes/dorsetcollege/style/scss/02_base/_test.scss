@@ -97,6 +97,7 @@
     border-radius: 0;
     position: relative;
     border-bottom: 2px solid #fff;
+    background-color: #809fff;
     }
 
     .btn-back{
@@ -105,8 +106,8 @@
 
     .button.js-form-submit.form-submit{
       padding: 10px;
-      border-radius: 30px;
-      background-color: #F14950;
+      border-radius: 0px;
+      background-color: #809fff;
       color: #fff !important;
       cursor: pointer;
       width: 100%;
@@ -118,18 +119,21 @@
 
   }
 
-  .block-views-blockfind-a-course-block-1 .block-table .pager{
+.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-8{
+
+  .block-table .pager{
     position: relative !important;
         display: inline-block;
   }
 
-  .block-views-blockfind-a-course-block-1 .block-table .table-row:hover{
+  .block-table .table-row:hover{
         background: #efefef;
         cursor: pointer;
           .views-field-title a{
         color: #36F;
         }
   }
+}
 
 
 .block-region-bottom .block-views-exposed-filter-blockcourse-search-page-1{
