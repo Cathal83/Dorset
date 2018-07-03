@@ -1,20 +1,20 @@
 <div class="form-content">
-    <div class="form-progression">
-      <div class="form-step marked"></div>
-      <span class="form-step-line"></span>
-      <div class"form-step"></div>
-      <span class="form-step-line"></span>
-      <div class="form-step"></div>
-    </div>
     <div class="form-title">
       <h2>Online Application</h2>
       <div>
         <h1>{{ user.productname }}<span ng-if="productData[0].application_type == '60'">{{ ': ' + user.deliveryname }}</span></h1>
       </div>
     </div>
+    <div class="form-progression">
+      <h3>Step 1: Personal Details</h3>
+      <div class="form-step marked"></div>
+      <span class="form-step-line"></span>
+      <div class="form-step"></div>
+      <span class="form-step-line"></span>
+      <div class="form-step"></div>
+    </div>
     <!-- Course Select Box -->
     <div class="form-fields">
-      <h3>Step 1: Personal Details</h3>
       <!-- Select Course -->
       <div class="form-wrapper">
         <div>
@@ -38,7 +38,7 @@
         </div>
         <div class="form-row">
           <div class="form-opt">
-            <md-datepicker name="dob" ng-model="user.dob" md-current-view="year" md-placeholder="Date of Birth" required></md-datepicker>
+            <md-datepicker class="datepick" name="dob" ng-model="user.dob" md-current-view="year" md-placeholder="Date of Birth" required></md-datepicker>
           </div>
           <div ng-messages="bookingStepForm.dob.$error" ng-if="formStepSubmitted" class="error-msg">
             <div ng-message="required">Date of birth is required for application.</div>
@@ -111,7 +111,7 @@
               <div ng-messages="bookingStepForm.city.$error" ng-if="formStepSubmitted" class="error-msg">
                   <div ng-message="required">City/ Town field is required for application..</div>
               </div>
-          </div>   
+          </div>
             <!-- Postal Code -->
             <div class="form-row">
               <div class="form-opt">
@@ -120,7 +120,7 @@
               <div ng-messages="bookingStepForm.postalcode.$error" ng-if="formStepSubmitted" class="error-msg">
                   <div ng-message="required">Postal Code field is required for application..</div>
               </div>
-          </div>           
+          </div>
       </div>
       <!-- Proceed Button -->
       <div class="bookingform-btn">
@@ -131,4 +131,3 @@
       </div>
     </div>
   </div>
-  

@@ -1,20 +1,20 @@
 <div class="form-content">
-    <div class="form-progression">
-        <div class="form-step marked"></div>
-        <span class="form-step-line marked"></span>
-        <div class "form-step marked"></div>
-        <span class="form-step-line"></span>
-        <div class="form-step"></div>
-    </div>
     <div class="form-title">
         <h2>Online Application</h2>
         <div>
             <h1>{{ user.productname }}<span ng-if="productData[0].application_type == '60'">{{ ': ' + user.deliveryname }}</span></h1>
         </div>
     </div>
+    <div class="form-progression">
+        <h3>Step 2: Required Documents</h3>
+        <div class="form-step marked"></div>
+        <span class="form-step-line"></span>
+        <div class="form-step marked"></div>
+        <span class="form-step-line"></span>
+        <div class="form-step"></div>
+    </div>
     <!-- Course Select Box -->
     <div class="form-fields">
-        <h3>Step 2: Required Documents</h3>
         <p>You will need to upload documents to show your prior learning/experience and to verify your identity.</p>
         <div class="form-row">
             <div class="form-opt" ng-repeat="product in productData | unique:'document'">
@@ -22,10 +22,10 @@
                     <div>
                         <span>{{ $index + 1 }}. {{ product.document }}</span>
                     </div>
-                </div>  
-            </div>  
+                </div>
+            </div>
             <div class="form-upload" ng-repeat="product in productData">
-                <div ng-if="$index == 0">
+                <div ng-if="$index == 0" class="upbtn">
                     <button type="file" name="docs0" ng-model="user.docs[0]" ngf-select ngf-change="docSize(user.docs[0], 0)" ng-hide="user.docs[0]" required>Upload Documents</button>
                     <i ng-show="maxSize[0]">File is too large, max 5Mb</i>
                     <div ng-messages="bookingStepForm['docs0'].$error" ng-if="formStepSubmitted" class="error-msg">
@@ -42,14 +42,14 @@
                     <li>{{ user.docs[$index].name }} <div ng-click="user.docs[$index] = null" ng-show="user.docs[$index]">Delete</div> </li>
                 </ul>
             </div>
-        </div> 
+        </div>
     </div>
     <div>
         <!-- Proceed Button -->
         <div class="bookingform-btn">
           <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
         </div>
-        <div>
+        <div class="bookingform-btn">
           <a class="btn-next" ng-click="goToNextSection(bookingStepForm.$valid)"href="">Continue</a>
         </div>
     </div>

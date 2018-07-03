@@ -1,16 +1,16 @@
 <div class="form-content">
-  <div class="form-progression">
-    <div class="form-step marked"></div>
-    <span class="form-step-line marked"></span>
-    <div class "form-step marked"></div>
-    <span class="form-step-line marked"></span>
-    <div class="form-step marked"></div>
-  </div>
   <div class="form-title">
       <h2>Online Application</h2>
       <div>
           <h1>{{ user.productname }} <span ng-if="productData[0].application_type == '60'">{{': ' + user.deliveryname }}</span></h1>
       </div>
+  </div>
+  <div class="form-progression">
+    <div class="form-step marked"></div>
+    <span class="form-step-line"></span>
+    <div class="form-step marked"></div>
+    <span class="form-step-line"></span>
+    <div class="form-step marked"></div>
   </div>
   <div class="form-fields">
     <div class="form-wrapper">
@@ -121,10 +121,10 @@
   <div class="bookingform-btn">
     <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
   </div>
-  <div class="bookingform-btn" ng-if="productData[0].application_type == '61'">
+  <div class="bookingform-btn fixw" ng-if="productData[0].application_type == '61'">
     <a class="btn-next" ng-click="submitForm()" href="">Submit</a>
   </div>
-  <div class="bookingform-btn" ng-if="productData[0].application_type == '60'">
+  <div class="bookingform-btn fixw" ng-if="productData[0].application_type == '60'">
     <a class="btn-next" ng-click="submitForm()" href="">Make Payment</a>
   </div>
 </div>
