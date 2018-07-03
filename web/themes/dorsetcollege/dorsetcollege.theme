@@ -10,3 +10,15 @@ function dorsetcollege_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $
     }
   }
 }
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function dorsetcollege_theme_suggestions_html_alter(array &$suggestions, array $variables) {
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'html__'.$content_type;
+  }
+}
