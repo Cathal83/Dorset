@@ -9,7 +9,7 @@ function dorsetcollege_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $
       $form['#action'] = '/find-a-course';
     }
     elseif ($form['#id'] == 'views-exposed-form-course-search-page-1') {
-      $form['#action'] = '/find-a-course/search';
+      $form['#action'] = '/find-a-course';
     }
   }
 }
