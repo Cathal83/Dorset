@@ -613,7 +613,7 @@ p.arrow-right::after, a.arrow-right::after{
 .path-student-life .block-list-bg-img, .path-current-students .block-list-bg-img{
       width: 100%;
       @include breakpoint(640px) {
-        width: 33.33333%;
+        width: 50%;
       }
       position: relative;
       height: 300px;
@@ -621,7 +621,7 @@ p.arrow-right::after, a.arrow-right::after{
       padding: 0;
       float: left;
 
-      &:nth-child(5)  {
+      &:nth-child(4)  {
         clear: both;
       }
 
@@ -950,4 +950,10 @@ p.arrow-right::after, a.arrow-right::after{
 
 .lecturer-profile {
   margin-bottom: 5em;
+}
+
+.path-student-life .block-list-bg-img, .path-current-students{
+  #wrapper-bottom{
+    margin-top: -3em;
+  }
 }
