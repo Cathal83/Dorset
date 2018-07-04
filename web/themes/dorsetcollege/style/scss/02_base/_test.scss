@@ -12,7 +12,7 @@
 // BUTTON: COURSE VIEW MORE
 .block footer {
   clear: both;
-  padding: 1em 0;
+  //padding: 1em 0;
   text-align: center;
 }
 
@@ -236,9 +236,9 @@ input {
 
 }
 
-.lecturer-row.views-row.clearfix.row-2{
-  margin-top: 5em !important;
-}
+//.lecturer-row.views-row.clearfix.row-2{
+//  margin-top: 5em !important;
+//}
 
 .lecturer-row .col-sm-4{
   margin: 0 !important;
@@ -445,6 +445,8 @@ p.arrow-right::after, a.arrow-right::after{
 .header-image-update .hero-image img {
     width: 100%;
     height: auto;
+    background-color: black;
+    opacity: 0.8;
 }
 
 @media (min-width: 640px){
@@ -459,7 +461,7 @@ p.arrow-right::after, a.arrow-right::after{
   img{
   width: 100%;
   height: auto;
-  border-radius: 0 0 64% 64%/0 0 12% 12%;
+  border-radius: 0 0 60% 60%/0 0 15% 15%;
   }
 }
 
@@ -467,10 +469,10 @@ p.arrow-right::after, a.arrow-right::after{
 .hero-image {
   height: 309px;
   overflow: hidden;
-  border-radius: 0 0 64% 64%/0 0 12% 12%;
+  border-radius: 0 0 60% 60%/0 0 15% 15%;
   box-shadow: inset 0 0 0 2000px rgba(45,45,45,.38);
 
-    & img {
+      img {
       height: 309px;
       width: auto;
       overflow: hidden;
@@ -693,7 +695,7 @@ p.arrow-right::after, a.arrow-right::after{
   display: none;
 }
 
-.lecturer-row .col-sm-4 .lecturer-profile, {
+.lecturer-row .col-sm-4.lecturer-profile{
   margin-bottom: 5em !important;
 }
 
@@ -705,6 +707,7 @@ p.arrow-right::after, a.arrow-right::after{
     //-ms-transform: translate(-50%, -50%);
     margin-top: 3rem;
     padding-left: 6%;
+    z-index: 2;
 }
 
 #zone-actionblocks .zone-section .block-region-homeactionblocks .block-list-bg-img {
@@ -847,14 +850,14 @@ p.arrow-right::after, a.arrow-right::after{
 
 @media only screen and (min-width: 600px) {
   //.path-frontpage h2{
-  h2{  
+  h2{
     padding: 50px 0;
   }
-  
+
   .hero-title h2{
     padding: 0;
   }
-  
+
   .node_54 .right-paragraph, .node_54 .left-paragraph{
     h2{
       padding-top: 0;
@@ -867,6 +870,19 @@ p.arrow-right::after, a.arrow-right::after{
     padding: 3em 6% 12em 6% !important;
 }
 
+.block-views-blocklecturer-profiles-block-1 footer{
+  margin: 5em 0 2em 0;
+}
+
+.btn-blue {
+  border-bottom: 2px solid $dc-blue;
+    font-weight: 700;
+}
+
+.btn-blue:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
 //DROPDOWN MENU
 #block-dorsetcollege-main-menu .sub-menu ul li{
   display: block;
@@ -903,31 +919,31 @@ p.arrow-right::after, a.arrow-right::after{
 //    display: block !important;
 //  }
 
-@media only screen and (max-width: 975px) {
-  #zone-post-footer{
-    display: none;
-  }
-}
-
-#zone-post-footer{
-  display: block !important;
-
-  background-color: #14235D!important;
-
-  .block-views-blockpost-footer-blocks-block-1, .block-views-blockpost-footer-blocks-block-2, .block-views-blockpost-footer-blocks-block-3, .block-views-blockpost-footer-blocks-block-4, .block-views-blockpost-footer-blocks-block-5 {
-    display: flex;
-    width: 20%;
-    float: left;
-
-    h2{
-    font-size: 20px;
-    color: #fff;
-    text-align: left;
-    }
-  }
-
-  .block-views-blockpost-footer-blocks-block-2, .block-views-blockpost-footer-blocks-block-4{
-    background: #14235D!important;
-  }
-
-}
+//@media only screen and (max-width: 975px) {
+//  #zone-post-footer{
+//    display: none;
+//  }
+//}
+//
+//#zone-post-footer{
+//  display: block !important;
+//
+//  background-color: #14235D!important;
+//
+//  .block-views-blockpost-footer-blocks-block-1, .block-views-blockpost-footer-blocks-block-2, .block-views-blockpost-footer-blocks-block-3, .block-views-blockpost-footer-blocks-block-4, .block-views-blockpost-footer-blocks-block-5 {
+//    display: flex;
+//    width: 20%;
+//    float: left;
+//
+//    h2{
+//    font-size: 20px;
+//    color: #fff;
+//    text-align: left;
+//    }
+//  }
+//
+//  .block-views-blockpost-footer-blocks-block-2, .block-views-blockpost-footer-blocks-block-4{
+//    background: #14235D!important;
+//  }
+//
+//}

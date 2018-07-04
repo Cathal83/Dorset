@@ -21,7 +21,7 @@
   background-repeat: no-repeat;
 
   }
-  
+
   .views-field-field-course-delivery-mode{
       background-image: url('/sites/default/files/block-bg/diploma.svg');
   }
@@ -33,7 +33,7 @@
   .views-field-field-nfq-level{
       background-image: url('/sites/default/files/block-bg/graduation.svg');
   }
-  //      
+  //
   .views-field-field-dorset-course-duration{
       background-image: url('/sites/default/files/block-bg/hourglass.svg');
   }
@@ -41,7 +41,7 @@
   .views-field-field-campus{
       background-image: url('/sites/default/files/block-bg/museum-1.svg');
   }
-  //      Type     
+  //      Type
   .views-field-field-type-of-course{
     background-image: url('/sites/default/files/block-bg/open-book-1.svg');
   }
@@ -220,7 +220,7 @@
 @media screen and (max-width: 900px) and (min-width: 600px) {
   .block-views-blockcourses-view-block-2 {
     //height: 375px;
-    height: 410px;    
+    height: 410px;
   }
 
   .block-views-blockcourses-view-block-2 div{
@@ -264,7 +264,7 @@
 
   .block-views-blockcourses-view-block-7{
     //height: 415px;
-    height: 450px;    
+    height: 450px;
     margin-top: -40px;
   }
 
@@ -439,7 +439,7 @@
   .block-views-blockcourses-view-block-14 {
     width: 100% !important;
     //height: 182px;
-    height: 200px;   
+    height: 200px;
     background-size: 61px 61px !important;
     background-position: 50% 10% !important;
   }
@@ -472,7 +472,7 @@
     font-size: 11px;
     padding: 5% 10% 20%;
   }
-  
+
   .block-views-blockcourses-view-block-6 .col-sm-12 {
     margin: 0 5%;
   }
@@ -618,12 +618,12 @@
 //Mobile To Become
 
 @media only screen and (max-width: 600px) {
-  
+
   .become .col-sm-6 h3 {
     font-size: 20px;
     padding-top: 0;
   }
-  
+
   .become .paragraph--type--dorset-course-become div div div{
     background-size: 30px 30px;
     padding: 2em 2em 2em 4.5em;
@@ -890,7 +890,7 @@
 @media only screen and (min-width: 600px) {
 
   .path-frontpage #zone-main{
-    margin-top: -40px;
+    margin-top: -50px;
   }
 
   .zone-section .block-region-homeactionblocks .block-list-bg-img{
@@ -901,11 +901,11 @@
   }
 
   .zone-section .block-region-homeactionblocks .block-list-bg-img:nth-child(1) .block-title{
-      margin-top: 1.15em;
+      margin-top: 2.15em;
   }
 
   .zone-section .block-region-homeactionblocks .block-list-bg-img:nth-child(2) .block-title{
-      margin-top: 1.75em;
+      margin-top: 2.75em;
   }
 
   .zone-section .block-region-homeactionblocks .block-list-bg-img .block-content .block-title{
@@ -934,6 +934,16 @@
   }
 }
 
+@media screen and (max-width: 975px) and (min-width: 600px) {
+  .zone-section .block-region-homeactionblocks .block-list-bg-img:nth-child(1) .block-title{
+      margin-top: 1.15em;
+  }
+
+  .zone-section .block-region-homeactionblocks .block-list-bg-img:nth-child(2) .block-title{
+      margin-top: 2.1em;
+  }
+}
+
 // Home Page Desktop CSS - Stats
 
 @media only screen and (min-width: 975px) {
@@ -952,8 +962,9 @@
         height: 230px;
         position: relative;
     }
-    .block-region-homeaccreditations .block-accreditations .block-icons div{
-      width: inherit;
+    .block-region-homeaccreditations .block-accreditations .block-icons div div{
+      width: 82px;
+      height: 82px;
     }
 }
 
@@ -1364,7 +1375,7 @@
   .modass div .paragraph--type--dorset-module-detail div div:nth-child(2){
     clear: both;
   }
-  
+
     @media screen and (max-width: 975px) and (min-width: 600px) {
 
     .modtitle, .modcred, .modsemester, .modstat {
@@ -1441,7 +1452,7 @@
 
 .path-student-life .choose .statistic-content{
 
-  //padding: 5%;
+  padding: 5%;
   background-color: #F8F8F8;
   height: 130px;
 
@@ -1547,6 +1558,7 @@
 .paragraph--type--page-introduction{
   margin-top: 1.15em;
   margin-bottom: 1.15em;
+  padding: 2% 0;
 }
 
 .paragraph--type--linked-icons{
@@ -1556,7 +1568,7 @@
 
 
 .node_54 .paragraph--type--paragraph-statistic{
-  
+
 
 
   @include breakpoint(640px) {
@@ -1661,13 +1673,13 @@
 
   //.path-about-us .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7 .paragraph.paragraph--type--paragraph-statistic.paragraph--view-mode--default{
    .paragraph--type--paragraph-statistic{
-  
+
       width: inherit;
       float:none;
       text-align: inherit;
       padding-left: 20%;
       //margin-bottom: 2em;
-      
+
   }
 
   .paragraph--type--paragraph-statistic {
@@ -1675,25 +1687,33 @@
     .stat-intro {
      margin-left: 10%;
     }
-  }  
-
-  .path-about-us .block-accreditations .block-icons {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
   }
 
-  .path-about-us .block-accreditations .block-icons div {
-    width: inherit;
+  .path-about-us .block-accreditations h2{
+    padding-top: 26.5em;
   }
 
-  .path-about-us .block.block-block-content.block-accreditations{
-    margin-bottom: 0em;
+  .path-frontpage, .path-about-us{
+
+    .block-accreditations .block-icons {
+      display: inline-block;
+      padding-left: 19%;
+      padding-right: 5%;
+    }
+
+    .block-accreditations .block-icons div{
+      width: 50%;
+      float: left;
+    }
+
+    .block-accreditations .block-icons div div{
+      width: 82px;
+      height: 82px;
+    }
+
+    .block.block-block-content.block-accreditations{
+      margin-bottom: 0em;
+    }
   }
 
   //.path-about-us .block.block-block-content.block-block-contentfb82da58-854d-4edc-9781-bce5b1f035f7{
@@ -1721,6 +1741,7 @@
   .stat-content{
     padding-left: 2%;
     padding-right: 2%;
+    font-weight: 400;
   }
 }
 
@@ -2001,4 +2022,78 @@
  .news-intro {
    padding: 0 5%;
  }
+}
+
+.node_53 .col-sm-6{
+  padding-bottom: 5%;
+}
+
+.path-about-us .stat-intro{
+  font-weight: 700;
+}
+
+.path-about-us .stat-content{
+  font-weight: 400;
+}
+
+.node_344, .node_54, .node_56{
+  article{
+    padding-bottom: 5%;
+  }
+}
+
+#views-exposed-form-find-a-course-block-1 .js-form-item .js-form-item-search{
+  display: none;
+}
+
+.path-current-students, .path-student-life {
+  .block-list-bg-img .block-content .block-list{
+    display: block;
+    margin: -30% 10% 0% 10%;
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  #zone-post-footer{
+    display: none;
+  }
+}
+
+#zone-post-footer{
+
+  background-color: #14235D!important;
+
+  .block-views-blockpost-footer-blocks-block-1, .block-views-blockpost-footer-blocks-block-2, .block-views-blockpost-footer-blocks-block-3 {
+    display: inline-block;
+    width: 33.3%;
+    float: left;
+    padding-bottom: 5%;
+
+    h2{
+    font-size: 20px;
+    color: #fff;
+    text-align: left;
+    }
+    .views-row {
+      width: 85%;
+    }
+  }
+
+  .block-views-blockpost-footer-blocks-block-2, .block-views-blockpost-footer-blocks-block-4{
+    background: #14235D!important;
+  }
+
+}
+
+@media only screen and (min-width: 975px) {
+  #zone-footer .region-footer .block-menu-footer{
+    flex-basis: initial!important;
+  }
+  #zone-footer .col-xm-12 {
+    width: 28.3%!important;
+    float: left!important;
+    margin-left: 0!important;
+    margin-right: 5%;
+  }
 }
