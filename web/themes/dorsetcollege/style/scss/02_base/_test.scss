@@ -621,9 +621,9 @@ p.arrow-right::after, a.arrow-right::after{
       padding: 0;
       float: left;
 
-      &:nth-child(4)  {
-        clear: both;
-      }
+      //&:nth-child(4)  {
+      //  clear: both;
+      //}
 
       .bg-img div{
         background-position: center;
@@ -952,7 +952,7 @@ p.arrow-right::after, a.arrow-right::after{
   margin-bottom: 5em;
 }
 
-.path-student-life .block-list-bg-img, .path-current-students{
+.path-student-life .path-current-students{
   #wrapper-bottom{
     margin-top: -3em;
   }
