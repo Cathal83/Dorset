@@ -693,7 +693,7 @@ p.arrow-right::after, a.arrow-right::after{
   display: none;
 }
 
-.lecturer-row .col-sm-4.lecturer-profile{
+.lecturer-row .col-sm-4 .lecturer-profile, {
   margin-bottom: 5em !important;
 }
 
@@ -866,3 +866,39 @@ p.arrow-right::after, a.arrow-right::after{
 #zone-stats .zone-section {
     padding: 3em 6% 12em 6% !important;
 }
+
+//DROPDOWN MENU
+#block-dorsetcollege-main-menu .sub-menu ul li{
+  display: block;
+}
+
+#block-dorsetcollege-main-menu .sub-menu {
+  position: absolute;
+  z-index:99;
+}
+
+.sub-menu .sub-menu-lv-1{
+    padding-top: 2em;
+    padding-right: 1.5em;
+    background-color: #fff;
+    min-width: 235px;
+    
+    li {
+      margin: 0;
+      padding: 0;
+      display: block;
+      
+      a{
+        display: table;
+        padding: 1em 0em 1em 1.5em;
+      }
+    }
+}
+
+//.cols-3 .lecturer-row{
+//  display: none;
+//}
+//
+//.cols-3 .lecturer-row.row-1{
+//    display: block !important;
+//  }
