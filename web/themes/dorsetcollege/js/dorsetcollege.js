@@ -7,10 +7,10 @@
     attach: function(context, settings) {
       // Menu Navigation
       $("#block-dorsetcollege-main-menu .menu-lv-0 > .menu-item--expanded").mouseenter(function () {
-        $(this).find(".sub-menu").animate({ height: "toggle" }, 300);
+        $(this).find(".sub-menu").animate({ height: "toggle" }, 600);
 
       }).mouseleave(function () {
-        $(this).find(".sub-menu").animate({ height: "toggle" }, 300);
+        $(this).find(".sub-menu").animate({ height: "toggle" }, 600);
 
       });
       $(".sub-menu").change(function (e) {
@@ -43,8 +43,8 @@
       });
 
      $(document).ready(function(){
-          $('.btn-more').click(function(){
-              $('.block .col-sm-6').toggle();
+          $('.btn-blue').click(function(){
+              $('.lecturer-row:not(:first)').toggle("show");
           });
       }); 
 
@@ -77,10 +77,11 @@
       nextText: "",
       maxItems: 3,
       keyboard: true,
-      touch: true,
-      animationLoop: true
+      touch: true
 
     });
+      
+    
 
     // $("#hide").on("click", function (){
     //   // if ($(".node_54 .paragraph--type--page-introduction").height() == 200) {
