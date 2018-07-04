@@ -902,3 +902,31 @@ p.arrow-right::after, a.arrow-right::after{
 //.cols-3 .lecturer-row.row-1{
 //    display: block !important;
 //  }
+
+@media only screen and (max-width: 975px) {
+  #zone-post-footer{
+    display: none;
+  }
+}
+
+#zone-post-footer{
+
+  background-color: #14235D!important;
+
+  .block-views-blockpost-footer-blocks-block-1, .block-views-blockpost-footer-blocks-block-2, .block-views-blockpost-footer-blocks-block-3, .block-views-blockpost-footer-blocks-block-4, .block-views-blockpost-footer-blocks-block-5 {
+    display: flex;
+    width: 20%;
+    float: left;
+
+    h2{
+    font-size: 20px;
+    color: #fff;
+    text-align: left;
+    }
+  }
+
+  .block-views-blockpost-footer-blocks-block-2, .block-views-blockpost-footer-blocks-block-4{
+    background: #14235D!important;
+  }
+
+}
