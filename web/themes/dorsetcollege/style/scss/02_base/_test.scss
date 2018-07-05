@@ -848,24 +848,6 @@ p.arrow-right::after, a.arrow-right::after{
   padding-bottom: 5em;
 }
 
-@media only screen and (min-width: 600px) {
-  //.path-frontpage h2{
-  h2{
-    padding: 50px 0;
-  }
-
-  .hero-title h2{
-    padding: 0;
-  }
-
-  .node_54 .right-paragraph, .node_54 .left-paragraph{
-    h2{
-      padding-top: 0;
-      padding-bottom: 25px;
-    }
-  }
-}
-
 #zone-stats .zone-section {
     padding: 2em 0 4em 0 !important;
 }
@@ -893,22 +875,45 @@ p.arrow-right::after, a.arrow-right::after{
   z-index:99;
 }
 
-.sub-menu .sub-menu-lv-1{
+#block-dorsetcollege-main-menu .sub-menu .sub-menu-lv-1{
     padding-top: 2em;
-    padding-right: 1.5em;
-    background-color: #fff;
-    min-width: 235px;
+    background-color: $dc-blue;
+    color: #fff;
+    margin-top: 1em;
     
     li {
-      margin: 0;
+      //margin: 0;
       padding: 0;
       display: block;
-      
-      a{
-        display: table;
-        padding: 1em 0em 1em 1.5em;
+      color: #fff;
+      border-bottom: 2px solid #fff;
+      margin: 0 1em;
+        &:hover {
+          background: #809fff;
+  
+        }
       }
-    }
+
+      a{
+        text-align: left;
+        color: #fff;
+        display: table;
+        padding: 1em 2em 1em 1em;
+        margin-left: 1em;
+        border: none;
+        //border-bottom: 2px solid #fff;
+              &:hover {
+        background: #809fff;
+        }
+       }
+       
+      li:last-of-type{
+        //a{
+          border-bottom: none;
+        //}
+      }
+   
+    
 }
 
 .cols-3 .lecturer-row{
@@ -918,35 +923,6 @@ p.arrow-right::after, a.arrow-right::after{
 .cols-3 .lecturer-row.row-1{
     display: block !important;
  }
-
-//@media only screen and (max-width: 975px) {
-//  #zone-post-footer{
-//    display: none;
-//  }
-//}
-//
-//#zone-post-footer{
-//  display: block !important;
-//
-//  background-color: #14235D!important;
-//
-//  .block-views-blockpost-footer-blocks-block-1, .block-views-blockpost-footer-blocks-block-2, .block-views-blockpost-footer-blocks-block-3, .block-views-blockpost-footer-blocks-block-4, .block-views-blockpost-footer-blocks-block-5 {
-//    display: flex;
-//    width: 20%;
-//    float: left;
-//
-//    h2{
-//    font-size: 20px;
-//    color: #fff;
-//    text-align: left;
-//    }
-//  }
-//
-//  .block-views-blockpost-footer-blocks-block-2, .block-views-blockpost-footer-blocks-block-4{
-//    background: #14235D!important;
-//  }
-//
-//}
 
 .lecturer-profile {
   margin-bottom: 5em;

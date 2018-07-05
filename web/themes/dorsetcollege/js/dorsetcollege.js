@@ -7,10 +7,12 @@
     attach: function(context, settings) {
       // Menu Navigation
       $("#block-dorsetcollege-main-menu .menu-lv-0 > .menu-item--expanded").mouseenter(function () {
-        $(this).find(".sub-menu").animate({ height: "toggle" }, 600);
+        //$(this).find(".sub-menu").animate({ height: "toggle" }, 600);
+        $(this).find(".sub-menu").show();
 
       }).mouseleave(function () {
-        $(this).find(".sub-menu").animate({ height: "toggle" }, 600);
+        //$(this).find(".sub-menu").animate({ height: "toggle" }, 600);
+        $(this).find(".sub-menu").hide();
 
       });
       $(".sub-menu").change(function (e) {
