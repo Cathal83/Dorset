@@ -93,10 +93,10 @@
       
       $(document).ready(function() {
         $("#hide").click(function() {      
-            if($(".node_54 div:nth-child(3)").hasClass("max")) {
-                $(".node_54 div:nth-child(3)").removeClass("max");
+            if($(".node_54 .page-content-section .right-paragraph:nth-child(3),.node_54 .page-content-section .left-paragraph:nth-child(2) ").hasClass("max")) {
+                $(".node_54 .page-content-section .right-paragraph:nth-child(3), .node_54 .page-content-section .left-paragraph:nth-child(2)").removeClass("max");
             } else {
-               $(".node_54 div:nth-child(3)").addClass("max");
+               $(".node_54 .page-content-section .right-paragraph:nth-child(3), .node_54 .page-content-section .left-paragraph:nth-child(2)").addClass("max");
             }
     
         })

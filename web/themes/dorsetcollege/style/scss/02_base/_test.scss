@@ -996,6 +996,17 @@ p.arrow-right::after, a.arrow-right::after{
   //    height: auto;
   //}
   
+  .node_54 .page-content-section
+  {
+    .right-paragraph:nth-child(3), .left-paragraph:nth-child(2) {
+    height: 400px;
+    overflow: hidden;
+    }
+  }
+   .node_54 .page-content-section .right-paragraph.col-sm-6.max, .node_54 .page-content-section .left-paragraph.col-sm-6.max{
+      height: auto !important;
+ 
+  }
 }
 
 .path-find-a-course .block-views-exposed-filter-blockcourse-search-page-1{
