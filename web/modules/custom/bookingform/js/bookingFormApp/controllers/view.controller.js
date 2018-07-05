@@ -129,7 +129,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
       updateValidityOfCurrentStep(true /*valid */);
 
       $state.go(nextState($state.current.name));
-      $location.hash('bookingform');
+      $location.hash('page');
       // call $anchorScroll()
       $anchorScroll();
     } else {
@@ -142,7 +142,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
   $scope.goToPreviousSection = function() {
 
     $state.go(previousState($state.current.name));
-    $location.hash('bookingform');
+    $location.hash('page');
     // call $anchorScroll()
     $anchorScroll();
 
@@ -152,7 +152,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
   $scope.goToSection = function(section) {
     
     $state.go(section);
-    $location.hash('bookingform');
+    $location.hash('page');
 
     // call $anchorScroll()
     $anchorScroll();
