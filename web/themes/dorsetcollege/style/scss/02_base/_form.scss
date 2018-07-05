@@ -101,6 +101,10 @@
   color: $dc-red;
 }
 
+.error-msg div{
+  color: $dc-red!important;
+}
+
 .path-apply-now .form-fields .form-wrapper h4{
   padding: .5em 0 1em;
 }
@@ -251,9 +255,7 @@
   font-family: Lato;
 }
 
-//Find a Course pagination fix
-
-.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-8{
+.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-5, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-7, .block-views-blockfind-a-course-block-8, .block-views-blockfind-a-course-block-9, .block-views-blockfind-a-course-block-10{
 
 .block-table .pager .pager__item{
   display: block!important;
@@ -377,6 +379,16 @@
   padding-bottom: 2em;
 }
 
+.nomar {
+  margin-left: 0!important;
+}
+
+.delete {
+  color: #36F;
+  border-bottom: 1px solid;
+  width: 10.5%;
+}
+
 @media only screen and (max-width: 600px) {
   .form-progression h3 {
     font-size: 11px;
@@ -387,4 +399,36 @@
     margin-left: 18%;
     top: 12px;
   }
+}
+
+.cardpay {
+
+  padding: 1em 0;
+
+  .form-row {
+   display: contents;
+   float: left;
+ }
+
+  .form-opt select {
+   background-color: #FAFAFA;
+   height: 40px;
+   width: 15%;
+ }
+
+  .form-opt input {
+   font-size: 16px;
+   padding: 10px 10px 10px 5px;
+   /* display: block; */
+   width: 30%;
+   border: none;
+   border-bottom: 1px solid #757575;
+ }
+
+}
+
+.path-apply-now .block-bookingform-block .ng-scope span {
+   font-size: 16px;
+   padding: .5em 0!important;
+   margin-left: 0;
 }

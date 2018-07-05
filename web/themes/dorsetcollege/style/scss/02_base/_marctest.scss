@@ -1496,11 +1496,52 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+
+  .path-frontpage .block-region-homestats .statistic-content{
+
+    height: 450px;
+    text-align: center;
+
+    .path-frontpage .paragraph--type--statistics-wrapper{
+      width: 50%;
+      display: inline-block;
+      float: left;
+      margin-top: 2em;
+    }
+
+    .paragraph--type--statistics-wrapper h3{
+      font-size: 35px;
+    }
+
+    .paragraph--type--statistics-wrapper {
+      font-size: 11px;
+      padding: 5% 0;
+    }
+  }
+}
+
 // Why Choose DC Tablet CSS
 
 @media screen and (max-width: 975px) and (min-width: 600px) {
 
   .path-student-life .choose .statistic-content{
+
+    height: 70px;
+
+    .paragraph--type--statistics-wrapper h3{
+      font-size: 35px;
+    }
+
+    .paragraph--type--statistics-wrapper {
+      font-size: 11px;
+    }
+  }
+}
+
+@media screen and (max-width: 975px) and (min-width: 600px) {
+
+  .path-frontpage .block-region-homestats .statistic-content{
 
     height: 70px;
 
@@ -1852,7 +1893,7 @@
 
 // Find a Course pagination
 
-.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-8{
+.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-5, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-7, .block-views-blockfind-a-course-block-8, .block-views-blockfind-a-course-block-9, .block-views-blockfind-a-course-block-10{
 
   .block-table .pager .pager__item a{
     color: #5D5D5D;
@@ -2042,15 +2083,23 @@
   }
 }
 
-#views-exposed-form-find-a-course-block-1 .js-form-item .js-form-item-search{
+#views-exposed-form-find-a-course-block-1 .js-form-item-search{
   display: none;
 }
 
 .path-current-students, .path-student-life {
   .block-list-bg-img .block-content .block-list{
     display: block;
-    margin: -30% 10% 0% 10%;
+    margin: -20% 10% 0% 10%;
     width: 80%;
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  .path-current-students, .path-student-life {
+    .block-list-bg-img .block-content .block-list{
+      margin: -35% 10% 0% 10%;
+    }
   }
 }
 
@@ -2063,6 +2112,10 @@
 #zone-post-footer{
 
   background-color: #14235D!important;
+
+  a:hover {
+    opacity: 0.8;
+  }
 
   .block-views-blockpost-footer-blocks-block-1, .block-views-blockpost-footer-blocks-block-2, .block-views-blockpost-footer-blocks-block-3 {
     display: inline-block;
@@ -2096,4 +2149,8 @@
     margin-left: 0!important;
     margin-right: 5%;
   }
+}
+
+.js-form-item-field-type-of-course-target-id{
+  display: none;
 }

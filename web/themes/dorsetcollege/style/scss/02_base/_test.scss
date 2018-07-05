@@ -86,8 +86,12 @@
 #views-exposed-form-find-a-course-block-2,
 #views-exposed-form-find-a-course-block-3,
 #views-exposed-form-find-a-course-block-4,
+#views-exposed-form-find-a-course-block-5,
 #views-exposed-form-find-a-course-block-6,
-#views-exposed-form-find-a-course-block-8{
+#views-exposed-form-find-a-course-block-7,
+#views-exposed-form-find-a-course-block-8,
+#views-exposed-form-find-a-course-block-9,
+#views-exposed-form-find-a-course-block-10{
   display: block;
   width: 25%;
   float: right;
@@ -127,7 +131,7 @@
 
   }
 
-.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-8{
+.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-5, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-7, .block-views-blockfind-a-course-block-8, .block-views-blockfind-a-course-block-9, .block-views-blockfind-a-course-block-10{
 
   .block-table .pager{
     position: relative !important;
@@ -644,7 +648,7 @@ p.arrow-right::after, a.arrow-right::after{
 
       .block-title{
         position: absolute;
-        top: 10%;
+        top: 15%;
         width: 80%;
         text-align: left;
         margin: 0 10%;
@@ -685,6 +689,14 @@ p.arrow-right::after, a.arrow-right::after{
             //}
         }
       }
+}
+
+@media only screen and (max-width: 600px) {
+  .path-student-life .block-list-bg-img, .path-current-students .block-list-bg-img{
+    .block-title{
+      top: 25%;
+    }
+  }
 }
 
 .introduction-paragraph {
@@ -846,6 +858,24 @@ p.arrow-right::after, a.arrow-right::after{
 
 .lecturer-slider .views-field{
   padding-bottom: 5em;
+}
+
+@media only screen and (min-width: 600px) {
+  //.path-frontpage h2{
+  h2{
+    padding: 50px 0;
+  }
+
+  .hero-title h2{
+    padding: 0;
+  }
+
+  .node_54 .right-paragraph, .node_54 .left-paragraph{
+    h2{
+      padding-top: 0;
+      padding-bottom: 25px;
+    }
+  }
 }
 
 #zone-stats .zone-section {
