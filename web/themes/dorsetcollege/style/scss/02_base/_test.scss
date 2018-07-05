@@ -945,9 +945,9 @@ p.arrow-right::after, a.arrow-right::after{
       }
 }
 
-      .menu-item .sub-menu-item--active-trail a .is-active{
-          color: #fff !important;
-        }
+.menu-item .sub-menu-item--active-trail .is-active{
+    color: #fff !important;
+  }
 
 .cols-3 .lecturer-row{
   display: none;
