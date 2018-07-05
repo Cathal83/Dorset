@@ -1,4 +1,4 @@
-bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, productDocuments,  dataService) {
+bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $location, $anchorScroll, productDocuments,  dataService) {
 
   /**
    * Form Steps Validation
@@ -129,6 +129,9 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
       updateValidityOfCurrentStep(true /*valid */);
 
       $state.go(nextState($state.current.name));
+      $location.hash('bookingform');
+      // call $anchorScroll()
+      $anchorScroll();
     } else {
       // mark the step as valid so we can navigate to it via the links
       updateValidityOfCurrentStep(false /*not valid */);
@@ -139,6 +142,9 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
   $scope.goToPreviousSection = function() {
 
     $state.go(previousState($state.current.name));
+    $location.hash('bookingform');
+    // call $anchorScroll()
+    $anchorScroll();
 
   }
 
@@ -146,6 +152,10 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, product
   $scope.goToSection = function(section) {
     
     $state.go(section);
+    $location.hash('bookingform');
+
+    // call $anchorScroll()
+    $anchorScroll();
 
   }
   
