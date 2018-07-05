@@ -2176,8 +2176,8 @@
 
 @media only screen and (max-width: 975px) {
   .header-image-update .hero-image img{
-    width: inherit;
-    height: 100%;
+    width: inherit !important;
+    height: 100% !important;
     margin-left: -100%;
     margin-right: -100%;
   }
