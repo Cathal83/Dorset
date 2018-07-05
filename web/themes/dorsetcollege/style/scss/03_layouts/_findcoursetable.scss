@@ -1,6 +1,7 @@
-.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-8 {
+.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-5, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-7, .block-views-blockfind-a-course-block-8, .block-views-blockfind-a-course-block-9, .block-views-blockfind-a-course-block-10{
 
   margin: 0 5%;
+  padding: 0 0 !important;
 
   a {
     @include font-size($p-default);
@@ -65,10 +66,12 @@
 
       .pager__item--next {
         float: right;
+        margin-right: 25px;
 
       }
       .pager__item--previous {
         float: left;
+        margin-left: 25px;
 
       }
     }
@@ -79,15 +82,60 @@
 
 @media only screen and (max-width: 600px) {
 
-  #views-exposed-form-find-a-course-block-1, #views-exposed-form-find-a-course-block-2, #views-exposed-form-find-a-course-block-3, #views-exposed-form-find-a-course-block-4, #views-exposed-form-find-a-course-block-6, #views-exposed-form-find-a-course-block-8{
+  #views-exposed-form-find-a-course-block-1, #views-exposed-form-find-a-course-block-2, #views-exposed-form-find-a-course-block-3, #views-exposed-form-find-a-course-block-4, #views-exposed-form-find-a-course-block-5, #views-exposed-form-find-a-course-block-6, #views-exposed-form-find-a-course-block-7, #views-exposed-form-find-a-course-block-8, #views-exposed-form-find-a-course-block-9, #views-exposed-form-find-a-course-block-10{
     width: 100%;
     min-height: 200px;
     margin-left: 5%;
   }
 
-  .block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-8 {
+  .block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-5, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-7, .block-views-blockfind-a-course-block-8, .block-views-blockfind-a-course-block-9, .block-views-blockfind-a-course-block-10{
       .block-table .table-row .views-field-title {
-        flex: 3;
+        flex: 3!important;
     }
   }
+}
+
+
+.path-find-a-course #section-content{
+
+  a {
+    @include font-size($p-default);
+
+  }
+
+  .views-element-container{
+    padding: 5% 5%;
+  }
+
+    .views-row {
+      padding: $fc-row-padding;
+      display: flex;
+      flex: wrap;
+      justify-content: space-between;
+      padding: 0 3%;
+      min-height: $fc-row-min-hg;
+      border-bottom: $fc-row-border;
+
+      .views-field-title {
+        flex: 5;
+        margin: auto;
+        padding-right: 6%;
+
+        a {
+          color: $p-color;
+          font-weight: 400;
+
+        }
+      }
+      .views-field-view-node {
+        flex: 1;
+        margin: auto;
+        text-align: right;
+
+        a {
+          color: $dc-blue;
+
+        }
+      }
+    }
 }

@@ -12,7 +12,7 @@
 // BUTTON: COURSE VIEW MORE
 .block footer {
   clear: both;
-  padding: 1em 0;
+  //padding: 1em 0;
   text-align: center;
 }
 
@@ -33,8 +33,9 @@
     margin-top: 7rem;
     padding: 0 6%;
     background: none !important;
-    
-		@include breakpoint(640px) { 
+
+
+		@include breakpoint(640px) {
       margin-top: 12.5rem;
     }
     .filter-trigger, .btn-back, label {
@@ -46,19 +47,26 @@
   padding: 0.75em;
   float:left;
   border-radius: 60px;
+  font-size: 16px;
     @include breakpoint(640px) {
-      width: 60%;            
+      width: 60%;
     }
   }
 
     input.button.form-submit {
       width: 30%;
-      margin-left: -10%;      
+      margin-left: -10%;
       		@include breakpoint(640px) {
            width: 10%;
            margin-left: -5%
           }
     }
+}
+
+@media only screen and (max-width: 975px) {
+  .block-region-headerimage .views-exposed-form input{
+    font-size: 11px;
+  }
 }
 
   .button.form-submit {
@@ -67,8 +75,8 @@
     @include btn-base;
     cursor: pointer;
       &:hover {
-        background-color: #F46F73; 
-      }   
+        background-color: #F46F73;
+      }
     }
 
 
@@ -78,8 +86,12 @@
 #views-exposed-form-find-a-course-block-2,
 #views-exposed-form-find-a-course-block-3,
 #views-exposed-form-find-a-course-block-4,
+#views-exposed-form-find-a-course-block-5,
 #views-exposed-form-find-a-course-block-6,
-#views-exposed-form-find-a-course-block-8{
+#views-exposed-form-find-a-course-block-7,
+#views-exposed-form-find-a-course-block-8,
+#views-exposed-form-find-a-course-block-9,
+#views-exposed-form-find-a-course-block-10{
   display: block;
   width: 25%;
   float: right;
@@ -118,8 +130,26 @@
     }
 
   }
+  
+@media only screen and (max-width: 975px) {
+  #views-exposed-form-find-a-course-block-1,
+  #views-exposed-form-find-a-course-block-2,
+  #views-exposed-form-find-a-course-block-3,
+  #views-exposed-form-find-a-course-block-4,
+  #views-exposed-form-find-a-course-block-5,
+  #views-exposed-form-find-a-course-block-6,
+  #views-exposed-form-find-a-course-block-7,
+  #views-exposed-form-find-a-course-block-8,
+  #views-exposed-form-find-a-course-block-9,
+  #views-exposed-form-find-a-course-block-10{
 
-.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-8{
+    summary {
+      padding: 1em 1.5em;
+    }
+  }
+}
+
+.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-5, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-7, .block-views-blockfind-a-course-block-8, .block-views-blockfind-a-course-block-9, .block-views-blockfind-a-course-block-10{
 
   .block-table .pager{
     position: relative !important;
@@ -135,7 +165,6 @@
   }
 }
 
-
 .block-region-bottom .block-views-exposed-filter-blockcourse-search-page-1{
   display: block;
   background: red;
@@ -144,8 +173,8 @@
 .block-links {
   font-size: 11px;
   width: 80% !important;
-    @include breakpoint(640px) {  
-      margin-top: 15rem !important;
+    @include breakpoint(640px) {
+      margin-top: 16rem !important;
       font-size: 16px;
       }
     padding-left: 6% !important;
@@ -155,7 +184,7 @@ input {
   border: 0;
 }
 .paragraph--type--paragraph-image{
-  
+
   img {
   width: 100%;
   height: auto;
@@ -181,7 +210,7 @@ input {
         background-image: url('/sites/default/files/block-bg/tick_desktop.svg');
         background-position: left center;
         background-repeat: no-repeat;
-     //   padding-left: 20px; 
+     //   padding-left: 20px;
         background-size: 20px 20px;
             color: #5D5D5D;
     }
@@ -224,14 +253,14 @@ input {
     height: 309px !important;
   @include breakpoint(640px) {
     height: 390px !important;
-    
-  } 
+
+  }
 
 }
 
-.lecturer-row.views-row.clearfix.row-2{
-  margin-top: 5em !important;
-}
+//.lecturer-row.views-row.clearfix.row-2{
+//  margin-top: 5em !important;
+//}
 
 .lecturer-row .col-sm-4{
   margin: 0 !important;
@@ -270,7 +299,7 @@ input {
   color: #fff;
   text-align: center;
   margin: 1em 0;
-  
+
   &.btn-modal{
     border-bottom: 2px solid #fff;
     display: inline-block;
@@ -318,8 +347,8 @@ p.arrow-right::after, a.arrow-right::after{
   -ms-transform:translateY(-50%);
   transform:translateY(75%);
   margin-left:10px;
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
   border-left: 7px solid #36F;
@@ -370,7 +399,7 @@ p.arrow-right::after, a.arrow-right::after{
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 999999999; /* Sit on top */
+    z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
     width: 100vw; /* Full width */
@@ -378,15 +407,13 @@ p.arrow-right::after, a.arrow-right::after{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
-    //display: block;
-    //position: absolute;
 }
 
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
 /*    margin: 15% auto;*/ /* 15% from the top and centered */
-    margin: 5vw; /* 15% from the top and centered */    
+    margin: 5vw; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
@@ -433,14 +460,21 @@ p.arrow-right::after, a.arrow-right::after{
 
 /*MAIN HEADER IMAGE*/
 .header-image-update {
-    width: 100%;
+    z-index: 2;
+    position: relative;
 }
 
-.header-image-update img {
+.header-image-update .hero-image img {
     width: 100%;
     height: auto;
-    border-radius: 0 0 64% 64%/0 0 12% 12%;
-    box-shadow: inset 0 0 0 2000px rgba(45,45,45,.38);
+    background-color: black;
+    opacity: 0.8;
+}
+
+@media (min-width: 640px){
+  .header-image-update .hero-image {
+      height: 390px!important;
+  }
 }
 
 .header-image {
@@ -449,7 +483,7 @@ p.arrow-right::after, a.arrow-right::after{
   img{
   width: 100%;
   height: auto;
-  border-radius: 0 0 64% 64%/0 0 12% 12%;
+  border-radius: 0 0 60% 60%/0 0 15% 15%;
   }
 }
 
@@ -457,10 +491,10 @@ p.arrow-right::after, a.arrow-right::after{
 .hero-image {
   height: 309px;
   overflow: hidden;
-  border-radius: 0 0 64% 64%/0 0 12% 12%;
+  border-radius: 0 0 60% 60%/0 0 15% 15%;
   box-shadow: inset 0 0 0 2000px rgba(45,45,45,.38);
-  
-    & img {
+
+      img {
       height: 309px;
       width: auto;
       overflow: hidden;
@@ -489,7 +523,7 @@ p.arrow-right::after, a.arrow-right::after{
   background: #efefef;
   padding: 3.5em 1em 1em 1em;
   margin-top: -23%;
-  
+
   & h3{
     text-align: center;
     margin: 50px 0 0 0!important;
@@ -601,23 +635,23 @@ p.arrow-right::after, a.arrow-right::after{
 .path-student-life .block-list-bg-img, .path-current-students .block-list-bg-img{
       width: 100%;
       @include breakpoint(640px) {
-        width: 33.33333%;
+        width: 50%;
       }
       position: relative;
       height: 300px;
       display: inline-block !important;
       padding: 0;
       float: left;
-      
-      &:nth-child(5)  {
-        clear: both;
-      }
-      
+
+      //&:nth-child(4)  {
+      //  clear: both;
+      //}
+
       .bg-img div{
         background-position: center;
         box-shadow: inset 0 0 0 2000px rgba(45,45,45,.7);
       }
-      &:nth-child(2)  {
+      &:nth-child(1)  {
         .bg-img div{
           box-shadow: inset 0 0 0 2000px #f14950;
           }
@@ -627,25 +661,25 @@ p.arrow-right::after, a.arrow-right::after{
            box-shadow: inset 0 0 0 2000px #2952cc;
          }
       }
-      
-      
-      
+
+
+
       .block-title{
         position: absolute;
-        top: 10%;
+        top: 15%;
         width: 80%;
         text-align: left;
         margin: 0 10%;
-        
+
       }
-      
+
       .btn-link-white{
         width: 100%;
         text-align: center;
         position: absolute;
         top: 80%;
         left: 0;
-                
+
         a{
           border-bottom: 2px solid #fff;
           display: inline-block;
@@ -653,12 +687,12 @@ p.arrow-right::after, a.arrow-right::after{
           padding: $link-border-padding;
           border-radius: 0;
           background: none;
-        
+
             &:hover {
               opacity: 0.8;
               border-bottom: 2px solid (255,255,255, 0.8);
             }
-            
+
             //&::after{
             //  position: absolute;
             //  content: "";
@@ -675,6 +709,14 @@ p.arrow-right::after, a.arrow-right::after{
       }
 }
 
+@media only screen and (max-width: 600px) {
+  .path-student-life .block-list-bg-img, .path-current-students .block-list-bg-img{
+    .block-title{
+      top: 25%;
+    }
+  }
+}
+
 .introduction-paragraph {
   margin: 2em 6%;
 }
@@ -684,7 +726,7 @@ p.arrow-right::after, a.arrow-right::after{
 }
 
 .lecturer-row .col-sm-4.lecturer-profile{
-  margin-bottom: 5em !important; 
+  margin-bottom: 5em !important;
 }
 
 .hero-title{
@@ -695,16 +737,17 @@ p.arrow-right::after, a.arrow-right::after{
     //-ms-transform: translate(-50%, -50%);
     margin-top: 3rem;
     padding-left: 6%;
+    z-index: 2;
 }
 
 #zone-actionblocks .zone-section .block-region-homeactionblocks .block-list-bg-img {
-  z-index: 1 !important; 
+  z-index: 1 !important;
 }
 
 .node_56 .paragraph.paragraph--type--icons-block-with-text.paragraph--view-mode--default{
   display: inline-block;
   width: 100%;
-  
+
   .paragraph--type--paragraph-statistic {
     width: 33%;
     float: left;
@@ -723,7 +766,7 @@ p.arrow-right::after, a.arrow-right::after{
 
 .paragraph--type--statistics-wrapper{
   h3{
-     color: #E7B929;   
+     color: #E7B929;
   }
 }
 
@@ -745,7 +788,7 @@ p.arrow-right::after, a.arrow-right::after{
     color: $h2-grey-color;
     margin: 0.5em 0;
   }
-  
+
   .col-sm-12{
     margin-bottom: 1.5em;
     padding: 1em;
@@ -767,14 +810,14 @@ p.arrow-right::after, a.arrow-right::after{
 }
 
 #section-content {
-  
+
   p,li {
     a{
     color: $dc-blue;
     &:hover {
       opacity: 0.8;
     }
-      
+
     }
   }
   ol, ul {
@@ -793,21 +836,21 @@ p.arrow-right::after, a.arrow-right::after{
   #zone-about .zone-section .block-region-homeabout .block-content-with-title{
       margin-left: 20% !important;
       margin-right: 20% !important;
-      margin-top: -110px !important;
+      margin-top: -85px !important;
   }
 
 }
 
 @media only screen and (min-width: 600px) {
   //.path-frontpage h2{
-  h2{  
+  h2{
     padding: 50px 0;
   }
-  
+
   .hero-title h2{
     padding: 0;
   }
-  
+
   .node_54 .right-paragraph, .node_54 .left-paragraph{
     h2{
       padding-top: 0;
@@ -816,7 +859,7 @@ p.arrow-right::after, a.arrow-right::after{
   }
 }
 
-.flexslider-slider, .flexslider-slider-lecturer {
+.flexslider-slider {
   ul.slides{
   margin-left: 0!important;
   }
@@ -835,45 +878,157 @@ p.arrow-right::after, a.arrow-right::after{
   padding-bottom: 5em;
 }
 
-.statistic-content {
-  padding: 0 6%;
-  h3 {
-  font-size: 35px;
+@media only screen and (min-width: 600px) {
+  //.path-frontpage h2{
+  h2{
+    padding: 50px 0;
   }
-    @include breakpoint(640px) { 
-    h3{
-    font-size: 60px;
+
+  .hero-title h2{
+    padding: 0;
+  }
+
+  .node_54 .right-paragraph, .node_54 .left-paragraph{
+    h2{
+      padding-top: 0;
+      padding-bottom: 25px;
     }
   }
 }
 
-#zone-stats{
-  padding-bottom: 10em;
-  padding-top: 2em;
+#zone-stats .zone-section {
+    padding: 2em 0 4em 0 !important;
 }
 
+.block-views-blocklecturer-profiles-block-1 footer{
+  margin: 5em 0 2em 0;
+}
 
-//.lecturer .lecturer-image {
-//  width: 30%;
-//  float: left;
-//  
-//  img{
-//    width: 100%;
-//    height: auto;
-//  }
-//}
-//
-//.lecturer{
-//  .lecturer-name, .lecturer-studies{
-//    width: 100%;
-//    padding: 0.5em 0em;
-//    font-size: 1.5em;
-//  }
-//  
-//  .lecturer-profile{
-//    width: 65%;
-//    float: right;
-//    padding: 0em 0.5em;
-//  }
-//}
+.btn-blue {
+  border-bottom: 2px solid $dc-blue;
+    font-weight: 700;
+}
+
+.btn-blue:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+//DROPDOWN MENU
+#block-dorsetcollege-main-menu .sub-menu ul li{
+  display: block;
+}
+
+#block-dorsetcollege-main-menu .sub-menu {
+  position: absolute;
+  z-index:99;
+}
+
+#block-dorsetcollege-main-menu .sub-menu .sub-menu-lv-1{
+
+    background-color: $dc-blue;
+    color: #fff;
+    margin-top: 1em;
+    
+    li {
+      //margin: 0;
+      padding: 0;
+      display: block;
+      color: #fff;
+      border-bottom: 2px solid #fff;
+      //margin: 0 1em;
+        &:hover {
+          background: #809fff;
+  
+        }
+      }
+
+      a{
+        text-align: left;
+        color: #fff;
+        display: table;
+        padding: 1em 2em 1em 1em;
+        margin-left: 1em;
+        border: none;
+        //border-bottom: 2px solid #fff;
+              &:hover {
+        background: #809fff;
+        }
+        
+       }
+       
+      li:last-of-type{
+        //a{
+          border-bottom: none;
+        //}
+      }
+}
+
+.menu-item .sub-menu-item--active-trail .is-active{
+    color: #fff !important;
+  }
+
+.cols-3 .lecturer-row{
+  display: none;
+}
+
+.cols-3 .lecturer-row.row-1{
+    display: block !important;
+ }
+
+.lecturer-profile {
+  margin-bottom: 5em;
+}
+
+.path-student-life, .path-current-students{
+  #wrapper-bottom .block-region-bottom{
+    margin-top: -3em;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  //.node_54 div:nth-child(3){
+  //  height: 400px;
+  //  overflow: hidden;
+  //}
+  //
+  //.node_54 div.max{
+  //    height: auto;
+  //}
+  
+  .node_54 .page-content-section
+  {
+    .right-paragraph:nth-child(3), .left-paragraph:nth-child(2) {
+    height: 400px;
+    overflow: hidden;
+    }
+  }
+   .node_54 .page-content-section .right-paragraph.col-sm-6.max, .node_54 .page-content-section .left-paragraph.col-sm-6.max{
+      height: auto !important;
+ 
+  }
+  
+  #hide {
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #hide {
+    display: none;
+  }
+}
+
+.path-find-a-course .block-views-exposed-filter-blockcourse-search-page-1{
+ display: inline-block;
+}
+
+.block-views-blockacademic-calendar-view-block-pre-academic-calendar, .block-views-blocknews-events-block-1{
+  .contextual-region{
+    margin-bottom: -0.2em;
+    display: inline-block;
+  }
+}
+
 

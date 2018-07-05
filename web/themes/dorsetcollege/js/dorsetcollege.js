@@ -7,10 +7,12 @@
     attach: function(context, settings) {
       // Menu Navigation
       $("#block-dorsetcollege-main-menu .menu-lv-0 > .menu-item--expanded").mouseenter(function () {
-        $(this).find(".sub-menu").animate({ height: "toggle" }, 300);
+        //$(this).find(".sub-menu").animate({ height: "toggle" }, 600);
+        $(this).find(".sub-menu").show();
 
       }).mouseleave(function () {
-        $(this).find(".sub-menu").animate({ height: "toggle" }, 300);
+        //$(this).find(".sub-menu").animate({ height: "toggle" }, 600);
+        $(this).find(".sub-menu").hide();
 
       });
       $(".sub-menu").change(function (e) {
@@ -42,11 +44,19 @@
 
       });
 
-     $(document).ready(function(){
-          $('.btn-more').click(function(){
-              $('.block .col-sm-6').toggle();
-          });
-      }); 
+
+      $(document).ready(function(){
+        $('.btn-blue').click(function(){
+        var display =  $('.lecturer-row:not(:first)').css("display");
+            if(display!="none")
+            {
+                $('.lecturer-row:not(:first)').hide();
+            } else {
+              $('.lecturer-row:not(:first)').show();
+            }
+        });
+      });
+
 
       $(document).ready(function(){
           $('#site-branding').click(function(){
@@ -77,22 +87,33 @@
       nextText: "",
       maxItems: 3,
       keyboard: true,
-      touch: true,
-      animationLoop: true
+      touch: true
 
     });
+      
+      $(document).ready(function() {
+        $("#hide").click(function() {      
+            if($(".node_54 .page-content-section .right-paragraph:nth-child(3),.node_54 .page-content-section .left-paragraph:nth-child(2) ").hasClass("max")) {
+                $(".node_54 .page-content-section .right-paragraph:nth-child(3), .node_54 .page-content-section .left-paragraph:nth-child(2)").removeClass("max");
+            } else {
+               $(".node_54 .page-content-section .right-paragraph:nth-child(3), .node_54 .page-content-section .left-paragraph:nth-child(2)").addClass("max");
+            }
+    
+        })
+    });
+        
 
     // $("#hide").on("click", function (){
-    //   // if ($(".node_54 .paragraph--type--page-introduction").height() == 200) {
-    //   //      $(".node_54 .paragraph--type--page-introduction").animate(
-    //   //          {height: "2000px"});
-    //   //      }
-    //   //   else if ($(".node_54 .paragraph--type--page-introduction").height() == 2000) {
-    //   //      $(".node_54 .paragraph--type--page-introduction").animate({height: "200px"});
-    //   //      }
-    
-    //       $(".paragraph--type--page-introduction:nth-of-type(2)").slideToggle('slow');
-    //     });
+    ////if ($(".node_54 .paragraph--type--page-introduction").height() == 200) {
+    ////   $(".node_54 .paragraph--type--page-introduction").animate(
+    ////         {height: "2000px"});
+    ////     }
+    ////  else if ($(".node_54 .paragraph--type--page-introduction").height() == 2000) {
+    //// $(".node_54 .paragraph--type--page-introduction").animate({height: "200px"});
+    //// }
+    //
+    //$(".node_54 div:nth-child(3)").slideToggle('slow');
+    //});
     }
   };
 })(jQuery);

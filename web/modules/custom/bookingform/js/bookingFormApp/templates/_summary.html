@@ -71,7 +71,7 @@
     </div>
     <div class="form-wrapper">
       <!-- Payment Type -->
-      <div class="form-row" ng-if="productData[0].application_type == '60'">
+      <div class="form-row nomar" ng-if="productData[0].application_type == '60'">
         <h4>Payment Type</h4>
         <div class="form-opt">
           <h4>{{ user.payment.type_txt + ':' }}</h4>
@@ -90,7 +90,7 @@
             <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
         </div>
       </div>
-      <div class="form-row" ng-if="productData[0].application_type == '60'">
+      <div class="form-row nomar" ng-if="productData[0].application_type == '60'">
         <h4>Billing Address</h4>
         <div class="form-opt">
           <div>{{ user.billingaddress.address1 }}</div>
@@ -118,7 +118,7 @@
     <div ng-if="status.data">Sending Data</div>
   </div>
   <!-- Proceed Button -->
-  <div class="bookingform-btn">
+  <div class="bookingform-btn fixw">
     <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
   </div>
   <div class="bookingform-btn fixw" ng-if="productData[0].application_type == '61'">

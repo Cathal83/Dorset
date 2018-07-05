@@ -9,18 +9,18 @@
 {
   padding-left: $content-padding;
   padding-right: $content-padding;
-  
+
 }
 
 .path-find-a-course #zone-main .wrapper {
   padding-left: 0;
   padding-right: 0;
-  
+
 }
 
 .path-frontpage #zone-main {
-  margin-top: -27px;
-  
+  margin-top: -40px;
+
 }
 
 //#zone-stats .zone-section {
@@ -28,29 +28,29 @@
 //
 //}
 
-#zone-about {  
+#zone-about {
   height: 500px;
-  
+
   .zone-section{
-    position: relative;  
+    position: relative;
 
     .block-background-image {
       height: 500px;
-      
+
     }
   }
 }
 
 @media only screen and (max-width: 600px) {
-  #zone-about {  
+  #zone-about {
     height: 250px;
-    
+
     .zone-section{
-      position: relative;  
-  
+      position: relative;
+
       .block-background-image {
         height: 250px;
-        
+
       }
     }
   }
@@ -63,6 +63,6 @@
 }
 
 #zone-post-footer {
-  display: none;
-  
+  display: block;
+
 }
