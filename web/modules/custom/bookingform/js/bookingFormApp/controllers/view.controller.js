@@ -123,7 +123,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
       // mark the step as valid so we can navigate to it via the links
       updateValidityOfCurrentStep(true /*valid */);
 
-      $state.go(nextState($state.current.name, {'#': page}));
+      $state.go(nextState($state.current.name, {'#': 'page'}));
       
     } else {
       // mark the step as valid so we can navigate to it via the links
@@ -134,14 +134,14 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
   // Function that returns previous State of the form - in case back button is clicked
   $scope.goToPreviousSection = function() {
 
-    $state.go(previousState($state.current.name), {'#': page});
+    $state.go(previousState($state.current.name), {'#': 'page'});
 
   }
 
   // Function that goes to a specific section
   $scope.goToSection = function(section) {
     
-    $state.go(section, {'#': page});
+    $state.go(section, {'#': 'page'});
 
   }
 })
