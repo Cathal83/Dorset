@@ -906,7 +906,7 @@ p.arrow-right::after, a.arrow-right::after{
 }
 
 #block-dorsetcollege-main-menu .sub-menu .sub-menu-lv-1{
-    padding-top: 2em;
+
     background-color: $dc-blue;
     color: #fff;
     margin-top: 1em;
@@ -982,4 +982,11 @@ p.arrow-right::after, a.arrow-right::after{
 
 .path-find-a-course .block-views-exposed-filter-blockcourse-search-page-1{
  display: inline-block;
+}
+
+.block-news-events, .block-views-blocknews-events-block-1{
+  .contextual-region{
+  margin-bottom: -0.2em;
+  display: inline-block;
+}
 }
