@@ -334,26 +334,26 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
           // Payment status update
           $scope.payment.status = 'Yes';
 
-          // Sends Data
-          postService.submitData($scope.user, $scope.token).then(function (response) {
-            // Status Data
-            delete $scope.status.payment;
-            $scope.status.data = 1;
-
-            console.log(response);
-            if (response == 200) {
-              console.log('Data submitted');
-              $scope.goToNextSection(true);
-            }
-            else {
-              $scope.status.error.data = 1;
-              console.log('Error uploading Data')
-            }
-          });
         }
         else {
           $scope.status.payment.error = 1;
           console.log('There was a problem with the Payment');
+        }
+      });
+      // Sends Data
+      postService.submitData($scope.user, $scope.token).then(function (response) {
+        // Status Data
+        delete $scope.status.payment;
+        $scope.status.data = 1;
+
+        console.log(response);
+        if (response == 200) {
+          console.log('Data submitted');
+          $scope.goToNextSection(true);
+        }
+        else {
+          $scope.status.error.data = 1;
+          console.log('Error uploading Data')
         }
       });
     }
@@ -365,23 +365,23 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
       $scope.status.upload = 1;
 
       $scope.docsUp().then(function(response){
-        // Sends Data
-        postService.submitData($scope.user, $scope.token).then(function (response) {
-          // Status Data
-          delete $scope.status.upload;
-          $scope.status.data = 1;
-          if (response == 200) {
-            console.log('Data submitted');
-            $scope.goToNextSection(true);
-          }
-          else {
-            $scope.status.error.data = 1;
-            console.log('Error uploading Data')
-          }
-        });
       }).catch(function (err) {
         $scope.status.error.docs = 1;
         console.log(err);
+      });
+      // Sends Data
+      postService.submitData($scope.user, $scope.token).then(function (response) {
+        // Status Data
+        delete $scope.status.upload;
+        $scope.status.data = 1;
+        if (response == 200) {
+          console.log('Data submitted');
+          $scope.goToNextSection(true);
+        }
+        else {
+          $scope.status.error.data = 1;
+          console.log('Error uploading Data')
+        }
       });
     }   
   }
