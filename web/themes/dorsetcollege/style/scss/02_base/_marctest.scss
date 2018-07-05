@@ -2173,3 +2173,12 @@
     top: 70%!important;
   }
 }
+
+@media only screen and (max-width: 975px) {
+  .header-image-update .hero-image img{
+    width: inherit;
+    height: 100%;
+    margin-left: -100%;
+    margin-right: -100%;
+  }
+}
