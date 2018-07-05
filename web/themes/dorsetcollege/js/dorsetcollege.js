@@ -91,19 +91,29 @@
 
     });
       
+      $(document).ready(function() {
+        $("#hide").click(function() {      
+            if($(".node_54 div:nth-child(3)").hasClass("max")) {
+                $(".node_54 div:nth-child(3)").removeClass("max");
+            } else {
+               $(".node_54 div:nth-child(3)").addClass("max");
+            }
     
+        })
+    });
+        
 
     // $("#hide").on("click", function (){
-    //   // if ($(".node_54 .paragraph--type--page-introduction").height() == 200) {
-    //   //      $(".node_54 .paragraph--type--page-introduction").animate(
-    //   //          {height: "2000px"});
-    //   //      }
-    //   //   else if ($(".node_54 .paragraph--type--page-introduction").height() == 2000) {
-    //   //      $(".node_54 .paragraph--type--page-introduction").animate({height: "200px"});
-    //   //      }
-    
-    //       $(".paragraph--type--page-introduction:nth-of-type(2)").slideToggle('slow');
-    //     });
+    ////if ($(".node_54 .paragraph--type--page-introduction").height() == 200) {
+    ////   $(".node_54 .paragraph--type--page-introduction").animate(
+    ////         {height: "2000px"});
+    ////     }
+    ////  else if ($(".node_54 .paragraph--type--page-introduction").height() == 2000) {
+    //// $(".node_54 .paragraph--type--page-introduction").animate({height: "200px"});
+    //// }
+    //
+    //$(".node_54 div:nth-child(3)").slideToggle('slow');
+    //});
     }
   };
 })(jQuery);
