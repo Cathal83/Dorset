@@ -124,6 +124,7 @@
       </div>
     </div>
   </div>
+  {{ $scope.status.upload }}
   <div class="form-status-area">
     <div ng-if="status.error.payment == 1">There was a problem processing the payment, please check your Card Details.</div>
     <div ng-if="status.error.docs == 1">There was a problem uploading the files to the server, please try again in a few minutes.</div>

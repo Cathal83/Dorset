@@ -74,6 +74,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   $scope.status.processing = 0;
   $scope.status.upload = 0;
   $scope.status.data = 0;
+  $scope.status.payment = 0;
   $scope.years = [];
   $scope.nationalities;
   $scope.countries;
@@ -370,6 +371,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
        */
       delete $scope.status.processing;
       $scope.status.upload = 1;
+      console.log($scope.status.upload);
 
       $scope.docsUp().then(function(response){
       }).catch(function (err) {
