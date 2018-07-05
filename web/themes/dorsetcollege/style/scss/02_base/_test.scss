@@ -1007,6 +1007,17 @@ p.arrow-right::after, a.arrow-right::after{
       height: auto !important;
  
   }
+  
+  #hide {
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #hide {
+    display: none;
+  }
 }
 
 .path-find-a-course .block-views-exposed-filter-blockcourse-search-page-1{
@@ -1015,7 +1026,9 @@ p.arrow-right::after, a.arrow-right::after{
 
 .block-views-blockacademic-calendar-view-block-pre-academic-calendar, .block-views-blocknews-events-block-1{
   .contextual-region{
-  margin-bottom: -0.2em;
-  display: inline-block;
+    margin-bottom: -0.2em;
+    display: inline-block;
+  }
 }
-}
+
+
