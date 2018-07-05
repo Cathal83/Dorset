@@ -2154,3 +2154,22 @@
 .js-form-item-field-type-of-course-target-id{
   display: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .path-find-a-course, .path-frontpage {
+    .block-views:not(:first-child){
+      margin-top: 10rem;
+    }
+  }
+  .path-find-a-course, .path-frontpage {
+    .block-links {
+      margin-top: 12rem;
+    }
+  }
+  #zone-actionblocks .zone-section .block-region-homeactionblocks .block-list-bg-img:first-child .block-content .block-title{
+    padding-top: 60px!important;
+  }
+  #zone-actionblocks .zone-section .block-region-homeactionblocks .block-list-bg-img:first-child .block-content .btn-link-white{
+    top: 70%!important;
+  }
+}
