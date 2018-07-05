@@ -317,7 +317,6 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    * */
   $scope.submitForm = function() {
 
-    $scope.status.processing = 1;
     if ($scope.status.error == 1) {
       delete $scope.status.error;
     }

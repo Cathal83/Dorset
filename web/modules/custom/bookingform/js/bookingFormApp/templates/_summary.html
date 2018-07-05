@@ -2,7 +2,7 @@
   <div class="form-title">
       <h2>Online Application</h2>
       <div>
-          <h1>{{ user.productname }} <span ng-if="productData[0].application_type == '60'">{{': ' + user.deliveryname }}</span></h1>
+          <h1>{{ user.productname }} <div ng-if="productData[0].application_type == '60'">{{': ' + user.deliveryname }}</div></h1>
       </div>
   </div>
   <div class="form-progression">
@@ -21,7 +21,7 @@
           <label>Course Title</label>
           <div>{{ user.productname }}</div>
         </div>
-        <div class="form-opt">
+        <div class="form-opt" ng-if="productData[0].application_type == '60'">
           <label>Course Mode</label>
           <div>{{ productData[0].price_group }}</div>
         </div>
@@ -90,13 +90,25 @@
             <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
         </div>
       </div>
-      <div class="form-row nomar" ng-if="productData[0].application_type == '60'">
+      <div class="form-row nomar" ng-if="productData[0].application_type == '60' && user.billingaddress.billingcontact == false">
         <h4>Billing Address</h4>
         <div class="form-opt">
           <div>{{ user.billingaddress.address1 }}</div>
           <div>{{ user.billingaddress.address2 }}</div>
           <div>{{ 'Co. ' + user.billingaddress.county }}</div>
           <div>{{ user.billingaddress.country }}</div>
+        </div>
+        <div>
+            <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
+        </div>
+      </div>
+      <div class="form-row nomar" ng-if="productData[0].application_type == '60' && user.billingaddress.billingcontact == true">
+        <h4>Billing Address</h4>
+        <div class="form-opt">
+          <div>{{ user.contactaddress.address1 }}</div>
+          <div>{{ user.contactaddress.address2 }}</div>
+          <div>{{ 'Co. ' + user.contactaddress.county }}</div>
+          <div>{{ user.contactaddress.country }}</div>
         </div>
         <div>
             <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
@@ -113,6 +125,8 @@
   </div>
   <div class="form-status-area">
     <div ng-if="status.error.payment">There was a problem processing the payment, please check your Card Details.</div>
+    <div ng-if="status.error.docs">There was a problem uploading the files to the server, please try again in a few minutes.</div>
+    <div ng-if="status.error.data">There was a problem sending the data to the server, please try again in a few minutes.</div>
     <div ng-if="status.processing">Processing Payment</div>
     <div ng-if="status.upload">Uploading Documents</div>
     <div ng-if="status.data">Sending Data</div>
