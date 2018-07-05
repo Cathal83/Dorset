@@ -68,6 +68,12 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    */
   $scope.status = [];
   $scope.status.error = 0;
+  $scope.status.error.payment = 0;
+  $scope.status.error.docs = 0;
+  $scope.status.error.data = 0;
+  $scope.status.processing = 0;
+  $scope.status.upload = 0;
+  $scope.status.data = 0;
   $scope.years = [];
   $scope.nationalities;
   $scope.countries;
@@ -369,6 +375,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
         $scope.status.error.docs = 1;
         console.log(err);
       });
+
       // Sends Data
       postService.submitData($scope.user, $scope.token).then(function (response) {
         // Status Data

@@ -125,12 +125,12 @@
     </div>
   </div>
   <div class="form-status-area">
-    <div ng-if="status.error.payment">There was a problem processing the payment, please check your Card Details.</div>
-    <div ng-if="status.error.docs">There was a problem uploading the files to the server, please try again in a few minutes.</div>
-    <div ng-if="status.error.data">There was a problem sending the data to the server, please try again in a few minutes.</div>
-    <div ng-if="status.processing">Processing Payment</div>
-    <div ng-if="status.upload">Uploading Documents</div>
-    <div ng-if="status.data">Sending Data</div>
+    <div ng-if="status.error.payment == 1">There was a problem processing the payment, please check your Card Details.</div>
+    <div ng-if="status.error.docs == 1">There was a problem uploading the files to the server, please try again in a few minutes.</div>
+    <div ng-if="status.error.data == 1">There was a problem sending the data to the server, please try again in a few minutes.</div>
+    <div ng-if="status.processing == 1">Processing Payment</div>
+    <div ng-if="status.upload == 1">Uploading Documents</div>
+    <div ng-if="status.data == 1">Sending Data</div>
   </div>
   <!-- Proceed Button -->
   <div class="bookingform-btn fixw">

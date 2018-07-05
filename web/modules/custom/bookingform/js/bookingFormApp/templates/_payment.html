@@ -9,8 +9,7 @@
     <div class="form-title">
       <h2>Online Application</h2>
       <div>
-        <h1 ng-if="productData[0].application_type == '60'">{{ user.productname }}{{ ': ' + user.deliveryname }}</h1>
-        <h1 ng-if="productData[0].application_type == '61'">{{ user.productname }}</h1>
+          <h1>{{ user.productname }}<div ng-if="productData[0].application_type == '60'">{{ ': ' + user.deliveryname }}</div></h1>
       </div>
     </div>
     <div class="form-progression">
@@ -107,7 +106,7 @@
             <input type="text" ng-model="user.billingaddress.address1" placeholder="Address 1" required>
           </div>
           <div ng-messages="bookingStepForm.address1.$error" ng-if="formStepSubmitted" class="error-msg">
-            <div ng-message="required">The field Address 1 is required.</div>
+            <div ng-message="required">The field is required.</div>
           </div>
         </div>
         <div class="form-row">
