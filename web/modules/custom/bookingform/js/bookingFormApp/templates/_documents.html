@@ -2,8 +2,9 @@
     <div class="form-title">
         <h2>Online Application</h2>
         <div>
-            <h1>{{ user.productname }}<div ng-if="productData[0].application_type == '60'">{{ ': ' + user.deliveryname }}</div></h1>
-        </div>
+            <h1 ng-if="productData[0].application_type == '60'">{{ user.productname }}{{ ': ' + user.deliveryname }}</h1>
+            <h1 ng-if="productData[0].application_type == '61'">{{ user.productname }}</h1>
+          </div>
     </div>
     <div class="form-progression">
         <h3>Step 2: Required Documents</h3>

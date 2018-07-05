@@ -5,8 +5,9 @@
     <!-- Course Select Box -->
     <div class="form-fields">
         <!-- Course display -->
-        <div ng-if="user.productnid">
-            <h1 class="h1ng">{{ user.productname }}<div ng-if="productData[0].application_type == '60'">{{ ': ' + user.deliveryname }}</div></h1>
+        <div>
+            <h1 ng-if="productData[0].application_type == '60'">{{ user.productname }}{{ ': ' + user.deliveryname }}</h1>
+            <h1 ng-if="productData[0].application_type == '61'">{{ user.productname }}</h1>
         </div>
         <div>
             <h2>What you may need</h2>
