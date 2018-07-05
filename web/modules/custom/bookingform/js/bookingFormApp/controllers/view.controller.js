@@ -129,9 +129,6 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
       // mark the step as valid so we can navigate to it via the links
       updateValidityOfCurrentStep(false /*not valid */);
     }
-    $location.hash('bookingform');
-    // call $anchorScroll()
-    $anchorScroll();
   };
   
   // Function that returns previous State of the form - in case back button is clicked
@@ -139,9 +136,6 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
 
     $state.go(previousState($state.current.name));
 
-    $location.hash('bookingform');
-    // call $anchorScroll()
-    $anchorScroll();
   }
 
   // Function that goes to a specific section
@@ -149,9 +143,5 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
     
     $state.go(section);
 
-    $location.hash('bookingform');
-    // call $anchorScroll()
-    $anchorScroll();
   }
-  
 })
