@@ -56,7 +56,6 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
       month: "",
       year: "",
       exp: "",
-      //address_zip: "D7"
     } 
   }
 
@@ -331,10 +330,9 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
        * Payment Applications
        */
       // Submits payment and data
+      delete $scope.status.processing;
+      $scope.status.payment = 1;
       $scope.charge().then(function (response) {
-        // Status Data
-        delete $scope.status.processing;
-        $scope.status.payment = 1;
         // 200 = no errors
         if (response == '200') {
           // Payment status update
@@ -342,17 +340,20 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
 
         }
         else {
-          $scope.status.payment.error = 1;
+          var PaymentError = 1;
           console.log('There was a problem with the Payment');
         }
       });
-      // Sends Data
-      postService.submitData($scope.user, $scope.token).then(function (response) {
-        // Status Data
-        delete $scope.status.payment;
-        $scope.status.data = 1;
+      // Case payment error
+      if (paymentError == 1) {
+        $scope.status.error.payment = 1;
+      }
 
-        console.log(response);
+      // Sends Data
+      // Status Data
+      delete $scope.status.payment;
+      $scope.status.data = 1;
+      postService.submitData($scope.user, $scope.token).then(function (response) {
         if (response == 200) {
           console.log('Data submitted');
           $scope.goToNextSection(true);
@@ -365,7 +366,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     }
     else if ($scope.productData[0].application_type == "61"){
       /**
-       * Documents Application submit everything
+       * Documents Application
        */
       delete $scope.status.processing;
       $scope.status.upload = 1;
@@ -375,12 +376,12 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
         $scope.status.error.docs = 1;
         console.log(err);
       });
-
+      
+      // Status Data
+      delete $scope.status.upload;
+      $scope.status.data = 1;
       // Sends Data
       postService.submitData($scope.user, $scope.token).then(function (response) {
-        // Status Data
-        delete $scope.status.upload;
-        $scope.status.data = 1;
         if (response == 200) {
           console.log('Data submitted');
           $scope.goToNextSection(true);
