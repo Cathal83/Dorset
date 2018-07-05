@@ -16,7 +16,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
       case 'bookingForm' :
         // Get products needed for course application
         productDocuments($scope.productData, $scope.user.deliverymode);
-        return 'steps'
+        return 'steps#page'
         break;
 
       // Goes to Deposit/ Application depending on Course
@@ -119,7 +119,6 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
   // Check if form is filled before next step
   $scope.goToNextSection = function(isFormValid) {
     // set to true to show all error messages (if there are any)
-    console.log(isFormValid);
     $scope.formStepSubmitted = true;
     if(isFormValid) {
       // reset this for next form
@@ -129,9 +128,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
       updateValidityOfCurrentStep(true /*valid */);
 
       $state.go(nextState($state.current.name));
-      $location.hash('bookingform');
-      // call $anchorScroll()
-      $anchorScroll();
+
     } else {
       // mark the step as valid so we can navigate to it via the links
       updateValidityOfCurrentStep(false /*not valid */);
@@ -142,9 +139,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
   $scope.goToPreviousSection = function() {
 
     $state.go(previousState($state.current.name));
-    $location.hash('bookingform');
-    // call $anchorScroll()
-    $anchorScroll();
+
 
   }
 
@@ -152,10 +147,6 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
   $scope.goToSection = function(section) {
     
     $state.go(section);
-    $location.hash('bookingform');
-
-    // call $anchorScroll()
-    $anchorScroll();
 
   }
   
