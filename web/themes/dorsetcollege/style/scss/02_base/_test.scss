@@ -935,6 +935,10 @@ p.arrow-right::after, a.arrow-right::after{
               &:hover {
         background: #809fff;
         }
+        
+        a:active {
+          color: #fff !important;
+        }
        }
        
       li:last-of-type{
