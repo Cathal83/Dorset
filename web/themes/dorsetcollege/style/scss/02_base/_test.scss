@@ -911,13 +911,13 @@ p.arrow-right::after, a.arrow-right::after{
     }
 }
 
-//.cols-3 .lecturer-row{
-//  display: none;
-//}
-//
-//.cols-3 .lecturer-row.row-1{
-//    display: block !important;
-//  }
+.cols-3 .lecturer-row{
+  display: none;
+}
+
+.cols-3 .lecturer-row.row-1{
+    display: block !important;
+ }
 
 //@media only screen and (max-width: 975px) {
 //  #zone-post-footer{

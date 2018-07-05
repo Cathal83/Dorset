@@ -42,11 +42,19 @@
 
       });
 
-     $(document).ready(function(){
-          $('.btn-blue').click(function(){
-              $('.lecturer-row:not(:first)').toggle("show");
-          });
-      }); 
+
+      $(document).ready(function(){
+        $('.btn-blue').click(function(){
+        var display =  $('.lecturer-row:not(:first)').css("display");
+            if(display!="none")
+            {
+                $('.lecturer-row:not(:first)').hide();
+            } else {
+              $('.lecturer-row:not(:first)').show();
+            }
+        });
+      });
+
 
       $(document).ready(function(){
           $('#site-branding').click(function(){
