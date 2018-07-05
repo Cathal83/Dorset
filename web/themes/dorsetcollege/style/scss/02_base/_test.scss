@@ -130,6 +130,24 @@
     }
 
   }
+  
+@media only screen and (max-width: 975px) {
+  #views-exposed-form-find-a-course-block-1,
+  #views-exposed-form-find-a-course-block-2,
+  #views-exposed-form-find-a-course-block-3,
+  #views-exposed-form-find-a-course-block-4,
+  #views-exposed-form-find-a-course-block-5,
+  #views-exposed-form-find-a-course-block-6,
+  #views-exposed-form-find-a-course-block-7,
+  #views-exposed-form-find-a-course-block-8,
+  #views-exposed-form-find-a-course-block-9,
+  #views-exposed-form-find-a-course-block-10{
+
+    summary {
+      padding: 1em 1.5em;
+    }
+  }
+}
 
 .block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-5, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-7, .block-views-blockfind-a-course-block-8, .block-views-blockfind-a-course-block-9, .block-views-blockfind-a-course-block-10{
 
@@ -984,7 +1002,7 @@ p.arrow-right::after, a.arrow-right::after{
  display: inline-block;
 }
 
-.block-news-events, .block-views-blocknews-events-block-1{
+.block-views-blockacademic-calendar-view-block-pre-academic-calendar, .block-views-blocknews-events-block-1{
   .contextual-region{
   margin-bottom: -0.2em;
   display: inline-block;
