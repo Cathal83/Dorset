@@ -1,138 +1,149 @@
 <div class="form-content">
-  <div class="form-title">
-      <h2>Online Application</h2>
-      <div>
-        <h1 ng-if="productData[0].application_type == '60'">{{ user.productname }}{{ ': ' + user.deliveryname }}</h1>
-        <h1 ng-if="productData[0].application_type == '61'">{{ user.productname }}</h1>
-      </div>
-  </div>
-  <div class="form-progression">
-    <div class="form-step marked"></div>
-    <span class="form-step-line"></span>
-    <div class="form-step marked"></div>
-    <span class="form-step-line"></span>
-    <div class="form-step marked"></div>
-  </div>
-  <div class="form-fields">
-    <div class="form-wrapper">
-      <div class="form-row">
-        <!-- Pre Application-->
-        <h4>Pre-application</h4>
-        <div class="form-opt">
-          <label>Course Title</label>
-          <div>{{ user.productname }}</div>
-        </div>
-        <div class="form-opt" ng-if="productData[0].application_type == '60'">
-          <label>Course Mode</label>
-          <div>{{ productData[0].price_group }}</div>
-        </div>
+  <div class="form-row col-sm-12">
+    <div class="form-title">
+        <h2>Online Application</h2>
         <div>
-            <a href="" ng-model="target" value="bookingForm" ng-click="goToSection('bookingForm')">Edit</a>
+          <h1 ng-if="productData[0].application_type == '60'">{{ user.productname }}{{ ': ' + user.deliveryname }}</h1>
+          <h1 ng-if="productData[0].application_type == '61'">{{ user.productname }}</h1>
         </div>
+    </div>
+    <div class = "col-sm-6">
+      <div class="form-progression">
+        <div class="form-step marked"></div>
+        <span class="form-step-line"></span>
+        <div class="form-step marked"></div>
+        <span class="form-step-line"></span>
+        <div class="form-step marked"></div>
       </div>
-      <!-- Personal Information -->
-      <div class="form-row">
-        <h4>Personal Information</h4>
-        <div>
+    </div> 
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-fields">
+      <div class="form-wrapper">
+        <div class="form-row">
+          <!-- Pre Application-->
+          <h4>Pre-application</h4>
           <div class="form-opt">
-              <label>Name:</label>
-              <div>{{ user.firstname + ' ' + user.lastname }}</div>
-            </div>
-            <div class="form-opt">
-              <label>DOB:</label>
-              <div>{{ user.dob | date:'dd/MM/yyyy' }}</div>
-            </div>
-            <div class="form-opt">
-              <label>Email:</label>
-              <div>{{ user.email }}</div>
-            </div>
-            <div class="form-opt">
-              <label>Gender:</label>
-              <div>{{ user.gender }}</div>
-            </div>
-            <div class="form-opt">
-              <label>Country:</label>
-              <div>{{ user.contactaddress.country }}</div>
-            </div>
+            <label>Course Title</label>
+            <div>{{ user.productname }}</div>
+          </div>
+          <div class="form-opt" ng-if="productData[0].application_type == '60'">
+            <label>Course Mode</label>
+            <div>{{ productData[0].price_group }}</div>
+          </div>
+          <div>
+              <a href="" ng-model="target" value="bookingForm" ng-click="goToSection('bookingForm')">Edit</a>
+          </div>
         </div>
-        <div>
-          <a href="" ng-model="target" value="customer-details" ng-click="goToSection('customer-details')">Edit</a>
-        </div>
-        <h4>Contact Address</h4>
-        <div>
-          <div>{{ user.contactaddress.address1 }}</div>
-          <div>{{ user.contactaddress.address2 }}</div>
-          <div>{{ 'Co. ' + user.contactaddress.county }}</div>
-          <div>{{ user.contactaddress.country }}</div>
-        </div>
-        <div>
+        <!-- Personal Information -->
+        <div class="form-row">
+          <h4>Personal Information</h4>
+          <div>
+            <div class="form-opt">
+                <label>Name:</label>
+                <div>{{ user.firstname + ' ' + user.lastname }}</div>
+              </div>
+              <div class="form-opt">
+                <label>DOB:</label>
+                <div>{{ user.dob | date:'dd/MM/yyyy' }}</div>
+              </div>
+              <div class="form-opt">
+                <label>Email:</label>
+                <div>{{ user.email }}</div>
+              </div>
+              <div class="form-opt">
+                <label>Gender:</label>
+                <div>{{ user.gender }}</div>
+              </div>
+              <div class="form-opt">
+                <label>Country:</label>
+                <div>{{ user.contactaddress.country }}</div>
+              </div>
+          </div>
+          <div>
             <a href="" ng-model="target" value="customer-details" ng-click="goToSection('customer-details')">Edit</a>
-        </div>
-      </div>
-    </div>
-    <div class="form-wrapper">
-      <!-- Payment Type -->
-      <div class="form-row nomar" ng-if="productData[0].application_type == '60'">
-        <h4>Payment Type</h4>
-        <div class="form-opt">
-          <h4>{{ user.payment.type_txt + ':' }}</h4>
-          <div>€ {{ user.payment.amount }}</div>
-        </div>
-        <h4>Payment Details</h4>
-        <div class="form-opt">
-          <label>Card Number:</label>
-          <div>{{ payment.ccencoded }}</div>
-        </div>
-        <div class="form-opt">
-          <label>Expiring Date:</label>
-          <div>{{ payment.card.exp }}</div>
-        </div>
-        <div>
-            <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
-        </div>
-      </div>
-      <div class="form-row nomar" ng-if="productData[0].application_type == '60' && user.billingaddress.billingcontact == false">
-        <h4>Billing Address</h4>
-        <div class="form-opt">
-          <div>{{ user.billingaddress.address1 }}</div>
-          <div>{{ user.billingaddress.address2 }}</div>
-          <div>{{ 'Co. ' + user.billingaddress.county }}</div>
-          <div>{{ user.billingaddress.country }}</div>
-        </div>
-        <div>
-            <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
-        </div>
-      </div>
-      <div class="form-row nomar" ng-if="productData[0].application_type == '60' && user.billingaddress.billingcontact == true">
-        <h4>Billing Address</h4>
-        <div class="form-opt">
-          <div>{{ user.contactaddress.address1 }}</div>
-          <div>{{ user.contactaddress.address2 }}</div>
-          <div>{{ 'Co. ' + user.contactaddress.county }}</div>
-          <div>{{ user.contactaddress.country }}</div>
-        </div>
-        <div>
-            <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
-        </div>
-      </div>
-      <!-- Documents required -->
-      <div class="form-row" ng-if="productData[0].document != ''">
-        <h4>Uploaded Documents</h4>
-        <div ng-repeat="doc in user.docs">
-          <div>{{ doc.name }}</div>
+          </div>
+          <h4>Contact Address</h4>
+          <div>
+            <div>{{ user.contactaddress.address1 }}</div>
+            <div>{{ user.contactaddress.address2 }}</div>
+            <div>{{ 'Co. ' + user.contactaddress.county }}</div>
+            <div>{{ user.contactaddress.country }}</div>
+          </div>
+          <div>
+              <a href="" ng-model="target" value="customer-details" ng-click="goToSection('customer-details')">Edit</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  {{ $scope.status.upload }}
-  <div class="form-status-area">
-    <div ng-if="status.error.payment == 1">There was a problem processing the payment, please check your Card Details.</div>
-    <div ng-if="status.error.docs == 1">There was a problem uploading the files to the server, please try again in a few minutes.</div>
-    <div ng-if="status.error.data == 1">There was a problem sending the data to the server, please try again in a few minutes.</div>
-    <div ng-if="status.processing == 1">Processing Payment</div>
-    <div ng-if="status.upload == 1">Uploading Documents</div>
-    <div ng-if="status.data == 1">Sending Data</div>
+    <div class = "col-sm-6">
+      <div class="form-wrapper">
+        <!-- Payment Type -->
+        <div ng-if="productData[0].application_type == '60'">
+          <h4>Payment Type</h4>
+          <div class="form-opt">
+            <h4>{{ user.payment.type_txt + ':' }}</h4>
+            <div>€ {{ user.payment.amount }}</div>
+          </div>
+          <h4>Payment Details</h4>
+          <div class="form-opt">
+            <label>Card Number:</label>
+            <div>{{ payment.ccencoded }}</div>
+          </div>
+          <div class="form-opt">
+            <label>Expiring Date:</label>
+            <div>{{ payment.card.exp }}</div>
+          </div>
+          <div>
+              <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
+          </div>
+        </div>
+        <div ng-if="productData[0].application_type == '60' && user.billingaddress.billingcontact == false">
+          <h4>Billing Address</h4>
+          <div class="form-opt">
+            <div>{{ user.billingaddress.address1 }}</div>
+            <div>{{ user.billingaddress.address2 }}</div>
+            <div>{{ 'Co. ' + user.billingaddress.county }}</div>
+            <div>{{ user.billingaddress.country }}</div>
+          </div>
+          <div>
+              <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
+          </div>
+        </div>
+        <div class="form-row nomar" ng-if="productData[0].application_type == '60' && user.billingaddress.billingcontact == true">
+          <h4>Billing Address</h4>
+          <div class="form-opt">
+            <div>{{ user.contactaddress.address1 }}</div>
+            <div>{{ user.contactaddress.address2 }}</div>
+            <div>{{ 'Co. ' + user.contactaddress.county }}</div>
+            <div>{{ user.contactaddress.country }}</div>
+          </div>
+          <div>
+              <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
+          </div>
+        </div>
+        <!-- Documents required -->
+        <div class="form-row" ng-if="productData[0].document != ''">
+          <h4>Uploaded Documents</h4>
+          <div ng-repeat="doc in user.docs">
+            <div>{{ doc.name }}</div>
+          </div>
+        </div>
+      </div>
+    
+    {{ $scope.status.upload }}
+    <div class="form-status-area">
+      <div ng-if="status.error.payment == 1">There was a problem processing the payment, please check your Card Details.</div>
+      <div ng-if="status.error.docs == 1">There was a problem uploading the files to the server, please try again in a few minutes.</div>
+      <div ng-if="status.error.data == 1">There was a problem sending the data to the server, please try again in a few minutes.</div>
+      <div ng-if="status.processing == 1">Processing Payment</div>
+      <div ng-if="status.upload == 1">Uploading Documents</div>
+      <div ng-if="status.data == 1">Sending Data</div>
+    </div>
   </div>
+<div class = "col-sm-12">
   <!-- Proceed Button -->
   <div class="bookingform-btn fixw">
     <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
@@ -144,3 +155,5 @@
     <a class="btn-next" ng-click="submitForm()" href="">Make Payment</a>
   </div>
 </div>
+</div>
+
