@@ -1989,9 +1989,9 @@
     color: #5D5D5D;
 }
 
-//.block-views-blockcourses-view-block-14 .price-element:nth-child(2) span{
-//  display: none;
-//}
+.block-views-blockcourses-view-block-14 .price-element:nth-child(2) span{
+  display: none;
+}
 
 @media screen and (max-width: 1024px) and (min-width: 600px) {
   .block-views-blockcourses-view-block-14 .price-element:nth-child(1) span{
@@ -2155,6 +2155,13 @@
   display: none;
 }
 
+.path-find-a-course .block-views-exposed-filter-blockcourse-search-page-1{
+  display: inline-block;
+  z-index: 2;
+}
+
+//Update from here
+
 @media only screen and (max-width: 600px) {
   .path-find-a-course, .path-frontpage {
     .block-views:not(:first-child){
@@ -2174,11 +2181,27 @@
   }
 }
 
+//Update from Here
+
 @media only screen and (max-width: 975px) {
   .header-image-update .hero-image img{
-    width: inherit !important;
-    height: 100% !important;
+    width: inherit!important;
+    height: 100%!important;
     margin-left: -100%;
     margin-right: -100%;
   }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .node_53, .node_56 {
+    .header-image-update .hero-image img{
+      height: 309px!important;
+    }
+  }
+    .node_56 {
+      .header-image-update .hero-image img{
+        margin-left: -40%!important;
+      }
+    }
 }

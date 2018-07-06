@@ -104,6 +104,11 @@
     padding: 1em 2.5em;
     border-bottom: 2px solid #fff;
   }
+
+    summary:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
     
   .filter-trigger{
     top: 0;
@@ -131,6 +136,12 @@
     padding: 1em;
     }
 
+  }
+  
+#views-exposed-form-find-a-course-block-5,
+#views-exposed-form-find-a-course-block-9,
+#views-exposed-form-find-a-course-block-10{
+    min-height: 840px;
   }
   
 @media only screen and (max-width: 975px) {
