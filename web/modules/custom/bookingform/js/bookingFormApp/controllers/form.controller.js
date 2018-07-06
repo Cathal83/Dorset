@@ -1,4 +1,4 @@
-bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $window, $location, $q, $controller, dataService, formService, postService, formSteps, stripe) {
+bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $window, $location, $q, $controller, $anchorScroll, dataService, formService, postService, formSteps, stripe) {
   /**
    * Default user settings
    */
@@ -68,6 +68,13 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    */
   $scope.status = [];
   $scope.status.error = 0;
+  $scope.status.error.payment = 0;
+  $scope.status.error.docs = 0;
+  $scope.status.error.data = 0;
+  $scope.status.processing = 0;
+  $scope.status.upload = 0;
+  $scope.status.data = 0;
+  $scope.status.payment = 0;
   $scope.years = [];
   $scope.nationalities;
   $scope.countries;
@@ -317,7 +324,6 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    * */
   $scope.submitForm = function() {
 
-    $scope.status.processing = 1;
     if ($scope.status.error == 1) {
       delete $scope.status.error;
     }
@@ -335,25 +341,27 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
           // Payment status update
           $scope.payment.status = 'Yes';
 
-          // Sends Data
-          postService.submitData($scope.user, $scope.token).then(function (response) {
-            // Status Data
-            delete $scope.status.payment;
-            $scope.status.data = 1;
-
-            console.log(response);
-            if (response == 200) {
-              console.log('Data submitted');
-              $scope.goToNextSection(true);
-            }
-            else {
-              console.log('Error uploading Data')
-            }
-          });
         }
         else {
           $scope.status.payment.error = 1;
           console.log('There was a problem with the Payment');
+        }
+      });
+      // Sends Data
+      postService.submitData($scope.user, $scope.token).then(function (response) {
+        // Status Data
+        delete $scope.status.payment;
+        $scope.status.data = 1;
+
+        console.log(response);
+        if (response == 200) {
+          console.log('Data submitted');
+          console.log($scope.status.data);
+          $scope.goToNextSection(true);
+        }
+        else {
+          $scope.status.error.data = 1;
+          console.log('Error uploading Data')
         }
       });
     }
@@ -362,23 +370,26 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
        * Documents Application submit everything
        */
       delete $scope.status.processing;
+      $scope.status.upload = 1;
+      console.log($scope.status.upload);
 
       $scope.docsUp().then(function(response){
-        console.log(response);
       }).catch(function (err) {
+        $scope.status.error.docs = 1;
         console.log(err);
       });
-      
+
       // Sends Data
       postService.submitData($scope.user, $scope.token).then(function (response) {
         // Status Data
-        delete $scope.status.payment;
+        delete $scope.status.upload;
         $scope.status.data = 1;
         if (response == 200) {
           console.log('Data submitted');
           $scope.goToNextSection(true);
         }
         else {
+          $scope.status.error.data = 1;
           console.log('Error uploading Data')
         }
       });
@@ -388,7 +399,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   /**
    * Controller for Templates and Form Steps
   */
-  $controller('viewCtrl', { $scope, formSteps, $state, productDocuments, dataService });
+  $controller('viewCtrl', { $scope, formSteps, $state, $location, $anchorScroll, productDocuments, dataService });
   $controller('paymentCtrl', { $scope, $http, $location, stripe, dataService });
   $controller('docsCtrl', { $scope, $http, $filter, $q });
 })

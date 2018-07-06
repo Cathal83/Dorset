@@ -10,10 +10,9 @@ bookingformJS.controller("docsCtrl", function($scope, $http, $filter, $q) {
       var docs = $scope.user.docs;
       var numFiles = $scope.user.docs.length;
       var folderId = new Date();
-      var text = 'test';
       var folderId = $filter('date')(folderId, 'yyMMddhhmmss');
       $scope.user.docs.folderId = folderId; // Pass the folder name to the post Service.
-      var dropboxToken = 'DVM0SFXgDugAAAAAAAASuqKrBV3NKj78SvEYngK-of8SmPyOosGQvECnzMlh28oY';
+      var dropboxToken = 'vcu7acvjByAAAAAAAAAAB1QOCMj1X0M3UhGGJB5sQzePNwi1oMfv5ot1mPTlorJf';
       var i = 0;
       $scope.status = 0;
 

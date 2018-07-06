@@ -9,7 +9,7 @@
     <div class="form-title">
       <h2>Online Application</h2>
       <div>
-          <h1>{{ user.productname }}<span ng-if="productData[0].application_type == '60'">{{ ': ' + user.deliveryname }}</span></h1>
+          <h1>{{ user.productname }}<div ng-if="productData[0].application_type == '60'">{{ ': ' + user.deliveryname }}</div></h1>
       </div>
     </div>
     <div class="form-progression">
@@ -113,16 +113,13 @@
           <div class="form-opt">
             <input type="text" ng-model="user.billingaddress.address2" placeholder="Address 2" required>
           </div>
-          <div ng-messages="bookingStepForm.address2.$error" ng-if="formStepSubmitted" class="error-msg">
-            <div ng-message="required">The field is required.</div>
-          </div>
         </div>
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="user.billingaddress.county" placeholder="County" required>
+            <input type="text" ng-model="user.billingaddress.county" placeholder="State / Province / County " required>
           </div>
           <div ng-messages="bookingStepForm.county.$error" ng-if="formStepSubmitted" class="error-msg">
-            <div ng-message="required">The field is required.</div>
+            <div ng-message="required">The field State / Province / County is required.</div>
           </div>
         </div>
         <div class="form-row">
@@ -130,7 +127,7 @@
             <input type="text" ng-model="user.billingaddress.country" placeholder="Country" required>
           </div>
           <div ng-messages="bookingStepForm.country.$error" ng-if="formStepSubmitted" class="error-msg">
-            <div ng-message="required">The field is required.</div>
+            <div ng-message="required">The field Country is required.</div>
           </div>
         </div>
         <div class="form-row">
@@ -138,7 +135,7 @@
             <input type="text" ng-model="user.billingaddress.city" placeholder="City" required>
           </div>
           <div ng-messages="bookingStepForm.city.$error" ng-if="formStepSubmitted" class="error-msg">
-            <div ng-message="required">The field is required.</div>
+            <div ng-message="required">The field City is required.</div>
           </div>
         </div>
         <div class="form-row">
@@ -146,7 +143,7 @@
             <input type="text" ng-model="user.billingaddress.postalcode" placeholder="Postal Code" required>
           </div>
           <div ng-messages="bookingStepForm.postalcode.$error" ng-if="formStepSubmitted" class="error-msg">
-            <div ng-message="required">The field is required.</div>
+            <div ng-message="required">The field Postal Code is required.</div>
           </div>
         </div>
       </div>

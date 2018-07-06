@@ -2,7 +2,8 @@
     <div class="form-title">
       <h2>Online Application</h2>
       <div>
-        <h1>{{ user.productname }}<span ng-if="productData[0].application_type == '60'">{{ ': ' + user.deliveryname }}</span></h1>
+        <h1 ng-if="productData[0].application_type == '60'">{{ user.productname }}{{ ': ' + user.deliveryname }}</h1>
+        <h1 ng-if="productData[0].application_type == '61'">{{ user.productname }}</h1>
       </div>
     </div>
     <div class="form-progression">
@@ -86,10 +87,10 @@
           <!-- County -->
           <div class="form-row">
               <div class="form-opt">
-                  <input type="text" placeholder="State/ Province" name="county" ng-model="user.contactaddress.county" required>
+                  <input type="text" placeholder="State / Province / County" name="county" ng-model="user.contactaddress.county" required>
               </div>
               <div ng-messages="bookingStepForm.county.$error" ng-if="formStepSubmitted" class="error-msg">
-                  <div ng-message="required">County field is required for application.</div>
+                  <div ng-message="required">State / Province / County field is required for application.</div>
               </div>
           </div>
           <!-- Country -->
