@@ -74,6 +74,10 @@
         margin-left: 25px;
 
       }
+
+      .pager__item--last, .pager__item--first{
+      display: none !important;
+      }
     }
   }
 }
