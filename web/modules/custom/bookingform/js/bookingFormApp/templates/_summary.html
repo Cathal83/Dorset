@@ -1,13 +1,14 @@
-<div class="form-content">
-  <div class="form-row col-sm-12">
-    <div class="form-title">
-        <h2>Online Application</h2>
-        <div>
-          <h1 ng-if="productData[0].application_type == '60'">{{ user.productname }}{{ ': ' + user.deliveryname }}</h1>
-          <h1 ng-if="productData[0].application_type == '61'">{{ user.productname }}</h1>
-        </div>
-    </div>
-    <div class = "col-sm-6">
+
+  <div class="col-sm-6">
+    <div class="form-content">
+      <div class="form-title">
+          <h2>Online Application</h2>
+          <div>
+            <h1 ng-if="productData[0].application_type == '60'">{{ user.productname }}{{ ': ' + user.deliveryname }}</h1>
+            <h1 ng-if="productData[0].application_type == '61'">{{ user.productname }}</h1>
+          </div>
+      </div>
+    <!--<div class = "col-sm-6">-->
       <div class="form-progression">
         <div class="form-step marked"></div>
         <span class="form-step-line"></span>
@@ -15,10 +16,10 @@
         <span class="form-step-line"></span>
         <div class="form-step marked"></div>
       </div>
-    </div> 
-  </div>
-
-  <div class="col-sm-6">
+    <!--</div> -->
+  <!--</div>-->
+  <!---->
+  <!--<div class="col-sm-6">-->
     <div class="form-fields">
       <div class="form-wrapper">
         <div class="form-row">
@@ -77,8 +78,23 @@
         </div>
       </div>
     </div>
+    
+    <!-- I MOVED THIS UP THE PAGE TO HERE - CATHAL -->
+    <!-- Proceed Button -->
+    <div class="bookingform-btn fixw">
+      <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
+    </div>
+    <div class="bookingform-btn fixw" ng-if="productData[0].application_type == '61'">
+      <a class="btn-next" ng-click="submitForm()" href="">Submit</a>
+    </div>
+    <div class="bookingform-btn fixw" ng-if="productData[0].application_type == '60'">
+      <a class="btn-next" ng-click="submitForm()" href="">Make Payment</a>
+    </div>
+    
+  </div>
   </div>
     <div class = "col-sm-6">
+      <div class = "form-content">
       <div class="form-wrapper">
         <!-- Payment Type -->
         <div ng-if="productData[0].application_type == '60'">
@@ -142,18 +158,20 @@
       <div ng-if="status.upload == 1">Uploading Documents</div>
       <div ng-if="status.data == 1">Sending Data</div>
     </div>
+  </div>    
   </div>
-<div class = "col-sm-12">
-  <!-- Proceed Button -->
-  <div class="bookingform-btn fixw">
-    <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
-  </div>
-  <div class="bookingform-btn fixw" ng-if="productData[0].application_type == '61'">
-    <a class="btn-next" ng-click="submitForm()" href="">Submit</a>
-  </div>
-  <div class="bookingform-btn fixw" ng-if="productData[0].application_type == '60'">
-    <a class="btn-next" ng-click="submitForm()" href="">Make Payment</a>
-  </div>
-</div>
+
+<!-- I MOVED THIS FURTHER UP THE PAGE - CATHAL -->
+    <!-- Proceed Button -->
+    <!--<div class="bookingform-btn fixw">-->
+    <!--  <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>-->
+    <!--</div>-->
+    <!--<div class="bookingform-btn fixw" ng-if="productData[0].application_type == '61'">-->
+    <!--  <a class="btn-next" ng-click="submitForm()" href="">Submit</a>-->
+    <!--</div>-->
+    <!--<div class="bookingform-btn fixw" ng-if="productData[0].application_type == '60'">-->
+    <!--  <a class="btn-next" ng-click="submitForm()" href="">Make Payment</a>-->
+    <!--</div>-->
+
 </div>
 
