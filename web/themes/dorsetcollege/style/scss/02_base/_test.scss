@@ -55,6 +55,7 @@
 
     input.button.form-submit {
       width: 30%;
+      font-weight:700;
       margin-left: -10%;
       		@include breakpoint(640px) {
            width: 10%;
