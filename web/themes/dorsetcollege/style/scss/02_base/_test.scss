@@ -1057,6 +1057,10 @@ p.arrow-right::after, a.arrow-right::after{
   display: inline-block;
   width: 90%;
   margin: 0 5%;
+  
+  h3{
+    color: $h2-color;
+  }
 }
 
 .paragraph--type--location-map-{
