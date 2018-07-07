@@ -1055,7 +1055,7 @@ p.arrow-right::after, a.arrow-right::after{
 
 .paragraph--type--map-wrapper{
   display: inline-block;
-  width: 100%;
+  width: 90%;
   margin: 0 5%;
 }
 
@@ -1072,7 +1072,7 @@ p.arrow-right::after, a.arrow-right::after{
 }
 @media only screen and (max-width: 600px) {
     .paragraph--type--location-map-{
-      width: 90%;
+      width: 100%;
   }
 }
 .block-accreditations{
