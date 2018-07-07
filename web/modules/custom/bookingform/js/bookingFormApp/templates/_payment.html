@@ -23,9 +23,9 @@
     </div>
     <div class="form-fields">
       <div class="form-wrapper">
-        <h4>Choose a payment Option:</h4>
+        <h4>Choose A Payment Option:</h4>
         <div class="form-row">
-          <div class="form-opt">
+          <div class="form-opt form-radio">
               <label ng-if="productPrices[0].full_amount">
                 <p>Full Amount:</p>
                 <input type="radio" name="paymentchoice" value="full_amount" value="full_amount" ng-model="user.payment.type_id" ng-click="scopePrices(user.payment.type_id)" checked="checked"
@@ -150,19 +150,21 @@
       </div>
       
     <!--    I MOVED THE BUTTONS FROM THE BOTTOM TO HERE - CATHAL  -->
-    <div class="bookingform-btn fixw">
-      <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
-    </div>
-    <div class="bookingform-btn fixw">
-      <a class="btn-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Next</a>
-    </div>
+    <div class = "button-form-footer">
+      <div class="bookingform-btn fixw">
+        <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
+      </div>
+      <div class="bookingform-btn fixw">
+        <a class="btn-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Next</a>
+      </div>
+      </div>
     </div>
   </div> 
   
   
   
   <div class ="col-sm-6">
-    <div class = "form-content">
+    <div class = "form-content summary-panel">
     <div class="form-fields">
       <h3>Summary</h3>
       <div class="form-wrapper">

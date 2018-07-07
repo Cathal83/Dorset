@@ -1,6 +1,6 @@
 
   <div class="col-sm-6">
-    <div class="form-content">
+    <div class="form-content summary-panel">
       <div class="form-title">
           <h2>Online Application</h2>
           <div>
@@ -81,20 +81,22 @@
     
     <!-- I MOVED THIS UP THE PAGE TO HERE - CATHAL -->
     <!-- Proceed Button -->
-    <div class="bookingform-btn fixw">
-      <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
-    </div>
-    <div class="bookingform-btn fixw" ng-if="productData[0].application_type == '61'">
-      <a class="btn-next" ng-click="submitForm()" href="">Submit</a>
-    </div>
-    <div class="bookingform-btn fixw" ng-if="productData[0].application_type == '60'">
-      <a class="btn-next" ng-click="submitForm()" href="">Make Payment</a>
-    </div>
+    <div class = "button-form-footer"> 
+      <div class="bookingform-btn fixw">
+        <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
+      </div>
+      <div class="bookingform-btn fixw" ng-if="productData[0].application_type == '61'">
+        <a class="btn-next" ng-click="submitForm()" href="">Submit</a>
+      </div>
+      <div class="bookingform-btn fixw" ng-if="productData[0].application_type == '60'">
+        <a class="btn-next" ng-click="submitForm()" href="">Make Payment</a>
+      </div>
+    </div> 
     
   </div>
   </div>
     <div class = "col-sm-6">
-      <div class = "form-content">
+      <div class = "form-content summary-panel">
       <div class="form-wrapper">
         <!-- Payment Type -->
         <div ng-if="productData[0].application_type == '60'">

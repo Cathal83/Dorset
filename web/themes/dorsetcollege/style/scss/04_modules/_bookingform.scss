@@ -15,9 +15,9 @@
   padding: 25px 0 !important;
 }
 
-.path-apply-now .form-row {
-  float: left;
-}
+//.path-apply-now .form-row {
+//  float: left;
+//}
 
 .path-apply-now .form-fields {
   display: inline-block;
@@ -25,7 +25,7 @@
 }
 
 .path-apply-now .form-fields .ng-binding{
-  color: #5D5D5D;
+  //color: #5D5D5D;
   font-size: 16px;
   padding-bottom: 1em;
   
@@ -49,8 +49,19 @@
   width: 50%;
   float: left;
   //background-color: #FFF;
-  margin: 2em;
+  margin: 0 2em;
   transition: all .6s ease-in-out;
+  display: block;
+}
+
+.block-bookingform{
+  h1, h2, h3, h4, p, a, div, li {
+    color: #fff;
+  }
+  input, select{
+    border-radius: 5px;
+    font-family: Lato;
+  }
 }
 
 .path-apply-now .block-bookingform-block {
@@ -66,9 +77,9 @@
     padding: .5em 0!important;
   }
 
-  .ng-binding{
-  color: #5D5D5D;
-  }
+  //.ng-binding{
+  //color: #5D5D5D;
+  //}
 }
 
 .path-apply-now .form-content {
@@ -78,7 +89,7 @@
       position: relative;
       background-color: #F14950;
       border-radius: 60px;
-      padding: 10px;
+      padding: 10px 15px;
       float:left;
       margin-top: 1.2em;
       margin-bottom: 1.2em;
@@ -89,7 +100,7 @@
       position: relative;
       background-color: #36F;
       border-radius: 60px;
-      padding: 10px;
+      padding: 10px 15px;
       float: left;
       margin-top: 1.2em;
       margin-bottom: 1.2em;
@@ -168,7 +179,7 @@
 .path-apply-now .bookingform-btn .btn-next, .path-apply-now .bookingform-btn .btn-back {
     color: #FFF;
     border-radius: 60px;
-    padding: 10px;
+    padding: 10px 15px;
     margin-top: 1.2em;
     margin-bottom: 1.2em;
     position: relative;
@@ -177,10 +188,10 @@
 
 .path-apply-now .bookingform-btn .btn-next{
   background-color: $dc-blue;
-  padding: 10px 12px;
+  padding: 10px 15px;
   min-width: 4em;
   text-align: center;
-  margin-left: 10%;
+  margin-left: 2em;
 }
 
 .path-apply-now .bookingform-btn a{
@@ -189,44 +200,29 @@
 
 #bookingform .form-fields a {
   color: $dc-blue;
-  border-bottom: 1px solid;
+  //border-bottom: 1px solid;
 }
 
 #bookingform .form-fields h3 {
-  color: #5D5D5D;
+  //color: #5D5D5D;
 }
 
 .path-apply-now .bookingform-btn .btn-back{
   background-color: $dc-red;
-  padding: 10px 12px;
+  padding: 10px 15px;
   min-width: 4em;
   text-align: center;
-  margin-left: 5%;
+  //margin-left: 5%;
 }
 
 .md-datepicker-input-container.md-datepicker-invalid{
   border-bottom: none;
 }
 
-// Form Tablet
-
-@media screen and (max-width: 975px) and (min-width: 600px) {
-
-  .block-bookingform{
-    width: 90%;
-    margin: 5%;
-  }
+.md-datepicker-input{
+  background: #fff;
 }
 
-// Form Mobile
-
-@media only screen and (max-width: 600px) {
-
-  .block-bookingform{
-    width: 90%;
-    margin: 5%;
-  }
-}
 
 .form-opt button{
   float: right;
@@ -243,18 +239,21 @@
   font-family: Lato;
 }
 
-.ng-scope button{
+.form-upload button{
   border-radius: 25px;
   color: #FFF;
   background-color: #F14950;
-  padding: 10px 12px;
-  min-width: 4em;
+  padding: 10px 15px;
+  //min-width: 4em;
   text-align: center;
   font-size: 16px;
   line-height: 1.68;
   font-weight: 700;
   font-family: Lato;
+  border: 0;
+  margin: 1em;
 }
+
 
 
 .thankicon {
@@ -305,7 +304,7 @@
 }
 
 .form-progression h3 {
-  color: $h2-grey-color;
+  //color: $h2-grey-color;
   font-size: 16px;
 }
 
@@ -335,15 +334,15 @@
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: white;
-  border: 2px solid #ddd;
+  background: $dc-blue;
+  border: 2px solid $dc-blue;
   border-radius: 50%;
   transition: all .2s ease-in-out;
   transition-delay: .3s;
   will-change: transform;
   margin-left: 20%;
   z-index: 2;
-  background-color: #ddd;
+  //background-color: #ddd;
 }
 
 .form-documents ul {
@@ -364,8 +363,13 @@
   margin-left: -3.5%!important;
 }
 
+.button-form-footer{
+  display: inline-flex;
+}
+
 .fixw {
-  width: 33.3%!important;
+  //width: 33.3%!important;
+  margin-right: 2em;
 }
 
 .thx {
@@ -383,9 +387,9 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .form-progression h3 {
-    font-size: 11px;
-  }
+  //.form-progression h3 {
+  //  font-size: 11px;
+  //}
   .form-step, .marked {
     width: 12px;
     height: 12px;
@@ -437,20 +441,103 @@
 }
 
 .path-apply-now #zone-main {
-    background-image: url(https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-image: url('https://graphicmint.com/wp-content/uploads/2018/07/Form_Image.jpg');
     width: 100%;
     height: 100%;
     background-size: cover;
 }
 
 .form-content {
-  background: #fff;
+ 
   margin: 1em 0;
   padding: 1em;
   display: inline-block;
   
 }
 
+.summary-panel{
+  background: #fff;
+  opacity: 0.8;
+  h1, h2, h3, h4, p, div {
+  color: #5D5D5D !important;
+  }
+}
+
 .block-bookingform .col-sm-6{
   margin-left: 3.5%;
+}
+
+input:placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000;
+    opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #000;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #000;
+}
+
+.btn-cancel, .btn-next, .btn-back, .form-upload button {
+  &:hover{
+    opacity: 0.8;
+  }
+}
+
+input[type="radio"] {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.form-radio label{
+  display: inline-block;
+  margin-right: 2em;
+}
+
+.form-radio label:nth-of-type(2){
+  border-left: 1px solid white;
+  padding-left: 2em;
+}
+
+// Form Tablet
+
+@media screen and (max-width: 975px) and (min-width: 600px) {
+
+  .block-bookingform{
+    width: 90%;
+    margin: 5%;
+  }
+}
+
+// Form Mobile
+
+@media only screen and (max-width: 600px) {
+
+  .block-bookingform, .col-sm-6, .form-content{
+
+    margin: 0%;
+  }
+  
+  .form-content{
+    padding: 0;
+  }
+  
+  .summary-panel .form-fields{
+    padding: 1em;
+  }
+  
+  .path-apply-now .form-title h2{
+    text-align: center;
+  }
+  
+  .form-progression{
+    margin: auto;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
 }
