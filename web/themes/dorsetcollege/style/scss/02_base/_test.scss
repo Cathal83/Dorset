@@ -1070,7 +1070,11 @@ p.arrow-right::after, a.arrow-right::after{
   }
   
 }
-
+@media only screen and (max-width: 600px) {
+    .paragraph--type--location-map-{
+      width: 90%;
+  }
+}
 .block-accreditations{
   clear: both;
 }
