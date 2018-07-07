@@ -1052,3 +1052,25 @@ p.arrow-right::after, a.arrow-right::after{
     display: block;
   }
 }
+
+.paragraph--type--map-wrapper{
+  display: inline-block;
+  width: 100%;
+  margin: 0 5%;
+}
+
+.paragraph--type--location-map-{
+  width: 26%;
+  display: block;
+  float: left;
+  padding: 1%;
+  
+  .geolocation-formatter-map-wrapper{
+    width: 100%;
+  }
+  
+}
+
+.block-accreditations{
+  clear: both;
+}

@@ -467,19 +467,6 @@
   margin-left: 3.5%;
 }
 
-input:placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #000;
-    opacity: 1; /* Firefox */
-}
-
-::-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #000;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: #000;
-}
-
 .btn-cancel, .btn-next, .btn-back, .form-upload button {
   &:hover{
     opacity: 0.8;
