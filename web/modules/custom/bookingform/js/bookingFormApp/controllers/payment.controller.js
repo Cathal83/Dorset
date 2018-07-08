@@ -9,9 +9,12 @@ bookingformJS.controller("paymentCtrl", function($scope, $http, $location, strip
        * Gets token for payment based on Card collected
        * and amount in the correct format
        */
-      var stripecard = $scope.payment.card;
-      delete stripecard.month;
-      delete stripecard.year;
+      var stripecard = {
+        number: $scope.payment.card.number,
+        cvc: $scope.payment.card.cvc,
+        exp: $scope.payment.card.exp,
+      };
+      
       var amount = Number($scope.user.payment.amount.replace(/[^0-9\.-]+/g, ""));
 
       return stripe.card.createToken(stripecard)

@@ -53,10 +53,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
     card : {
       number : "",
       cvc : "",
-      month: "",
-      year: "",
       exp: "",
-      //address_zip: "D7"
     } 
   }
 
@@ -67,7 +64,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    * Needed Scopes by default
    */
   $scope.status = [];
-  $scope.status.error = 0;
+  $scope.status.error = [];
   $scope.status.error.payment = 0;
   $scope.status.error.docs = 0;
   $scope.status.error.data = 0;
@@ -324,74 +321,82 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
    * */
   $scope.submitForm = function() {
 
-    if ($scope.status.error == 1) {
-      delete $scope.status.error;
-    }
-    if($scope.productData[0].application_type == "60") {
+    // Disable submit button and default values on sumission
+    $scope.submit = true;
+    $scope.status.error.payment = 0;
+    $scope.status.error.docs = 0;
+    $scope.status.error.data = 0;
+
+    /**
+     * Data upload for emailing via Drupal Backend
+     */
+    var dataUp = function() {
       /**
-       * Payment Applications
+       * Status data
        */
-      // Submits payment and data
-      $scope.charge().then(function (response) {
-        // Status Data
-        delete $scope.status.processing;
-        $scope.status.payment = 1;
-        // 200 = no errors
-        if (response == '200') {
-          // Payment status update
-          $scope.payment.status = 'Yes';
+      $scope.status.processing = 0;
+      $scope.status.upload = 0;
+      $scope.status.data = 1;
 
-        }
-        else {
-          $scope.status.payment.error = 1;
-          console.log('There was a problem with the Payment');
-        }
-      });
-      // Sends Data
+      /**
+       * Sends Data
+       */
       postService.submitData($scope.user, $scope.token).then(function (response) {
-        // Status Data
-        delete $scope.status.payment;
-        $scope.status.data = 1;
-
         console.log(response);
         if (response == 200) {
           console.log('Data submitted');
-          console.log($scope.status.data);
+          $scope.status.data = 0;
           $scope.goToNextSection(true);
         }
         else {
+          $scope.status.data = 0;
           $scope.status.error.data = 1;
-          console.log('Error uploading Data')
+          $scope.submit = false;
+          console.log('Error uploading Data');
         }
       });
     }
-    else if ($scope.productData[0].application_type == "61"){
+
+    /**
+     * Payment and document sumission function
+     */
+    if ($scope.productData[0].application_type == "60") {
+      /**
+       * Payment Applications
+       */
+      $scope.status.processing = 1;
+
+      // Submits payment and data
+      $scope.charge().then(function (response) {
+        // Status Data
+        // 200 = no errors
+        if (response == '200') {
+          // Payment status update
+          $scope.status.processing = 0;
+          dataUp();
+        }
+        else { 
+          $scope.status.processing = 0;
+          $scope.status.error.payment = 1;
+          $scope.submit = false;
+        }
+      });
+    }
+
+    if ($scope.productData[0].application_type == "61"){
       /**
        * Documents Application submit everything
        */
-      delete $scope.status.processing;
+      $scope.status.processing = 0;
+      $scope.status.processing = 1;
       $scope.status.upload = 1;
-      console.log($scope.status.upload);
 
+      console.log($scope.status.upload);
       $scope.docsUp().then(function(response){
+        $scope.status.upload = 0;
+        dataUp();
       }).catch(function (err) {
         $scope.status.error.docs = 1;
-        console.log(err);
-      });
-
-      // Sends Data
-      postService.submitData($scope.user, $scope.token).then(function (response) {
-        // Status Data
-        delete $scope.status.upload;
-        $scope.status.data = 1;
-        if (response == 200) {
-          console.log('Data submitted');
-          $scope.goToNextSection(true);
-        }
-        else {
-          $scope.status.error.data = 1;
-          console.log('Error uploading Data')
-        }
       });
     }   
   }

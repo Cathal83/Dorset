@@ -78,21 +78,17 @@
         </div>
       </div>
     </div>
-    
-    <!-- I MOVED THIS UP THE PAGE TO HERE - CATHAL -->
-    <!-- Proceed Button -->
     <div class = "button-form-footer"> 
       <div class="bookingform-btn fixw">
         <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
       </div>
       <div class="bookingform-btn fixw" ng-if="productData[0].application_type == '61'">
-        <a class="btn-next" ng-click="submitForm()" href="">Submit</a>
+        <button class="btn-next" ng-disabled="submit" ng-click="submitForm()">Submit</button>
       </div>
       <div class="bookingform-btn fixw" ng-if="productData[0].application_type == '60'">
-        <a class="btn-next" ng-click="submitForm()" href="">Make Payment</a>
+        <button class="btn-next" ng-disabled="submit" ng-click="submitForm()">Make Payment</button>
       </div>
     </div> 
-    
   </div>
   </div>
     <div class = "col-sm-6">
@@ -143,37 +139,24 @@
           </div>
         </div>
         <!-- Documents required -->
-        <div class="form-row" ng-if="productData[0].document != ''">
+        <div class="form-row" ng-if="productData[0].document != '60'">
           <h4>Uploaded Documents</h4>
           <div ng-repeat="doc in user.docs">
             <div>{{ doc.name }}</div>
           </div>
         </div>
       </div>
-    
-    {{ $scope.status.upload }}
-    <div class="form-status-area">
-      <div ng-if="status.error.payment == 1">There was a problem processing the payment, please check your Card Details.</div>
-      <div ng-if="status.error.docs == 1">There was a problem uploading the files to the server, please try again in a few minutes.</div>
-      <div ng-if="status.error.data == 1">There was a problem sending the data to the server, please try again in a few minutes.</div>
-      <div ng-if="status.processing == 1">Processing Payment</div>
-      <div ng-if="status.upload == 1">Uploading Documents</div>
-      <div ng-if="status.data == 1">Sending Data</div>
-    </div>
-  </div>    
+      {{ status.upload }}
+      {{ status.data }}
+      <div class="form-status-area">
+        <div ng-if="status.error.payment == 1">There was a problem processing the payment, please check your Card Details.</div>
+        <div ng-if="status.error.docs == 1">There was a problem uploading the files to the server, please try again in a few minutes.</div>
+        <div ng-if="status.error.data == 1">There was a problem sending the data to the server, please try again in a few minutes.</div>
+        <div ng-if="status.processing == 1">Processing Payment</div>
+        <div ng-if="status.upload == 1">Uploading Documents</div>
+        <div ng-if="status.data == 1">Sending Data</div>
+      </div>
+    </div>    
   </div>
-
-<!-- I MOVED THIS FURTHER UP THE PAGE - CATHAL -->
-    <!-- Proceed Button -->
-    <!--<div class="bookingform-btn fixw">-->
-    <!--  <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>-->
-    <!--</div>-->
-    <!--<div class="bookingform-btn fixw" ng-if="productData[0].application_type == '61'">-->
-    <!--  <a class="btn-next" ng-click="submitForm()" href="">Submit</a>-->
-    <!--</div>-->
-    <!--<div class="bookingform-btn fixw" ng-if="productData[0].application_type == '60'">-->
-    <!--  <a class="btn-next" ng-click="submitForm()" href="">Make Payment</a>-->
-    <!--</div>-->
-
 </div>
 
