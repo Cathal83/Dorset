@@ -32,3 +32,30 @@ h2 {
   padding-right: 3px;
   
 }
+
+::placeholder {
+  color: $placeholdercolour;
+}
+::-webkit-input-placeholder {
+  color: $placeholdercolour;
+}
+
+::-moz-placeholder { /* Firefox 18- */
+  color: $placeholdercolour;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: $placeholdercolour;
+}
+
+::-ms-input-placeholder { /* IE 10+ */
+  color: $placeholdercolour;
+}
+
+::-ms-input-placeholder { /* Edge */
+  color: $placeholdercolour;
+}
+
+::placeholder-shown { /* Standard one last! */
+  color: $placeholdercolour;
+}
