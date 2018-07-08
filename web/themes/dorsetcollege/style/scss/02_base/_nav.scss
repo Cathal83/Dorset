@@ -30,3 +30,19 @@
     }
   }
 }
+
+@media only screen and (max-width: 975px){
+  #site-branding, #menu-mob{
+  
+     display:inline-block;
+     width:50%;
+  }
+  
+  #block-dorsetcollege-branding{
+    width: 100%;
+       display: flex;
+  
+  }
+}
+
+

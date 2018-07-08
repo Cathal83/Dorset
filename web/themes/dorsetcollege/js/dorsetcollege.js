@@ -59,7 +59,7 @@
 
 
       $(document).ready(function(){
-          $('#site-branding').click(function(){
+            $('#menu-mob').click(function(){
               $('#block-dorsetcollege-main-menu').toggle();
           });
       }); 
@@ -99,21 +99,8 @@
                $(".node_54 .page-content-section .right-paragraph:nth-child(3), .node_54 .page-content-section .left-paragraph:nth-child(2)").addClass("max");
             }
     
-        })
+        });
     });
-        
-
-    // $("#hide").on("click", function (){
-    ////if ($(".node_54 .paragraph--type--page-introduction").height() == 200) {
-    ////   $(".node_54 .paragraph--type--page-introduction").animate(
-    ////         {height: "2000px"});
-    ////     }
-    ////  else if ($(".node_54 .paragraph--type--page-introduction").height() == 2000) {
-    //// $(".node_54 .paragraph--type--page-introduction").animate({height: "200px"});
-    //// }
-    //
-    //$(".node_54 div:nth-child(3)").slideToggle('slow');
-    //});
     }
   };
 })(jQuery);
