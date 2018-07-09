@@ -139,11 +139,18 @@
 
   }
   
-#views-exposed-form-find-a-course-block-5,
-#views-exposed-form-find-a-course-block-9,
-#views-exposed-form-find-a-course-block-10{
+#views-exposed-form-find-a-course-block-5 {
+  min-height: 550px;
+}
+
+#views-exposed-form-find-a-course-block-9 {
+  min-height: 650px;
+}
+
+#views-exposed-form-find-a-course-block-10 {
     min-height: 840px;
-  }
+}
+
   
 @media only screen and (max-width: 975px) {
   #views-exposed-form-find-a-course-block-1,
