@@ -1261,13 +1261,19 @@
   .modtitle{
     display: inline-block;
     float: left;
-    background-color: $dc-grey;
+    background-color: $dc-blue;
     width: 34%;
     height: 50px;
     padding: 2%;
     font-size: 16px;
     line-height: 1.68;
-    color: #5D5D5D;
+    color: #FFF;
+  }
+
+  .modtitle, .modstat, .modsemester, .modcred, .modass {
+    div{
+      color: #FFF;
+    }
   }
 
   .modtitle div:first-child{
@@ -1277,13 +1283,13 @@
   .modstat{
     display: inline-block;
     float: right;
-    background-color: $dc-grey;
+    background-color: $dc-blue;
     width: 16.66%;
     height: 50px;
     padding: 2%;
     font-size: 16px;
     line-height: 1.68;
-    color: #5D5D5D;
+    color: #FFF;
   }
 
   .modstat div:first-child{
@@ -1291,20 +1297,20 @@
   }
 
   .modstat a{
-    color: #5D5D5D;
+    color: #FFF;
     font-weight: 400;
   }
 
   .modsemester{
     display: inline-block;
     float: right;
-    background-color: $dc-grey;
+    background-color: $dc-blue;
     width: 16.66%;
     height: 50px;
     padding: 2%;
     font-size: 16px;
     line-height: 1.68;
-    color: #5D5D5D;
+    color: #FFF;
   }
 
   .modsemester div:first-child{
@@ -1314,13 +1320,13 @@
   .modcred{
     display: inline-block;
     float: right;
-    background-color: $dc-grey;
+    background-color: $dc-blue;
     width: 16.66%;
     height: 50px;
     padding: 2%;
     font-size: 16px;
     line-height: 1.68;
-    color: #5D5D5D;
+    color: #FFF;
   }
 
   .modcred div:first-child{
@@ -1369,11 +1375,11 @@
     display: block;
     clear: both;
     padding: 2%;
-    background-color: $dc-grey;
+    background-color: $dc-blue;
     height: 80px;
     font-size: 16px;
     line-height: 1.68;
-    color: #5D5D5D;
+    color: #FFF;
   }
 
   .modass div:nth-child(3){
