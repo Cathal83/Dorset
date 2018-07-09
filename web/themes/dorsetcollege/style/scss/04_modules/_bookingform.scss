@@ -82,30 +82,30 @@
   //}
 }
 
-.path-apply-now .form-content {
-
-  .btn-cancel {
-    color: #FFF;
-      position: relative;
-      background-color: #F14950;
-      border-radius: 60px;
-      padding: 10px 15px;
-      float:left;
-      margin-top: 1.2em;
-      margin-bottom: 1.2em;
-  }
-
-  .btn-next {
-    color: #FFF;
-      position: relative;
-      background-color: #36F;
-      border-radius: 60px;
-      padding: 10px 15px;
-      float: left;
-      margin-top: 1.2em;
-      margin-bottom: 1.2em;
-  }
-}
+//.path-apply-now .form-content {
+//
+//  .btn-cancel {
+//    color: #FFF;
+//      position: relative;
+//      background-color: #F14950;
+//      border-radius: 60px;
+//      padding: 10px 15px;
+//      float:left;
+//      margin-top: 1.2em;
+//      margin-bottom: 1.2em;
+//  }
+//
+//  .btn-next {
+//    color: #FFF;
+//      position: relative;
+//      background-color: #36F;
+//      border-radius: 60px;
+//      padding: 10px 15px;
+//      float: left;
+//      margin-top: 1.2em;
+//      margin-bottom: 1.2em;
+//  }
+//}
 
 .error-msg{
   padding-top: .25em;
@@ -175,7 +175,7 @@
   width: 92.75%;
 }
 
-.path-apply-now .bookingform-btn .btn-next, .path-apply-now .bookingform-btn .btn-back {
+.btn-next, .btn-back, .btn-cancel {
     color: #FFF;
     border-radius: 60px;
     padding: 10px 15px;
@@ -183,15 +183,18 @@
     margin-bottom: 1.2em;
     position: relative;
     float: left;
+    background-color: $dc-red;
 }
 
-.path-apply-now .bookingform-btn .btn-next{
+.btn-next{
   background-color: $dc-blue;
   padding: 10px 15px;
   min-width: 4em;
   text-align: center;
   margin-left: 2em;
 }
+
+
 
 .path-apply-now .bookingform-btn a{
   color: #FFF !important;
@@ -466,7 +469,7 @@
   margin-left: 3.5%;
 }
 
- .btn-next{
+.btn-next{
   &:hover{
     background-color: #5C85FF;
   }
@@ -475,6 +478,7 @@
 .btn-cancel, .btn-back, .form-upload button {
     &:hover{
       background-color: #F46E73;
+      
   }
 }
 
