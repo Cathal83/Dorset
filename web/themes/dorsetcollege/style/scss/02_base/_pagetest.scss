@@ -105,7 +105,7 @@
 
 
 .statistic-content .paragraph--type--statistics-wrapper{
-		@include breakpoint(640px) { 
+		@include breakpoint(600px) { 
 			width: 20%;
 			float: left;
 			display: block;

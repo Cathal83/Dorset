@@ -2209,3 +2209,9 @@
 .region-postfooter{
   border-top: 2px solid #fff;
 }
+
+@media screen and (max-width: 599px) and (min-width: 400px) {
+  .path-frontpage .block-region-homestats .statistic-content {
+    height: 500px
+  }
+}
