@@ -617,8 +617,21 @@
 
 //Mobile To Become
 
-@media only screen and (max-width: 600px) {
 
+
+@media only screen and (max-width: 600px) {
+.become .paragraph--type--dorset-course-become .become-icon {
+    padding: 0 5%;
+  }
+
+  .become .paragraph--type--dorset-course-become .become-icon div {
+    padding: 0em 1em 3em 3em;
+    font-size: 11px;
+    width: 33%;
+    float: left;
+    background-position: left top;
+  }
+  
   .become .col-sm-6 h3 {
     font-size: 20px;
     padding-top: 0;
@@ -634,6 +647,17 @@
 }
 
 @media screen and (max-width: 975px) and (min-width: 600px) {
+  .become .paragraph--type--dorset-course-become .become-icon {
+    padding: 0 5%;
+  }
+
+  .become .paragraph--type--dorset-course-become .become-icon div {
+    padding: 0em 1em 3em 3em;
+    font-size: 11px;
+    width: 33%;
+    float: left;
+    background-position: left top;
+  }
 
   .become .col-sm-6 h3 {
     font-size: 20px;
@@ -2233,5 +2257,11 @@
 @media screen and (max-width: 599px) and (min-width: 400px) {
   .path-frontpage .block-region-homestats .statistic-content {
     height: 500px
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #section-footer{
+    padding-top: 1.25em;
   }
 }
