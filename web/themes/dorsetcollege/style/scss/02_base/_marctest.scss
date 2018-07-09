@@ -1746,6 +1746,19 @@
       width: 50%;
       float: left;
     }
+    
+    .block-accreditations .block-icons div:last-of-type{
+      margin-left: 25%;
+    }
+
+    .block-accreditations .block-icons .paragraph--type--paragraph-image{
+      margin-left: 0!important;
+    }
+
+    .block-accreditations .block-icons .paragraph--type--paragraph-image div{
+      margin-left: 0!important;
+    }
+
 
     .block-accreditations .block-icons div div{
       width: 82px;
