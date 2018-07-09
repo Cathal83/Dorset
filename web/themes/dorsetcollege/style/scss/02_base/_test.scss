@@ -66,7 +66,8 @@
 
 @media only screen and (max-width: 975px) {
   .block-region-headerimage .views-exposed-form input{
-    font-size: 11px;
+    //font-size: 11px;
+        @include font-size($p-stat);
   }
 }
 
@@ -192,11 +193,13 @@
 }
 
 .block-links {
-  font-size: 11px;
+  //font-size: 11px;
+      @include font-size($p-stat);
   width: 80% !important;
     @include breakpoint(640px) {
       margin-top: 16rem !important;
-      font-size: 16px;
+      //font-size: 16px;
+      @include font-size($p-stat);
       }
     padding-left: 6% !important;
 }

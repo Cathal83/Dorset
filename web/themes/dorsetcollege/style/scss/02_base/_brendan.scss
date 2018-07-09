@@ -23,7 +23,8 @@
 @media screen and (max-width: 975px) and (min-width: 600px) {
 
   .left-paragraph p{
-    font-size: 11px;
+    //font-size: 11px;
+        @include font-size($p-stat);
   }
 }
 

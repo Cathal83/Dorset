@@ -1815,7 +1815,8 @@
     height: 61px!important;
   }
   .node_53 .paragraph--type--paragraph-statistic .stat-content{
-    font-size: 11px;
+    //font-size: 11px;
+    @include font-size($p-stat);
     font-weight: 400;
     width: 40%;
     margin-left: 10%;
@@ -1867,7 +1868,8 @@
     height: 61px!important;
   }
   .node_56 .paragraph--type--paragraph-statistic .stat-content{
-    font-size: 11px;
+    //font-size: 11px;
+    @include font-size($p-stat);
     font-weight: 400;
     width: 60%;
     margin-left: 30%;
@@ -1983,16 +1985,19 @@
 
 @media only screen and (max-width: 600px) {
   #views-exposed-form-find-a-course-block-1 summary{
-    font-size: 11px;
+    //font-size: 11px;
+    @include font-size($p-stat);
     padding: 1em 1.5em!important;
   }
 
   #views-exposed-form-find-a-course-block-1 .filter-trigger{
-    font-size: 11px;
+    //font-size: 11px;
+        @include font-size($p-stat);
   }
 
   #views-exposed-form-find-a-course-block-1 .form-checkboxes label{
-    font-size: 11px;
+    //font-size: 11px;
+        @include font-size($p-stat);
   }
 }
 
@@ -2009,7 +2014,8 @@
 @media screen and (max-width: 1024px) and (min-width: 600px) {
   .block-views-blockcourses-view-block-14 .price-element:nth-child(1) span{
       top: 8em;
-      font-size: 11px;
+      //font-size: 11px;
+          @include font-size($p-stat);
   }
   .block-views-blockcourses-view-block-14 div .field-content{
     top: 6.5em;
@@ -2020,7 +2026,8 @@
 
   .block-views-blockcourses-view-block-14 .price-element:nth-child(1) span{
       top: 8em;
-      font-size: 11px;
+      //font-size: 11px;
+          @include font-size($p-stat);
   }
   .block-views-blockcourses-view-block-14 div .field-content{
     top: 6em;
