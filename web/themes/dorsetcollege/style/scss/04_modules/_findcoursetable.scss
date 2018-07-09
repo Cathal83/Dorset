@@ -148,3 +148,7 @@
       }
     }
 }
+
+.link {
+  @include font-size($p-default);
+}
