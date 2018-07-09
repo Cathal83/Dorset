@@ -385,6 +385,9 @@ p.arrow-right::after, a.arrow-right::after{
   border-radius: 30px;
   background-color: #F14950;
   color: #fff !important;
+  &:hover{
+    background-color: #F46E73;
+  }
 }
 
 .application-buttons{
