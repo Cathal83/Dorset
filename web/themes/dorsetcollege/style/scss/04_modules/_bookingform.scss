@@ -466,9 +466,15 @@
   margin-left: 3.5%;
 }
 
-.btn-cancel, .btn-next, .btn-back, .form-upload button {
+ .btn-next{
   &:hover{
-    opacity: 0.8;
+    background: #5C85FF;
+  }
+}
+
+.btn-cancel, .btn-back, .form-upload button {
+    &:hover{
+      background: #F46E73;
   }
 }
 
