@@ -47,7 +47,8 @@
   padding: 0.75em;
   float:left;
   border-radius: 60px;
-  font-size: 16px;
+  //font-size: 16px;
+  @include font-size($p-default);
     @include breakpoint(640px) {
       width: 60%;
     }
