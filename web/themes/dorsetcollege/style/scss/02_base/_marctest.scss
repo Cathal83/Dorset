@@ -1210,13 +1210,13 @@
 
 @media screen and (max-width: 975px) and (min-width: 600px) {
 
-  #block-dorsetcollege-main-menu ul li a{
-    font-size: 25px;
-  }
-
-  #block-dorsetcollege-main-menu ul li:nth-child(6) a{
-    padding: 15px;
-  }
+  //#block-dorsetcollege-main-menu ul li a{
+  //  font-size: 25px;
+  //}
+  //
+  //#block-dorsetcollege-main-menu ul li:nth-child(6) a{
+  //  padding: 15px;
+  //}
 
   #block-dorsetcollege-main-menu ul li:nth-child(7) a{
     padding: 15px;
@@ -2146,6 +2146,12 @@
   }
 }
 
+@media only screen and (max-width: 600px) {
+  #section-footer{
+    padding-top: 1.25em;
+  }
+}
+
 @media only screen and (max-width: 975px) {
   .path-current-students, .path-student-life {
     .block-list-bg-img .block-content .block-list{
@@ -2181,6 +2187,7 @@
     }
     .views-row {
       width: 85%;
+      padding-bottom: 0.5em;
     }
   }
 
@@ -2271,4 +2278,15 @@
   #section-footer{
     padding-top: 1.25em;
   }
+}
+
+@media screen and (max-width: 599px) and (min-width: 400px) {
+  .path-student-life .choose .statistic-content{
+    height: 500px;
+  }
+}
+
+
+.block-views-blockcourses-view-block-4 a{
+  font-weight: 400;
 }
