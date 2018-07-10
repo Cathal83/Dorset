@@ -541,3 +541,12 @@ input[type="radio"] {
 .md-button.md-icon-button md-icon {
   fill: #fff !important;
 }
+
+.summary-panel .ng-binding{
+  padding-bottom: 0;
+}
+
+.errorfix {
+  clear: both;
+  padding-top: 1em;
+}

@@ -123,6 +123,8 @@
     position: relative;
     border-bottom: 2px solid #fff;
     background-color: #809fff;
+    font-weight: 700;
+    padding: 1em;
     }
 
     .btn-back{
@@ -177,6 +179,10 @@
 
 .block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-5, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-7, .block-views-blockfind-a-course-block-8, .block-views-blockfind-a-course-block-9, .block-views-blockfind-a-course-block-10{
 
+  h2{
+    text-align: left;
+  }
+  
   .block-table .pager{
     position: relative !important;
         display: inline-block;
@@ -853,7 +859,7 @@ p.arrow-right::after, a.arrow-right::after{
     }
   }
   ol, ul {
-    margin-left: 10%;
+    margin-left: 5%;
   }
 }
 

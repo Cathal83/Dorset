@@ -43,7 +43,7 @@
             <md-datepicker class="datepick" name="dob" ng-model="user.dob" md-current-view="year" md-placeholder="Date of Birth" required></md-datepicker>
           </div>
           <div ng-messages="bookingStepForm.dob.$error" ng-if="formStepSubmitted" class="error-msg">
-            <div ng-message="required">Date of birth is required for application.</div>
+            <div class = "errorfix" ng-message="required">Date of birth is required for application.</div>
           </div>
         </div>
         <div class="form-row">
