@@ -148,8 +148,6 @@
           </div>
         </div>
       </div>
-      
-    <!--    I MOVED THE BUTTONS FROM THE BOTTOM TO HERE - CATHAL  -->
     <div class = "button-form-footer">
       <div class="bookingform-btn fixw">
         <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
@@ -160,10 +158,7 @@
       </div>
     </div>
   </div> 
-  
-  
-  
-  <div class ="col-sm-6">
+  <div class="col-sm-6">
     <div class = "form-content summary-panel">
     <div class="form-fields">
       <h3>Summary</h3>
@@ -176,23 +171,15 @@
           </div>
           <div class="form-opt">
             <label>Course Mode:</label>
-            <div>{{ user.deliveryMode }}</div>
+            <div>{{ user.deliveryname }}</div>
           </div>
           <div class="form-opt">
             <label>Email:</label>
             <div>{{ user.email }}</div>
           </div>
-          <div class="form-opt">
-            <label>County:</label>
-            <div>{{ user.county }}</div>
-          </div>
-          <div class="form-opt">
-            <label>Country:</label>
-            <div>{{ user.country }}</div>
-          </div>
         </div>
         <div>
-          <a href="" ng-model="target" value="customer-details" ng-click="goToSection('customer-details')">Edit</a>
+          <a href="" ng-model="target" value="customer-details" ng-click="goToSection('bookingForm')">Edit</a>
         </div>
       </div>
       <div class="form-wrapper">
@@ -225,15 +212,6 @@
     </div>
     </div>
   </div>
-  
-    <!--  I MOVED THE BUTTONS TO HIGHER UP THE PAGE - CATHAL-->
-    <!-- Proceed Button -->
-    <!--    <div class="bookingform-btn fixw">
-      <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
-    </div>
-    <div class="bookingform-btn fixw">
-      <a class="btn-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Next</a>
-    </div>-->
   </div>
   </body>
 </html>

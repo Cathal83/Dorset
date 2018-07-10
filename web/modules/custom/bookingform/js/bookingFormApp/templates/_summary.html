@@ -31,7 +31,7 @@
           </div>
           <div class="form-opt" ng-if="productData[0].application_type == '60'">
             <label>Course Mode</label>
-            <div>{{ productData[0].price_group }}</div>
+            <div>{{ user.deliveryname }}</div>
           </div>
           <div>
               <a href="" ng-model="target" value="bookingForm" ng-click="goToSection('bookingForm')">Edit</a>
@@ -139,15 +139,13 @@
           </div>
         </div>
         <!-- Documents required -->
-        <div class="form-row" ng-if="productData[0].document != '60'">
+        <div class="form-row" ng-if="productData[0].document == '60'">
           <h4>Uploaded Documents</h4>
           <div ng-repeat="doc in user.docs">
             <div>{{ doc.name }}</div>
           </div>
         </div>
       </div>
-      {{ status.upload }}
-      {{ status.data }}
       <div class="form-status-area">
         <div ng-if="status.error.payment == 1">There was a problem processing the payment, please check your Card Details.</div>
         <div ng-if="status.error.docs == 1">There was a problem uploading the files to the server, please try again in a few minutes.</div>
