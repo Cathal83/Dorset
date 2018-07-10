@@ -48,7 +48,7 @@
   float:left;
   border-radius: 60px;
   //font-size: 16px;
-  @include font-size($p-default);
+  //@include font-size($p-default);
       -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -68,12 +68,12 @@
     }
 }
 
-@media only screen and (max-width: 975px) {
-  .block-region-headerimage .views-exposed-form input{
-    //font-size: 11px;
-        @include font-size($p-stat);
-  }
-}
+//@media only screen and (max-width: 975px) {
+//  .block-region-headerimage .views-exposed-form input{
+//    //font-size: 11px;
+//      @include font-size($p-default);
+//  }
+//}
 
   .button.form-submit {
     background-color: $dc-red;
@@ -198,12 +198,12 @@
 
 .block-links {
   //font-size: 11px;
-      @include font-size($p-stat);
+      //@include font-size($p-stat);
   width: 80% !important;
     @include breakpoint(640px) {
       margin-top: 16rem !important;
       //font-size: 16px;
-      @include font-size($p-stat);
+      //@include font-size($p-stat);
       }
     padding-left: 6% !important;
 }
@@ -1099,4 +1099,13 @@ p.arrow-right::after, a.arrow-right::after{
 }
 .block-accreditations{
   clear: both;
+}
+
+
+// FONT UPDATE
+input, .block-region-headerimage .views-exposed-form input, 
+.block-links{
+
+  @include font-size($p-default);
+  
 }
