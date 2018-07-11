@@ -98,7 +98,7 @@
         <div ng-if="productData[0].application_type == '60'">
           <h4>Payment Type</h4>
           <div class="form-opt">
-            <h4>{{ user.payment.type_txt + ':' }}</h4>
+            <h4 class = "label">{{ user.payment.type_txt + ':' }}</h4>
             <div>€ {{ user.payment.amount }}</div>
           </div>
           <h4>Payment Details</h4>
@@ -128,7 +128,7 @@
         </div>
         <div class="form-row nomar" ng-if="productData[0].application_type == '60' && user.billingaddress.billingcontact == true">
           <h4>Billing Address</h4>
-          <div class="form-opt">
+          <div class="form-opt noflexzone">
             <div>{{ user.contactaddress.address1 }}</div>
             <div>{{ user.contactaddress.address2 }}</div>
             <div>{{ 'Co. ' + user.contactaddress.county }}</div>

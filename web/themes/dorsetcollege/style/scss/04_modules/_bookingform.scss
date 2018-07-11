@@ -561,7 +561,7 @@ input[type="radio"] {
   }
   
 }
-.summary-panel label{
+.summary-panel label, .summary-panel .label{
   font-weight: 700;
   display: inline-block;
   margin-right: 1em;
