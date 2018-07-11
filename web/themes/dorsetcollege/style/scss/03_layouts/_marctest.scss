@@ -2311,15 +2311,42 @@
   .block-content p,
   .stat-intro,
   #zone-footer,
-  p
-  {
-
-  font-size: 16px;
-  line-height: 1.68;
-  @media only screen and (max-width: 600px) {
-    font-size: 11px;
-    line-height: 1.63;
-  }
+  p,
+  .block-region-headerimage .views-exposed-form input, 
+  .block-links,
+  #zone-actionblocks,
+  .link a{ 
+    font-size: 16px;
+    line-height: 1.68;
   //@include font-size($p-default);  
 }
-  
+ 
+@media only screen and (max-width: 600px) { 
+   .views-label,
+  .field-content,
+  .field-content a,
+  .block-views-blockcourses-view-block-7 .list-element,
+  .block-views-blocknews-events-block-1 .views-row .views-field-title .field-content a,    .block-views-blocknews-events-block-1 .views-row .views-field,
+  .block-views-blocknews-events-block-1 .views-row .views-field-body .field-content a,
+  .block-views-blocknews-events-block-1 .views-row .views-field-body .field-content p,
+  .modtitle,
+  .modstat,
+  .modsemester,
+  .modcred,
+  .modindc ul li,
+  .modass,
+  .paragraph--type--statistics-wrapper,
+  .left-paragraph p,
+  .right-paragraph p,
+  .block-content p,
+  .stat-intro,
+  #zone-footer,
+  p,
+  .block-region-headerimage .views-exposed-form input, 
+  .block-links,
+  #zone-actionblocks,
+  .link a{
+    font-size: 11px ;
+    line-height: 1.63;
+  }
+}
