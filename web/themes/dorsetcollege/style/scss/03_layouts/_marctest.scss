@@ -2082,6 +2082,13 @@
   margin-bottom: 1em;
 }
 
+@media only screen and (max-width: 600px) {
+  .block-views-blockcourses-view-course-prices-view {
+    margin-bottom: 0em;
+  }
+}
+
+
 .become .col-sm-12 h3 {
   font-size: 30px;
 }
