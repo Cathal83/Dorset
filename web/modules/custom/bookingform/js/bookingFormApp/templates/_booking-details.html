@@ -42,7 +42,7 @@
       <!-- Email input -->
       <div class="form-row" ng-if="productData[0].application_type == '61' || user.deliverymode">
         <div class="form-opt">
-          <input type="email" name="email" ng-model="user.email" placeholder="Your Email" required>
+          <input type="email" name="email" ng-model="user.email" ng-attr-placeholder="Your Email" required>
         </div>
         <div ng-messages="bookingStepForm.email.$error" ng-if="formStepSubmitted" class="error-msg">
             <div ng-message="required">Please type email address.</div>

@@ -47,7 +47,7 @@
         <h4>Enter Your Card Details</h4>
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="payment.card.number" ng-change="ccEncode(payment.card.number)" name="card_number" placeholder="Card Number"
+            <input type="text" ng-model="payment.card.number" ng-change="ccEncode(payment.card.number)" name="card_number" ng-attr-placeholder="Card Number"
               autocomplete="off" minlength="15" maxlength="19" ng-pattern="/^[0-9]*$/" required>
             <div ng-messages="bookingStepForm.card_number.$error" ng-if="formStepSubmitted" class="error-msg">
               <div ng-message="required">Card number is required for payment.</div>
@@ -87,7 +87,7 @@
         </div>
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="payment.card.cvc" placeholder="CVC" name="cardCVC" minlength="3" maxlength="4" required>
+            <input type="text" ng-model="payment.card.cvc" ng-attr-placeholder="CVC" name="cardCVC" minlength="3" maxlength="4" required>
             <div ng-messages="bookingStepForm.cardCVC.$error" ng-if="formStepSubmitted" class="error-msg">
               <div ng-message="required">CVC number is required for payment.</div>
             </div>
@@ -104,7 +104,7 @@
       <div class="form-wrapper" ng-if="user.billingaddress.billingcontact == false">
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="user.billingaddress.address1" placeholder="Address 1" required>
+            <input type="text" ng-model="user.billingaddress.address1" ng-attr-placeholder="Address 1" required>
           </div>
           <div ng-messages="bookingStepForm.address1.$error" ng-if="formStepSubmitted" class="error-msg">
             <div ng-message="required">The field is required.</div>
@@ -112,12 +112,12 @@
         </div>
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="user.billingaddress.address2" placeholder="Address 2" required>
+            <input type="text" ng-model="user.billingaddress.address2" ng-attr-placeholder="Address 2" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="user.billingaddress.county" placeholder="State / Province / County " required>
+            <input type="text" ng-model="user.billingaddress.county" ng-attr-placeholder="State / Province / County " required>
           </div>
           <div ng-messages="bookingStepForm.county.$error" ng-if="formStepSubmitted" class="error-msg">
             <div ng-message="required">The field State / Province / County is required.</div>
@@ -125,7 +125,7 @@
         </div>
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="user.billingaddress.country" placeholder="Country" required>
+            <input type="text" ng-model="user.billingaddress.country" ng-attr-placeholder="Country" required>
           </div>
           <div ng-messages="bookingStepForm.country.$error" ng-if="formStepSubmitted" class="error-msg">
             <div ng-message="required">The field Country is required.</div>
@@ -133,7 +133,7 @@
         </div>
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="user.billingaddress.city" placeholder="City" required>
+            <input type="text" ng-model="user.billingaddress.city" ng-attr-placeholder="City" required>
           </div>
           <div ng-messages="bookingStepForm.city.$error" ng-if="formStepSubmitted" class="error-msg">
             <div ng-message="required">The field City is required.</div>
@@ -141,7 +141,7 @@
         </div>
         <div class="form-row">
           <div class="form-opt">
-            <input type="text" ng-model="user.billingaddress.postalcode" placeholder="Postal Code" required>
+            <input type="text" ng-model="user.billingaddress.postalcode" ng-attr-placeholder="Postal Code" required>
           </div>
           <div ng-messages="bookingStepForm.postalcode.$error" ng-if="formStepSubmitted" class="error-msg">
             <div ng-message="required">The field Postal Code is required.</div>

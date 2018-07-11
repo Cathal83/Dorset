@@ -3,7 +3,7 @@
     <div class="form-title">
         <h2>Online Application</h2>
         <div>
-            <h1 ng-if="productData[0].application_type == '60'">{{ user.productname }}{{ ': ' + user.deliveryname }}</h1>
+            <h1 ng-if="productData[0].application_ng-attr-type == '60'">{{ user.productname }}{{ ': ' + user.deliveryname }}</h1>
             <h1 ng-if="productData[0].application_type == '61'">{{ user.productname }}</h1>
           </div>
     </div>
@@ -28,14 +28,14 @@
             </div>
             <div class="form-upload" ng-repeat="product in productData">
                 <div ng-if="$index == 0" class="upbtn">
-                    <button type="file" name="docs0" ng-model="user.docs[0]" ngf-select ngf-change="docSize(user.docs[0], 0)" ng-hide="user.docs[0]" required>Upload Documents</button>
+                    <button ng-attr-type="file" name="docs0" ng-model="user.docs[0]" ngf-select ngf-change="docSize(user.docs[0], 0)" ng-hide="user.docs[0]" required>Upload Documents</button>
                     <i ng-show="maxSize[0]">File is too large, max 5Mb</i>
                     <div ng-messages="bookingStepForm['docs0'].$error" ng-if="formStepSubmitted" class="error-msg">
                         <div ng-message="required">At least one document is required.</div>
                     </div>
                 </div>
                 <div ng-if="$index != 0">
-                    <button type="file" name="docs{{$index}}" ng-model="user.docs[$index]" ngf-select ngf-change="docSize(user.docs[$index], $index)" ng-show="user.docs[$index - 1] && !user.docs[$index]">Upload Documents</button>
+                    <button ng-attr-type="file" name="docs{{$index}}" ng-model="user.docs[$index]" ngf-select ngf-change="docSize(user.docs[$index], $index)" ng-show="user.docs[$index - 1] && !user.docs[$index]">Upload Documents</button>
                     <i ng-show="maxSize[$index]">File is too large, max 5Mb</i>
                 </div>
             </div>
