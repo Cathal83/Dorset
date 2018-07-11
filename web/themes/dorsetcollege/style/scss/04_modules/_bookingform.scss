@@ -555,6 +555,11 @@ input[type="radio"] {
   display: inline-flex;
   width: 100%;
   
+  .noflexzone{
+    display: block;
+    width: 100%;
+  }
+  
 }
 .summary-panel label{
   font-weight: 700;
@@ -568,11 +573,6 @@ input[type="radio"] {
 //  display: inline-block;
 //  width: 50%;
 //}
-
-.noflexzone .ng-binding {
-  display: block;
-  width: 100%;
-}
 
 .sqeeze{
   width: 100%;
