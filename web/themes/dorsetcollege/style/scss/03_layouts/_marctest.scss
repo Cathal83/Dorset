@@ -2291,6 +2291,7 @@
   font-weight: 400;
 }
 
+@media only screen and (min-width: 600px) { 
 // FONT UPDATE
   .views-label,
   .field-content,
@@ -2319,6 +2320,7 @@
     font-size: 16px;
     line-height: 1.68;
   //@include font-size($p-default);  
+  }
 }
  
 @media only screen and (max-width: 600px) { 
@@ -2346,7 +2348,7 @@
   .block-links,
   #zone-actionblocks,
   .link a{
-    font-size: 11px !important;
+    font-size: 11px;
     line-height: 1.63;
   }
 }
