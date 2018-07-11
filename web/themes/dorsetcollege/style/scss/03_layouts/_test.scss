@@ -760,6 +760,11 @@ p.arrow-right::after, a.arrow-right::after{
        box-shadow: inset 0 0 0 2000px #2952cc;
         }
       }
+   &:nth-child(3)  {
+   .bg-img div{     
+        box-shadow: inset 0 0 0 2000px rgba(45,45,45,.7)
+      }
+     }
     }
 }
 
