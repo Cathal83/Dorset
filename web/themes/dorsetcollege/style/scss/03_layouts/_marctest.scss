@@ -2307,9 +2307,12 @@
   .modass,
   .paragraph--type--statistics-wrapper,
   .left-paragraph p,
+  .right-paragraph p,
   .block-content p,
   .stat-intro,
-  #zone-footer {
+  #zone-footer,
+  p
+  {
 
   font-size: 16px;
   line-height: 1.68;
