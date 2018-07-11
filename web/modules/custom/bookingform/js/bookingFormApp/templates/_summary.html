@@ -1,3 +1,4 @@
+
   <div class="col-sm-6">
     <div class="form-content summary-panel">
       <div class="form-title">
@@ -9,7 +10,6 @@
       </div>
     <!--<div class = "col-sm-6">-->
       <div class="form-progression">
-        <h3>Step 3: Summary & Submit</h3>
         <div class="form-step marked"></div>
         <span class="form-step-line"></span>
         <div class="form-step marked"></div>
@@ -20,7 +20,7 @@
   <!--</div>-->
   <!---->
   <!--<div class="col-sm-6">-->
-    <div class="form-fields sqeeze">
+    <div class="form-fields">
       <div class="form-wrapper">
         <div class="form-row">
           <!-- Pre Application-->
@@ -31,7 +31,15 @@
           </div>
           <div class="form-opt" ng-if="productData[0].application_type == '60'">
             <label>Course Mode</label>
-            <div>{{ productData[0].price_group }}</div>
+            <div>{{ user.deliveryname }}</div>
+          </div>
+          <div class="form-opt" ng-if="productData[0].application_type == '61'">
+            <label>Nationality:</label>
+            <div>{{ user.nationality.name }}</div>
+          </div>
+          <div class="form-opt" ng-if="productData[0].application_type == '61'">
+            <label>Country of Residence:</label>
+            <div>{{ user.residence.name }}</div>
           </div>
           <div>
               <a href="" ng-model="target" value="bookingForm" ng-click="goToSection('bookingForm')">Edit</a>
@@ -62,9 +70,6 @@
                 <div>{{ user.contactaddress.country }}</div>
               </div>
           </div>
-          <div>
-            <a href="" ng-model="target" value="customer-details" ng-click="goToSection('customer-details')">Edit</a>
-          </div>
           <h4>Contact Address</h4>
           <div>
             <div>{{ user.contactaddress.address1 }}</div>
@@ -93,12 +98,13 @@
   </div>
     <div class = "col-sm-6">
       <div class = "form-content summary-panel">
+      <div class="form-fields">
       <div class="form-wrapper">
         <!-- Payment Type -->
         <div ng-if="productData[0].application_type == '60'">
           <h4>Payment Type</h4>
           <div class="form-opt">
-            <h4 class = "label">{{ user.payment.type_txt + ':' }}</h4>
+            <h4>{{ user.payment.type_txt + ':' }}</h4>
             <div>€ {{ user.payment.amount }}</div>
           </div>
           <h4>Payment Details</h4>
@@ -128,7 +134,7 @@
         </div>
         <div class="form-row nomar" ng-if="productData[0].application_type == '60' && user.billingaddress.billingcontact == true">
           <h4>Billing Address</h4>
-          <div class="form-opt noflexzone">
+          <div class="form-opt">
             <div>{{ user.contactaddress.address1 }}</div>
             <div>{{ user.contactaddress.address2 }}</div>
             <div>{{ 'Co. ' + user.contactaddress.county }}</div>
@@ -139,15 +145,14 @@
           </div>
         </div>
         <!-- Documents required -->
-        <div class="form-row" ng-if="productData[0].document != '60'">
+        <div class="form-row" ng-if="productData[0].application_type == '61'">
           <h4>Uploaded Documents</h4>
           <div ng-repeat="doc in user.docs">
             <div>{{ doc.name }}</div>
           </div>
         </div>
       </div>
-      {{ status.upload }}
-      {{ status.data }}
+      </div>
       <div class="form-status-area">
         <div ng-if="status.error.payment == 1">There was a problem processing the payment, please check your Card Details.</div>
         <div ng-if="status.error.docs == 1">There was a problem uploading the files to the server, please try again in a few minutes.</div>

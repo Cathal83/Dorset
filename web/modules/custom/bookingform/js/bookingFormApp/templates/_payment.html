@@ -148,8 +148,6 @@
           </div>
         </div>
       </div>
-      
-    <!--    I MOVED THE BUTTONS FROM THE BOTTOM TO HERE - CATHAL  -->
     <div class = "button-form-footer">
       <div class="bookingform-btn fixw">
         <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
@@ -160,80 +158,60 @@
       </div>
     </div>
   </div> 
-  
-  
-  
-  <div class ="col-sm-6">
+  <div class="col-sm-6">
     <div class = "form-content summary-panel">
-    <div class="form-fields">
-      <h3>Summary</h3>
-      <div class="form-wrapper">
-        <div class="form-row">
-          <h4>Pre-application</h4>
-          <div class="form-opt">
-            <label>Course Title:</label>
-            <div>{{ user.productname }}</div>
+      <div class="form-fields">
+        <h3>Summary</h3>
+        <div class="form-wrapper">
+          <div class="form-row">
+            <h4>Pre-application</h4>
+            <div class="form-opt">
+              <label>Course Title:</label>
+              <div>{{ user.productname }}</div>
+            </div>
+            <div class="form-opt">
+              <label>Course Mode:</label>
+              <div>{{ user.deliveryname }}</div>
+            </div>
+            <div class="form-opt">
+              <label>Email:</label>
+              <div>{{ user.email }}</div>
+            </div>
           </div>
-          <div class="form-opt">
-            <label>Course Mode:</label>
-            <div>{{ user.deliveryMode }}</div>
-          </div>
-          <div class="form-opt">
-            <label>Email:</label>
-            <div>{{ user.email }}</div>
-          </div>
-          <div class="form-opt">
-            <label>County:</label>
-            <div>{{ user.county }}</div>
-          </div>
-          <div class="form-opt">
-            <label>Country:</label>
-            <div>{{ user.country }}</div>
+          <div>
+            <a href="" ng-model="target" value="customer-details" ng-click="goToSection('bookingForm')">Edit</a>
           </div>
         </div>
-        <div>
-          <a href="" ng-model="target" value="customer-details" ng-click="goToSection('customer-details')">Edit</a>
-        </div>
-      </div>
-      <div class="form-wrapper">
-        <div class="form-row">
-          <h4>Personal Information</h4>
-          <div class="form-opt">
-            <label>Name:</label>
-            <div>{{ user.firstname + ' ' + user.lastname }}</div>
+        <div class="form-wrapper">
+          <div class="form-row">
+            <h4>Personal Information</h4>
+            <div class="form-opt">
+              <label>Name:</label>
+              <div>{{ user.firstname + ' ' + user.lastname }}</div>
+            </div>
+            <div class="form-opt">
+              <label>DOB:</label>
+              <div>{{ user.dob | date:'dd/MM/yyyy' }}</div>
+            </div>
+            <div class="form-opt">
+              <label>Gender:</label>
+              <div>{{ user.gender }}</div>
+            </div>
+            <h4>Contact Address</h4>
+            <div class="form-opt">
+              <div>{{ user.contactaddress.address1 }}</div>
+              <div>{{ user.contactaddress.address2 }}</div>
+              <div>{{ user.contactaddress.county }}</div>
+              <div>{{ user.contactaddress.country }}</div>
+            </div>
           </div>
-          <div class="form-opt">
-            <label>DOB:</label>
-            <div>{{ user.dob | date:'dd/MM/yyyy' }}</div>
+          <div>
+            <a href="" ng-model="target" value="customer-details" ng-click="goToSection('customer-details')">Edit</a>
           </div>
-          <div class="form-opt">
-            <label>Gender:</label>
-            <div>{{ user.gender }}</div>
-          </div>
-          <h4>Contact Address</h4>
-          <div class="form-opt noflexzone" >
-            <div>{{ user.contactaddress.address1 }}</div>
-            <div>{{ user.contactaddress.address2 }}</div>
-            <div>{{ user.contactaddress.county }}</div>
-            <div>{{ user.contactaddress.country }}</div>
-          </div>
-        </div>
-        <div>
-          <a href="" ng-model="target" value="customer-details" ng-click="goToSection('customer-details')">Edit</a>
         </div>
       </div>
+      </div>
     </div>
-    </div>
-  </div>
-  
-    <!--  I MOVED THE BUTTONS TO HIGHER UP THE PAGE - CATHAL-->
-    <!-- Proceed Button -->
-    <!--    <div class="bookingform-btn fixw">
-      <a class="btn-back" ng-click="goToPreviousSection()" href="">Back</a>
-    </div>
-    <div class="bookingform-btn fixw">
-      <a class="btn-next" ng-click="goToNextSection(bookingStepForm.$valid)" href="">Next</a>
-    </div>-->
   </div>
   </body>
 </html>

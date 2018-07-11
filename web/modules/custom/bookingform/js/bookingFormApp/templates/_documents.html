@@ -59,3 +59,62 @@
     </div>
 </div>
 </div>
+<div class="col-sm-6">
+    <div class="form-content summary-panel">
+        <div class="form-fields">
+            <h3>Summary</h3>
+            <div class="form-wrapper">
+                <div class="form-row">
+                    <h4>Pre-application</h4>
+                    <div class="form-opt">
+                        <label>Course Title:</label>
+                        <div>{{ user.productname }}</div>
+                    </div>
+                    <div class="form-opt">
+                        <label>Email:</label>
+                        <div>{{ user.email }}</div>
+                    </div>
+                    <div class="form-opt">
+                        <label>Nationality:</label>
+                        <div>{{ user.nationality.name }}</div>
+                    </div>
+                    <div class="form-opt">
+                        <label>Country of Residence:</label>
+                        <div>{{ user.residence.name }}</div>
+                    </div>
+                </div>
+                <div>
+                    <a href="" ng-model="target" value="customer-details" ng-click="goToSection('bookingForm')">Edit</a>
+                </div>
+            </div>
+            <div class="form-wrapper">
+                <div class="form-row">
+                    <h4>Personal Information</h4>
+                    <div class="form-opt">
+                        <label>Name:</label>
+                        <div>{{ user.firstname + ' ' + user.lastname }}</div>
+                    </div>
+                    <div class="form-opt">
+                        <label>DOB:</label>
+                        <div>{{ user.dob | date:'dd/MM/yyyy' }}</div>
+                    </div>
+                    <div class="form-opt">
+                        <label>Gender:</label>
+                        <div>{{ user.gender }}</div>
+                    </div>
+                    <h4>Contact Address</h4>
+                        <div class="form-opt">
+                            <div>{{ user.contactaddress.address1 }}</div>
+                            <div>{{ user.contactaddress.address2 }}</div>
+                            <div>{{ user.contactaddress.county }}</div>
+                            <div>{{ user.contactaddress.country }}</div>
+                        </div>
+                </div>
+                <div>
+                    <a href="" ng-model="target" value="customer-details" ng-click="goToSection('customer-details')">Edit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
