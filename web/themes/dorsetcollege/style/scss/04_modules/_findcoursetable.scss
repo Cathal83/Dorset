@@ -102,6 +102,15 @@
         flex: 3!important;
     }
   }
+  
+        .pager__item--next {
+        margin-right: 0;
+
+      }
+      .pager__item--previous {
+        margin-left: 0;
+
+      }
 }
 
 
