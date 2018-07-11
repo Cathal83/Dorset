@@ -555,7 +555,7 @@ input[type="radio"] {
   display: inline-flex;
   width: 100%;
   
-  .noflexzone{
+  &.noflexzone{
     display: block;
     width: 100%;
   }
