@@ -1004,6 +1004,10 @@ p.arrow-right::after, a.arrow-right::after{
    .md-datepicker-calendar-pane.pane-opn{
     top: 300px;
    }
+   
+   .cardpay .form-row{
+    float: none;
+   }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1063,4 +1067,8 @@ p.arrow-right::after, a.arrow-right::after{
 
 .block-table .views-exposed-form summary {
   display: block;
+}
+
+button .btn-next{
+  border: 0;
 }
