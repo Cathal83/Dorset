@@ -894,6 +894,13 @@ p.arrow-right::after, a.arrow-right::after{
     font-weight: 700;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   .btn-blue  {
+    display: inline-block;
+    margin-left: 48%;
+   }
+}
+
 .btn-blue:hover {
   opacity: 0.8;
   cursor: pointer;
