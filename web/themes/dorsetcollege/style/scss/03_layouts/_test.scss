@@ -894,13 +894,6 @@ p.arrow-right::after, a.arrow-right::after{
     font-weight: 700;
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-   #hide, .btn-blue  {
-    display: inline-block;
-    margin-left: 48%;
-   }
-}
-
 .btn-blue:hover {
   opacity: 0.8;
   cursor: pointer;
@@ -991,6 +984,13 @@ p.arrow-right::after, a.arrow-right::after{
     width: fit-content;
     margin: auto;
   }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   #hide, .btn-blue  {
+    display: inline-block;
+    margin-left: 48%;
+   }
 }
 
 @media only screen and (max-width: 600px) {
