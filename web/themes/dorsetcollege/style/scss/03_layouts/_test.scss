@@ -1040,3 +1040,7 @@ p.arrow-right::after, a.arrow-right::after{
 .block-accreditations{
   clear: both;
 }
+
+details .form-item summary {
+  display: block;
+}
