@@ -1005,8 +1005,8 @@ p.arrow-right::after, a.arrow-right::after{
     top: 300px;
    }
    
-   .cardpay .form-row{
-    float: none;
+   .cardpay.form-row{
+    float: none !important;
    }
 }
 
