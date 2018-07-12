@@ -895,7 +895,7 @@ p.arrow-right::after, a.arrow-right::after{
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-   .btn-blue  {
+   #hide, .btn-blue  {
     display: inline-block;
     margin-left: 48%;
    }
