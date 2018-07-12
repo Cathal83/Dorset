@@ -996,6 +996,11 @@ p.arrow-right::after, a.arrow-right::after{
     display: block;
    }
    
+   .path-find-a-course#section-content.views-row.views-field-title a{
+    display: block;
+    padding: 1em 0;
+   }
+   
    .md-datepicker-calendar-pane.pane-opn{
     top: 300px;
    }
