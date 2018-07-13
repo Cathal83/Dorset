@@ -1069,3 +1069,14 @@ p.arrow-right::after, a.arrow-right::after{
 .btn-next{
   border: 0;
 }
+
+@media only screen and (max-width: 600px) {
+  .paragraph--type--right-image-left-text{
+    display: flex;
+    flex-direction: column;
+    
+    &.col-sm-6:last-of-type{
+      order: 2;
+    }
+  }
+}
