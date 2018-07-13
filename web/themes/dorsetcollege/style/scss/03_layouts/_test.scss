@@ -1071,12 +1071,12 @@ p.arrow-right::after, a.arrow-right::after{
 }
 
 @media only screen and (max-width: 600px) {
-  .paragraph--type--right-image-left-text{
+  .paragraph--type--left-image-right-text{
     display: flex;
     flex-direction: column;
-    
-    &.col-sm-6:first-of-type{
+  }
+  
+     .paragraph--type--left-image-right-text.col-sm-6:first-child{
       order: 2;
     }
-  }
 }
