@@ -122,7 +122,7 @@
           </div>
         </div>
         <div ng-if="productData[0].application_type == '60' && user.billingaddress.billingcontact == false">
-          <h4>Billing Address</h4>
+          <h4>Billing Address:</h4>
           <div class="form-opt address">
             <div>{{ user.billingaddress.address1 }}</div>
             <div>{{ user.billingaddress.address2 }}</div>
@@ -134,7 +134,7 @@
           </div>
         </div>
         <div class="form-row nomar" ng-if="productData[0].application_type == '60' && user.billingaddress.billingcontact == true">
-          <h4>Billing Address</h4>
+          <h4>Billing Address:</h4>
           <<div class="form-opt address">
             <div>{{ user.contactaddress.address1 }}</div>
             <div>{{ user.contactaddress.address2 }}</div>
