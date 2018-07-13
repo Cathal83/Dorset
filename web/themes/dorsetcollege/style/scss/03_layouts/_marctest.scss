@@ -2081,14 +2081,16 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .paragraph--type--statistics-wrapper{
+  .paragraph--type--statistics-wrapper,
+  .form-progression h3{
     font-size: 16px;
     line-height: 1.68;
   }
 }
 
 @media only screen and (min-width: 600px) {
-  .paragraph--type--statistics-wrapper{
+  .paragraph--type--statistics-wrapper,
+  .form-progression h3{
     font-size: 20px;
     line-height: 1.68;
   }
