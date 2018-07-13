@@ -15,7 +15,7 @@
   
         </div>
       </div>
-      <!-- Select product -->
+      <!-- Select product --> 
       <div class="form-row" ng-show="showProductSel">
         <div class="form-opt">
           <select ng-model="user.productnid" name="product" ng-options="product.nid as product.title group by product.faculty for product in products | unique: 'title'" ng-change="productIsolate(user.productnid)" required>
