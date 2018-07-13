@@ -1075,7 +1075,7 @@ p.arrow-right::after, a.arrow-right::after{
     display: flex;
     flex-direction: column;
     
-    &.col-sm-6:last-of-type{
+    &.col-sm-6:first-of-type{
       order: 2;
     }
   }
