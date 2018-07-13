@@ -385,7 +385,9 @@
 .delete {
   color: #36F !important;
   width: 10.5%;
-  display: inline-block
+  display: inline-block;
+  margin-left: 1em;
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 600px) {
@@ -558,6 +560,11 @@ input[type="radio"] {
   &.noflexzone{
     display: block;
     width: 100%;
+  }
+  
+  &.address{
+    display: block;
+    width: 100%; 
   }
   
 }
