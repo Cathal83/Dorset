@@ -1076,7 +1076,7 @@ p.arrow-right::after, a.arrow-right::after{
     flex-direction: column;
   }
   
-     .paragraph--type--left-image-right-text.col-sm-6:first-child{
+     .paragraph--type--left-image-right-text .col-sm-6:first-child{
       order: 2;
     }
 }
