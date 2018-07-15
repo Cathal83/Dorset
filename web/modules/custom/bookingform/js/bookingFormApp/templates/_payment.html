@@ -106,7 +106,7 @@
           <div class="form-opt">
             <input type="text" ng-model="user.billingaddress.address1" ng-attr-placeholder="Address 1" required>
           </div>
-          <div ng-messages="bookingStepForm.address1.$error" ng-if="formStepSubmitted" class="error-msg">
+          <div ng-messages="bookingStepForm.billingaddress.address1.$error" ng-if="formStepSubmitted" class="error-msg">
             <div ng-message="required">The field is required.</div>
           </div>
         </div>
@@ -119,7 +119,7 @@
           <div class="form-opt">
             <input type="text" ng-model="user.billingaddress.county" ng-attr-placeholder="State / Province / County " required>
           </div>
-          <div ng-messages="bookingStepForm.county.$error" ng-if="formStepSubmitted" class="error-msg">
+          <div ng-messages="bookingStepForm.billingaddress.county.$error" ng-if="formStepSubmitted" class="error-msg">
             <div ng-message="required">The field State / Province / County is required.</div>
           </div>
         </div>
@@ -127,7 +127,7 @@
           <div class="form-opt">
             <input type="text" ng-model="user.billingaddress.country" ng-attr-placeholder="Country" required>
           </div>
-          <div ng-messages="bookingStepForm.country.$error" ng-if="formStepSubmitted" class="error-msg">
+          <div ng-messages="bookingStepForm.billingaddress.country.$error" ng-if="formStepSubmitted" class="error-msg">
             <div ng-message="required">The field Country is required.</div>
           </div>
         </div>
@@ -135,7 +135,7 @@
           <div class="form-opt">
             <input type="text" ng-model="user.billingaddress.city" ng-attr-placeholder="City" required>
           </div>
-          <div ng-messages="bookingStepForm.city.$error" ng-if="formStepSubmitted" class="error-msg">
+          <div ng-messages="bookingStepForm.billingaddress.city.$error" ng-if="formStepSubmitted" class="error-msg">
             <div ng-message="required">The field City is required.</div>
           </div>
         </div>
@@ -143,7 +143,7 @@
           <div class="form-opt">
             <input type="text" ng-model="user.billingaddress.postalcode" ng-attr-placeholder="Postal Code" required>
           </div>
-          <div ng-messages="bookingStepForm.postalcode.$error" ng-if="formStepSubmitted" class="error-msg">
+          <div ng-messages="bookingStepForm.billingaddress.postalcode.$error" ng-if="formStepSubmitted" class="error-msg">
             <div ng-message="required">The field Postal Code is required.</div>
           </div>
         </div>

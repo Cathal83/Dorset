@@ -50,6 +50,8 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
       contact_address_as_billing: data.billingaddress.billingcontact,
       billing_address_1: data.billingaddress.address1,
       billing_address_2: data.billingaddress.address2,
+      billing_city_town: data.billingaddress.city,
+      billing_county: data.billingaddress.county,
       billing_country: data.billingaddress.country,
       billing_postal_code: data.billingaddress.postalcode,
       documents: docs,
