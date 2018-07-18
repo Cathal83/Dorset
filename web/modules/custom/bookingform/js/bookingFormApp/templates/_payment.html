@@ -117,6 +117,14 @@
         </div>
         <div class="form-row">
           <div class="form-opt">
+            <input type="text" ng-model="user.billingaddress.city" ng-attr-placeholder="City" required>
+          </div>
+          <div ng-messages="bookingStepForm.billingaddress.city.$error" ng-if="formStepSubmitted" class="error-msg">
+            <div ng-message="required">The field City is required.</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-opt">
             <input type="text" ng-model="user.billingaddress.county" ng-attr-placeholder="State / Province / County " required>
           </div>
           <div ng-messages="bookingStepForm.billingaddress.county.$error" ng-if="formStepSubmitted" class="error-msg">
@@ -129,14 +137,6 @@
           </div>
           <div ng-messages="bookingStepForm.billingaddress.country.$error" ng-if="formStepSubmitted" class="error-msg">
             <div ng-message="required">The field Country is required.</div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-opt">
-            <input type="text" ng-model="user.billingaddress.city" ng-attr-placeholder="City" required>
-          </div>
-          <div ng-messages="bookingStepForm.billingaddress.city.$error" ng-if="formStepSubmitted" class="error-msg">
-            <div ng-message="required">The field City is required.</div>
           </div>
         </div>
         <div class="form-row">

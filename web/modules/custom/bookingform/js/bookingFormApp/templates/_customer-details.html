@@ -85,6 +85,15 @@
                 <input type="text" ng-attr-placeholder="Address Line 2" name="address2" ng-model="user.contactaddress.address2">
             </div>
           </div>
+          <!-- City/ Town -->
+          <div class="form-row">
+            <div class="form-opt">
+              <input type="text" ng-attr-placeholder="City/ Town" name="city" ng-model="user.contactaddress.city" required>
+            </div>
+            <div ng-messages="bookingStepForm.city.$error" ng-if="formStepSubmitted" class="error-msg">
+            <div ng-message="required">City/ Town field is required for application..</div>
+            </div>
+          </div>
           <!-- County -->
           <div class="form-row">
               <div class="form-opt">
@@ -105,23 +114,14 @@
                   <div ng-message="required">Country field is required for application.</div>
               </div>
           </div>
-          <!-- City/ Town -->
-          <div class="form-row">
-              <div class="form-opt">
-                  <input type="text" ng-attr-placeholder="City/ Town" name="city" ng-model="user.contactaddress.city" required>
-              </div>
-              <div ng-messages="bookingStepForm.city.$error" ng-if="formStepSubmitted" class="error-msg">
-                  <div ng-message="required">City/ Town field is required for application..</div>
-              </div>
-          </div>
-            <!-- Postal Code -->
-            <div class="form-row"> 
-              <div class="form-opt">
-                  <input type="text" ng-attr-placeholder="Postal Code" name="postalcode" ng-model="user.contactaddress.postalcode" required>
-              </div>
-              <div ng-messages="bookingStepForm.postalcode.$error" ng-if="formStepSubmitted" class="error-msg">
-                  <div ng-message="required">Postal Code field is required for application..</div>
-              </div>
+          <!-- Postal Code -->
+          <div class="form-row"> 
+            <div class="form-opt">
+              <input type="text" ng-attr-placeholder="Postal Code" name="postalcode" ng-model="user.contactaddress.postalcode" required>
+            </div>
+            <div ng-messages="bookingStepForm.postalcode.$error" ng-if="formStepSubmitted" class="error-msg">
+              <div ng-message="required">Postal Code field is required for application..</div>
+            </div>
           </div>
       </div>
       <!-- Proceed Button -->

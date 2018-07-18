@@ -40,7 +40,7 @@ bookingformJS.service("formService", function($filter, $location, dataService) {
             2 : {
               number: 2,
               title: "Required Documents",
-              description: "You will need to upload documents to show your prior learning/experience and to verify your identity. Upload all that apply: (Passport or ID, English Level Cert, Leaving Cert Results, FETAC Level 5 & 6 Major Award, International Equivalent to Leaving Cert, Transcript of Results)"
+              description: "You will need to upload documents to show your prior learning/experience and to verify your identity. Upload all that apply: Transcript of Result, Passport or ID, Leaving Cert Results, FETAC Level 5 and Level 6 Major Award, English Proficiency Certificate, International Equivalent to High School"
             },
             3 : {
               number: 3,
