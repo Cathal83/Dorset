@@ -9,7 +9,7 @@
   class bookingformRest extends ControllerBase {
 
     // Replace this with live key once on Live stage
-    private $apiKey = "sk_test_zJpfrkdwd8oaD56vZr8eumPO";
+    private $apiKey = "sk_live_1LRvNgYojgDZ9dUQK7IvGXLq";
 
     public function __construct() {
 
