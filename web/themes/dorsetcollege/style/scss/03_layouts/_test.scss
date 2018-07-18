@@ -552,7 +552,7 @@ p.arrow-right::after, a.arrow-right::after{
   margin-top: -33px;
 }
 
-.testimonial-row:first-of-type .testimonial{
+.testimonial-row:nth-child(2) .testimonial{
   margin-left: 6%;
 }
 
@@ -560,7 +560,7 @@ p.arrow-right::after, a.arrow-right::after{
   margin-right: 6%;
 }
 
-.testimonial-row:nth-child(2) .testimonial{
+.testimonial-row:nth-child(3) .testimonial{
   margin: 0 2%;
 }
 

@@ -26,3 +26,4 @@
 
 # Gulp libraries
 /web/themes/dorsetcollege/style/node_modules/*
+*.jpg

@@ -4,7 +4,7 @@
 
 .block-views-blockcourses-view-block-2 {
   width: 49.95%;
-  height: 500px;
+  height: 550px;
   display: inline-block;
   float: left;
 }
@@ -71,10 +71,10 @@
 
 .block-views-blockcourses-view-block-7{
   width: 33.3% !important;
-  height: 559px;
+  height: 609px;
   display: inline-block;
   margin-top: -60px;
-  background-image: linear-gradient(rgba(241,73,80,0.5),rgba(241,73,80,0.5)), url('/sites/default/files/styles/large/public/block_list/how_to_apply_0.jpg?itok=aKX80AYP');
+  background-image: linear-gradient(rgba(241,73,80,0.5),rgba(241,73,80,0.5)), url('/sites/default/files/styles/large/public/block_list/Homepage_How_To_Apply.jpg?itok=rTyb7Fcs');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -1652,7 +1652,8 @@
 
 // Find a Course pagination
 
-.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-5, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-7, .block-views-blockfind-a-course-block-8, .block-views-blockfind-a-course-block-9, .block-views-blockfind-a-course-block-10{
+div[class*=" block-views-blockfind-a-course-block-"]{
+  //.block-views-blockfind-a-course-block-1, .block-views-blockfind-a-course-block-2, .block-views-blockfind-a-course-block-3, .block-views-blockfind-a-course-block-4, .block-views-blockfind-a-course-block-5, .block-views-blockfind-a-course-block-6, .block-views-blockfind-a-course-block-7, .block-views-blockfind-a-course-block-8, .block-views-blockfind-a-course-block-9, .block-views-blockfind-a-course-block-10{
 
   .block-table .pager .pager__item a{
     color: #5D5D5D;
@@ -1699,21 +1700,30 @@
   padding: 4px 8px;
 }
 
-#views-exposed-form-find-a-course-block-1 .form-checkboxes label{
-  padding-left: 1em;
-  color: #6D6E71;
+
+form[id^="views-exposed-form-find-a-course-block-"]{
+  .js-form-item{
+
+    padding: 10px 20px;
+  }
+  
+  .form-checkboxes label{
+    padding-left: 1em;
+    color: #6D6E71;
+  }
+  
+  .form-checkboxes .form-checkbox{
+    background-color: $white;
+    cursor: pointer;
+    border-radius: 0;
+    border: 1px solid #979797;
+  }
+  
+  .js-form-item-search{
+    display: none;
+  }
 }
 
-#views-exposed-form-find-a-course-block-1 .js-form-item{
-  padding: 10px 20px;
-}
-
-#views-exposed-form-find-a-course-block-1 .form-checkboxes .form-checkbox{
-  background-color: $white;
-  cursor: pointer;
-  border-radius: 0;
-  border: 1px solid #979797;
-}
 
 .menu-item .is-active{
   color: #3366FF !important;
@@ -1722,22 +1732,24 @@
 
 
 @media screen and (max-width: 975px) and (min-width: 600px) {
-  #views-exposed-form-find-a-course-block-1 .js-form-item{
-    padding: 10px 0px;
+form[id^="views-exposed-form-find-a-course-block-"]{
+  .js-form-item{
+      padding: 10px 0px;
+    }
   }
 }
 
 @media only screen and (max-width: 600px) {
-  #views-exposed-form-find-a-course-block-1 summary{
+  form[id^="views-exposed-form-find-a-course-block-"] summary{
     @include font-size($p-stat);
     padding: 1em 1.5em!important;
   }
 
-  #views-exposed-form-find-a-course-block-1 .filter-trigger{
+ form[id^="views-exposed-form-find-a-course-block-"] .filter-trigger{
         @include font-size($p-stat);
   }
 
-  #views-exposed-form-find-a-course-block-1 .form-checkboxes label{
+  form[id^="views-exposed-form-find-a-course-block-"] .form-checkboxes label{
         @include font-size($p-stat);
   }
 }
@@ -1854,9 +1866,9 @@
   }
 }
 
-#views-exposed-form-find-a-course-block-1 .js-form-item-search{
-  display: none;
-}
+//#views-exposed-form-find-a-course-block-1 .js-form-item-search{
+//  display: none;
+//}
 
 .path-current-students, .path-student-life {
   .block-list-bg-img .block-content .block-list{
