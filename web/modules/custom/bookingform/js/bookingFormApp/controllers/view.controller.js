@@ -10,7 +10,6 @@ bookingformJS.controller("viewCtrl", function($scope, $window, formSteps, $state
   // Form steps
   // If validation passes move to the next page
   var nextState = function(currentState) {
-    $window.scrollTo(0, 131);
     // Check the current page and returns the next
     switch (currentState) {
       // Product Selection to Application Steps
@@ -66,7 +65,7 @@ bookingformJS.controller("viewCtrl", function($scope, $window, formSteps, $state
 
   //Form steps - Previous
   var previousState = function(currentState) {
-    $window.scrollTo(0, 131);
+    
     switch (currentState) {
       case 'steps':
         return 'bookingForm'
@@ -117,6 +116,7 @@ bookingformJS.controller("viewCtrl", function($scope, $window, formSteps, $state
     // set to true to show all error messages (if there are any)
     console.log(isFormValid);
     $scope.formStepSubmitted = true;
+    $window.scrollTo(0, 131);
     if(isFormValid) {
       // reset this for next form
       $scope.formStepSubmitted = false;
@@ -134,7 +134,7 @@ bookingformJS.controller("viewCtrl", function($scope, $window, formSteps, $state
   
   // Function that returns previous State of the form - in case back button is clicked
   $scope.goToPreviousSection = function() {
-
+    $window.scrollTo(0, 131);
     $state.go(previousState($state.current.name), { '#': 'section-header'});
 
   }
