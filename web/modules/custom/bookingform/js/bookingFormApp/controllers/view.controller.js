@@ -10,6 +10,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
   // Form steps
   // If validation passes move to the next page
   var nextState = function(currentState) {
+    $window.scrollTo(0, 0);
     // Check the current page and returns the next
     switch (currentState) {
       // Product Selection to Application Steps
