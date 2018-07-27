@@ -404,7 +404,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   /**
    * Controller for Templates and Form Steps
   */
-  $controller('viewCtrl', { $scope, formSteps, $state, $location, $anchorScroll, productDocuments, dataService });
-  $controller('paymentCtrl', { $scope, $http, $location, stripe, dataService });
-  $controller('docsCtrl', { $scope, $http, $filter, $q });
-});
+  $controller('viewCtrl', { $scope: $scope, formSteps: formSteps, $state: $state, $location: $location, $anchorScroll: $anchorScroll, productDocuments: productDocuments, dataService: dataService });
+  $controller('paymentCtrl', { $scope: $scope, $http: $http, $location: $location, stripe: stripe, dataService: dataService });
+  $controller('docsCtrl', { $scope: $scope, $http: $http, $filter: $filter, $q: $q });
+})

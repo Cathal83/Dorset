@@ -144,4 +144,4 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
     $state.go(section, {'#': 'zone-header'});
 
   }
-});
+})

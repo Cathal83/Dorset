@@ -53,5 +53,5 @@ bookingformJS.controller("paymentCtrl", function($scope, $http, $location, strip
         }
       })
     }
-});
+})
   
