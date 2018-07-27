@@ -141,6 +141,7 @@ bookingformJS.controller("viewCtrl", function($scope, $window, formSteps, $state
   // Function that goes to a specific section
   $scope.goToSection = function(section) {
     $window.scrollTo(0, 131);
+    console.log('scrolltop')
     $state.go(section);
 
   }

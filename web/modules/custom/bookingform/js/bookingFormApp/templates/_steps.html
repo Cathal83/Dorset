@@ -3,9 +3,7 @@
     <div class="form-title">
       <h2>Online Application</h2>
     </div>
-    <!-- Course Select Box -->
     <div class="form-fields">
-        <!-- Course display -->
         <div>
             <h1 ng-if="productData[0].application_type == '60'">{{ user.productname }}{{ ': ' + user.deliveryname }}</h1>
             <h1 ng-if="productData[0].application_type == '61'">{{ user.productname }}</h1>
@@ -19,7 +17,6 @@
                 <p>{{ step.description }}</p>
             </div>
         </ul>
-        <!-- Proceed Button -->
       <div class = "button-form-footer">  
         <div class="bookingform-btn">
           <a class="btn-back nomar" ng-click="goToPreviousSection()" href="">Back</a>
