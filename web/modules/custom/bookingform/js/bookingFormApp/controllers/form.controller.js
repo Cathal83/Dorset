@@ -407,4 +407,4 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   $controller('viewCtrl', { $scope, formSteps, $state, $location, $anchorScroll, productDocuments, dataService });
   $controller('paymentCtrl', { $scope, $http, $location, stripe, dataService });
   $controller('docsCtrl', { $scope, $http, $filter, $q });
-})
+})(bookingformJS);

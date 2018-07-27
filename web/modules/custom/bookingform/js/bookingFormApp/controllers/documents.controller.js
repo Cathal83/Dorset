@@ -85,4 +85,4 @@ bookingformJS.controller("docsCtrl", function($scope, $http, $filter, $q) {
     } else { }
 
   }
-})
+})(bookingformJS);
