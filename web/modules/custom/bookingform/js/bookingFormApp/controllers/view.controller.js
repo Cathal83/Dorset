@@ -115,11 +115,11 @@ bookingformJS.controller("viewCtrl", function($scope, $window, formSteps, $state
   $scope.goToNextSection = function(isFormValid) {
     // set to true to show all error messages (if there are any)
     $scope.formStepSubmitted = true;
-    $window.scrollTo(0, 131);
+    
     if(isFormValid) {
       // reset this for next form
       $scope.formStepSubmitted = false;
-
+      $window.scrollTo(0, 131);
       // mark the step as valid so we can navigate to it via the links
       updateValidityOfCurrentStep(true /*valid */);
 
@@ -141,7 +141,6 @@ bookingformJS.controller("viewCtrl", function($scope, $window, formSteps, $state
   // Function that goes to a specific section
   $scope.goToSection = function(section) {
     $window.scrollTo(0, 131);
-    console.log('scrolltop')
     $state.go(section);
 
   }
