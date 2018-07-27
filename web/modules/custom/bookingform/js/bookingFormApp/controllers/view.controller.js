@@ -1,4 +1,4 @@
-bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $location, $anchorScroll, productDocuments,  dataService) {
+bookingformJS.controller("viewCtrl", function($scope, $window, formSteps, $state, $location, $anchorScroll, productDocuments,  dataService) {
 
   /**
    * Form Steps Validation

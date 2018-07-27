@@ -1,4 +1,4 @@
-bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $window, $location, $q, $controller, $anchorScroll, dataService, formService, postService, formSteps, stripe) {
+bookingformJS.controller("formCtrl", function($scope, $window, $http, $filter, $state, $window, $location, $q, $controller, $anchorScroll, dataService, formService, postService, formSteps, stripe) {
   /**
    * Default user settings
    */
@@ -404,7 +404,7 @@ bookingformJS.controller("formCtrl", function($scope, $http, $filter, $state, $w
   /**
    * Controller for Templates and Form Steps
   */
-  $controller('viewCtrl', { $scope: $scope, formSteps: formSteps, $state: $state, $location: $location, $anchorScroll: $anchorScroll, productDocuments: productDocuments, dataService: dataService });
+  $controller('viewCtrl', { $scope: $scope, $window: $window, formSteps: formSteps, $state: $state, $location: $location, $anchorScroll: $anchorScroll, productDocuments: productDocuments, dataService: dataService });
   $controller('paymentCtrl', { $scope: $scope, $http: $http, $location: $location, stripe: stripe, dataService: dataService });
   $controller('docsCtrl', { $scope: $scope, $http: $http, $filter: $filter, $q: $q });
 })
