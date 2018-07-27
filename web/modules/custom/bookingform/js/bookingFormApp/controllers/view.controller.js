@@ -114,7 +114,6 @@ bookingformJS.controller("viewCtrl", function($scope, $window, formSteps, $state
   // Check if form is filled before next step
   $scope.goToNextSection = function(isFormValid) {
     // set to true to show all error messages (if there are any)
-    console.log(isFormValid);
     $scope.formStepSubmitted = true;
     $window.scrollTo(0, 131);
     if(isFormValid) {
@@ -141,7 +140,7 @@ bookingformJS.controller("viewCtrl", function($scope, $window, formSteps, $state
 
   // Function that goes to a specific section
   $scope.goToSection = function(section) {
-    
+    $window.scrollTo(0, 131);
     $state.go(section);
 
   }
