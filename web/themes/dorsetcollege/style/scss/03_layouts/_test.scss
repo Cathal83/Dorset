@@ -469,6 +469,12 @@ p.arrow-right::after, a.arrow-right::after{
   }
 }
 
+@media screen and (min-width: 1600px) {
+  .test-body h3{
+    margin: 100px 0 0 0!important;
+  }
+}
+
 @media screen and (max-width: 975px) and (min-width: 600px) {
   .test-body h3{
     margin: 10px 0 0 0!important;

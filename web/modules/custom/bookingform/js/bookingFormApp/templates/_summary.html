@@ -8,7 +8,6 @@
             <h1 ng-if="productData[0].application_type == '61'">{{ user.productname }}</h1>
           </div>
       </div>
-    <!--<div class = "col-sm-6">-->
       <div class="form-progression">
         <h3>Step 3: Confirm & Submit</h3>
         <div class="form-step marked"></div>
@@ -17,14 +16,9 @@
         <span class="form-step-line"></span>
         <div class="form-step marked"></div>
       </div>
-    <!--</div> -->
-  <!--</div>-->
-  <!---->
-  <!--<div class="col-sm-6">-->
     <div class="form-fields">
       <div class="form-wrapper">
         <div class="form-row">
-          <!-- Pre Application-->
           <h4>Pre-application</h4>
           <div class="form-opt">
             <label>Course Title</label>
@@ -46,7 +40,6 @@
               <a href="" ng-model="target" value="bookingForm" ng-click="goToSection('bookingForm')">Edit</a>
           </div>
         </div>
-        <!-- Personal Information -->
         <div class="form-row">
           <h4>Personal Information</h4>
           <div>
@@ -101,7 +94,6 @@
       <div class = "form-content summary-panel">
       <div class="form-fields">
       <div class="form-wrapper">
-        <!-- Payment Type -->
         <div ng-if="productData[0].application_type == '60'">
           <h4>Payment Type</h4>
           <div class="form-opt">
@@ -145,7 +137,6 @@
               <a href="" ng-model="target" value="payment" ng-click="goToSection('payment')">Edit</a>
           </div>
         </div>
-        <!-- Documents required -->
         <div class="form-row" ng-if="productData[0].application_type == '61'">
           <h4>Uploaded Documents</h4>
           <div ng-repeat="doc in user.docs">

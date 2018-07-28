@@ -1,4 +1,4 @@
-bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $location, $anchorScroll, productDocuments,  dataService) {
+bookingformJS.controller("viewCtrl", function($scope, $window, formSteps, $state, $location, $anchorScroll, productDocuments,  dataService) {
 
   /**
    * Form Steps Validation
@@ -65,7 +65,7 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
 
   //Form steps - Previous
   var previousState = function(currentState) {
-
+    
     switch (currentState) {
       case 'steps':
         return 'bookingForm'
@@ -114,16 +114,16 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
   // Check if form is filled before next step
   $scope.goToNextSection = function(isFormValid) {
     // set to true to show all error messages (if there are any)
-    console.log(isFormValid);
     $scope.formStepSubmitted = true;
+    
     if(isFormValid) {
       // reset this for next form
       $scope.formStepSubmitted = false;
-
+      $window.scrollTo(0, 131);
       // mark the step as valid so we can navigate to it via the links
       updateValidityOfCurrentStep(true /*valid */);
 
-      $state.go(nextState($state.current.name), {'#': 'zone-header'});
+      $state.go(nextState($state.current.name));
       
     } else {
       // mark the step as valid so we can navigate to it via the links
@@ -133,15 +133,15 @@ bookingformJS.controller("viewCtrl", function($scope, formSteps, $state, $locati
   
   // Function that returns previous State of the form - in case back button is clicked
   $scope.goToPreviousSection = function() {
-
-    $state.go(previousState($state.current.name), {'#': 'zone-header'});
+    $window.scrollTo(0, 131);
+    $state.go(previousState($state.current.name));
 
   }
 
   // Function that goes to a specific section
   $scope.goToSection = function(section) {
-    
-    $state.go(section, {'#': 'zone-header'});
+    $window.scrollTo(0, 131);
+    $state.go(section);
 
   }
 })
