@@ -586,3 +586,13 @@ input[type="radio"] {
   width: 50%;
 }
 
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .md-datepicker-button{
+    background: none;
+  }
+  
+  input{
+    position: relative;
+  }
+}
