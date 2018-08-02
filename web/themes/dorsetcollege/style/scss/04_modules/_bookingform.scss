@@ -594,6 +594,7 @@ input[type="radio"] {
   
   #bookingform .form-opt input{
     position: relative !important;
+    pointer-events: auto !important;
   }
   
   #zone-footer #block-footerterms{
