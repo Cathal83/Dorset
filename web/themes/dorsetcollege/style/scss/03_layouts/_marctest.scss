@@ -2075,6 +2075,7 @@ form[id^="views-exposed-form-find-a-course-block-"]{
 @media screen and (orientation: landscape) {
   .block-views-blockcourses-view-block-7 .list-element{
     font-size: 16px;
+    padding-bottom: 10%;
   }
   
   .block-views-blockcourses-view-block-7 {
@@ -2083,5 +2084,10 @@ form[id^="views-exposed-form-find-a-course-block-"]{
   
   .block-views-blockcourses-view-block-2{
     height: 450px;
+  }
+  
+  .block-region-headerimage .views-exposed-form input.button.form-submit{
+    width: 30%;
+    margin-left: -10%;
   }
 }
