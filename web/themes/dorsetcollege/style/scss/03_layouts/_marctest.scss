@@ -442,56 +442,7 @@
   }
 }
 
-// Course Page Tablet CSS
 
-//@media screen and (max-width: 900px) and (min-width: 600px) {
-//  .block-views-blockcourses-view-block-2 {
-//    height: 410px;
-//  }
-//
-//  .block-views-blockcourses-view-block-2 div{
-//    .views-field{
-//    height: 192px;
-//      background-size: 61px 61px;
-//    }
-//    .field-content{
-//      top: 40%;
-//    }
-//
-//    .views-label {
-//        top: 8em;
-//        font-size: 11px;
-//    }
-//  }
-
-
-  .block-views-blockcourses-view-block-14 {
-    height: 354px;
-    background-size: 61px 61px !important;
-  }
-
-  .block-views-blockcourses-view-block-14 div{
-
-    .field-content{
-      position: relative;
-      top: 125px;
-    }
-  }
-
-  .block-views-blockcourses-view-block-7{
-    height: 450px;
-    margin-top: -40px;
-  }
-
-  .block-views-blockcourses-view-block-7 h2{
-    font-size: 20px;
-    padding: 30% 20% 0% 20%;
-  }
-
-  .block-views-blockcourses-view-block-7 .list-element{
-    font-size: 11px;
-  }
-}
 
 // Course Page iPad Pro CSS
 
@@ -1774,10 +1725,12 @@ form[id^="views-exposed-form-find-a-course-block-"]{
 @media screen and (max-width: 1024px) and (min-width: 600px) {
   .block-views-blockcourses-view-block-14 .price-element:nth-child(1) span{
       top: 8em;
-          @include font-size($p-stat);
+      font-size: 11px;
+        
   }
   .block-views-blockcourses-view-block-14 div .field-content{
     top: 6.5em;
+    font-size: 16px;
   }
 }
 
@@ -2114,3 +2067,5 @@ form[id^="views-exposed-form-find-a-course-block-"]{
     line-height: 1.68;
   }
 }
+
+
