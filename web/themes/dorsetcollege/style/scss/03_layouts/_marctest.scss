@@ -219,6 +219,8 @@
     }
     .field-content{
       top: 40%;
+      font-size: 16px;
+      padding: 15px;
     }
     .views-label {
         top: 8em;
@@ -442,25 +444,25 @@
 
 // Course Page Tablet CSS
 
-@media screen and (max-width: 900px) and (min-width: 600px) {
-  .block-views-blockcourses-view-block-2 {
-    height: 410px;
-  }
-
-  .block-views-blockcourses-view-block-2 div{
-    .views-field{
-    height: 192px;
-      background-size: 61px 61px;
-    }
-    .field-content{
-      top: 40%;
-    }
-
-    .views-label {
-        top: 8em;
-        font-size: 11px;
-    }
-  }
+//@media screen and (max-width: 900px) and (min-width: 600px) {
+//  .block-views-blockcourses-view-block-2 {
+//    height: 410px;
+//  }
+//
+//  .block-views-blockcourses-view-block-2 div{
+//    .views-field{
+//    height: 192px;
+//      background-size: 61px 61px;
+//    }
+//    .field-content{
+//      top: 40%;
+//    }
+//
+//    .views-label {
+//        top: 8em;
+//        font-size: 11px;
+//    }
+//  }
 
 
   .block-views-blockcourses-view-block-14 {
@@ -1786,7 +1788,7 @@ form[id^="views-exposed-form-find-a-course-block-"]{
           @include font-size($p-stat);
   }
   .block-views-blockcourses-view-block-14 div .field-content{
-    top: 6em;
+    top: 5em;
   }
 
   .page-node-type-course .cat.choose .zone-section .block-region-headerimage{
