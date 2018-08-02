@@ -210,6 +210,10 @@
 @media screen and (max-width: 900px) and (min-width: 600px) {
   .block-views-blockcourses-view-block-2 {
     height: 410px;
+    
+    .price-element .field-content p{
+            font-size: 16px;
+    }
   }
 
   .block-views-blockcourses-view-block-2 div{
@@ -2068,4 +2072,8 @@ form[id^="views-exposed-form-find-a-course-block-"]{
   }
 }
 
-
+@media screen and (orientation: landscape) {
+  .block-views-blockcourses-view-block-7 .list-element{
+    font-size: 11px;
+  }
+}
