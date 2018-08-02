@@ -2072,7 +2072,8 @@ form[id^="views-exposed-form-find-a-course-block-"]{
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 800px){
+
+@media only screen and (orientation : landscape) and (max-width: 900px) {
   .block-views-blockcourses-view-block-7 .list-element{
     font-size: 16px;
     padding-bottom: 10%;
@@ -2087,11 +2088,11 @@ form[id^="views-exposed-form-find-a-course-block-"]{
   }
   
   .block-region-headerimage .views-exposed-form input.button.form-submit{
-    width: 30%;
-    margin-left: -10%;
+    width: 30% !important;
+    margin-left: -10% !important;
   }
   
   .block-views-blocknews-events-block-pre-news-events .block-news-events .views-row{
-    height: 375px !important;
+    height: 475px;
   }
 }
