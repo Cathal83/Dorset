@@ -84,6 +84,13 @@
     });
       
       $(document).ready(function() {
+        $(".colorbox").colorbox({
+      
+        trapFocus: false
+        });
+      })
+      
+      $(document).ready(function() {
         $("#more").click(function() {      
                 $(".node_54 .page-content-section .right-paragraph:nth-child(3), .node_54 .page-content-section .left-paragraph:nth-child(2)").addClass("max");
             });
