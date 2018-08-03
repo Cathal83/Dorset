@@ -1057,3 +1057,8 @@ p.arrow-right::after, a.arrow-right::after{
   height:100px; /* fixed header height*/
   margin:-100px 0 0; /* negative fixed header height */
 }
+
+#colorbox {
+  width: 90vw !important;
+  height: 90vh !important;
+}
