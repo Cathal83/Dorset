@@ -1047,3 +1047,14 @@ p.arrow-right::after, a.arrow-right::after{
 .block-views-blockcourses-view-block-11 .col-sm-12 {
   text-align: center;
 }
+
+#fees::before,
+#overview::before,
+#programme-details::before,
+#lecturer-profiles::before,
+#process::before{
+  content:"";
+  display:block;
+  height:100px; /* fixed header height*/
+  margin:-100px 0 0; /* negative fixed header height */
+}
