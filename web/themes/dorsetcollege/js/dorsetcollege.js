@@ -69,15 +69,7 @@
       // Using this method, we can call different flexslider settings on each class
       // This one calls flexslider on the .flexslider-slider class.
       $('.flexslider-slider').flexslider({
-      //   animation: "fade",
-      //   prevText: "",
-      //   nextText: "",
-      //   controlNav: false,
-      //   animationSpeed: 800,
-      //   easing: 'linear',
-      //   slideshowSpeed: 5000,
-      //   fadeFirstSlide: false,
-      // });
+
       animation: "slide",
       animationLoop: true,
       itemWidth: 250,
@@ -92,15 +84,26 @@
     });
       
       $(document).ready(function() {
-        $("#hide").click(function() {      
-            if($(".node_54 .page-content-section .right-paragraph:nth-child(3),.node_54 .page-content-section .left-paragraph:nth-child(2) ").hasClass("max")) {
-                $(".node_54 .page-content-section .right-paragraph:nth-child(3), .node_54 .page-content-section .left-paragraph:nth-child(2)").removeClass("max");
-            } else {
-               $(".node_54 .page-content-section .right-paragraph:nth-child(3), .node_54 .page-content-section .left-paragraph:nth-child(2)").addClass("max");
-            }
-    
+        $("#more").click(function() {      
+                $(".node_54 .page-content-section .right-paragraph:nth-child(3), .node_54 .page-content-section .left-paragraph:nth-child(2)").addClass("max");
+            });
+        $("#less").click(function() {      
+            $(".node_54 .page-content-section .right-paragraph:nth-child(3), .node_54 .page-content-section .left-paragraph:nth-child(2)").removeClass("max");
+       
         });
     });
+      
+    $(document).ready(function() {
+        $("#more").click(function() {      
+                $("#more").removeClass("appear");
+                 $("#less").addClass("appear");   
+        });
+        
+        $("#less").click(function() {      
+                $("#less").removeClass("appear");
+                 $("#more").addClass("appear");   
+        });
+      });
     }
   };
 })(jQuery);

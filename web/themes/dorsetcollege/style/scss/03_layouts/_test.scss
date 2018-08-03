@@ -935,14 +935,14 @@ p.arrow-right::after, a.arrow-right::after{
  
   }
   
-  #hide {
+  .appear {
     width: fit-content;
     margin: auto;
   }
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-   #hide, .btn-blue  {
+   .appear, .btn-blue  {
     display: inline-block;
     margin-left: 48%;
    }
@@ -962,7 +962,7 @@ p.arrow-right::after, a.arrow-right::after{
 }
 
 @media only screen and (max-width: 600px) {
-  #hide {
+  .appear {
     display: none;
   }
 }

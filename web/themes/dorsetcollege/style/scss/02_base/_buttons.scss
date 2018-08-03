@@ -54,3 +54,11 @@
     }
 }
 
+#more, #less{
+  display: none;
+}
+
+#more.appear, #less.appear{
+  display: block;
+}
+
