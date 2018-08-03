@@ -156,7 +156,7 @@ input {
 
 
 
-.block-views-blockcourses-view-block-8, .block-views-blockcourses-view-block-10, .block-views-blockcourses-view-course-prices-view, .block-views-blockcourses-view-block-6 {
+.block-views-blockcourses-view-block-11, .block-views-blockcourses-view-block-8, .block-views-blockcourses-view-block-10, .block-views-blockcourses-view-course-prices-view, .block-views-blockcourses-view-block-6 {
   background: #efefef;
 }
 
@@ -1033,4 +1033,17 @@ p.arrow-right::after, a.arrow-right::after{
      .paragraph--type--left-image-right-text .col-sm-6.left-image{
       order: 2;
     }
+}
+
+.btn-grey{
+  display: inline-block;  
+  margin: 1em 1em 1em 0;
+}
+
+.page-node-type-course .block-views-blockcourses-view-block-11{
+  min-height: auto;
+}
+
+.anchor-links {
+  text-align: center;
 }

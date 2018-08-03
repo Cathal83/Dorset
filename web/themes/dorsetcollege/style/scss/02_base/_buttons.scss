@@ -42,3 +42,15 @@
   @include btn-blue;
   
 }
+
+.btn-grey {
+    @include btn-base;
+    background: #DFDFDF;
+    color: #5D5D5D;
+    
+    &:hover{
+      background: $dc-blue;
+      color: #FFF;
+    }
+}
+
