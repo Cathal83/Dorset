@@ -932,10 +932,10 @@
 
   #block-dorsetcollege-main-menu{
     display: none;
-    position: fixed;
+    position: absolute;
     z-index: 1000;
     width: 100%;
-    height: 100%;
+    height: 200vh;
     background-color: #FFF;
     right: 0;
     left: 0;
@@ -1257,7 +1257,7 @@
 
   .path-student-life .choose .statistic-content{
 
-    height: 500px;
+    height: auto;
     text-align: center;
 
     .path-student-life .paragraph--type--statistics-wrapper{
@@ -1972,7 +1972,7 @@ form[id^="views-exposed-form-find-a-course-block-"]{
 
 @media screen and (max-width: 599px) and (min-width: 400px) {
   .path-student-life .choose .statistic-content{
-    height: 500px;
+    height: auto;
   }
 }
 
@@ -2094,5 +2094,9 @@ form[id^="views-exposed-form-find-a-course-block-"]{
   
   .block-views-blocknews-events-block-pre-news-events .block-news-events .views-row{
     height: 475px;
+  }
+  
+  .test-body {
+    padding-top: 7.5rem !important;
   }
 }
