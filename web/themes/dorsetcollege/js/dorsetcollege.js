@@ -84,7 +84,7 @@
     });
       
       $(document).ready(function() {
-        $(".colorbox").colorbox({
+        $(".colorbox-load").colorbox({
       
         trapFocus: false
         });
