@@ -1,8 +1,6 @@
 bookingformJS.service("postService", function ($filter, $location, $http, dataService) {
   // Elements to bankFormat Process
   var submitData = function(data, token) {
-    console.log(data);
-
     // Document values process
     // If no documents
     if (Object.keys(data.docs).length === 0) {
@@ -35,6 +33,7 @@ bookingformJS.service("postService", function ($filter, $location, $http, dataSe
       firstname: data.firstname,
       lastname: data.lastname,
       phone_number: data.phonenumber,
+      pps_number: data.ppsnumber,
       date_of_birth: data.dob,
       address_line_1: data.contactaddress.address1,
       address_line_2: data.contactaddress.address2,

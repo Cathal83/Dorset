@@ -193,6 +193,10 @@
               <label>DOB:</label>
               <div>{{ user.dob | date:'dd/MM/yyyy' }}</div>
             </div>
+            <div class="form-opt" ng-if="user.isqqi == '1'">
+              <label>PPS Number:</label>
+              <div>{{ user.ppsnumber }}</div>
+            </div>
             <div class="form-opt">
               <label>Gender:</label>
               <div>{{ user.gender }}</div>

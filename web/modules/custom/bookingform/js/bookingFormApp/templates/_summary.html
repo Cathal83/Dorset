@@ -55,6 +55,10 @@
                 <label>Email:</label>
                 <div>{{ user.email }}</div>
               </div>
+              <div class="form-opt" ng-if="user.isqqi == '1'">
+                <label>PPS Number:</label>
+                <div>{{ user.ppsnumber }}</div>
+              </div>
               <div class="form-opt">
                 <label>Gender:</label>
                 <div>{{ user.gender }}</div>

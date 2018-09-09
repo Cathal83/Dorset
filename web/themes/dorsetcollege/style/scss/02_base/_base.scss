@@ -32,7 +32,12 @@ h2 {
   padding-right: 3px;
   
 }
-
+.md-datepicker-input::placeholder {
+  color: $placeholdercolour;
+}
+.md-datepicker-input::-ms-input-placeholder {
+  color: $placeholdercolour;
+}
 ::placeholder {
   color: $placeholdercolour;
 }

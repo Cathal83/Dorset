@@ -33,4 +33,4 @@
 web/sites/default/services.yml
 web/.htaccess
 web/sites/default/services.yml
-.DS_Store
+*/.DS_Store

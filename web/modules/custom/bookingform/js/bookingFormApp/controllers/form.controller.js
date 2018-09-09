@@ -7,6 +7,8 @@ bookingformJS.controller("formCtrl", function($scope, $window, $http, $filter, $
     productname : "",
     deliverymode : "",
     deliveryname : "",
+    validatedby : "",
+    startdate : "",
     firstname : "",
     lastname : "",
     country : "",
@@ -18,6 +20,7 @@ bookingformJS.controller("formCtrl", function($scope, $window, $http, $filter, $
     },
     email : "",
     phonenumber: "",
+    ppsnumber: "",
     dob : "",
     gender : "",
     contactaddress : {
@@ -119,7 +122,7 @@ bookingformJS.controller("formCtrl", function($scope, $window, $http, $filter, $
     
   });
 
-  // Scope all product data from functions§
+  // Scope all product data from functions
   var scopeVars = function(productData) {
 
     // Hide Product Select
@@ -129,6 +132,16 @@ bookingformJS.controller("formCtrl", function($scope, $window, $http, $filter, $
     $scope.user.productname = productData[0].title;
     $scope.user.deliveryname = productData[0].price_group;
     $scope.user.application = productData[0].application_type;
+    $scope.user.validatedby = productData[0].validated_by;
+    
+    // Case QQI - used to display PPS Number Field
+    if($scope.user.validatedby.indexOf('QQI') >= 0) {
+      console.log(productData[0].validated_by);
+      $scope.user.isqqi = 1;
+    }
+    else {
+      $scope.user.isqqi = 0;
+    }
 
     // In case only one option it selects it by default
     if(productData.length == 1) {
@@ -342,7 +355,6 @@ bookingformJS.controller("formCtrl", function($scope, $window, $http, $filter, $
        * Sends Data
        */
       postService.submitData($scope.user, $scope.token).then(function (response) {
-        console.log(response);
         if (response == 200) {
           console.log('Data submitted');
           $scope.status.data = 0;
