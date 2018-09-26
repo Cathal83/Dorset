@@ -46,18 +46,15 @@
         </div>
         <div class="form-row" ng-if="user.isqqi == '1'">
           <div class="form-opt">
-            <input type="text" name="ppsnumber" ng-model="user.ppsnumber" ng-attr-placeholder="PPS Number" required>
-          </div>
-          <div ng-messages="bookingStepForm.ppsnumber.$error" ng-if="formStepSubmitted" class="error-msg">
-            <div ng-message="required">PPS Number is required for application.</div>
+            <input type="text" name="ppsnumber" ng-model="user.ppsnumber" ng-attr-placeholder="PPS Number">
           </div>
         </div>
         <div class="form-row">
           <div class="form-opt">
-            <input type="number" name="phonenumber" ng-model="user.phonenumber" ng-attr-placeholder="Phone Number" required>
+            <input type="number" name="phonenumber" ng-model="user.phonenumber" ng-attr-placeholder="Mobile Number" required>
           </div>
           <div ng-messages="bookingStepForm.phonenumber.$error" ng-if="formStepSubmitted" class="error-msg">
-            <div ng-message="required">Phone Number is required for application.</div>
+            <div ng-message="required">Mobile Number is required for application.</div>
           </div>
         </div>
         <div class="form-row">
